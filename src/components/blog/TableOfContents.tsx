@@ -19,6 +19,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
   const [isOpen, setIsOpen] = useState(true)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     // Generate ToC from content
     const parser = new DOMParser()
     const doc = parser.parseFromString(content, 'text/html')
@@ -28,14 +30,19 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.substring(1))
       const text = heading.textContent || ''
-      const id = `heading-${index}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`
-      items.push({ id, text, level })
+      const id = heading.id || `heading-${index}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`
+      
+      if (text) {
+        items.push({ id, text, level })
+      }
     })
     
     setToc(items)
   }, [content])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     // Track active heading on scroll
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,11 +52,21 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
           }
         })
       },
-      { rootMargin: '-80px 0px -80% 0px' }
+      { 
+        rootMargin: '-80px 0px -80% 0px',
+        threshold: 0.5
+      }
     )
 
-    const headings = document.querySelectorAll('h2, h3, h4')
-    headings.forEach((heading) => observer.observe(heading))
+    // Wait a bit for content to render
+    setTimeout(() => {
+      const headings = document.querySelectorAll('h2, h3, h4')
+      headings.forEach((heading) => {
+        if (heading.id) {
+          observer.observe(heading)
+        }
+      })
+    }, 500)
 
     return () => observer.disconnect()
   }, [toc])
@@ -58,20 +75,23 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
     const element = document.getElementById(id)
     if (element) {
       const offset = 100
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - offset
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
       })
+
+      // Update active state immediately
+      setActiveId(id)
     }
   }
 
   if (toc.length === 0) return null
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 sticky top-24">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 lg:sticky lg:top-24">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full mb-4"
@@ -86,17 +106,17 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
       </button>
 
       {isOpen && (
-        <nav className="space-y-2">
+        <nav className="space-y-1">
           {toc.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToHeading(item.id)}
-              className={`block w-full text-left py-2 px-3 rounded-lg transition-colors text-sm ${
+              className={`block w-full text-left py-2 px-3 rounded-lg transition-all text-sm ${
                 activeId === item.id
-                  ? 'bg-primary-50 text-primary-700 font-semibold'
+                  ? 'bg-primary-100 text-primary-700 font-semibold border-l-2 border-primary-600'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
               }`}
-              style={{ paddingLeft: `${(item.level - 2) * 16 + 12}px` }}
+              style={{ paddingLeft: `${(item.level - 2) * 12 + 12}px` }}
             >
               {item.text}
             </button>

@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowLeft, User, Share2 } from 'lucide-react'
+import { Calendar, Clock, ArrowLeft, User } from 'lucide-react'
 import TableOfContents from '@/components/blog/TableOfContents'
 import { addIdsToHeadings } from '@/lib/utils/toc'
 
@@ -148,8 +148,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Main Content with ToC */}
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left Sidebar with ToC */}
+          <aside className="lg:col-span-3 order-2 lg:order-1">
+            <TableOfContents content={post.content} />
+          </aside>
+
           {/* Main Content */}
-          <article className="lg:col-span-8">
+          <article className="lg:col-span-9 order-1 lg:order-2">
             <div 
               className="prose prose-lg max-w-none
                 prose-headings:font-bold prose-headings:text-gray-900
@@ -204,24 +209,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             </div>
           </article>
-
-          {/* Sidebar with ToC */}
-          <aside className="lg:col-span-4">
-            <div className="sticky top-24 space-y-6">
-              <TableOfContents content={post.content} />
-
-              {/* CTA Card */}
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl p-6 text-white">
-                <h3 className="text-xl font-bold mb-3">Ready to Get Started?</h3>
-                <p className="text-primary-100 mb-4 text-sm">
-                  Book a free consultation with Dr. Chacko Cyriac
-                </p>
-                <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 block text-center">
-                  Book Consultation
-                </Link>
-              </div>
-            </div>
-          </aside>
         </div>
       </div>
 

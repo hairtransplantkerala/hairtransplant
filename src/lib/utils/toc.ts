@@ -18,9 +18,7 @@ export function generateTableOfContents(html: string): TocItem[] {
     const text = heading.textContent || '';
     const id = `heading-${index}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`;
     
-    // Add ID to heading if it doesn't have one
     heading.id = id;
-    
     toc.push({ id, text, level });
   });
   
@@ -30,17 +28,21 @@ export function generateTableOfContents(html: string): TocItem[] {
 export function calculateReadingTime(html: string): number {
   const text = html.replace(/<[^>]*>/g, '');
   const words = text.split(/\s+/).length;
-  return Math.ceil(words / 200); // 200 words per minute
+  return Math.ceil(words / 200);
 }
 
 export function addIdsToHeadings(html: string): string {
+  if (!html) return ''
+
+  // Server-side: use regex
   if (typeof window === 'undefined') {
-    // Server-side: use a simple regex approach
+    let headingIndex = 0
     return html.replace(/<(h[1-6])([^>]*)>(.*?)<\/\1>/gi, (match, tag, attrs, content) => {
       const text = content.replace(/<[^>]*>/g, '').trim()
-      const id = `heading-${text.toLowerCase().replace(/[^\w]+/g, '-')}`
+      const id = `heading-${headingIndex}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`
+      headingIndex++
       
-      // Check if ID already exists in attrs
+      // Check if ID already exists
       if (attrs.includes('id=')) {
         return match
       }
@@ -55,9 +57,11 @@ export function addIdsToHeadings(html: string): string {
   const headings = doc.querySelectorAll('h1, h2, h3, h4, h5, h6');
   
   headings.forEach((heading, index) => {
-    const text = heading.textContent || '';
-    const id = `heading-${index}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`;
-    heading.id = id;
+    if (!heading.id) {
+      const text = heading.textContent || '';
+      const id = `heading-${index}-${text.toLowerCase().replace(/[^\w]+/g, '-')}`;
+      heading.id = id;
+    }
   });
   
   return doc.body.innerHTML;

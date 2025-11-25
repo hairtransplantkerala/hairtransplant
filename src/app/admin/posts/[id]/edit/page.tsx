@@ -1,19 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import RichTextEditor from '@/components/admin/RichTextEditor'
 import TocPreview from '@/components/admin/TocPreview'
 import imageCompression from 'browser-image-compression'
-import { ArrowLeft, Save, Eye, Upload, X, Sparkles, Copy, Check, Plus, Trash2, HelpCircle } from 'lucide-react'
+import { ArrowLeft, Save, Eye, Upload, X, Sparkles, Copy, Check } from 'lucide-react'
 import Link from 'next/link'
 import { generateMetaTitle, generateMetaDescription, generateKeywords, generateSchemaMarkup } from '@/lib/utils/seo'
 import { createClient } from '@/lib/supabase/client'
-
-interface FAQItem {
-  question: string
-  answer: string
-}
 
 function slugify(text: string): string {
   return text
@@ -30,15 +25,18 @@ function calculateReadingTime(html: string): number {
   return Math.ceil(words / 200)
 }
 
-export default function NewPostPage() {
+export default function EditPostPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter()
   const supabase = createClient()
   
+  // Unwrap params Promise
+  const { id } = use(params)
+  
   const [loading, setLoading] = useState(false)
+  const [fetching, setFetching] = useState(true)
   const [imageUploading, setImageUploading] = useState(false)
   const [schemaCopied, setSchemaCopied] = useState(false)
   const [showSEO, setShowSEO] = useState(false)
-  const [showFAQ, setShowFAQ] = useState(false)
   
   const [formData, setFormData] = useState({
     title: '',
@@ -59,9 +57,43 @@ export default function NewPostPage() {
     schema_markup: '',
   })
 
-  const [faqs, setFaqs] = useState<FAQItem[]>([
-    { question: '', answer: '' }
-  ])
+  useEffect(() => {
+    fetchPost()
+  }, [id])
+
+  const fetchPost = async () => {
+    try {
+      const response = await fetch(`/api/posts/${id}`)
+      const data = await response.json()
+
+      if (data.success && data.post) {
+        const post = data.post
+        setFormData({
+          title: post.title || '',
+          slug: post.slug || '',
+          excerpt: post.excerpt || '',
+          content: post.content || '',
+          image: post.image || '',
+          author: post.author || 'Dr. Chacko Cyriac',
+          category: post.category || '',
+          tags: Array.isArray(post.tags) ? post.tags.join(', ') : '',
+          read_time: post.read_time || '',
+          meta_title: post.meta_title || '',
+          meta_description: post.meta_description || '',
+          meta_keywords: post.meta_keywords || '',
+          og_title: post.og_title || '',
+          og_description: post.og_description || '',
+          og_image: post.og_image || '',
+          schema_markup: post.schema_markup || '',
+        })
+      }
+    } catch (error) {
+      console.error('Error fetching post:', error)
+      alert('Error loading post')
+    } finally {
+      setFetching(false)
+    }
+  }
 
   // Auto-generate SEO fields when title or content changes
   useEffect(() => {
@@ -71,14 +103,10 @@ export default function NewPostPage() {
       
       setFormData(prev => ({
         ...prev,
-        meta_title: prev.meta_title || generateMetaTitle(formData.title),
-        meta_description: prev.meta_description || generateMetaDescription(formData.excerpt, formData.content),
         meta_keywords: keywords.join(', '),
-        og_title: prev.og_title || formData.title,
-        og_description: prev.og_description || formData.excerpt,
       }))
     }
-  }, [formData.title, formData.excerpt, formData.content, formData.tags, formData.category])
+  }, [formData.title, formData.tags, formData.category])
 
   // Generate schema markup
   useEffect(() => {
@@ -98,8 +126,7 @@ export default function NewPostPage() {
   }, [formData.title, formData.slug, formData.excerpt, formData.content, formData.image, formData.author, formData.category])
 
   const handleTitleChange = (title: string) => {
-    const slug = slugify(title)
-    setFormData({ ...formData, title, slug })
+    setFormData({ ...formData, title })
   }
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -164,22 +191,6 @@ export default function NewPostPage() {
     setTimeout(() => setSchemaCopied(false), 2000)
   }
 
-  // FAQ handlers
-  const addFAQ = () => {
-    setFaqs([...faqs, { question: '', answer: '' }])
-  }
-
-  const removeFAQ = (index: number) => {
-    const newFaqs = faqs.filter((_, i) => i !== index)
-    setFaqs(newFaqs.length > 0 ? newFaqs : [{ question: '', answer: '' }])
-  }
-
-  const updateFAQ = (index: number, field: 'question' | 'answer', value: string) => {
-    const newFaqs = [...faqs]
-    newFaqs[index][field] = value
-    setFaqs(newFaqs)
-  }
-
   const handleSubmit = async (published: boolean) => {
     setLoading(true)
 
@@ -207,9 +218,6 @@ export default function NewPostPage() {
         .map(tag => tag.trim())
         .filter(tag => tag)
 
-      // Filter out empty FAQs
-      const validFaqs = faqs.filter(faq => faq.question.trim() && faq.answer.trim())
-
       const postData = {
         title: formData.title.trim(),
         slug: formData.slug.trim(),
@@ -229,14 +237,12 @@ export default function NewPostPage() {
         og_description: formData.og_description.trim(),
         og_image: formData.og_image || formData.image,
         schema_markup: formData.schema_markup,
-        faqs: validFaqs.length > 0 ? validFaqs : null,
       }
 
-      const response = await fetch('/api/posts', {
-        method: 'POST',
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('adminToken')}`,
         },
         body: JSON.stringify(postData),
       })
@@ -244,14 +250,14 @@ export default function NewPostPage() {
       const result = await response.json()
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error || 'Failed to create post')
+        throw new Error(result.error || 'Failed to update post')
       }
 
-      alert(`Post ${published ? 'published' : 'saved as draft'} successfully!`)
+      alert('Post updated successfully!')
       router.push('/admin/posts')
     } catch (error: any) {
-      console.error('Error saving post:', error)
-      alert(error.message || 'Error saving post. Please try again.')
+      console.error('Error updating post:', error)
+      alert(error.message || 'Error updating post. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -268,6 +274,17 @@ export default function NewPostPage() {
     "Before & After"
   ]
 
+  if (fetching) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading post...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-20">
       {/* Header */}
@@ -280,8 +297,8 @@ export default function NewPostPage() {
             <ArrowLeft className="w-5 h-5" />
           </Link>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Create New Post</h1>
-            <p className="text-gray-600">Write and publish your blog post</p>
+            <h1 className="text-3xl font-bold text-gray-900">Edit Post</h1>
+            <p className="text-gray-600">Update your blog post</p>
           </div>
         </div>
 
@@ -301,7 +318,7 @@ export default function NewPostPage() {
             className="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
           >
             <Eye className="w-4 h-4" />
-            <span>{loading ? 'Publishing...' : 'Publish'}</span>
+            <span>{loading ? 'Updating...' : 'Update & Publish'}</span>
           </button>
         </div>
       </div>
@@ -329,7 +346,7 @@ export default function NewPostPage() {
             URL Slug *
           </label>
           <div className="flex items-center gap-2">
-            <span className="text-gray-500 text-sm">hairtransplantkerala.com/blog/</span>
+            <span className="text-gray-500 text-sm">eternoclinic.com/blog/</span>
             <input
               type="text"
               value={formData.slug}
@@ -348,16 +365,16 @@ export default function NewPostPage() {
           <textarea
             value={formData.excerpt}
             onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
-            placeholder="Brief description (auto-generates meta description if empty)..."
+            placeholder="Brief description..."
             rows={3}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 resize-none"
           />
         </div>
 
-        {/* Featured Image Upload */}
+        {/* Featured Image */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Featured Image (Auto-compressed to &lt;200KB)
+            Featured Image
           </label>
           {formData.image ? (
             <div className="relative">
@@ -380,13 +397,12 @@ export default function NewPostPage() {
                 {imageUploading ? (
                   <>
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mb-3"></div>
-                    <p className="text-sm text-gray-500">Compressing & uploading...</p>
+                    <p className="text-sm text-gray-500">Uploading...</p>
                   </>
                 ) : (
                   <>
                     <Upload className="w-12 h-12 text-gray-400 mb-3" />
-                    <p className="text-sm text-gray-500">Click to upload featured image</p>
-                    <p className="text-xs text-gray-400 mt-1">Auto-compressed to WebP &lt;200KB</p>
+                    <p className="text-sm text-gray-500">Click to upload</p>
                   </>
                 )}
               </div>
@@ -401,7 +417,7 @@ export default function NewPostPage() {
           )}
         </div>
 
-        {/* Content Editor */}
+        {/* Content */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Content *
@@ -412,20 +428,18 @@ export default function NewPostPage() {
           />
         </div>
 
-        {/* ToC Preview */}
         <TocPreview content={formData.content} />
 
-        {/* Author Info & Category */}
+        {/* Author & Category */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Author Name
+              Author
             </label>
             <input
               type="text"
               value={formData.author}
               onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-              placeholder="Dr. Chacko Cyriac"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
             />
           </div>
@@ -439,7 +453,7 @@ export default function NewPostPage() {
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
             >
-              <option value="">Select a category</option>
+              <option value="">Select</option>
               {categories.map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
@@ -457,7 +471,6 @@ export default function NewPostPage() {
               type="text"
               value={formData.tags}
               onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-              placeholder="hair transplant, fue, recovery"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
             />
           </div>
@@ -469,199 +482,92 @@ export default function NewPostPage() {
             <input
               type="text"
               value={formData.read_time || `${calculateReadingTime(formData.content)} min read`}
-              placeholder="Auto-calculated"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 bg-gray-50"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
               disabled
             />
           </div>
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-        <button
-          onClick={() => setShowFAQ(!showFAQ)}
-          className="w-full px-8 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-        >
-          <div className="flex items-center gap-3">
-            <HelpCircle className="w-5 h-5 text-primary-600" />
-            <h3 className="text-lg font-semibold text-gray-900">
-              FAQ Section (Optional)
-            </h3>
-          </div>
-          <span className="text-gray-400">{showFAQ ? '−' : '+'}</span>
-        </button>
-
-        {showFAQ && (
-          <div className="px-8 py-6 border-t space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-4 space-y-3">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-sm font-semibold text-gray-700">Question {index + 1}</h4>
-                  {faqs.length > 1 && (
-                    <button
-                      type="button"
-                      onClick={() => removeFAQ(index)}
-                      className="text-red-600 hover:text-red-700 p-1"
-                      title="Remove FAQ"
-                    >
-                      <Trash2 size={18} />
-                    </button>
-                  )}
-                </div>
-
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">Question</label>
-                  <input
-                    type="text"
-                    value={faq.question}
-                    onChange={(e) => updateFAQ(index, 'question', e.target.value)}
-                    placeholder="Enter your question..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs text-gray-600 mb-1">Answer</label>
-                  <textarea
-                    value={faq.answer}
-                    onChange={(e) => updateFAQ(index, 'answer', e.target.value)}
-                    placeholder="Enter your answer..."
-                    rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 resize-none"
-                  />
-                </div>
-              </div>
-            ))}
-
-            <button
-              type="button"
-              onClick={addFAQ}
-              className="w-full py-3 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-primary-600 hover:text-primary-600 transition-colors flex items-center justify-center gap-2"
-            >
-              <Plus size={20} />
-              Add Another FAQ
-            </button>
-
-            <p className="text-xs text-gray-500 mt-4">
-              💡 FAQs will be displayed at the end of your blog post with proper schema markup for SEO
-            </p>
-          </div>
-        )}
-      </div>
-
       {/* SEO Section */}
       <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
         <button
           onClick={() => setShowSEO(!showSEO)}
-          className="w-full px-8 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+          className="w-full px-8 py-4 flex items-center justify-between hover:bg-gray-50"
         >
           <div className="flex items-center gap-3">
             <Sparkles className="w-5 h-5 text-primary-600" />
-            <h3 className="text-lg font-semibold text-gray-900">
-              SEO Settings (Auto-Generated)
-            </h3>
+            <h3 className="text-lg font-semibold">SEO Settings</h3>
           </div>
-          <span className="text-gray-400">{showSEO ? '−' : '+'}</span>
+          <span>{showSEO ? '−' : '+'}</span>
         </button>
 
         {showSEO && (
           <div className="px-8 py-6 space-y-6 border-t">
-            {/* Meta Title */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Meta Title
-                <span className="ml-2 text-xs text-gray-500">({formData.meta_title.length}/60)</span>
-              </label>
+              <label className="block text-sm font-medium mb-2">Meta Title</label>
               <input
                 type="text"
                 value={formData.meta_title}
                 onChange={(e) => setFormData({ ...formData, meta_title: e.target.value })}
                 maxLength={60}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
+                className="w-full px-4 py-3 border rounded-lg"
               />
             </div>
 
-            {/* Meta Description */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Meta Description
-                <span className="ml-2 text-xs text-gray-500">({formData.meta_description.length}/160)</span>
-              </label>
+              <label className="block text-sm font-medium mb-2">Meta Description</label>
               <textarea
                 value={formData.meta_description}
                 onChange={(e) => setFormData({ ...formData, meta_description: e.target.value })}
                 maxLength={160}
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 resize-none"
+                className="w-full px-4 py-3 border rounded-lg resize-none"
               />
             </div>
 
-            {/* Meta Keywords */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Meta Keywords (Auto-generated from title & tags)
-              </label>
+              <label className="block text-sm font-medium mb-2">Keywords</label>
               <input
                 type="text"
                 value={formData.meta_keywords}
                 onChange={(e) => setFormData({ ...formData, meta_keywords: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 bg-gray-50"
-                placeholder="Keywords will be auto-generated"
+                className="w-full px-4 py-3 border rounded-lg bg-gray-50"
               />
             </div>
 
-            {/* Open Graph */}
             <div className="border-t pt-6">
-              <h4 className="text-md font-semibold text-gray-900 mb-4">Open Graph (Social Media)</h4>
+              <h4 className="font-semibold mb-4">Open Graph</h4>
               
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    OG Title
-                  </label>
+                  <label className="block text-sm mb-2">OG Title</label>
                   <input
                     type="text"
                     value={formData.og_title}
                     onChange={(e) => setFormData({ ...formData, og_title: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
+                    className="w-full px-4 py-3 border rounded-lg"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    OG Description
-                  </label>
+                  <label className="block text-sm mb-2">OG Description</label>
                   <textarea
                     value={formData.og_description}
                     onChange={(e) => setFormData({ ...formData, og_description: e.target.value })}
                     rows={2}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 resize-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    OG Image URL
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.og_image}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600 bg-gray-50"
-                    placeholder="Auto-filled from featured image"
-                    disabled
+                    className="w-full px-4 py-3 border rounded-lg resize-none"
                   />
                 </div>
               </div>
             </div>
 
-            {/* Schema Markup */}
             <div className="border-t pt-6">
               <div className="flex items-center justify-between mb-4">
-                <h4 className="text-md font-semibold text-gray-900">Schema Markup (JSON-LD)</h4>
+                <h4 className="font-semibold">Schema Markup</h4>
                 <button
                   onClick={copySchemaToClipboard}
-                  className="flex items-center gap-2 px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg"
                 >
                   {schemaCopied ? <Check size={16} className="text-green-600" /> : <Copy size={16} />}
                   {schemaCopied ? 'Copied!' : 'Copy'}
@@ -671,11 +577,8 @@ export default function NewPostPage() {
                 value={formData.schema_markup}
                 readOnly
                 rows={12}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 font-mono text-xs"
+                className="w-full px-4 py-3 border rounded-lg bg-gray-50 font-mono text-xs"
               />
-              <p className="text-xs text-gray-500 mt-2">
-                This structured data will be automatically added to your post for better SEO
-              </p>
             </div>
           </div>
         )}
