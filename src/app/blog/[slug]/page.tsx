@@ -87,14 +87,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container-custom">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-gray-700 hover:text-black mb-6 transition-colors"
           >
             <ArrowLeft size={20} />
             Back to Blog
           </Link>
 
           {post.category && (
-            <span className="inline-block bg-primary-100 text-primary-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block bg-gray-100 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               {post.category}
             </span>
           )}
@@ -156,33 +156,39 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Main Content */}
           <article className="lg:col-span-9 order-1 lg:order-2">
             <div 
-              className="prose prose-lg max-w-none
+              className="prose prose-lg prose-gray max-w-none
                 prose-headings:font-bold prose-headings:text-gray-900
-                prose-h1:text-4xl prose-h1:mb-6
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:pb-2
-                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
-                prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2
-                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-                prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-gray-900 prose-strong:font-semibold
-                prose-ul:my-6 prose-ol:my-6
-                prose-li:text-gray-700 prose-li:my-2
-                prose-blockquote:border-l-4 prose-blockquote:border-primary-600 prose-blockquote:bg-primary-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-6
-                prose-code:text-primary-600 prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded
-                prose-pre:bg-gray-900 prose-pre:text-gray-100
-                prose-img:rounded-lg prose-img:shadow-lg"
+                prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-8
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-3
+                prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
+                prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3
+                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
+                prose-a:text-gray-900 prose-a:underline prose-a:decoration-gray-300 hover:prose-a:decoration-gray-900 prose-a:transition-colors
+                prose-strong:text-gray-900 prose-strong:font-bold
+                prose-em:text-gray-700 prose-em:italic
+                prose-ul:my-6 prose-ul:space-y-2
+                prose-ol:my-6 prose-ol:space-y-2
+                prose-li:text-gray-700 prose-li:leading-relaxed prose-li:text-lg
+                prose-blockquote:border-l-4 prose-blockquote:border-gray-400 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:italic
+                prose-code:text-gray-900 prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
+                prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-6 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-8
+                prose-img:rounded-xl prose-img:shadow-2xl prose-img:my-8
+                prose-hr:border-gray-200 prose-hr:my-12
+                prose-table:my-8
+                prose-th:bg-gray-100 prose-th:text-gray-900 prose-th:font-semibold prose-th:p-3
+                prose-td:p-3 prose-td:border prose-td:border-gray-200"
               dangerouslySetInnerHTML={{ __html: contentWithIds }}
             />
 
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
+              <div className="mt-12 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold mb-4 text-gray-900">Related Topics</h3>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag: string) => (
                     <span
                       key={tag}
-                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-primary-100 hover:text-primary-700 transition-colors cursor-pointer"
+                      className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors cursor-pointer"
                     >
                       #{tag}
                     </span>
@@ -192,9 +198,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             )}
 
             {/* Author Bio */}
-            <div className="mt-12 p-6 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl border border-primary-200">
+            <div className="mt-12 p-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-200">
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                   {post.author.charAt(0)}
                 </div>
                 <div>
@@ -202,7 +208,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <p className="text-gray-700 mb-4">
                     Expert hair transplant surgeon with 15+ years of experience. MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore.
                   </p>
-                  <Link href="/about" className="text-primary-600 font-semibold hover:text-primary-700 inline-flex items-center gap-2">
+                  <Link href="/about" className="text-gray-900 font-semibold hover:text-black inline-flex items-center gap-2 underline">
                     Learn More <ArrowLeft className="rotate-180" size={16} />
                   </Link>
                 </div>
@@ -234,7 +240,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-xl font-bold mb-2 line-clamp-2 group-hover:text-gray-600 transition-colors">
                       {related.title}
                     </h3>
                     <p className="text-gray-600 text-sm line-clamp-2 mb-4">
@@ -263,19 +269,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
             Transform Your Look Today
           </h2>
-          <p className="text-primary-100 text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
             Schedule a personalized consultation with Dr. Chacko Cyriac and take the first step towards restoring your confidence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary bg-white text-gray-900 hover:bg-gray-100 inline-block">
               Book Free Consultation
             </Link>
-            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white hover:text-gray-900 inline-block">
               View Before & After
             </Link>
           </div>

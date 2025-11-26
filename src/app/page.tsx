@@ -99,11 +99,11 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="text-accent-500" size={20} />
+                  <CheckCircle className="text-white" size={20} />
                   <span>5000+ Successful Cases</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="text-accent-500" size={20} />
+                  <CheckCircle className="text-white" size={20} />
                   <span>FDA Approved</span>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
             {procedureSteps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-xl shadow-lg h-full">
-                  <div className="text-6xl font-bold text-primary-100 mb-4">{step.number}</div>
+                  <div className="text-6xl font-bold text-black mb-4">{step.number}</div>
                   <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>

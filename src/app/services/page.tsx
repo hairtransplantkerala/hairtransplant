@@ -72,7 +72,7 @@ export default function ServicesPage() {
         "Multiple sessions recommended for optimal results"
       ],
       ideal: "Ideal for early-stage hair loss, thinning hair, and post-transplant care",
-      recoveryTime: "Immediate",
+      recoveryTime: "Immedi ate",
       procedure: "30-45 minutes",
       results: "Visible in 3-6 months"
     },
@@ -296,10 +296,10 @@ export default function ServicesPage() {
               Schedule a personalized consultation with Dr. Chacko Cyriac to discuss the best treatment option for your unique situation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+              <Link href="/contact" className="btn-primary bg-white text-black hover:bg-gray-100 inline-block">
                 Book Free Consultation
               </Link>
-              <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+              <Link href="/gallery" className="btn-secondary border-white text-primary-600- hover:bg-gray-100 inline-block">
                 View Results Gallery
               </Link>
             </div>

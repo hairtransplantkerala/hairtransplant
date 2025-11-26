@@ -288,7 +288,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-4">Our Location</h3>
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.045824076489!2d76.29299631478457!3d9.98223299272827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin%22"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

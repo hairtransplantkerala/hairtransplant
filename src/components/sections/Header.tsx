@@ -2,14 +2,27 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { 
+      name: "Services", 
+      href: "/services",
+      hasDropdown: true,
+      dropdown: [
+        { name: "FUE Hair Transplant", href: "/services/fue", icon: "💈" },
+        { name: "FUT Hair Transplant", href: "/services/fut", icon: "✂️" },
+        { name: "DHI Hair Transplant", href: "/services/dhi", icon: "🔬" },
+        { name: "PRP Treatment", href: "/services/prp", icon: "💉" },
+        { name: "Beard Transplant", href: "/services/beard", icon: "🧔" },
+        { name: "Eyebrow Transplant", href: "/services/eyebrow", icon: "👁️" },
+      ]
+    },
     { name: "About Dr. Cyriac", href: "/about" },
     { name: "Gallery", href: "/gallery" },
     { name: "Blog", href: "/blog" },
@@ -17,40 +30,93 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
       <nav className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary-600">Eterno</span>
-            <span className="text-sm text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
+            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-bold">
+              E
+            </div>
+            <div>
+              <span className="text-2xl font-bold text-black block">Eterno</span>
+              <span className="text-xs text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
+              item.hasDropdown ? (
+                <div 
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-black font-medium transition-colors flex items-center gap-1"
+                  >
+                    {item.name}
+                    <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  {isServicesOpen && (
+                    <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 animate-fade-in">
+                      <Link
+                        href="/services"
+                        className="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-black font-semibold border-b border-gray-200"
+                      >
+                        📋 All Services
+                      </Link>
+                      {item.dropdown?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-black transition-colors"
+                        >
+                          <span className="text-xl">{subItem.icon}</span>
+                          <span className="text-sm font-medium">{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-black font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+918884447777" className="flex items-center space-x-2 text-primary-600">
+            <a 
+              href="tel:+918884447777" 
+              className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors"
+            >
               <Phone size={20} />
-              <span className="font-semibold">Book Appointment</span>
+              <span className="font-semibold">+91 888 444 7777</span>
             </a>
+            <Link 
+              href="/contact" 
+              className="btn-primary"
+            >
+              Book Appointment
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-gray-700 hover:text-black"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -58,24 +124,68 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 space-y-3">
+          <div className="lg:hidden py-4 space-y-3 border-t">
             {navigation.map((item) => (
+              item.hasDropdown ? (
+                <div key={item.name}>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-black font-medium"
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {isServicesOpen && (
+                    <div className="pl-4 mt-2 space-y-2 border-l-2 border-gray-300">
+                      <Link
+                        href="/services"
+                        className="block py-2 text-gray-600 hover:text-black font-medium"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        📋 All Services
+                      </Link>
+                      {item.dropdown?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="flex items-center gap-2 py-2 text-gray-600 hover:text-black"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <span>{subItem.icon}</span>
+                          <span className="text-sm">{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block py-2 text-gray-700 hover:text-black font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
+            ))}
+            <div className="pt-4 border-t space-y-3">
+              <a
+                href="tel:+918884447777"
+                className="flex items-center space-x-2 text-gray-700 py-2"
+              >
+                <Phone size={20} />
+                <span className="font-semibold">+91 888 444 7777</span>
+              </a>
               <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-gray-700 hover:text-primary-600 font-medium"
+                href="/contact"
+                className="btn-primary w-full text-center block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.name}
+                Book Appointment
               </Link>
-            ))}
-            <a
-              href="tel:+918884447777"
-              className="flex items-center space-x-2 text-primary-600 py-2"
-            >
-              <Phone size={20} />
-              <span className="font-semibold">Book Appointment</span>
-            </a>
+            </div>
           </div>
         )}
       </nav>

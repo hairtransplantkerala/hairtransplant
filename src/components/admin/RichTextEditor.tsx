@@ -3,183 +3,204 @@
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Link from '@tiptap/extension-link'
-import Image from '@tiptap/extension-image'
-import Placeholder from '@tiptap/extension-placeholder'
-import { createClient } from '@/lib/supabase/client'
-import imageCompression from 'browser-image-compression'
-
+import TiptapImage from '@tiptap/extension-image'
+import TextAlign from '@tiptap/extension-text-align'
+import Underline from '@tiptap/extension-underline'
 import { 
   Bold, 
   Italic, 
+  Underline as UnderlineIcon, 
   List, 
-  ListOrdered, 
-  Quote, 
-  Undo, 
-  Redo, 
+  ListOrdered,
+  Heading2,
+  Heading3,
+  Quote,
+  Code,
   Link as LinkIcon,
   Image as ImageIcon,
-  Code,
-  Strikethrough,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  Undo,
+  Redo
 } from 'lucide-react'
 
 interface RichTextEditorProps {
   content: string
   onChange: (content: string) => void
-  placeholder?: string
 }
 
-export default function RichTextEditor({ 
-  content, 
-  onChange, 
-  placeholder = 'Start writing your post...' 
-}: RichTextEditorProps) {
-  const supabase = createClient()
+// Custom resizable image extension
+const ResizableImage = TiptapImage.extend({
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      width: {
+        default: null,
+        renderHTML: attributes => {
+          if (!attributes.width) return {}
+          return { 
+            width: attributes.width,
+            style: `width: ${attributes.width}; height: auto;`
+          }
+        },
+      },
+    }
+  },
+  
+  addNodeView() {
+    return ({ node, getPos, editor }) => {
+      const container = document.createElement('div')
+      container.style.position = 'relative'
+      container.style.display = 'inline-block'
+      container.style.maxWidth = '100%'
+      container.contentEditable = 'false'
+      container.className = 'image-resizer'
 
+      const img = document.createElement('img')
+      img.src = node.attrs.src
+      img.alt = node.attrs.alt || ''
+      img.className = 'rounded-lg'
+      img.style.width = node.attrs.width || '100%'
+      img.style.height = 'auto'
+      img.style.display = 'block'
+      img.style.cursor = 'pointer'
+
+      // Resize handle
+      const resizeHandle = document.createElement('div')
+      resizeHandle.className = 'resize-handle'
+      resizeHandle.style.cssText = `
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border: 2px solid #fff;
+        cursor: nwse-resize;
+        border-radius: 50%;
+        display: none;
+      `
+
+      container.addEventListener('mouseenter', () => {
+        resizeHandle.style.display = 'block'
+      })
+
+      container.addEventListener('mouseleave', () => {
+        resizeHandle.style.display = 'none'
+      })
+
+      let startX: number, startWidth: number
+
+      const onMouseDown = (e: MouseEvent) => {
+        e.preventDefault()
+        startX = e.clientX
+        startWidth = img.offsetWidth
+
+        const onMouseMove = (e: MouseEvent) => {
+          const width = startWidth + (e.clientX - startX)
+          const maxWidth = container.parentElement?.offsetWidth || 800
+          const newWidth = Math.min(Math.max(100, width), maxWidth)
+          img.style.width = `${newWidth}px`
+        }
+
+        const onMouseUp = () => {
+          document.removeEventListener('mousemove', onMouseMove)
+          document.removeEventListener('mouseup', onMouseUp)
+          
+          if (typeof getPos === 'function') {
+            editor.commands.updateAttributes('image', {
+              width: img.style.width
+            })
+          }
+        }
+
+        document.addEventListener('mousemove', onMouseMove)
+        document.addEventListener('mouseup', onMouseUp)
+      }
+
+      resizeHandle.addEventListener('mousedown', onMouseDown)
+
+      container.appendChild(img)
+      container.appendChild(resizeHandle)
+
+      return {
+        dom: container,
+        update: (updatedNode) => {
+          if (updatedNode.type.name !== 'image') return false
+          img.src = updatedNode.attrs.src
+          img.alt = updatedNode.attrs.alt || ''
+          if (updatedNode.attrs.width) {
+            img.style.width = updatedNode.attrs.width
+          }
+          return true
+        },
+        destroy: () => {
+          resizeHandle.removeEventListener('mousedown', onMouseDown)
+        }
+      }
+    }
+  }
+})
+
+export default function RichTextEditor({ content, onChange }: RichTextEditorProps) {
   const editor = useEditor({
-    immediatelyRender: false,
     extensions: [
       StarterKit.configure({
+        bulletList: {
+          HTMLAttributes: {
+            class: 'list-disc pl-6 space-y-2 my-4',
+          },
+        },
+        orderedList: {
+          HTMLAttributes: {
+            class: 'list-decimal pl-6 space-y-2 my-4',
+          },
+        },
+        listItem: {
+          HTMLAttributes: {
+            class: 'pl-1',
+          },
+        },
         heading: {
-          levels: [1, 2, 3, 4, 5, 6],
+          levels: [1, 2, 3, 4],
+        },
+        paragraph: {
+          HTMLAttributes: {
+            class: 'mb-4',
+          },
         },
       }),
       Link.configure({
         openOnClick: false,
         HTMLAttributes: {
-          class: 'text-blue-600 underline hover:text-blue-700',
+          class: 'text-gray-900 underline hover:text-black',
         },
       }),
-      Image.configure({
+      ResizableImage.configure({
         HTMLAttributes: {
-          class: 'max-w-full h-auto rounded-lg my-4',
+          class: 'rounded-lg my-6',
         },
       }),
-      Placeholder.configure({
-        placeholder,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
       }),
+      Underline,
     ],
-    content: content || '<p></p>',
+    content,
+    onUpdate: ({ editor }) => {
+      onChange(editor.getHTML())
+    },
     editorProps: {
       attributes: {
-        class:
-          'prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none focus:outline-none min-h-[400px] p-4',
+        class: 'prose prose-lg max-w-none focus:outline-none min-h-[500px] p-6',
       },
-      handlePaste: (view, event) => {
-        const items = Array.from(event.clipboardData?.items || [])
-        for (const item of items) {
-          if (item.type.startsWith('image/')) {
-            event.preventDefault()
-            const file = item.getAsFile()
-            if (!file) continue
-
-            ;(async () => {
-              try {
-                const options = {
-                  maxSizeMB: 0.2,
-                  maxWidthOrHeight: 1920,
-                  useWebWorker: true,
-                  fileType: 'image/webp' as const,
-                }
-                const compressedFile = await imageCompression(file, options)
-                const fileName = `${Math.random()
-                  .toString(36)
-                  .substring(2)}-${Date.now()}.webp`
-                const filePath = `blog-images/${fileName}`
-
-                const { error: uploadError } = await supabase.storage
-                  .from('uploads')
-                  .upload(filePath, compressedFile, {
-                    contentType: 'image/webp',
-                    cacheControl: '3600',
-                  })
-
-                if (uploadError) throw uploadError
-
-                const { data } = supabase.storage
-                  .from('uploads')
-                  .getPublicUrl(filePath)
-
-                if (editor) {
-                  editor.chain().focus().setImage({ src: data.publicUrl }).run()
-                }
-              } catch (err) {
-                console.error('Pasted image upload error:', err)
-                alert('Error uploading pasted image')
-              }
-            })()
-
-            return true
-          }
-        }
-        return false
-      },
-      handleDrop: (view, event, slice, moved) => {
-        if (!moved && event.dataTransfer?.files && event.dataTransfer.files[0]) {
-          const file = event.dataTransfer.files[0]
-          if (file.type.startsWith('image/')) {
-            event.preventDefault()
-
-            ;(async () => {
-              try {
-                const options = {
-                  maxSizeMB: 0.2,
-                  maxWidthOrHeight: 1920,
-                  useWebWorker: true,
-                  fileType: 'image/webp' as const,
-                }
-                const compressedFile = await imageCompression(file, options)
-                const fileName = `${Math.random()
-                  .toString(36)
-                  .substring(2)}-${Date.now()}.webp`
-                const filePath = `blog-images/${fileName}`
-
-                const { error: uploadError } = await supabase.storage
-                  .from('uploads')
-                  .upload(filePath, compressedFile, {
-                    contentType: 'image/webp',
-                    cacheControl: '3600',
-                  })
-
-                if (uploadError) throw uploadError
-
-                const { data } = supabase.storage
-                  .from('uploads')
-                  .getPublicUrl(filePath)
-
-                const coordinates = view.posAtCoords({
-                  left: event.clientX,
-                  top: event.clientY,
-                })
-
-                if (coordinates && editor) {
-                  editor
-                    .chain()
-                    .focus()
-                    .insertContentAt(coordinates.pos, {
-                      type: 'image',
-                      attrs: { src: data.publicUrl },
-                    })
-                    .run()
-                }
-              } catch (err) {
-                console.error('Dropped image upload error:', err)
-                alert('Error uploading image')
-              }
-            })()
-
-            return true
-          }
-        }
-        return false
-      },
-    },
-    onUpdate: ({ editor }) => {
-      const html = editor.getHTML()
-      onChange(html)
     },
   })
 
-  if (!editor) return null
+  if (!editor) {
+    return null
+  }
 
   const addLink = () => {
     const url = window.prompt('Enter URL:')
@@ -188,244 +209,247 @@ export default function RichTextEditor({
     }
   }
 
-  const removeLink = () => {
-    editor.chain().focus().unsetLink().run()
-  }
-
-  const addImage = async () => {
-    const input = document.createElement('input')
-    input.type = 'file'
-    input.accept = 'image/*'
-    input.onchange = async (e: any) => {
-      const file = e.target.files?.[0]
-      if (!file) return
-
-      try {
-        editor
-          .chain()
-          .focus()
-          .insertContent(
-            '<p class="text-gray-500 italic">Uploading image...</p>',
-          )
-          .run()
-
-        const options = {
-          maxSizeMB: 0.2,
-          maxWidthOrHeight: 1920,
-          useWebWorker: true,
-          fileType: 'image/webp' as const,
-        }
-
-        console.log('Compressing image...')
-        const compressedFile = await imageCompression(file, options)
-        console.log(
-          'Compressed size:',
-          (compressedFile.size / 1024).toFixed(2),
-          'KB',
-        )
-
-        const fileName = `${Math.random()
-          .toString(36)
-          .substring(2)}-${Date.now()}.webp`
-        const filePath = `blog-images/${fileName}`
-
-        const { error: uploadError } = await supabase.storage
-          .from('uploads')
-          .upload(filePath, compressedFile, {
-            contentType: 'image/webp',
-            cacheControl: '3600',
-          })
-
-        if (uploadError) throw uploadError
-
-        const { data } = supabase.storage
-          .from('uploads')
-          .getPublicUrl(filePath)
-
-        const { from, to } = editor.state.selection
-        editor.chain().focus().deleteRange({ from: from - 35, to }).run()
-
-        editor.chain().focus().setImage({ src: data.publicUrl }).run()
-
-        console.log('Image uploaded successfully!')
-      } catch (err) {
-        console.error('Image upload error:', err)
-        alert('Error uploading image')
-      }
+  const addImage = () => {
+    const url = window.prompt('Enter image URL:')
+    if (url) {
+      editor.chain().focus().setImage({ 
+        src: url,
+        width: '100%'
+      }).run()
     }
-    input.click()
   }
 
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden bg-white">
+    <div className="border border-gray-300 rounded-lg overflow-hidden">
       {/* Toolbar */}
-      <div className="bg-gray-50 border-b border-gray-300 p-2 flex flex-wrap gap-1">
+      <div className="bg-gray-50 border-b border-gray-300 p-2 flex flex-wrap gap-1 items-center">
         {/* Text Formatting */}
         <button
-          type="button"
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('bold') ? 'bg-gray-300' : ''
+            editor.isActive('bold') ? 'bg-gray-900 text-white' : ''
           }`}
           title="Bold (Ctrl+B)"
+          type="button"
         >
-          <Bold className="w-4 h-4" />
+          <Bold size={18} />
         </button>
 
         <button
-          type="button"
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('italic') ? 'bg-gray-300' : ''
+            editor.isActive('italic') ? 'bg-gray-900 text-white' : ''
           }`}
           title="Italic (Ctrl+I)"
+          type="button"
         >
-          <Italic className="w-4 h-4" />
+          <Italic size={18} />
         </button>
 
         <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleStrike().run()}
+          onClick={() => editor.chain().focus().toggleUnderline().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('strike') ? 'bg-gray-300' : ''
+            editor.isActive('underline') ? 'bg-gray-900 text-white' : ''
           }`}
-          title="Strikethrough"
+          title="Underline (Ctrl+U)"
+          type="button"
         >
-          <Strikethrough className="w-4 h-4" />
+          <UnderlineIcon size={18} />
         </button>
 
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleCode().run()}
-          className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('code') ? 'bg-gray-300' : ''
-          }`}
-          title="Inline Code"
-        >
-          <Code className="w-4 h-4" />
-        </button>
-
-        <div className="w-px bg-gray-300 mx-1" />
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
 
         {/* Headings */}
-        {([1, 2, 3, 4, 5, 6] as const).map((level) => (
-          <button
-            key={level}
-            type="button"
-            onClick={() =>
-              editor.chain().focus().toggleHeading({ level }).run()
-            }
-            className={`px-2 py-1 rounded hover:bg-gray-200 text-xs font-semibold transition-colors ${
-              editor.isActive('heading', { level }) ? 'bg-gray-300' : ''
-            }`}
-            title={`Heading ${level}`}
-          >
-            H{level}
-          </button>
-        ))}
+        <button
+          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+          className={`px-3 py-2 rounded hover:bg-gray-200 transition-colors font-semibold text-sm ${
+            editor.isActive('heading', { level: 2 }) ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Heading 2"
+          type="button"
+        >
+          H2
+        </button>
 
-        <div className="w-px bg-gray-300 mx-1" />
+        <button
+          onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+          className={`px-3 py-2 rounded hover:bg-gray-200 transition-colors font-semibold text-sm ${
+            editor.isActive('heading', { level: 3 }) ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Heading 3"
+          type="button"
+        >
+          H3
+        </button>
+
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
 
         {/* Lists */}
         <button
-          type="button"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('bulletList') ? 'bg-gray-300' : ''
+            editor.isActive('bulletList') ? 'bg-gray-900 text-white' : ''
           }`}
           title="Bullet List"
+          type="button"
         >
-          <List className="w-4 h-4" />
+          <List size={18} />
         </button>
 
         <button
-          type="button"
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('orderedList') ? 'bg-gray-300' : ''
+            editor.isActive('orderedList') ? 'bg-gray-900 text-white' : ''
           }`}
           title="Numbered List"
+          type="button"
         >
-          <ListOrdered className="w-4 h-4" />
+          <ListOrdered size={18} />
         </button>
 
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
+
+        {/* Other Formatting */}
         <button
-          type="button"
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('blockquote') ? 'bg-gray-300' : ''
+            editor.isActive('blockquote') ? 'bg-gray-900 text-white' : ''
           }`}
           title="Quote"
+          type="button"
         >
-          <Quote className="w-4 h-4" />
+          <Quote size={18} />
         </button>
 
-        <div className="w-px bg-gray-300 mx-1" />
-
-        {/* Link & Image */}
         <button
+          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+          className={`p-2 rounded hover:bg-gray-200 transition-colors ${
+            editor.isActive('codeBlock') ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Code Block"
           type="button"
+        >
+          <Code size={18} />
+        </button>
+
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
+
+        {/* Alignment */}
+        <button
+          onClick={() => editor.chain().focus().setTextAlign('left').run()}
+          className={`p-2 rounded hover:bg-gray-200 transition-colors ${
+            editor.isActive({ textAlign: 'left' }) ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Align Left"
+          type="button"
+        >
+          <AlignLeft size={18} />
+        </button>
+
+        <button
+          onClick={() => editor.chain().focus().setTextAlign('center').run()}
+          className={`p-2 rounded hover:bg-gray-200 transition-colors ${
+            editor.isActive({ textAlign: 'center' }) ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Align Center"
+          type="button"
+        >
+          <AlignCenter size={18} />
+        </button>
+
+        <button
+          onClick={() => editor.chain().focus().setTextAlign('right').run()}
+          className={`p-2 rounded hover:bg-gray-200 transition-colors ${
+            editor.isActive({ textAlign: 'right' }) ? 'bg-gray-900 text-white' : ''
+          }`}
+          title="Align Right"
+          type="button"
+        >
+          <AlignRight size={18} />
+        </button>
+
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
+
+        {/* Insert */}
+        <button
           onClick={addLink}
           className={`p-2 rounded hover:bg-gray-200 transition-colors ${
-            editor.isActive('link') ? 'bg-gray-300' : ''
+            editor.isActive('link') ? 'bg-gray-900 text-white' : ''
           }`}
-          title="Add Link"
+          title="Insert Link"
+          type="button"
         >
-          <LinkIcon className="w-4 h-4" />
+          <LinkIcon size={18} />
         </button>
-
-        {editor.isActive('link') && (
-          <button
-            type="button"
-            onClick={removeLink}
-            className="px-2 py-1 rounded bg-red-100 hover:bg-red-200 text-xs font-semibold text-red-700"
-            title="Remove Link"
-          >
-            Unlink
-          </button>
-        )}
 
         <button
-          type="button"
           onClick={addImage}
-          className="p-2 rounded hover:bg-primary-100 bg-primary-50 transition-colors"
-          title="Upload Image"
+          className="p-2 rounded hover:bg-gray-200 transition-colors"
+          title="Insert Image (Drag corner to resize)"
+          type="button"
         >
-          <ImageIcon className="w-4 h-4 text-primary-600" />
+          <ImageIcon size={18} />
         </button>
 
-        <div className="w-px bg-gray-300 mx-1" />
+        <div className="w-px h-6 bg-gray-300 mx-1"></div>
 
         {/* Undo/Redo */}
         <button
-          type="button"
           onClick={() => editor.chain().focus().undo().run()}
+          className="p-2 rounded hover:bg-gray-200 transition-colors disabled:opacity-50"
           disabled={!editor.can().undo()}
-          className="p-2 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          title="Undo (Ctrl+Z)"
+          title="Undo"
+          type="button"
         >
-          <Undo className="w-4 h-4" />
+          <Undo size={18} />
         </button>
 
         <button
-          type="button"
           onClick={() => editor.chain().focus().redo().run()}
+          className="p-2 rounded hover:bg-gray-200 transition-colors disabled:opacity-50"
           disabled={!editor.can().redo()}
-          className="p-2 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          title="Redo (Ctrl+Y)"
+          title="Redo"
+          type="button"
         >
-          <Redo className="w-4 h-4" />
+          <Redo size={18} />
         </button>
       </div>
 
-      {/* Editor Content */}
-      <EditorContent editor={editor} className="min-h-[400px]" />
+      {/* Editor with proper list styling */}
+      <style jsx global>{`
+        .ProseMirror ul {
+          list-style-type: disc !important;
+          padding-left: 1.5rem !important;
+          margin: 1rem 0 !important;
+        }
+        
+        .ProseMirror ol {
+          list-style-type: decimal !important;
+          padding-left: 1.5rem !important;
+          margin: 1rem 0 !important;
+        }
+        
+        .ProseMirror li {
+          margin-left: 0.5rem !important;
+          padding-left: 0.25rem !important;
+          margin-top: 0.5rem !important;
+          margin-bottom: 0.5rem !important;
+        }
 
-      {/* Footer Hint */}
-      <div className="bg-gray-50 border-t border-gray-300 px-4 py-2 text-xs text-gray-500">
-        💡 Tips: Paste images directly • Drag & drop images • All images
-        auto-compress to WebP &lt;200KB
-      </div>
+        .ProseMirror li p {
+          margin: 0 !important;
+        }
+
+        .image-resizer {
+          margin: 1.5rem 0;
+        }
+
+        .image-resizer:hover .resize-handle {
+          display: block !important;
+        }
+      `}</style>
+
+      <EditorContent editor={editor} />
     </div>
   )
 }
