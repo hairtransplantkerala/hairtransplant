@@ -19,7 +19,7 @@ export default function Header() {
         { name: "FUT Hair Transplant", href: "/services/fut" },
         { name: "DHI Hair Transplant", href: "/services/dhi" },
         { name: "PRP Treatment", href: "/services/prp" },
-        { name: "Beard Transplant", href: "/services/beard"},
+        { name: "Beard Transplant", href: "/services/beard" },
         { name: "Eyebrow Transplant", href: "/services/eyebrow" },
       ]
     },
@@ -75,9 +75,8 @@ export default function Header() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-black transition-colors"
+                          className="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-black transition-colors"
                         >
-                          <span className="text-xl">{subItem.icon}</span>
                           <span className="text-sm font-medium">{subItem.name}</span>
                         </Link>
                       ))}
@@ -149,10 +148,9 @@ export default function Header() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="flex items-center gap-2 py-2 text-gray-600 hover:text-black"
+                          className="block py-2 text-gray-600 hover:text-black"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <span>{subItem.icon}</span>
                           <span className="text-sm">{subItem.name}</span>
                         </Link>
                       ))}
