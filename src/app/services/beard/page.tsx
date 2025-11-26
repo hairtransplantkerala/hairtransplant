@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone } from 'lucide-react'
+import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone, X } from 'lucide-react'
 
 export const metadata = {
   title: 'Beard Transplant in Kerala | Facial Hair Restoration',
@@ -338,3 +338,4 @@ export default function BeardTransplantPage() {
     </>
   )
 }
+// Build Wed Nov 26 22:42:31 IST 2025
