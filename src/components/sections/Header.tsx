@@ -15,12 +15,12 @@ export default function Header() {
       href: "/services",
       hasDropdown: true,
       dropdown: [
-        { name: "FUE Hair Transplant", href: "/services/fue", icon: "💈" },
-        { name: "FUT Hair Transplant", href: "/services/fut", icon: "✂️" },
-        { name: "DHI Hair Transplant", href: "/services/dhi", icon: "🔬" },
-        { name: "PRP Treatment", href: "/services/prp", icon: "💉" },
-        { name: "Beard Transplant", href: "/services/beard", icon: "🧔" },
-        { name: "Eyebrow Transplant", href: "/services/eyebrow", icon: "👁️" },
+        { name: "FUE Hair Transplant", href: "/services/fue" },
+        { name: "FUT Hair Transplant", href: "/services/fut" },
+        { name: "DHI Hair Transplant", href: "/services/dhi" },
+        { name: "PRP Treatment", href: "/services/prp" },
+        { name: "Beard Transplant", href: "/services/beard"},
+        { name: "Eyebrow Transplant", href: "/services/eyebrow" },
       ]
     },
     { name: "About Dr. Cyriac", href: "/about" },
@@ -69,7 +69,7 @@ export default function Header() {
                         href="/services"
                         className="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-black font-semibold border-b border-gray-200"
                       >
-                        📋 All Services
+                        All Services
                       </Link>
                       {item.dropdown?.map((subItem) => (
                         <Link
@@ -143,7 +143,7 @@ export default function Header() {
                         className="block py-2 text-gray-600 hover:text-black font-medium"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        📋 All Services
+                        All Services
                       </Link>
                       {item.dropdown?.map((subItem) => (
                         <Link
