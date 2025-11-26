@@ -213,8 +213,7 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
     const url = window.prompt('Enter image URL:')
     if (url) {
       editor.chain().focus().setImage({ 
-        src: url,
-        width: '100%'
+        src: url
       }).run()
     }
   }
