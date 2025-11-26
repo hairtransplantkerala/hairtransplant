@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 text-center shadow-xl">
                   Book Free Consultation
                 </Link>
-                <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 text-center">
+                <Link href="/gallery" className="btn-secondary border-white text-black hover:bg-white/10 text-center">
                   View Results Gallery
                 </Link>
               </div>
@@ -313,7 +313,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
                 Book Free Consultation
               </Link>
-              <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white/10 inline-flex items-center justify-center gap-2">
+              <a href="tel:+918884447777" className="btn-secondary border-white text-black hover:bg-white/10 inline-flex items-center justify-center gap-2">
                 <Phone size={20} />
                 Call: +91 888 444 7777
               </a>
