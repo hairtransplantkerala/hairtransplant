@@ -33,16 +33,31 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
       <nav className="container-custom">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-bold">
-              E
-            </div>
-            <div>
-              <span className="text-2xl font-bold text-black block">Eterno</span>
-              <span className="text-xs text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
-            </div>
-          </Link>
+         {/* Logo */}
+<Link href="/" className="flex items-center space-x-2">
+  <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
+    <img 
+      src="/images/logo.png" 
+      alt="Eterno Clinic Logo" 
+      className="w-full h-full object-cover"
+      onError={(e) => {
+        // Fallback if image doesn't load
+        e.currentTarget.style.display = 'none'
+        const parent = e.currentTarget.parentElement!
+        parent.classList.add('bg-black')
+        const fallback = document.createElement('span')
+        fallback.className = 'text-white font-bold text-xl'
+        fallback.textContent = 'E'
+        parent.appendChild(fallback)
+      }}
+    />
+  </div>
+  <div>
+    <span className="text-2xl font-bold text-black block">Eterno</span>
+    <span className="text-xs text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
+  </div>
+</Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
