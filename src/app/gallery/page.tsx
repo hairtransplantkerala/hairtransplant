@@ -11,6 +11,7 @@ export default function GalleryPage() {
     { id: 'all', label: 'All Results' },
     { id: 'fue', label: 'FUE Hair Transplant' },
     { id: 'fut', label: 'FUT Hair Transplant' },
+    { id: 'PRP', label: 'PRP Treatment'},
     { id: 'dhi', label: 'DHI Method' },
     { id: 'beard', label: 'Beard Transplant' },
     { id: 'eyebrow', label: 'Eyebrow Transplant' },
@@ -23,8 +24,8 @@ export default function GalleryPage() {
       id: 1,
       category: 'fue',
       procedure: 'FUE Hair Transplant - 3500 Grafts',
-      before: 'https://images.unsplash.com/photo-1560869713-da86a9ec0744?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1622296089863-eb7fc47b3d72?w=800&h=600&fit=crop',
+      before: '/images/gallery/fue-before-1.webp',
+      after: '/images/gallery/fue-after-1.webp',
       timeline: '12 months post-op',
       grafts: '3500 grafts'
     },
@@ -32,8 +33,8 @@ export default function GalleryPage() {
       id: 2,
       category: 'fue',
       procedure: 'FUE Hairline Restoration',
-      before: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=600&fit=crop',
+      before: '/images/gallery/fue-before-2.jpg',
+      after: '/images/gallery/fue-after-2.jpg',
       timeline: '10 months post-op',
       grafts: '2800 grafts'
     },
@@ -41,8 +42,8 @@ export default function GalleryPage() {
       id: 3,
       category: 'fut',
       procedure: 'FUT Hair Transplant - Advanced Hair Loss',
-      before: 'https://images.unsplash.com/photo-1542190891-2093d38760f2?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=600&fit=crop',
+      before: '/images/gallery/fut-before-1.jpg',
+      after: '/images/gallery/fut-after-1.jpg',
       timeline: '14 months post-op',
       grafts: '5000 grafts'
     },
@@ -50,8 +51,8 @@ export default function GalleryPage() {
       id: 4,
       category: 'dhi',
       procedure: 'DHI Method - Frontal Hairline',
-      before: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+      before: '/images/gallery/dhi-before-1.jpg',
+      after: '/images/gallery/dhi-after-1.jpg',
       timeline: '8 months post-op',
       grafts: '2200 grafts'
     },
@@ -59,8 +60,8 @@ export default function GalleryPage() {
       id: 5,
       category: 'beard',
       procedure: 'Beard Transplant - Full Coverage',
-      before: 'https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1542345812-d98b5cd6cf98?w=800&h=600&fit=crop',
+      before: '/images/gallery/beard-before-1.jpg',
+      after: '/images/gallery/beard-after-1.jpg',
       timeline: '6 months post-op',
       grafts: '1500 grafts'
     },
@@ -68,8 +69,8 @@ export default function GalleryPage() {
       id: 6,
       category: 'female',
       procedure: 'Female Hair Loss Treatment - FUE',
-      before: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&h=600&fit=crop',
+      before: '/images/gallery/female-before-1.jpg',
+      after: '/images/gallery/female-after-1.jpg',
       timeline: '10 months post-op',
       grafts: '2500 grafts'
     },
@@ -77,8 +78,8 @@ export default function GalleryPage() {
       id: 7,
       category: 'eyebrow',
       procedure: 'Eyebrow Transplant Restoration',
-      before: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=600&fit=crop',
+      before: '/images/gallery/eyebrow-before-1.jpg',
+      after: '/images/gallery/eyebrow-after-1.jpg',
       timeline: '5 months post-op',
       grafts: '400 grafts'
     },
@@ -86,8 +87,17 @@ export default function GalleryPage() {
       id: 8,
       category: 'fue',
       procedure: 'FUE Crown Restoration',
-      before: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=800&h=600&fit=crop',
-      after: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&h=600&fit=crop',
+      before: '/images/gallery/fue-before-3.jpg',
+      after: '/images/gallery/fue-after-3.jpg',
+      timeline: '11 months post-op',
+      grafts: '3200 grafts'
+    },
+    {
+      id: 9,
+      category: 'PRP',
+      procedure: 'PRP Treatment',
+      before: '/images/gallery/prp-before.webp',
+      after: '/images/gallery/prp-after.webp',
       timeline: '11 months post-op',
       grafts: '3200 grafts'
     },
@@ -100,10 +110,10 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Before & After Gallery</h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Real transformations from real patients. See the life-changing results achieved at Eterno Clinic.
           </p>
         </div>
@@ -118,7 +128,7 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all shadow-md ${
                 activeCategory === category.id
-                  ? 'bg-primary-600 text-white shadow-lg scale-105'
+                  ? 'bg-gray-900 text-white shadow-lg scale-105'
                   : 'bg-white text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -166,7 +176,7 @@ export default function GalleryPage() {
               {/* Card Info */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
                     {item.category.toUpperCase()}
                   </span>
                   <span className="text-gray-500 text-sm font-medium">{item.grafts}</span>
@@ -192,7 +202,7 @@ export default function GalleryPage() {
             <p className="text-gray-500 text-lg font-medium">No results found in this category.</p>
             <button 
               onClick={() => setActiveCategory('all')}
-              className="mt-4 text-primary-600 font-semibold hover:text-primary-700"
+              className="mt-4 text-gray-900 font-semibold hover:text-gray-700"
             >
               View All Results
             </button>
@@ -212,15 +222,15 @@ export default function GalleryPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="p-4">
-                <div className="text-4xl font-bold text-primary-600 mb-2">5000+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">5000+</div>
                 <p className="text-gray-600">Successful Procedures</p>
               </div>
               <div className="p-4">
-                <div className="text-4xl font-bold text-primary-600 mb-2">98%</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">98%</div>
                 <p className="text-gray-600">Patient Satisfaction</p>
               </div>
               <div className="p-4">
-                <div className="text-4xl font-bold text-primary-600 mb-2">25+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">25+</div>
                 <p className="text-gray-600">Countries Served</p>
               </div>
             </div>
@@ -229,19 +239,19 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready for Your Transformation?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             These results could be yours. Schedule a free consultation to discuss your hair restoration goals with Dr. Chacko Cyriac.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <a href="tel:+918884447777" className="btn-secondary inline-block">
               Call Now: +91 888 444 7777
             </a>
           </div>

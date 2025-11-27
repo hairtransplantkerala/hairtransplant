@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone, Eye } from 'lucide-react'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
   title: 'Eyebrow Transplant in Kerala | Natural Eyebrow Restoration',
@@ -99,7 +100,7 @@ export default function EyebrowTransplantPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -108,25 +109,25 @@ export default function EyebrowTransplantPage() {
                 Frame Your Face
               </div>
               <h1 className="text-white mb-6">Eyebrow Transplant</h1>
-              <p className="text-xl text-primary-100 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Eyebrow Restoration - Achieve perfectly shaped, natural eyebrows that enhance your facial beauty permanently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block text-center">
+                <Link href="/contact" className="btn-primary text-center">
                   Book Free Consultation
                 </Link>
-                <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white/10 inline-flex items-center justify-center gap-2">
+                <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
                   Call Now
                 </a>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold">
-                Perfect Eyebrows
-              </div>
-            </div>
+            
+            <ServiceHeroImage 
+              src="/images/services/eyebrow.webp"
+              alt="Eyebrow Transplant Procedure"
+              placeholder="Perfect Eyebrows"
+            />
           </div>
         </div>
       </section>
@@ -136,22 +137,22 @@ export default function EyebrowTransplantPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Duration</h3>
               <p className="text-gray-600">2-3 hours</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Recovery</h3>
               <p className="text-gray-600">5-7 days</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Grafts</h3>
               <p className="text-gray-600">400-800</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <DollarSign className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <DollarSign className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Starting From</h3>
               <p className="text-gray-600">₹40,000</p>
             </div>
@@ -182,12 +183,12 @@ export default function EyebrowTransplantPage() {
                 Get Your Custom Design <ArrowRight size={20} />
               </Link>
             </div>
-            <div className="bg-primary-50 p-8 rounded-2xl">
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
               <h4 className="text-xl font-bold mb-4">Common Causes of Eyebrow Loss:</h4>
               <ul className="space-y-3">
                 {commonCauses.map((cause, index) => (
-                  <li key={index} className="border-b border-primary-100 pb-3 last:border-0">
-                    <div className="font-semibold text-primary-700">{cause.title}</div>
+                  <li key={index} className="border-b border-gray-200 pb-3 last:border-0">
+                    <div className="font-semibold text-gray-900">{cause.title}</div>
                     <div className="text-sm text-gray-600">{cause.description}</div>
                   </li>
                 ))}
@@ -210,7 +211,7 @@ export default function EyebrowTransplantPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <CheckCircle className="w-8 h-8 text-primary-600 mb-3" />
+                <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
                 <p className="font-semibold">{benefit}</p>
               </div>
             ))}
@@ -232,7 +233,7 @@ export default function EyebrowTransplantPage() {
             {process.map((item, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -240,7 +241,7 @@ export default function EyebrowTransplantPage() {
                 </div>
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-primary-600" />
+                    <ArrowRight className="w-6 h-6 text-gray-900" />
                   </div>
                 )}
               </div>
@@ -250,27 +251,27 @@ export default function EyebrowTransplantPage() {
       </section>
 
       {/* Golden Ratio Design */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-center mb-12">The Golden Ratio in Eyebrow Design</h2>
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
               <p className="text-gray-700 mb-6 text-center">
                 We use the golden ratio (phi = 1.618) to design eyebrows that are mathematically proportional to your face, creating the most aesthetically pleasing and harmonious look.
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="p-6 bg-primary-50 rounded-xl">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">Point 1</div>
+                <div className="p-6 bg-gray-50 rounded-xl">
+                  <div className="text-3xl font-bold text-gray-900 mb-2">Point 1</div>
                   <div className="text-sm text-gray-600">Eyebrow Start</div>
                   <p className="text-xs mt-2">Aligned with inner corner of eye</p>
                 </div>
-                <div className="p-6 bg-primary-50 rounded-xl">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">Point 2</div>
+                <div className="p-6 bg-gray-50 rounded-xl">
+                  <div className="text-3xl font-bold text-gray-900 mb-2">Point 2</div>
                   <div className="text-sm text-gray-600">Arch Peak</div>
                   <p className="text-xs mt-2">Aligned with outer edge of iris</p>
                 </div>
-                <div className="p-6 bg-primary-50 rounded-xl">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">Point 3</div>
+                <div className="p-6 bg-gray-50 rounded-xl">
+                  <div className="text-3xl font-bold text-gray-900 mb-2">Point 3</div>
                   <div className="text-sm text-gray-600">Eyebrow End</div>
                   <p className="text-xs mt-2">Aligned with outer corner of eye</p>
                 </div>
@@ -285,41 +286,41 @@ export default function EyebrowTransplantPage() {
         <div className="container-custom">
           <h2 className="text-center mb-12">Recovery Timeline</h2>
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-600">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-900">
               <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">Day 1-3</div>
+                <div className="bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-bold">Day 1-3</div>
                 <h3 className="text-xl font-bold">Immediate Post-Op</h3>
               </div>
               <p className="text-gray-600">Mild swelling and redness. Small scabs form around transplanted hairs. Keep area dry and clean.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-500">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-700">
               <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-bold">Day 4-7</div>
+                <div className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-bold">Day 4-7</div>
                 <h3 className="text-xl font-bold">Early Healing</h3>
               </div>
               <p className="text-gray-600">Swelling subsides. Scabs begin to fall off naturally. You can return to work with makeup if needed.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-400">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-600">
               <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary-400 text-white px-3 py-1 rounded-full text-sm font-bold">Week 2-3</div>
+                <div className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-bold">Week 2-3</div>
                 <h3 className="text-xl font-bold">Hair Shedding</h3>
               </div>
               <p className="text-gray-600">Transplanted hairs shed (normal process). Follicles remain intact and will regrow. Don't worry!</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-300">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-500">
               <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary-300 text-white px-3 py-1 rounded-full text-sm font-bold">Week 3-4</div>
+                <div className="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-bold">Week 3-4</div>
                 <h3 className="text-xl font-bold">New Growth</h3>
               </div>
               <p className="text-gray-600">New hairs start growing. Initially thin and fine, gradually becoming thicker and darker.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-600">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-900">
               <div className="flex items-center gap-4 mb-2">
-                <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">Week 8-12</div>
+                <div className="bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-bold">Week 8-12</div>
                 <h3 className="text-xl font-bold">Final Results</h3>
               </div>
               <p className="text-gray-600">Full, natural-looking eyebrows achieved. Regular trimming needed every 2-3 weeks.</p>
@@ -356,17 +357,17 @@ export default function EyebrowTransplantPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Wake Up with Perfect Eyebrows Every Day</h2>
-          <p className="text-primary-100 text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
             Schedule a free consultation to discover how eyebrow transplant can transform your look
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/gallery" className="btn-secondary inline-block">
               View Eyebrow Transformations
             </Link>
           </div>

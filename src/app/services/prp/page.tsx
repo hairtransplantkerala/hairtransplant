@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone, Droplet } from 'lucide-react'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
   title: 'PRP Treatment for Hair Loss in Kerala | Platelet Rich Plasma Therapy',
@@ -81,7 +82,7 @@ export default function PRPPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -90,25 +91,25 @@ export default function PRPPage() {
                 Natural & Non-Surgical
               </div>
               <h1 className="text-white mb-6">PRP Hair Treatment</h1>
-              <p className="text-xl text-primary-100 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Platelet-Rich Plasma Therapy - Harness your body's natural healing power to stimulate hair growth and reduce hair loss.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block text-center">
+                <Link href="/contact" className="btn-primary text-center">
                   Book Free Consultation
                 </Link>
-                <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white/10 inline-flex items-center justify-center gap-2">
+                <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
                   Call Now
                 </a>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold">
-                PRP Therapy
-              </div>
-            </div>
+            
+            <ServiceHeroImage 
+              src="/images/services/prp.webp"
+              alt="PRP Hair Treatment Therapy"
+              placeholder="PRP Therapy"
+            />
           </div>
         </div>
       </section>
@@ -118,22 +119,22 @@ export default function PRPPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Duration</h3>
               <p className="text-gray-600">30-45 minutes</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Recovery</h3>
               <p className="text-gray-600">No downtime</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Sessions</h3>
               <p className="text-gray-600">4-6 sessions</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <DollarSign className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <DollarSign className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Per Session</h3>
               <p className="text-gray-600">₹8,000</p>
             </div>
@@ -164,12 +165,12 @@ export default function PRPPage() {
                 Get Started Today <ArrowRight size={20} />
               </Link>
             </div>
-            <div className="bg-primary-50 p-8 rounded-2xl">
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
               <h4 className="text-xl font-bold mb-4">Ideal For:</h4>
               <ul className="space-y-3">
                 {idealCandidates.map((candidate, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                     <span>{candidate}</span>
                   </li>
                 ))}
@@ -192,7 +193,7 @@ export default function PRPPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <CheckCircle className="w-8 h-8 text-primary-600 mb-3" />
+                <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
                 <p className="font-semibold">{benefit}</p>
               </div>
             ))}
@@ -214,7 +215,7 @@ export default function PRPPage() {
             {process.map((item, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -222,7 +223,7 @@ export default function PRPPage() {
                 </div>
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-primary-600" />
+                    <ArrowRight className="w-6 h-6 text-gray-900" />
                   </div>
                 )}
               </div>
@@ -232,13 +233,13 @@ export default function PRPPage() {
       </section>
 
       {/* Treatment Protocol */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-center mb-12">Treatment Protocol</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-primary-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   1
                 </div>
                 <h3 className="text-xl font-bold mb-2">Initial Phase</h3>
@@ -246,7 +247,7 @@ export default function PRPPage() {
                 <p className="text-sm text-gray-500">Kickstart hair growth and reduce hair fall</p>
               </div>
               <div className="text-center">
-                <div className="bg-primary-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   2
                 </div>
                 <h3 className="text-xl font-bold mb-2">Consolidation</h3>
@@ -254,7 +255,7 @@ export default function PRPPage() {
                 <p className="text-sm text-gray-500">Strengthen and stabilize results</p>
               </div>
               <div className="text-center">
-                <div className="bg-primary-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   3
                 </div>
                 <h3 className="text-xl font-bold mb-2">Maintenance</h3>
@@ -294,17 +295,17 @@ export default function PRPPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Stop Hair Loss Naturally</h2>
-          <p className="text-primary-100 text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
             Start your PRP treatment journey today and see visible results in just a few months
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Your First Session
             </Link>
-            <Link href="/blog" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/blog" className="btn-secondary inline-block">
               Learn More About PRP
             </Link>
           </div>

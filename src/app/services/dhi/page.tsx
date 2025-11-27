@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone, Zap } from 'lucide-react'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
   title: 'DHI Hair Transplant in Kerala | Direct Hair Implantation',
@@ -68,7 +69,7 @@ export default function DHIPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -77,25 +78,25 @@ export default function DHIPage() {
                 Most Advanced Technology
               </div>
               <h1 className="text-white mb-6">DHI Hair Transplant</h1>
-              <p className="text-xl text-primary-100 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Direct Hair Implantation - The revolutionary CHOI pen technique for maximum precision and natural density.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block text-center">
+                <Link href="/contact" className="btn-primary text-center">
                   Book Free Consultation
                 </Link>
-                <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white/10 inline-flex items-center justify-center gap-2">
+                <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
                   Call Now
                 </a>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold">
-                DHI CHOI Pen
-              </div>
-            </div>
+            
+            <ServiceHeroImage 
+              src="/images/services/dhi.webp"
+              alt="DHI Hair Transplant with CHOI Pen"
+              placeholder="DHI CHOI Pen"
+            />
           </div>
         </div>
       </section>
@@ -105,22 +106,22 @@ export default function DHIPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Duration</h3>
               <p className="text-gray-600">6-9 hours</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Recovery</h3>
               <p className="text-gray-600">2-4 days</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Survival Rate</h3>
               <p className="text-gray-600">95-98%</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <DollarSign className="w-10 h-10 text-primary-600 mx-auto mb-3" />
+              <DollarSign className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Starting From</h3>
               <p className="text-gray-600">₹55,000</p>
             </div>
@@ -151,27 +152,27 @@ export default function DHIPage() {
                 Get Personalized Quote <ArrowRight size={20} />
               </Link>
             </div>
-            <div className="bg-primary-50 p-8 rounded-2xl">
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
               <h4 className="text-xl font-bold mb-4">Perfect For:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                   <span>Those who don't want to shave</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                   <span>Professionals with busy schedules</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                   <span>Women seeking hair restoration</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                   <span>Frontal hairline reconstruction</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
                   <span>High-density requirements</span>
                 </li>
               </ul>
@@ -193,7 +194,7 @@ export default function DHIPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                <CheckCircle className="w-8 h-8 text-primary-600 mb-3" />
+                <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
                 <p className="font-semibold">{benefit}</p>
               </div>
             ))}
@@ -215,7 +216,7 @@ export default function DHIPage() {
             {process.map((item, index) => (
               <div key={index} className="relative">
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -223,7 +224,7 @@ export default function DHIPage() {
                 </div>
                 {index < process.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-primary-600" />
+                    <ArrowRight className="w-6 h-6 text-gray-900" />
                   </div>
                 )}
               </div>
@@ -260,17 +261,17 @@ export default function DHIPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Experience the Future of Hair Restoration</h2>
-          <p className="text-primary-100 text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
             Schedule a free consultation with Dr. Chacko Cyriac to discover if DHI is right for you
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/gallery" className="btn-secondary inline-block">
               View Before & After Results
             </Link>
           </div>

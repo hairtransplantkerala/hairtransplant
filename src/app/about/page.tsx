@@ -1,5 +1,6 @@
 import { Award, GraduationCap, Globe, Users, CheckCircle, BookOpen, Trophy, Heart } from "lucide-react";
 import Link from "next/link";
+import DoctorImage from "@/components/DoctorImage";
 
 export const metadata = {
   title: "About Dr. Chacko Cyriac | Expert Hair Transplant Surgeon",
@@ -134,10 +135,10 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+      <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16">
         <div className="container-custom">
-          <h1 className="mb-4">Meet Dr. Chacko Cyriac</h1>
-          <p className="text-xl text-primary-100 max-w-3xl">
+          <h1 className="mb-4 text-white">Meet Dr. Chacko Cyriac</h1>
+          <p className="text-xl text-gray-300 max-w-3xl">
             Senior Consultant Plastic Surgeon | MCh Plastic Surgery | International Expert in Hair Restoration
           </p>
         </div>
@@ -149,31 +150,27 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
             {/* Image */}
             <div className="sticky top-24">
-              <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl h-[600px] flex items-center justify-center shadow-2xl">
-                <div className="text-center">
-                  <div className="w-40 h-40 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-primary-600">DC</span>
-                  </div>
-                  <span className="text-primary-600 text-lg font-semibold">[Dr. Cyriac Professional Photo]</span>
-                </div>
-              </div>
+              <DoctorImage 
+                src="/images/dr-cyriac.jpg"
+                alt="Dr. Chacko Cyriac - Hair Transplant Specialist"
+              />
               <div className="bg-white rounded-xl shadow-lg p-6 mt-6">
                 <h3 className="text-xl font-bold mb-4">Quick Facts</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-center">
-                    <CheckCircle className="text-accent-500 mr-3" size={20} />
+                    <CheckCircle className="text-gray-900 mr-3" size={20} />
                     <span><strong>15+</strong> Years Experience</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="text-accent-500 mr-3" size={20} />
+                    <CheckCircle className="text-gray-900 mr-3" size={20} />
                     <span><strong>5000+</strong> Successful Procedures</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="text-accent-500 mr-3" size={20} />
+                    <CheckCircle className="text-gray-900 mr-3" size={20} />
                     <span><strong>25+</strong> Countries Served</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="text-accent-500 mr-3" size={20} />
+                    <CheckCircle className="text-gray-900 mr-3" size={20} />
                     <span><strong>98%</strong> Patient Satisfaction</span>
                   </li>
                 </ul>
@@ -183,7 +180,7 @@ export default function AboutPage() {
             {/* Content */}
             <div className="space-y-8">
               <div>
-                <div className="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   About Dr. Cyriac
                 </div>
                 <h2 className="mb-4">A Leader in Hair Restoration Surgery</h2>
@@ -200,13 +197,13 @@ export default function AboutPage() {
 
               <div>
                 <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <GraduationCap className="mr-3 text-primary-600" size={32} />
+                  <GraduationCap className="mr-3 text-gray-900" size={32} />
                   Qualifications & Training
                 </h3>
                 <ul className="space-y-3">
                   {qualifications.map((qual, index) => (
                     <li key={index} className="flex items-start space-x-3 bg-gray-50 p-4 rounded-lg">
-                      <CheckCircle className="text-accent-500 flex-shrink-0 mt-1" size={20} />
+                      <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
                       <span className="text-gray-700 font-medium">{qual}</span>
                     </li>
                   ))}
@@ -215,25 +212,25 @@ export default function AboutPage() {
 
               <div>
                 <h3 className="text-2xl font-bold mb-4 flex items-center">
-                  <BookOpen className="mr-3 text-primary-600" size={32} />
+                  <BookOpen className="mr-3 text-gray-900" size={32} />
                   Areas of Expertise
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {expertise.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3 bg-primary-50 p-3 rounded-lg">
-                      <CheckCircle className="text-primary-600 flex-shrink-0 mt-0.5" size={18} />
+                    <div key={index} className="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                      <CheckCircle className="text-gray-900 flex-shrink-0 mt-0.5" size={18} />
                       <span className="text-gray-700 text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-8 rounded-2xl text-white">
+              <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-2xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Choose Your Doctor Wisely</h3>
-                <p className="text-primary-100 mb-4">
+                <p className="text-gray-300 mb-4">
                   When considering hair transplant surgery, it's crucial to ask the right questions:
                 </p>
-                <ul className="space-y-2 text-primary-100">
+                <ul className="space-y-2 text-gray-300">
                   <li>✓ What are your surgeon's qualifications?</li>
                   <li>✓ What is their primary training background?</li>
                   <li>✓ Are they qualified and trained to perform surgery?</li>
@@ -262,7 +259,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {philosophy.map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-bold mb-3 text-primary-600">{item.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
@@ -283,8 +280,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="bg-white p-8 rounded-xl text-center shadow-lg hover:shadow-xl transition-shadow">
-                <div className="inline-block bg-primary-100 p-4 rounded-full mb-4">
-                  <achievement.icon className="w-10 h-10 text-primary-600" />
+                <div className="inline-block bg-gray-100 p-4 rounded-full mb-4">
+                  <achievement.icon className="w-10 h-10 text-gray-900" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{achievement.title}</h3>
                 <p className="text-gray-600">{achievement.description}</p>
@@ -309,11 +306,11 @@ export default function AboutPage() {
               {journey.map((milestone, index) => (
                 <div key={index} className="flex gap-6">
                   <div className="flex flex-col items-center">
-                    <div className="bg-primary-600 text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    <div className="bg-gray-900 text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
                       {milestone.year}
                     </div>
                     {index < journey.length - 1 && (
-                      <div className="w-1 h-full bg-primary-200 mt-2"></div>
+                      <div className="w-1 h-full bg-gray-200 mt-2"></div>
                     )}
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-lg flex-1 mb-8">
@@ -339,8 +336,8 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {mediaFeatures.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-primary-50 to-white p-6 rounded-xl border-2 border-primary-200">
-                  <h3 className="text-lg font-bold text-primary-600 mb-2">{feature.title}</h3>
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               ))}
@@ -350,17 +347,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Consult with Dr. Cyriac</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Get personalized expert advice for your hair restoration journey. Book your free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white/10 inline-block">
+            <Link href="/gallery" className="btn-secondary inline-block">
               View Results Gallery
             </Link>
           </div>

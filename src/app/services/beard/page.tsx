@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone } from 'lucide-react'
+import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
   title: 'Beard Transplant in Kerala | Facial Hair Restoration',
@@ -95,21 +96,21 @@ export default function BeardTransplantPage() {
                 Facial Hair Restoration - Achieve the full, masculine beard you've always wanted with natural, permanent results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-primary bg-white text-gray-900 hover:bg-gray-100 inline-block text-center">
+                <Link href="/contact" className="btn-primary text-center">
                   Book Free Consultation
                 </Link>
-                <a href="tel:+918884447777" className="btn-secondary border-white text-white hover:bg-white hover:text-gray-900 inline-flex items-center justify-center gap-2">
+                <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
                   Call Now
                 </a>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white text-2xl font-bold">
-                Beard Transformation
-              </div>
-            </div>
+            
+            <ServiceHeroImage 
+              src="/images/services/beard.webp"
+              alt="Beard Transplant Procedure"
+              placeholder="Beard Transformation"
+            />
           </div>
         </div>
       </section>
@@ -326,10 +327,10 @@ export default function BeardTransplantPage() {
             Schedule a free consultation to discuss your custom beard design
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-gray-900 hover:bg-gray-100 inline-block">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white hover:text-gray-900 inline-block">
+            <Link href="/gallery" className="btn-secondary inline-block">
               View Beard Transformations
             </Link>
           </div>

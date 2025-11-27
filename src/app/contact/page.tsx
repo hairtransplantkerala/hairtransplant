@@ -35,19 +35,37 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // In production, replace this with your actual API endpoint
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Format the WhatsApp message
+      const whatsappMessage = `
+*New Consultation Request*
+
+*Name:* ${data.name}
+*Email:* ${data.email}
+*Phone:* ${data.phone}
+*Service Interest:* ${data.serviceInterest || 'Not specified'}
+*Subject:* ${data.subject}
+*Preferred Date:* ${data.preferredDate || 'Not specified'}
+
+*Message:*
+${data.message}
+
+---
+Sent from Eterno Clinic Website
+      `.trim();
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
       
-      // You can send to your backend or email service like:
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      // WhatsApp number (without + symbol, with country code)
+      const whatsappNumber = "918431373779";
       
-      console.log("Form data:", data);
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+      
       setSubmitSuccess(true);
       reset();
       
@@ -55,6 +73,7 @@ export default function ContactPage() {
       setTimeout(() => setSubmitSuccess(false), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("There was an error. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -70,7 +89,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 888 444 7777", "+91 888 444 8888"],
+      details: ["+91 888 444 7777", "+91 843 137 3779"],
       link: "tel:+918884447777"
     },
     {
@@ -101,10 +120,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+      <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16">
         <div className="container-custom">
-          <h1 className="mb-4">Contact Us</h1>
-          <p className="text-xl text-primary-100 max-w-3xl">
+          <h1 className="mb-4 text-white">Contact Us</h1>
+          <p className="text-xl text-gray-300 max-w-3xl">
             Schedule your free consultation with Dr. Chacko Cyriac today. We're here to answer all your questions.
           </p>
         </div>
@@ -116,14 +135,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">
-                <div className="inline-block bg-primary-100 p-4 rounded-full mb-4">
-                  <info.icon className="w-8 h-8 text-primary-600" />
+                <div className="inline-block bg-gray-100 p-4 rounded-full mb-4">
+                  <info.icon className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{info.title}</h3>
                 {info.details.map((detail, idx) => (
                   <p key={idx} className="text-gray-600 text-sm mb-1">
                     {info.link && idx === 0 ? (
-                      <a href={info.link} className="hover:text-primary-600 transition-colors">
+                      <a href={info.link} className="hover:text-gray-900 transition-colors">
                         {detail}
                       </a>
                     ) : (
@@ -146,7 +165,7 @@ export default function ContactPage() {
                   <div className="flex items-center">
                     <Check className="mr-3" size={24} />
                     <div>
-                      <p className="font-bold">Thank you for contacting us!</p>
+                      <p className="font-bold">WhatsApp message sent successfully!</p>
                       <p className="text-sm">We'll contact you shortly to confirm your appointment.</p>
                     </div>
                   </div>
@@ -161,7 +180,7 @@ export default function ContactPage() {
                   <input
                     {...register("name")}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                     placeholder="John Doe"
                   />
                   {errors.name && (
@@ -177,7 +196,7 @@ export default function ContactPage() {
                     <input
                       {...register("email")}
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                       placeholder="john@example.com"
                     />
                     {errors.email && (
@@ -192,7 +211,7 @@ export default function ContactPage() {
                     <input
                       {...register("phone")}
                       type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                       placeholder="+91 9876543210"
                     />
                     {errors.phone && (
@@ -207,7 +226,7 @@ export default function ContactPage() {
                   </label>
                   <select
                     {...register("serviceInterest")}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
@@ -223,7 +242,7 @@ export default function ContactPage() {
                   <input
                     {...register("subject")}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                     placeholder="Hair Transplant Consultation"
                   />
                   {errors.subject && (
@@ -239,7 +258,7 @@ export default function ContactPage() {
                     {...register("preferredDate")}
                     type="date"
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
                   />
                 </div>
 
@@ -250,7 +269,7 @@ export default function ContactPage() {
                   <textarea
                     {...register("message")}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent outline-none transition resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition resize-none"
                     placeholder="Tell us about your hair loss concerns and what you hope to achieve..."
                   />
                   {errors.message && (
@@ -271,13 +290,13 @@ export default function ContactPage() {
                   ) : (
                     <>
                       <Send size={20} />
-                      <span>Send Message</span>
+                      <span>Send via WhatsApp</span>
                     </>
                   )}
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
-                  By submitting this form, you agree to our privacy policy and terms of service.
+                  Your message will be sent via WhatsApp. By submitting, you agree to our privacy policy.
                 </p>
               </form>
             </div>
@@ -288,7 +307,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-4">Our Location</h3>
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin%22"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -303,12 +322,12 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 p-8 rounded-xl text-white">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl text-white">
                 <h3 className="text-2xl font-bold mb-4">International Patients</h3>
-                <p className="text-primary-100 mb-4">
+                <p className="text-gray-300 mb-4">
                   We welcome patients from around the world. We can assist with:
                 </p>
-                <ul className="space-y-2 text-primary-100">
+                <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <Check className="mr-2 flex-shrink-0 mt-1" size={18} />
                     <span>Travel and accommodation arrangements</span>
@@ -340,27 +359,27 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-4">Why Choose Eterno?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">Free consultation with Dr. Chacko Cyriac</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">15+ years of experience</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">5000+ successful procedures</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">State-of-the-art facility</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">Transparent pricing</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="text-accent-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
                     <span className="text-gray-700">Lifetime follow-up support</span>
                   </li>
                 </ul>
