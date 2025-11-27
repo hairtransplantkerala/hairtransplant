@@ -14,7 +14,7 @@ export default function StructuredData() {
       "addressCountry": "IN"
     },
     "telephone": "+918884447777",
-    "email": "info@eternoclinic.com",
+    "email": "eternocosmeticsurgery@gmail.com",
     "priceRange": "₹₹₹",
     "openingHours": "Mo-Sa 09:00-18:00",
     "url": "https://eternoclinic.com"

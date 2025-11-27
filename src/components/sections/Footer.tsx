@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={16} />
-                <a href="mailto:info@eternoclinic.com" className="hover:text-white">info@eternoclinic.com</a>
+                <a href="mailto:eternocosmeticsurgery@gmail.com" className="hover:text-white">eternocosmeticsurgery@gmail.com</a>
               </li>
             </ul>
           </div>

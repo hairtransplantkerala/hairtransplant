@@ -76,8 +76,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@eternoclinic.com", "appointments@eternoclinic.com"],
-      link: "mailto:info@eternoclinic.com"
+      details: ["eternocosmeticsurgery@gmail.com", "appointments@eternoclinic.com"],
+      link: "mailto:eternocosmeticsurgery@gmail.com"
     },
     {
       icon: Clock,

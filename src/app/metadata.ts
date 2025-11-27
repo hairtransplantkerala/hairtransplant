@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://eternoclinic.com",
   ogImage: "/og-image.jpg",
   phone: "+918884447777",
-  email: "info@eternoclinic.com",
+  email: "eternocosmeticsurgery@gmail.com",
 };
 
 export const defaultMetadata: Metadata = {
