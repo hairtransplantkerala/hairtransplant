@@ -169,41 +169,29 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
               <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 Why Eterno Clinic
               </div>
               <h2 className="mb-6">Why Choose Eterno for Your Hair Restoration?</h2>
-              <p className="text-gray-600 text-lg mb-6">
+              <p className="text-gray-600 text-lg mb-8">
                 With over 15 years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
               </p>
-              <ul className="space-y-3">
-                {whyChooseUs.map((item, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl text-white">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Look?</h3>
-              <p className="text-gray-300 mb-6 text-lg">
-                Get a personalized assessment and treatment plan from Dr. Chacko Cyriac. Free consultation with no obligations.
-              </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Phone className="text-gray-300" size={32} />
-                  <div>
-                    <div className="text-sm text-gray-400">Call us now</div>
-                    <a href="tel:+918884447777" className="text-2xl font-bold hover:text-gray-300">+91 9645921944</a>
-                  </div>
+            
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              {whyChooseUs.map((item, index) => (
+                <div key={index} className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">{item}</span>
                 </div>
-                <p className="text-sm text-gray-400">Mon - Sat: 9:00 AM - 6:00 PM</p>
-              </div>
-              <Link href="/contact" className="btn-primary block text-center w-full">
-                Schedule Free Consultation
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <Link href="/contact" className="btn-primary inline-block">
+                Schedule Your Free Consultation
               </Link>
             </div>
           </div>
@@ -305,7 +293,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary inline-block">
                 Book Free Consultation
               </Link>
-              <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
+              <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
                 <Phone size={20} />
                 Call: +91 9645921944
               </a>

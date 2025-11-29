@@ -148,8 +148,8 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
-            {/* Image */}
-            <div className="sticky top-24">
+            {/* Image - Removed sticky on mobile, only sticky on lg+ */}
+            <div className="lg:sticky lg:top-24">
               <DoctorImage 
                 src="/images/dr-cyriac.jpg"
                 alt="Dr. Chacko Cyriac - Hair Transplant Specialist"

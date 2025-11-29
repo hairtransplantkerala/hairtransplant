@@ -9,10 +9,10 @@ import { useState } from "react";
 // Zod validation schema
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
+  email: z.string().optional(),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(20, "Message must be at least 20 characters"),
+  subject: z.string().optional(),
+  message: z.string().optional(),
   preferredDate: z.string().optional(),
   serviceInterest: z.string().optional(),
 });
@@ -191,7 +191,7 @@ Sent from Eterno Clinic Website
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2">
-                      Email Address *
+                      Email Address
                     </label>
                     <input
                       {...register("email")}
@@ -237,7 +237,7 @@ Sent from Eterno Clinic Website
 
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">
-                    Subject *
+                    Subject
                   </label>
                   <input
                     {...register("subject")}
@@ -264,7 +264,7 @@ Sent from Eterno Clinic Website
 
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">
-                    Message *
+                    Message
                   </label>
                   <textarea
                     {...register("message")}
