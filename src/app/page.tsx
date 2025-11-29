@@ -197,7 +197,7 @@ export default function HomePage() {
                   <Phone className="text-gray-300" size={32} />
                   <div>
                     <div className="text-sm text-gray-400">Call us now</div>
-                    <a href="tel:+918884447777" className="text-2xl font-bold hover:text-gray-300">+91 888 444 7777</a>
+                    <a href="tel:+918884447777" className="text-2xl font-bold hover:text-gray-300">+91 9645921944</a>
                   </div>
                 </div>
                 <p className="text-sm text-gray-400">Mon - Sat: 9:00 AM - 6:00 PM</p>
@@ -307,7 +307,7 @@ export default function HomePage() {
               </Link>
               <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                 <Phone size={20} />
-                Call: +91 888 444 7777
+                Call: +91 9645921944
               </a>
             </div>
           </div>

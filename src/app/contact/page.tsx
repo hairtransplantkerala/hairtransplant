@@ -58,7 +58,7 @@ Sent from Eterno Clinic Website
       const encodedMessage = encodeURIComponent(whatsappMessage);
       
       // WhatsApp number (without + symbol, with country code)
-      const whatsappNumber = "918431373779";
+      const whatsappNumber = "919645921944";
       
       // Create WhatsApp URL
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -89,7 +89,7 @@ Sent from Eterno Clinic Website
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 888 444 7777", "+91 843 137 3779"],
+      details: ["+91 9645921944", "+91 843 137 3779"],
       link: "tel:+918884447777"
     },
     {

@@ -117,7 +117,7 @@ export default function Header() {
               className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors"
             >
               <Phone size={20} />
-              <span className="font-semibold">+91 888 444 7777</span>
+              <span className="font-semibold">+91 9645921944</span>
             </a>
             <Link 
               href="/contact" 
@@ -189,7 +189,7 @@ export default function Header() {
                 className="flex items-center space-x-2 text-gray-700 py-2"
               >
                 <Phone size={20} />
-                <span className="font-semibold">+91 888 444 7777</span>
+                <span className="font-semibold">+91 9645921944</span>
               </a>
               <Link
                 href="/contact"

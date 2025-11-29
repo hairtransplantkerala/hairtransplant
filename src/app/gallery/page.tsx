@@ -252,7 +252,7 @@ export default function GalleryPage() {
               Book Free Consultation
             </Link>
             <a href="tel:+918884447777" className="btn-secondary inline-block">
-              Call Now: +91 888 444 7777
+              Call Now: +91 9645921944
             </a>
           </div>
         </div>
