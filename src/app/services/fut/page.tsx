@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CheckCircle, Clock, DollarSign, Users, ArrowRight, Phone } from 'lucide-react'
+import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone } from 'lucide-react'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
@@ -120,7 +120,7 @@ export default function FUTPage() {
               <p className="text-gray-600">3000-4000</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <DollarSign className="w-10 h-10 text-gray-900 mx-auto mb-3" />
+              <IndianRupee className="w-10 h-10 text-gray-900 mx-auto mb-3" />
               <h3 className="text-lg font-bold mb-1">Starting From</h3>
               <p className="text-gray-600">₹35,000</p>
             </div>
