@@ -11,7 +11,6 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().optional(),
   phone: z.string().min(10, "Please enter a valid phone number"),
-  subject: z.string().optional(),
   message: z.string().optional(),
   preferredDate: z.string().optional(),
   serviceInterest: z.string().optional(),
@@ -44,7 +43,6 @@ export default function ContactPage() {
 *Email:* ${data.email}
 *Phone:* ${data.phone}
 *Service Interest:* ${data.serviceInterest || 'Not specified'}
-*Subject:* ${data.subject}
 *Preferred Date:* ${data.preferredDate || 'Not specified'}
 
 *Message:*
@@ -233,21 +231,6 @@ Sent from Eterno Clinic Website
                       <option key={service} value={service}>{service}</option>
                     ))}
                   </select>
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">
-                    Subject
-                  </label>
-                  <input
-                    {...register("subject")}
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
-                    placeholder="Hair Transplant Consultation"
-                  />
-                  {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-                  )}
                 </div>
 
                 <div>
