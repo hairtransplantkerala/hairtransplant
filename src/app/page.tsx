@@ -86,14 +86,22 @@ export default function HomePage() {
         videoSrc="/videos/hero-background.mp4"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-6">
-            <div className="flex items-center gap-1">
-              <span className="text-yellow-400 text-base sm:text-lg">★★★★★</span>
-            </div>
-            <span className="text-white whitespace-nowrap">4.9 out of 5</span>
-            <span className="text-white/70 xs:inline">|</span>
-            <span className="text-white/90 whitespace-nowrap">5000+ Happy Patients</span>
-          </div>
+  <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-6">
+    <div className="flex items-center gap-1">
+      <span className="text-yellow-400 text-base sm:text-lg">★★★★★</span>
+    </div>
+    <a 
+      href="https://share.google/et94AAsNCgNKbPHAr" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white whitespace-nowrap hover:text-yellow-400 transition-colors underline"
+    >
+      4.9 out of 5
+    </a>
+    <span className="text-white/70 xs:inline">|</span>
+    <span className="text-white/90 whitespace-nowrap">5000+ Happy Patients</span>
+  </div>
+
 
           <h1 className="mb-6 leading-tight text-white">
             <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
