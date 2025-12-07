@@ -122,7 +122,7 @@ Sent from Eterno Clinic Website
         <div className="container-custom">
           <h1 className="mb-4 text-white">Contact Us</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Schedule your free consultation with Dr. Chacko Cyriac today. We're here to answer all your questions.
+            Schedule your Consultation with Dr. Chacko Cyriac today. We're here to answer all your questions.
           </p>
         </div>
       </section>
@@ -155,7 +155,7 @@ Sent from Eterno Clinic Website
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-xl shadow-xl">
-              <h2 className="text-3xl font-bold mb-2">Book Your Free Consultation</h2>
+              <h2 className="text-3xl font-bold mb-2">Book Your Consultation</h2>
               <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
               
               {submitSuccess && (
@@ -343,11 +343,11 @@ Sent from Eterno Clinic Website
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">Free consultation with Dr. Chacko Cyriac</span>
+                    <span className="text-gray-700">Consultation with Dr. Chacko Cyriac</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">15+ years of experience</span>
+                    <span className="text-gray-700">22+ years of experience</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />

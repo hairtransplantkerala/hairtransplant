@@ -313,7 +313,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary inline-block">
-                Book Free Consultation
+                Book Consultation
               </Link>
               <Link href="/gallery" className="btn-secondary inline-block">
                 View Results Gallery

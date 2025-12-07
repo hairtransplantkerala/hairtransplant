@@ -4,7 +4,7 @@ import DoctorImage from "@/components/DoctorImage";
 
 export const metadata = {
   title: "About Dr. Chacko Cyriac | Expert Hair Transplant Surgeon",
-  description: "Meet Dr. Chacko Cyriac, MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore. 15+ years experience, 5000+ successful procedures.",
+  description: "Meet Dr. Chacko Cyriac, MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore. 22+ years experience, 5000+ successful procedures.",
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
   const achievements = [
     {
       icon: Award,
-      title: "15+ Years Experience",
+      title: "22+ Years Experience",
       description: "Extensive experience in plastic surgery and hair restoration with continuous learning"
     },
     {
@@ -159,7 +159,7 @@ export default function AboutPage() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
-                    <span><strong>15+</strong> Years Experience</span>
+                    <span><strong>22+</strong> Years Experience</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
@@ -351,11 +351,11 @@ export default function AboutPage() {
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Consult with Dr. Cyriac</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get personalized expert advice for your hair restoration journey. Book your free consultation today.
+            Get personalized expert advice for your hair restoration journey. Book your Consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link href="/gallery" className="btn-secondary inline-block">
               View Results Gallery

@@ -74,7 +74,7 @@ export default function FAQ({ items }: FAQProps) {
     },
     {
       question: "Why choose Dr. Chacko Cyriac for hair transplant?",
-      answer: "Dr. Cyriac holds MCh Plastic Surgery from PGI Chandigarh and has international training from UK, USA, Canada, and Singapore. With 15+ years of experience and 5000+ successful procedures, he combines surgical expertise with artistic skill. Our state-of-the-art facility and personalized approach ensure optimal results."
+      answer: "Dr. Cyriac holds MCh Plastic Surgery from PGI Chandigarh and has international training from UK, USA, Canada, and Singapore. With 22+ years of experience and 5000+ successful procedures, he combines surgical expertise with artistic skill. Our state-of-the-art facility and personalized approach ensure optimal results."
     }
   ];
 

@@ -83,7 +83,7 @@ export default function DHIPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary text-center">
-                  Book Free Consultation
+                  Book Consultation
                 </Link>
                 <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
@@ -265,11 +265,11 @@ export default function DHIPage() {
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Experience the Future of Hair Restoration</h2>
           <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-            Schedule a free consultation with Dr. Chacko Cyriac to discover if DHI is right for you
+            Schedule a Consultation with Dr. Chacko Cyriac to discover if DHI is right for you
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link href="/gallery" className="btn-secondary inline-block">
               View Before & After Results

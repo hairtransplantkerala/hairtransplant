@@ -245,11 +245,11 @@ export default function GalleryPage() {
             Ready for Your Transformation?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            These results could be yours. Schedule a free consultation to discuss your hair restoration goals with Dr. Chacko Cyriac.
+            These results could be yours. Schedule a Consultation to discuss your hair restoration goals with Dr. Chacko Cyriac.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <a href="tel:+918884447777" className="btn-secondary inline-block">
               Call Now: +91 9645921944

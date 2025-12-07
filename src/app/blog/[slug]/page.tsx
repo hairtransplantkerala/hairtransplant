@@ -206,7 +206,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">About {post.author}</h4>
                   <p className="text-gray-700 mb-4">
-                    Expert hair transplant surgeon with 15+ years of experience. MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore.
+                    Expert hair transplant surgeon with 22+ years of experience. MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore.
                   </p>
                   <Link href="/about" className="text-gray-900 font-semibold hover:text-black inline-flex items-center gap-2 underline">
                     Learn More <ArrowLeft className="rotate-180" size={16} />
@@ -279,7 +279,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary bg-white text-gray-900 hover:bg-gray-100 inline-block">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link href="/gallery" className="btn-secondary border-white text-white hover:bg-white hover:text-gray-900 inline-block">
               View Before & After

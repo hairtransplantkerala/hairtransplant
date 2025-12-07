@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, Phone, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, Phone, ArrowRight, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceCard from "@/components/ServiceCard";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
+import GalleryCarousel from "@/components/GalleryCarousel";
 
 export default function HomePage() {
   const services = [
@@ -38,9 +39,9 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { icon: Award, label: "Years of Excellence", value: "15+" },
+    { icon: Award, label: "Years of Excellence", value: "22+" },
     { icon: Users, label: "Happy Patients", value: "5000+" },
-    { icon: Globe, label: "Countries Served", value: "25+" },
+    { icon: Globe, label: "Countries Served", value: "26+" },
     { icon: Star, label: "Success Rate", value: "98%" },
   ];
 
@@ -49,7 +50,7 @@ export default function HomePage() {
     "International training from UK, USA, Canada, and Singapore",
     "Latest techniques: FUE, FUT, DHI, Modified Hair Implantation",
     "State-of-the-art equipment and world-class facilities",
-    "Patients from 25+ countries worldwide trust our expertise",
+    "Patients from 26+ countries worldwide trust our expertise",
     "Personalized treatment plans tailored to individual needs",
     "Comprehensive post-operative care and lifetime support",
     "Transparent pricing with no hidden costs"
@@ -58,7 +59,7 @@ export default function HomePage() {
   const procedureSteps = [
     {
       number: "01",
-      title: "Free Consultation",
+      title: "Consultation",
       description: "Meet Dr. Cyriac for personalized assessment and treatment plan"
     },
     {
@@ -85,18 +86,27 @@ export default function HomePage() {
         videoSrc="/videos/hero-background.mp4"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            ⭐ Rated 4.9/5 by 5000+ Patients
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-6">
+            <div className="flex items-center gap-1">
+              <span className="text-yellow-400 text-base sm:text-lg">★★★★★</span>
+            </div>
+            <span className="text-white whitespace-nowrap">4.9 out of 5</span>
+            <span className="text-white/70 xs:inline">|</span>
+            <span className="text-white/90 whitespace-nowrap">5000+ Happy Patients</span>
           </div>
+
           <h1 className="mb-6 leading-tight text-white">
-            The Leading Hair Transplant Clinic in Kochi, Kerala
+            <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
+            <span className="block">Hair Transplant Clinic</span>
+            <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
-            Hair Transplant & Hair Restoration by <strong>Dr. Chacko Cyriac</strong> - MCh Plastic Surgery Specialist trained internationally in the UK, USA, Canada, and Singapore
+          <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
+            Hair Transplant & Hair Restoration by <strong className="text-white">Dr. Chacko Cyriac</strong> - MCh Plastic Surgeon with Qualifications from 5 Countries and Training from the Best Centres in India and Abroad
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
             <Link href="/contact" className="btn-primary text-center shadow-xl">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link href="/gallery" className="btn-secondary text-center">
               View Results Gallery
@@ -104,35 +114,20 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-6 text-sm justify-center flex-wrap">
             <div className="flex items-center gap-2">
-              <CheckCircle className="text-white" size={20} />
+              <Users className="text-white" size={20} />
               <span>5000+ Successful Cases</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="text-white" size={20} />
-              <span>FDA Approved</span>
+              <Globe className="text-white" size={20} />
+              <span>26+ Countries Served</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="text-white" size={20} />
-              <span>15+ Years Experience</span>
+              <Award className="text-white" size={20} />
+              <span>22+ Years Experience</span>
             </div>
           </div>
         </div>
       </HeroVideoBackground>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-b">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <stat.icon className="w-12 h-12 mx-auto text-gray-900 mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
@@ -166,8 +161,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gallery Carousel Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Real Results
+            </div>
+            <h2 className="mb-4">Before & After Transformations</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              See the incredible transformations achieved by Dr. Chacko Cyriac at Eterno Clinic
+            </p>
+          </div>
+          <GalleryCarousel />
+          <div className="text-center mt-12">
+            <Link href="/gallery" className="btn-primary inline-block">
+              View Full Gallery
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -191,7 +207,7 @@ export default function HomePage() {
 
             <div className="text-center mt-8">
               <Link href="/contact" className="btn-primary inline-block">
-                Schedule Your Free Consultation
+                Schedule Your Consultation
               </Link>
             </div>
           </div>
@@ -199,7 +215,7 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -213,7 +229,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {procedureSteps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg h-full">
+                <div className="bg-gray-50 p-6 rounded-xl shadow-lg h-full">
                   <div className="text-6xl font-bold text-gray-900 mb-4">{step.number}</div>
                   <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
@@ -230,7 +246,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -287,16 +303,12 @@ export default function HomePage() {
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
             <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait any longer. Schedule your free consultation with Dr. Chacko Cyriac and take the first step towards regaining your confidence.
+              Don't wait any longer. Schedule your Consultation with Dr. Chacko Cyriac and take the first step towards regaining your confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary inline-block">
-                Book Free Consultation
+              <Link href="/contact" className="btn-secondary inline-block">
+                Book Consultation
               </Link>
-              <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
-                <Phone size={20} />
-                Call: +91 9645921944
-              </a>
             </div>
           </div>
         </div>

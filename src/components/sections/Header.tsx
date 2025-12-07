@@ -11,7 +11,7 @@ export default function Header() {
   const navigation = [
     { name: "Home", href: "/" },
     { 
-      name: "Services", 
+      name: " Our services", 
       href: "/services",
       hasDropdown: true,
       dropdown: [
@@ -23,10 +23,10 @@ export default function Header() {
         { name: "Eyebrow Transplant", href: "/services/eyebrow" },
       ]
     },
-    { name: "About Dr. Cyriac", href: "/about" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Dr. Chacko Cyriac", href: "/about" },
+    { name: "Our Results", href: "/gallery" },
+    { name: "Blogs", href: "/blog" },
+    { name: "Contact us", href: "/contact" },
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex justify-between items-center h-20">
          {/* Logo */}
-<Link href="/" className="flex items-center space-x-2">
+<Link href="/" className="flex items-center space-x-2 relative z-[60]">
   <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
     <img 
       src="/images/logo.png" 
@@ -53,11 +53,10 @@ export default function Header() {
     />
   </div>
   <div>
-    <span className="text-2xl font-bold text-black block">Eterno</span>
-    <span className="text-xs text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
+    <span className="text-m font-normal text-black block">Eterno</span>
+    <span className="text-l font-bold text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
   </div>
 </Link>
-
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -112,13 +111,7 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a 
-              href="tel:+918884447777" 
-              className="flex items-center space-x-2 text-gray-700 hover:text-black transition-colors"
-            >
-              <Phone size={20} />
-              <span className="font-semibold">+91 9645921944</span>
-            </a>
+            
             <Link 
               href="/contact" 
               className="btn-primary"
@@ -130,15 +123,17 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-black"
+            className="lg:hidden p-2 text-gray-700 hover:text-black relative z-[60]"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 space-y-3 border-t">
+        {/* Mobile Navigation - Slide-in menu from right (60% width) */}
+        <div className={`lg:hidden fixed right-0 top-20 bottom-0 w-[60%] bg-white shadow-2xl z-50 overflow-y-auto transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          <div className="py-4 px-6 space-y-3">
             {navigation.map((item) => (
               item.hasDropdown ? (
                 <div key={item.name}>
@@ -184,23 +179,16 @@ export default function Header() {
               )
             ))}
             <div className="pt-4 border-t space-y-3">
-              <a
-                href="tel:+918884447777"
-                className="flex items-center space-x-2 text-gray-700 py-2"
-              >
-                <Phone size={20} />
-                <span className="font-semibold">+91 9645921944</span>
-              </a>
               <Link
                 href="/contact"
-                className="btn-primary w-full text-center block"
+                className="btn-primary w-full text-center block text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Book Appointment
               </Link>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );
