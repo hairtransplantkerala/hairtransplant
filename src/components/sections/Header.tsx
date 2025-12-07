@@ -54,7 +54,7 @@ export default function Header() {
   </div>
   <div>
     <span className="text-m font-normal text-black block">Eterno</span>
-    <span className="text-l font-bold text-gray-600 hidden sm:block">Hair Transplant Clinic</span>
+    <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 block">Hair Transplant Clinic</span>
   </div>
 </Link>
 
@@ -111,7 +111,6 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            
             <Link 
               href="/contact" 
               className="btn-primary"
