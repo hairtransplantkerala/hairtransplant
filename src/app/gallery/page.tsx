@@ -251,7 +251,7 @@ export default function GalleryPage() {
             <Link href="/contact" className="btn-primary inline-block">
               Book Consultation
             </Link>
-            <a href="tel:+918884447777" className="btn-secondary inline-block">
+            <a href="tel:+919645921944" className="btn-secondary inline-block">
               Call Now: +91 9645921944
             </a>
           </div>

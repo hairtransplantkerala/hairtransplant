@@ -84,7 +84,7 @@ export default function FUTPage() {
                 <Link href="/contact" className="btn-primary text-center">
                   Book Consultation
                 </Link>
-                <a href="tel:+918884447777" className="btn-secondary inline-flex items-center justify-center gap-2">
+                <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
                   <Phone size={20} />
                   Call Now
                 </a>

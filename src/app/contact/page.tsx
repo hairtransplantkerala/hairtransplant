@@ -87,8 +87,8 @@ Sent from Eterno Clinic Website
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9645921944", "+91 843 137 3779"],
-      link: "tel:+918884447777"
+      details: ["+91 9645921944"],
+      link: "tel:+919645921944"
     },
     {
       icon: Mail,
@@ -210,7 +210,7 @@ Sent from Eterno Clinic Website
                       {...register("phone")}
                       type="tel"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition"
-                      placeholder="+91 9876543210"
+                      placeholder="+91 9645921944"
                     />
                     {errors.phone && (
                       <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>

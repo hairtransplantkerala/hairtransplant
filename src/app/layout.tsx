@@ -104,7 +104,7 @@ export default function RootLayout({
     "url": "https://eternoclinic.com",
     "logo": "https://eternoclinic.com/logo.png",
     "image": "https://eternoclinic.com/clinic-image.jpg",
-    "telephone": "+918884447777",
+    "telephone": "+919645921944",
     "email": "eternocosmeticsurgery@gmail.com",
     "address": {
       "@type": "PostalAddress",

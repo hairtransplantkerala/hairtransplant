@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = '918884447777'; // Replace with actual WhatsApp number
+  const phoneNumber = '919645921944'; // Replace with actual WhatsApp number
   const message = 'Hello! I would like to know more about hair transplant services at Eterno Clinic.';
 
   const handleWhatsAppClick = () => {

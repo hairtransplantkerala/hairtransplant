@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Leading hair transplant clinic in Kochi, Kerala. Expert FUE, FUT, DHI, PRP treatments by Dr. Chacko Cyriac. 5000+ successful procedures.",
   url: "https://eternoclinic.com",
   ogImage: "/og-image.jpg",
-  phone: "+918884447777",
+  phone: "+919645921944",
   email: "eternocosmeticsurgery@gmail.com",
 };
 

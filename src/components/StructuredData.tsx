@@ -13,7 +13,7 @@ export default function StructuredData() {
       "postalCode": "682001",
       "addressCountry": "IN"
     },
-    "telephone": "+918884447777",
+    "telephone": "+919645921944",
     "email": "eternocosmeticsurgery@gmail.com",
     "priceRange": "₹₹₹",
     "openingHours": "Mo-Sa 09:00-18:00",

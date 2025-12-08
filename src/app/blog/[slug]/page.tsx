@@ -145,16 +145,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
+      {/* Table of Contents - Mobile Only (appears after featured image) */}
+      <div className="lg:hidden container-custom py-6">
+        <TableOfContents content={post.content} />
+      </div>
+
       {/* Main Content with ToC */}
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Sidebar with ToC */}
-          <aside className="lg:col-span-3 order-2 lg:order-1">
+          {/* Left Sidebar with ToC - Desktop Only */}
+          <aside className="hidden lg:block lg:col-span-3">
             <TableOfContents content={post.content} />
           </aside>
 
           {/* Main Content */}
-          <article className="lg:col-span-9 order-1 lg:order-2">
+          <article className="lg:col-span-9">
             <div 
               className="prose prose-lg prose-gray max-w-none
                 prose-headings:font-bold prose-headings:text-gray-900
