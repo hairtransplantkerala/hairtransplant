@@ -37,6 +37,8 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
   const [imageUploading, setImageUploading] = useState(false)
   const [schemaCopied, setSchemaCopied] = useState(false)
   const [showSEO, setShowSEO] = useState(false)
+  const [originalPublishedAt, setOriginalPublishedAt] = useState<string | null>(null)
+  const [wasPublished, setWasPublished] = useState(false)
   
   const [formData, setFormData] = useState({
     title: '',
@@ -68,6 +70,11 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
 
       if (data.success && data.post) {
         const post = data.post
+        
+        // Store original publication status and date
+        setWasPublished(post.published || false)
+        setOriginalPublishedAt(post.published_at || null)
+        
         setFormData({
           title: post.title || '',
           slug: post.slug || '',
@@ -119,11 +126,11 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
         image: formData.image,
         author: formData.author,
         category: formData.category,
-        published_at: new Date().toISOString(),
+        published_at: originalPublishedAt || new Date().toISOString(),
       })
       setFormData(prev => ({ ...prev, schema_markup: schema }))
     }
-  }, [formData.title, formData.slug, formData.excerpt, formData.content, formData.image, formData.author, formData.category])
+  }, [formData.title, formData.slug, formData.excerpt, formData.content, formData.image, formData.author, formData.category, originalPublishedAt])
 
   const handleTitleChange = (title: string) => {
     setFormData({ ...formData, title })
@@ -218,6 +225,21 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
         .map(tag => tag.trim())
         .filter(tag => tag)
 
+      // Determine the published_at value:
+      // - If already published and staying published, keep original date
+      // - If publishing for first time, use current date
+      // - If unpublishing, set to null
+      let publishedAt = null
+      if (published) {
+        if (wasPublished && originalPublishedAt) {
+          // Keep original publication date
+          publishedAt = originalPublishedAt
+        } else {
+          // First time publishing
+          publishedAt = new Date().toISOString()
+        }
+      }
+
       const postData = {
         title: formData.title.trim(),
         slug: formData.slug.trim(),
@@ -229,7 +251,7 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
         tags: tagsArray,
         read_time: readTime,
         published,
-        published_at: published ? new Date().toISOString() : null,
+        published_at: publishedAt,
         meta_title: formData.meta_title.trim(),
         meta_description: formData.meta_description.trim(),
         meta_keywords: formData.meta_keywords,
@@ -298,7 +320,9 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
           </Link>
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Edit Post</h1>
-            <p className="text-gray-600">Update your blog post</p>
+            <p className="text-gray-600">
+              {wasPublished ? 'Editing published post' : 'Update your blog post'}
+            </p>
           </div>
         </div>
 
@@ -318,10 +342,25 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
             className="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
           >
             <Eye className="w-4 h-4" />
-            <span>{loading ? 'Updating...' : 'Update & Publish'}</span>
+            <span>{loading ? 'Updating...' : wasPublished ? 'Update Post' : 'Update & Publish'}</span>
           </button>
         </div>
       </div>
+
+      {/* Show publication status */}
+      {wasPublished && originalPublishedAt && (
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+          <p className="text-green-800 text-sm">
+            ✓ This post was published on {new Date(originalPublishedAt).toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}
+          </p>
+        </div>
+      )}
 
       {/* Main Form */}
       <div className="bg-white border border-gray-200 rounded-xl p-8 space-y-6">
