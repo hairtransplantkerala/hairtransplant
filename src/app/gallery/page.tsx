@@ -114,7 +114,7 @@ export default function GalleryPage() {
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Before & After Gallery</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Real transformations from real patients. See the life-changing results achieved at Eterno Clinic.
+            Real transformations from real patients. Witness the life-changing results achieved under the expertise of Dr. Chacko Cyriac.
           </p>
         </div>
       </div>
