@@ -54,7 +54,7 @@ export default function Header() {
   </div>
   <div>
     <span className="text-m font-normal text-black block">Eterno</span>
-    <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 block">Hair Transplant Clinic</span>
+    <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 block">Hair Transplant Service</span>
   </div>
 </Link>
 

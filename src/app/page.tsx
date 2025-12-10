@@ -109,7 +109,7 @@ export default function HomePage() {
             <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
           </h1>
           <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
-            Hair Transplant & Hair Restoration by <strong className="text-white">Dr. Chacko Cyriac</strong> - MCh Plastic Surgeon with Qualifications from 5 Countries and Training from the Best Centres in India and Abroad
+            All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon, <strong className="text-white">Dr. Chacko Cyriac</strong>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
@@ -200,7 +200,7 @@ export default function HomePage() {
               </div>
               <h2 className="mb-6">Why Choose Eterno for Your Hair Restoration?</h2>
               <p className="text-gray-600 text-lg mb-8">
-                With over 15 years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
+                With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
               </p>
             </div>
             
