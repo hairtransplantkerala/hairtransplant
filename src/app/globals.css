@@ -101,6 +101,21 @@ html {
   background: #495057;
 }
 
+/* Scrollbar hide utility for mobile sliders */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for overflow-x-auto elements */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+
 /* Blog Content Spacing Fix */
 .prose p {
   margin-bottom: 1.5rem !important;

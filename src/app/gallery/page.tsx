@@ -164,11 +164,11 @@ export default function GalleryPage() {
                   className="h-full"
                 />
                 {/* Before Label */}
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
                   Before
                 </div>
                 {/* After Label */}
-                <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
                   After
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function GalleryPage() {
                 <p className="text-gray-600">Patient Satisfaction</p>
               </div>
               <div className="p-4">
-                <div className="text-4xl font-bold text-gray-900 mb-2">25+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">26+</div>
                 <p className="text-gray-600">Countries Served</p>
               </div>
             </div>

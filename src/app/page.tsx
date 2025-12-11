@@ -1,45 +1,13 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, Phone, ArrowRight, Star, ChevronLeft, ChevronRight, Calendar, Clock } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, ArrowRight, Calendar, Clock } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
-import ServiceCard from "@/components/ServiceCard";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
 import GalleryCarousel from "@/components/GalleryCarousel";
 import WorldMapClientele from "@/components/WorldMapClientele";
 import { createClient } from '@/lib/supabase/server';
 
 export default async function HomePage() {
-  const services = [
-    {
-      title: "FUE Hair Transplant",
-      description: "Follicular Unit Extraction - minimally invasive, no linear scar, faster recovery",
-      image: "/images/homepage/fue.webp",
-      link: "/services/fue",
-      features: ["No linear scarring", "Quick recovery", "Natural results"]
-    },
-    {
-      title: "FUT Hair Transplant",
-      description: "Strip technique for maximum graft harvesting in single session",
-      image: "/images/homepage/fut.webp",
-      link: "/services/fut",
-      features: ["Maximum grafts", "Cost-effective", "Proven technique"]
-    },
-    {
-      title: "PRP Treatment",
-      description: "Platelet-Rich Plasma therapy for natural hair regrowth stimulation",
-      image: "/images/homepage/prp.webp",
-      link: "/services/prp",
-      features: ["Non-surgical", "Natural growth", "Minimal side effects"]
-    },
-    {
-      title: "Beard & Eyebrow",
-      description: "Specialized transplants for facial hair restoration and enhancement",
-      image: "/images/homepage/beard.webp",
-      link: "/services/beard",
-      features: ["Natural appearance", "Customizable", "Permanent results"]
-    },
-  ];
-
   const specializedTreatments = [
     {
       title: "Hair Loss in Men",
@@ -83,13 +51,6 @@ export default async function HomePage() {
       link: "/stem-cell-fue",
       tag: "Advanced Tech"
     },
-  ];
-
-  const stats = [
-    { icon: Award, label: "Years of Excellence", value: "22+" },
-    { icon: Users, label: "Happy Patients", value: "7000+" },
-    { icon: Globe, label: "Countries Served", value: "26+" },
-    { icon: Star, label: "Success Rate", value: "98%" },
   ];
 
   const whyChooseUs = [
@@ -169,7 +130,7 @@ export default async function HomePage() {
         </div>
       </HeroVideoBackground>
 
-      {/* Specialized Care & Advanced Solutions - Unified Section */}
+      {/* Specialized Care & Advanced Solutions */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -189,24 +150,20 @@ export default async function HomePage() {
                 href={treatment.link}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
-                {/* Image Container with Overlay */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
                     src={treatment.image}
                     alt={treatment.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                   
-                  {/* Tag Badge */}
                   <div className="absolute top-4 right-4">
                     <span className="bg-white/95 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-full text-xs font-bold shadow-lg">
                       {treatment.tag}
                     </span>
                   </div>
 
-                  {/* Title on Image */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {treatment.title}
@@ -214,7 +171,6 @@ export default async function HomePage() {
                   </div>
                 </div>
 
-                {/* Content Container */}
                 <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {treatment.description}
@@ -225,16 +181,14 @@ export default async function HomePage() {
                   </div>
                 </div>
 
-                {/* Accent Border on Hover */}
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
               </Link>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/contact" className="btn-primary inline-block">
-              Schedule Specialized Consultation
-            </Link>
+            <Link href="/treatments" className="btn-primary inline-block">
+View all Latest Treatments            </Link>
           </div>
         </div>
       </section>
@@ -324,7 +278,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Latest Blogs Section */}
+      {/* Latest Blogs Section - Mobile Slider */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -338,58 +292,122 @@ export default async function HomePage() {
           </div>
           
           {latestPosts && latestPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {latestPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  {post.image && (
-                    <div className="aspect-video bg-gray-200 overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    {post.category && (
-                      <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                        {post.category}
-                      </span>
-                    )}
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-gray-600 transition-colors">
-                      {post.title}
-                    </h3>
-                    {post.excerpt && (
-                      <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                        {post.excerpt}
-                      </p>
-                    )}
-                    <div className="flex items-center justify-between text-gray-500 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Calendar size={14} />
-                        <span>
-                          {new Date(post.published_at).toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric'
-                          })}
-                        </span>
+            <>
+              {/* Desktop Grid View */}
+              <div className="hidden md:grid md:grid-cols-3 gap-8">
+                {latestPosts.map((post) => (
+                  <Link
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  >
+                    {post.image && (
+                      <div className="aspect-video bg-gray-200 overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
                       </div>
-                      {post.read_time && (
+                    )}
+                    <div className="p-6">
+                      {post.category && (
+                        <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                          {post.category}
+                        </span>
+                      )}
+                      <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-gray-600 transition-colors">
+                        {post.title}
+                      </h3>
+                      {post.excerpt && (
+                        <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                          {post.excerpt}
+                        </p>
+                      )}
+                      <div className="flex items-center justify-between text-gray-500 text-sm">
                         <div className="flex items-center gap-2">
-                          <Clock size={14} />
-                          <span>{post.read_time}</span>
+                          <Calendar size={14} />
+                          <span>
+                            {new Date(post.published_at).toLocaleDateString('en-US', {
+                              month: 'short',
+                              day: 'numeric',
+                              year: 'numeric'
+                            })}
+                          </span>
+                        </div>
+                        {post.read_time && (
+                          <div className="flex items-center gap-2">
+                            <Clock size={14} />
+                            <span>{post.read_time}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Horizontal Scroll Slider */}
+              <div className="md:hidden -mx-4 px-4">
+                <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+                  {latestPosts.map((post) => (
+                    <Link
+                      key={post.id}
+                      href={`/blog/${post.slug}`}
+                      className="group flex-shrink-0 w-[85vw] bg-white rounded-xl shadow-lg overflow-hidden snap-start"
+                    >
+                      {post.image && (
+                        <div className="aspect-video bg-gray-200 overflow-hidden">
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                       )}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                      <div className="p-6">
+                        {post.category && (
+                          <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                            {post.category}
+                          </span>
+                        )}
+                        <h3 className="text-xl font-bold mb-3 line-clamp-2">
+                          {post.title}
+                        </h3>
+                        {post.excerpt && (
+                          <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                            {post.excerpt}
+                          </p>
+                        )}
+                        <div className="flex items-center justify-between text-gray-500 text-sm">
+                          <div className="flex items-center gap-2">
+                            <Calendar size={14} />
+                            <span>
+                              {new Date(post.published_at).toLocaleDateString('en-US', {
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric'
+                              })}
+                            </span>
+                          </div>
+                          {post.read_time && (
+                            <div className="flex items-center gap-2">
+                              <Clock size={14} />
+                              <span>{post.read_time}</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="flex justify-center gap-2 mt-6">
+                  {latestPosts.map((_, index) => (
+                    <div key={index} className="w-2 h-2 rounded-full bg-gray-300" />
+                  ))}
+                </div>
+              </div>
+            </>
           ) : (
             <div className="text-center py-12">
               <p className="text-gray-600 text-lg">No blog posts available yet. Check back soon!</p>
@@ -421,7 +439,7 @@ export default async function HomePage() {
       </section>
 
       {/* Our Clientele - World Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">

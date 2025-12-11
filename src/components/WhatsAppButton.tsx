@@ -1,16 +1,21 @@
 'use client';
 
-import { MessageCircle, X } from 'lucide-react';
+import { MessageCircle, X, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = '919645921944'; // Replace with actual WhatsApp number
+  const callNumber = '+91 96459 21944'; // Display format
   const message = 'Hello! I would like to know more about hair transplant services at Eterno Clinic.';
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
+  };
+
+  const handleCallClick = () => {
+    window.location.href = `tel:${callNumber}`;
   };
 
   return (
@@ -19,7 +24,7 @@ export default function WhatsAppButton() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 animate-pulse"
-        aria-label="WhatsApp Contact"
+        aria-label="Contact Us"
       >
         {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
       </button>
@@ -32,20 +37,43 @@ export default function WhatsAppButton() {
               <MessageCircle className="text-white" size={24} />
             </div>
             <div>
-              <h3 className="font-bold text-gray-900">Chat with us!</h3>
-              <p className="text-sm text-gray-600">Typically replies instantly</p>
+              <h3 className="font-bold text-gray-900">Get in Touch!</h3>
+              <p className="text-sm text-gray-600">We're here to help you</p>
             </div>
           </div>
+          
           <p className="text-gray-700 mb-4">
-            Hi! Click below to chat with us on WhatsApp about hair transplant consultations.
+            Have questions about hair transplant? Contact us via WhatsApp or call us directly.
           </p>
+          
+          {/* WhatsApp Button */}
           <button
             onClick={handleWhatsAppClick}
-            className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center gap-2 mb-3"
           >
             <MessageCircle size={20} />
-            Start Chat on WhatsApp
+            Chat on WhatsApp
           </button>
+
+          {/* Call Button */}
+          <button
+            onClick={handleCallClick}
+            className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors flex items-center justify-center gap-2"
+          >
+            <Phone size={20} />
+            Call Now
+          </button>
+
+          {/* Phone Number Display */}
+          <div className="mt-4 pt-4 border-t border-gray-200 text-center">
+            <p className="text-xs text-gray-500 mb-1">Direct Line</p>
+            <a 
+              href={`tel:${callNumber}`}
+              className="text-gray-900 font-semibold hover:text-green-500 transition-colors"
+            >
+              {callNumber}
+            </a>
+          </div>
         </div>
       )}
     </>

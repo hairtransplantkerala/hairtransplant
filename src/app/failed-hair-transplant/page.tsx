@@ -11,19 +11,19 @@ export default function FailedHairTransplantRepairPage() {
   const signs = [
     {
       title: "Unnatural, Pluggy Hairline",
-      description: "Large grafts creating \"corn row\" or \"doll hair\" appearance with visible clusters instead of natural single hairs [web:233]"
+      description: "Large grafts creating \"corn row\" or \"doll hair\" appearance with visible clusters instead of natural single hairs "
     },
     {
       title: "Wrong Hairline Design",
-      description: "Hairline positioned too low, too straight, or not matching facial features and age-appropriate aesthetics [web:233]"
+      description: "Hairline positioned too low, too straight, or not matching facial features and age-appropriate aesthetics "
     },
     {
       title: "Poor Density",
-      description: "Thin, sparse results with visible scalp showing through transplanted areas despite adequate grafts used [web:221]"
+      description: "Thin, sparse results with visible scalp showing through transplanted areas despite adequate grafts used "
     },
     {
       title: "Visible Scarring",
-      description: "Wide FUT scars, cobblestoning, pitting, or white dots from poorly executed extractions [web:233]"
+      description: "Wide FUT scars, cobblestoning, pitting, or white dots from poorly executed extractions "
     },
     {
       title: "Wrong Hair Direction",
@@ -35,18 +35,18 @@ export default function FailedHairTransplantRepairPage() {
     },
     {
       title: "Depleted Donor Area",
-      description: "Over-harvesting leaving visible thinning or scarring at the back and sides of the head [web:221]"
+      description: "Over-harvesting leaving visible thinning or scarring at the back and sides of the head "
     },
     {
       title: "Bushy Temple Area",
-      description: "Too many grafts placed in temples creating overly dense, unnatural \"pom-pom\" effect [web:233]"
+      description: "Too many grafts placed in temples creating overly dense, unnatural \"pom-pom\" effect "
     }
   ];
 
   const solutions = [
     {
       title: "Hairline Redesign & Correction",
-      description: "Removing poorly placed grafts and recreating a natural, age-appropriate hairline with proper single-hair placement [web:221][web:233]",
+      description: "Removing poorly placed grafts and recreating a natural, age-appropriate hairline with proper single-hair placement ",
       technique: "Surgical extraction + FUE refinement"
     },
     {
@@ -56,17 +56,17 @@ export default function FailedHairTransplantRepairPage() {
     },
     {
       title: "Scar Revision & Camouflage",
-      description: "FUT scar excision, scalp micropigmentation, or strategic graft placement to hide visible scarring [web:221]",
+      description: "FUT scar excision, scalp micropigmentation, or strategic graft placement to hide visible scarring ",
       technique: "Multiple techniques combined"
     },
     {
       title: "Body Hair Transplant (BHT)",
-      description: "Using beard, chest, or body hair when donor scalp is depleted from previous over-harvesting [web:221]",
+      description: "Using beard, chest, or body hair when donor scalp is depleted from previous over-harvesting ",
       technique: "FUE extraction from body"
     },
     {
       title: "Temple Correction",
-      description: "Removing excessive grafts from overly dense temple areas and redistributing to needed areas [web:221]",
+      description: "Removing excessive grafts from overly dense temple areas and redistributing to needed areas ",
       technique: "Graft extraction + redistribution"
     },
     {
@@ -141,10 +141,10 @@ export default function FailedHairTransplantRepairPage() {
 
             <h2 className="mb-6">Understanding Failed Hair Transplants</h2>
             <p className="text-lg text-gray-700 mb-4">
-              A failed hair transplant occurs when the results are unnatural, aesthetically poor, or significantly different from what was promised. This can happen due to inexperienced surgeons, outdated techniques, poor planning, or unrealistic patient expectations [web:233].
+              A failed hair transplant occurs when the results are unnatural, aesthetically poor, or significantly different from what was promised. This can happen due to inexperienced surgeons, outdated techniques, poor planning, or unrealistic patient expectations .
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Common issues include unnatural "pluggy" hairlines, poor density despite adequate grafts, visible scarring, wrong hair direction, and depleted donor areas from over-harvesting [web:221][web:233]. These problems not only affect appearance but can cause significant emotional distress and loss of confidence.
+              Common issues include unnatural "pluggy" hairlines, poor density despite adequate grafts, visible scarring, wrong hair direction, and depleted donor areas from over-harvesting . These problems not only affect appearance but can cause significant emotional distress and loss of confidence.
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac specializes in corrective hair transplant surgery, using advanced techniques to repair failed procedures and restore natural, aesthetically pleasing results. With over 22 years of surgical experience and international training, he has successfully helped hundreds of patients regain their confidence.
@@ -179,7 +179,7 @@ export default function FailedHairTransplantRepairPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Corrective Solutions & Repair Options</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Advanced techniques to fix failed procedures and achieve natural results [web:221][web:233]
+              Advanced techniques to fix failed procedures and achieve natural results 
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">

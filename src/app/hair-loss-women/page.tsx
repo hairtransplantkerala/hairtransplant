@@ -137,10 +137,10 @@ export default function HairLossWomenPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Understanding Hair Loss in Women</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. Unlike men, women's hair loss patterns are typically more diffuse, with thinning spread across the crown and top of the scalp rather than receding hairlines [web:216][web:222].
+              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. Unlike men, women's hair loss patterns are typically more diffuse, with thinning spread across the crown and top of the scalp rather than receding hairlines [web:216].
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Female pattern hair loss (FPHL) affects up to 30 million women in the United States, with most experiencing symptoms in their 40s, 50s, or 60s [web:222]. However, hair loss can occur at any age due to various factors including hormonal changes, nutritional deficiencies, stress, and medical conditions.
+              Female pattern hair loss (FPHL) affects up to 30 million women in the United States, with most experiencing symptoms in their 40s, 50s, or 60s . However, hair loss can occur at any age due to various factors including hormonal changes, nutritional deficiencies, stress, and medical conditions.
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac provides compassionate, comprehensive evaluation and personalized treatment plans for women experiencing hair loss, ensuring both effective results and emotional support throughout your journey.

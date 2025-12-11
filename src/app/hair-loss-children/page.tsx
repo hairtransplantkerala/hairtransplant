@@ -11,7 +11,7 @@ export default function HairLossChildrenPage() {
   const causes = [
     {
       title: "Alopecia Areata",
-      description: "Autoimmune condition causing round, smooth bald patches. Most common cause of hair loss in children. Usually reversible with treatment [web:220]."
+      description: "Autoimmune condition causing round, smooth bald patches. Most common cause of hair loss in children. Usually reversible with treatment ."
     },
     {
       title: "Tinea Capitis (Ringworm)",
@@ -38,12 +38,12 @@ export default function HairLossChildrenPage() {
   const treatments = [
     {
       title: "Topical Corticosteroids",
-      description: "Prescription-strength creams applied to bald spots, most effective first-line treatment for children with alopecia areata [web:220]",
+      description: "Prescription-strength creams applied to bald spots, most effective first-line treatment for children with alopecia areata ",
       age: "Safe for all ages"
     },
     {
       title: "Minoxidil",
-      description: "FDA-approved topical solution to help maintain regrown hair. Few side effects, good option after corticosteroid treatment stops [web:220]",
+      description: "FDA-approved topical solution to help maintain regrown hair. Few side effects, good option after corticosteroid treatment stops ",
       age: "Children 10+ years"
     },
     {
@@ -136,10 +136,10 @@ export default function HairLossChildrenPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Understanding Hair Loss in Children</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Discovering that your child is losing hair can be alarming for parents. While childhood hair loss is less common than in adults, it affects many children and is rarely dangerous or life-threatening [web:223]. Most causes are treatable, and with proper diagnosis and care, children can regrow their hair.
+              Discovering that your child is losing hair can be alarming for parents. While childhood hair loss is less common than in adults, it affects many children and is rarely dangerous or life-threatening . Most causes are treatable, and with proper diagnosis and care, children can regrow their hair.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Children experience hair loss differently than adults. The most common condition is alopecia areata, an autoimmune disorder causing patchy bald spots. Other causes include fungal infections, stress-related shedding, nutritional deficiencies, and hair-pulling behaviors [web:223].
+              Children experience hair loss differently than adults. The most common condition is alopecia areata, an autoimmune disorder causing patchy bald spots. Other causes include fungal infections, stress-related shedding, nutritional deficiencies, and hair-pulling behaviors .
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac provides gentle, child-friendly evaluation and evidence-based treatments, ensuring both your child's physical and emotional wellbeing throughout the process.
@@ -174,7 +174,7 @@ export default function HairLossChildrenPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Safe, Effective Treatments for Children</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Age-appropriate, evidence-based care tailored to your child's needs [web:220][web:223]
+              Age-appropriate, evidence-based care tailored to your child's needs 
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -238,7 +238,7 @@ export default function HairLossChildrenPage() {
             <h2 className="mb-6">Good News: Most Children Regrow Their Hair</h2>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <p className="text-lg text-gray-700 mb-4">
-                With proper treatment, most children with alopecia areata will regrow hair within one year [web:223]. Even without treatment, hair may spontaneously regrow in young children.
+                With proper treatment, most children with alopecia areata will regrow hair within one year . Even without treatment, hair may spontaneously regrow in young children.
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 Fungal infections respond well to antifungal medications when treated promptly. Telogen effluvium typically resolves once the triggering factor is addressed.

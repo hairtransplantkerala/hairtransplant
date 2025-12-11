@@ -294,7 +294,7 @@ export default function MediaPage() {
             <h2 className="mb-12 text-center">Media Recognition</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-2">25+</div>
+                <div className="text-5xl font-bold text-gray-900 mb-2">26+</div>
                 <p className="text-gray-600 font-semibold">Media Features</p>
               </div>
               <div className="text-center">
@@ -302,7 +302,7 @@ export default function MediaPage() {
                 <p className="text-gray-600 font-semibold">TV Interviews</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-2">15+</div>
+                <div className="text-5xl font-bold text-gray-900 mb-2">22+</div>
                 <p className="text-gray-600 font-semibold">Press Articles</p>
               </div>
             </div>

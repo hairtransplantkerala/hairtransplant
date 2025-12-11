@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Eterno Hair Transplant Clinic | Leading Hair Restoration in Kochi, Kerala",
     template: "%s | Eterno Clinic"
   },
-  description: "Expert hair transplant services in Kochi, Kerala. FUE, FUT, DHI, PRP treatments by Dr. Chacko Cyriac, MCh Plastic Surgery. 7000+ successful procedures, patients from 25+ countries.",
+  description: "Expert hair transplant services in Kochi, Kerala. FUE, FUT, DHI, PRP treatments by Dr. Chacko Cyriac, MCh Plastic Surgery. 7000+ successful procedures, patients from 26+ countries.",
   keywords: [
     "hair transplant Kerala",
     "hair transplant Kochi",

@@ -123,7 +123,7 @@ export default function AboutPage() {
     {
       year: "2020",
       title: "7000+ Successful Procedures",
-      description: "Milestone achievement with patients from 25+ countries"
+      description: "Milestone achievement with patients from 26+ countries"
     },
     {
       year: "2025",
@@ -167,7 +167,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
-                    <span><strong>25+</strong> Countries Served</span>
+                    <span><strong>26+</strong> Countries Served</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />

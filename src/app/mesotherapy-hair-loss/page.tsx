@@ -11,27 +11,27 @@ export default function MesotherapyHairLossPage() {
   const benefits = [
     {
       title: "Promotes Hair Growth",
-      description: "Stimulates dormant hair follicles and encourages new hair growth through direct nutrient delivery [web:228]"
+      description: "Stimulates dormant hair follicles and encourages new hair growth through direct nutrient delivery "
     },
     {
       title: "Reduces Hair Loss",
-      description: "Clinical studies show up to 70% reduction in hair shedding after treatment course [web:229]"
+      description: "Clinical studies show up to 70% reduction in hair shedding after treatment course "
     },
     {
       title: "Improves Hair Thickness",
-      description: "Strengthens existing hair shafts, increases diameter and volume for fuller appearance [web:228]"
+      description: "Strengthens existing hair shafts, increases diameter and volume for fuller appearance "
     },
     {
       title: "Nourishes Scalp",
-      description: "Delivers vitamins, minerals, amino acids, and growth factors directly to hair follicles [web:228]"
+      description: "Delivers vitamins, minerals, amino acids, and growth factors directly to hair follicles "
     },
     {
       title: "Stimulates Collagen Production",
-      description: "Boosts collagen and elastin in scalp tissue, creating healthier environment for hair growth [web:228]"
+      description: "Boosts collagen and elastin in scalp tissue, creating healthier environment for hair growth "
     },
     {
       title: "Non-Invasive & Safe",
-      description: "Minimal downtime, no surgery, few side effects - suitable for most patients [web:228]"
+      description: "Minimal downtime, no surgery, few side effects - suitable for most patients "
     }
   ];
 
@@ -60,7 +60,7 @@ export default function MesotherapyHairLossPage() {
     {
       step: "3",
       title: "Microinjection Process",
-      description: "Nutrient solution injected into mesoderm (middle skin layer) using specialized mesotherapy gun or fine needles [web:228][web:231]"
+      description: "Nutrient solution injected into mesoderm (middle skin layer) using specialized mesotherapy gun or fine needles [web:231]"
     },
     {
       step: "4",
@@ -83,7 +83,7 @@ export default function MesotherapyHairLossPage() {
   const timeline = [
     { phase: "Initial Sessions", description: "Weekly treatments for 8-10 weeks to establish baseline improvement [web:231]" },
     { phase: "Month 2-3", description: "Reduced shedding noticed, scalp health improves visibly" },
-    { phase: "Month 4-5", description: "New hair regrowth begins, existing hair appears thicker [web:229]" },
+    { phase: "Month 4-5", description: "New hair regrowth begins, existing hair appears thicker " },
     { phase: "Month 6+", description: "Significant improvement in density and volume achieved" },
     { phase: "Maintenance", description: "Monthly or quarterly sessions to sustain results long-term" },
   ];
@@ -119,10 +119,10 @@ export default function MesotherapyHairLossPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">What is Mesotherapy for Hair Loss?</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Mesotherapy for hair loss is a non-surgical treatment that involves microinjecting a customized cocktail of vitamins, minerals, amino acids, and growth factors directly into the scalp's mesodermal layer [web:228]. This targeted delivery system nourishes hair follicles, improves blood circulation, and stimulates natural hair growth.
+              Mesotherapy for hair loss is a non-surgical treatment that involves microinjecting a customized cocktail of vitamins, minerals, amino acids, and growth factors directly into the scalp's mesodermal layer . This targeted delivery system nourishes hair follicles, improves blood circulation, and stimulates natural hair growth.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Originally developed in France in the 1950s for pain management, mesotherapy has evolved into an effective treatment for various conditions, including hair loss [web:226]. The technique delivers nutrients precisely where they're needed, bypassing systemic absorption and reducing potential side effects.
+              Originally developed in France in the 1950s for pain management, mesotherapy has evolved into an effective treatment for various conditions, including hair loss . The technique delivers nutrients precisely where they're needed, bypassing systemic absorption and reducing potential side effects.
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac uses pharmaceutical-grade mesotherapy solutions customized to your specific hair loss type and scalp condition, ensuring optimal results with minimal discomfort.
@@ -137,7 +137,7 @@ export default function MesotherapyHairLossPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Benefits of Hair Mesotherapy</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Proven advantages for hair restoration and scalp health [web:228][web:229]
+              Proven advantages for hair restoration and scalp health 
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -157,7 +157,7 @@ export default function MesotherapyHairLossPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">How Does Mesotherapy Work?</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Mesotherapy works by delivering a nutrient-rich solution into the mesoderm (middle skin layer) where hair follicles reside. The treatment improves blood circulation to the scalp, provides essential nutrients for hair growth, and stimulates collagen production [web:228][web:231].
+              Mesotherapy works by delivering a nutrient-rich solution into the mesoderm (middle skin layer) where hair follicles reside. The treatment improves blood circulation to the scalp, provides essential nutrients for hair growth, and stimulates collagen production [web:231].
             </p>
             
             <h3 className="text-2xl font-bold mb-4">Key Ingredients in Mesotherapy Solution</h3>
@@ -173,7 +173,7 @@ export default function MesotherapyHairLossPage() {
             <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-r-lg">
               <h4 className="font-bold text-gray-900 mb-2">Clinical Evidence</h4>
               <p className="text-gray-700">
-                Studies show mesotherapy can reduce hair loss by up to 70% and stimulate new hair regrowth in 30% of patients [web:229]. It's particularly effective for androgenetic alopecia when combined with other treatments.
+                Studies show mesotherapy can reduce hair loss by up to 70% and stimulate new hair regrowth in 30% of patients . It's particularly effective for androgenetic alopecia when combined with other treatments.
               </p>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function MesotherapyHairLossPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">The Mesotherapy Procedure</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Quick, comfortable treatment with minimal downtime [web:228][web:231]
+              Quick, comfortable treatment with minimal downtime [web:231]
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -201,7 +201,7 @@ export default function MesotherapyHairLossPage() {
           <div className="max-w-4xl mx-auto mt-12 bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-gray-900">Treatment Duration & Comfort</h3>
             <p className="text-gray-700 mb-2">
-              <strong>Duration:</strong> Each session takes 30-60 minutes [web:229][web:231]
+              <strong>Duration:</strong> Each session takes 30-60 minutes [web:231]
             </p>
             <p className="text-gray-700 mb-2">
               <strong>Pain Level:</strong> Minimal discomfort. Most patients describe a slight pricking sensation. Numbing cream available if needed.

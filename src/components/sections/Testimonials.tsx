@@ -6,8 +6,6 @@ import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 interface Testimonial {
   id: number;
   name: string;
-  location: string;
-  procedure: string;
   rating: number;
   text: string;
   image?: string;
@@ -19,51 +17,21 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Rajesh Kumar",
-      location: "Mumbai, India",
-      procedure: "FUE Hair Transplant - 3500 Grafts",
+      name: "Sona Rosey Jose",
       rating: 5,
-      text: "Dr. Chacko Cyriac and his team transformed my life! The procedure was painless, and the results exceeded my expectations. After 10 months, my hair looks completely natural. I'm so grateful for their expertise and care throughout the journey.",
+      text: "Dr. Chacko Cyriac is nothing less than outstanding. He is down to earth, easy to talk professional and honest in his approach to work. I waited about 6 months to write this review just to be sure that there was no scar on my face after surgery. Dr. Chacko Cyriac is truly an artist. I am extremely happy with the result. Thank you so much doctor and your team for the service.",
     },
     {
       id: 2,
-      name: "James Wilson",
-      location: "London, UK",
-      procedure: "FUT Hair Transplant - 4500 Grafts",
+      name: "Aneesh Antony",
       rating: 5,
-      text: "I traveled from UK specifically for Dr. Cyriac's expertise. His international training and experience are evident in every aspect. The facility is world-class, and the results are outstanding. Worth every penny and every mile traveled!",
+      text: "Dr Chacko Cyriac is a great plastic surgeon doing all aspects of Plastic and Cosmetic Surgery. He operated on me and am grateful for all the dedication and service. I Know he is skilled in several other areas like hair loss treatment, hair transplant, Gynecomastia surgery fat removal with liposuction etc. Thank you for your help Dr Cyriac",
     },
     {
       id: 3,
-      name: "Priya Menon",
-      location: "Kochi, Kerala",
-      procedure: "Female Hair Loss Treatment",
+      name: "John Paul",
       rating: 5,
-      text: "As a woman dealing with hair loss, I was nervous about the procedure. Dr. Cyriac was incredibly understanding and professional. The FUE technique left no visible scarring, and my hair density has improved dramatically. I feel confident again!",
-    },
-    {
-      id: 4,
-      name: "Ahmed Al-Rashid",
-      location: "Dubai, UAE",
-      procedure: "Beard Transplant",
-      rating: 5,
-      text: "Always wanted a full beard but had patchy growth. Dr. Cyriac created a perfectly natural-looking beard that exceeded my expectations. The attention to detail in designing the beard pattern was impressive. Highly recommend!",
-    },
-    {
-      id: 5,
-      name: "Michael Chen",
-      location: "Singapore",
-      procedure: "DHI Hair Transplant - 2800 Grafts",
-      rating: 5,
-      text: "The DHI method was perfect for my hairline restoration. No shaving required, minimal downtime, and exceptional results. Dr. Cyriac's artistic approach to hairline design is what sets him apart. Very happy with my decision!",
-    },
-    {
-      id: 6,
-      name: "Arun Prakash",
-      location: "Bangalore, India",
-      procedure: "FUE + PRP Combination",
-      rating: 5,
-      text: "Opted for FUE with PRP therapy as recommended by Dr. Cyriac. The combination worked wonders! Recovery was quick, and my existing hair also became thicker. The team's post-operative care and follow-up were excellent.",
+      text: "I have been going to Dr Chacko Cyriac in Kochi Kerala for my hair loss treatment. He was the only surgeon who told no need for surgery. I am very much satisfied with my results of treatment. Costs are also reasonable. Thank you Sir for your sincere advice.",
     },
   ];
 

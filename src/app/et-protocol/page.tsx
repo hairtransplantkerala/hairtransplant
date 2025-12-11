@@ -128,13 +128,13 @@ export default function ETProtocolPage() {
             <h2 className="mb-6">What is the ET-Protocol?</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> provides all medical treatments for hair loss, not just hair transplantation [web:246][web:247]. He firmly believes that all treatments have definitive indications and limitations too.
+                Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> provides all medical treatments for hair loss, not just hair transplantation. He firmly believes that all treatments have definitive indications and limitations too.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                With no bias towards any one type of treatment and with his wide range of experience with all techniques, he has developed the <strong>ET-Protocol</strong> (Eterno-Protocol) for comprehensive hair loss management [web:247][web:249].
+                With no bias towards any one type of treatment and with his wide range of experience with all techniques, he has developed the <strong>ET-Protocol</strong> (Eterno-Protocol) for comprehensive hair loss management .
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                This personalized approach ensures that each patient receives the most appropriate treatment based on their specific cause of hair loss, stage of baldness, extent of hair loss, age, and individual requirements [web:244][web:247].
+                This personalized approach ensures that each patient receives the most appropriate treatment based on their specific cause of hair loss, stage of baldness, extent of hair loss, age, and individual requirements.
               </p>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function ETProtocolPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Why Following the ET-Protocol is Essential</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              One-size-fits-all approaches fail because every patient's hair loss is unique. The ET-Protocol provides customized solutions for optimal results [web:247][web:249].
+              One-size-fits-all approaches fail because every patient's hair loss is unique. The ET-Protocol provides customized solutions for optimal results.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -200,7 +200,7 @@ export default function ETProtocolPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6 text-center">Core Principles of the ET-Protocol</h2>
             <p className="text-lg text-gray-700 text-center mb-10">
-              Dr. Cyriac's decades of experience with all hair restoration techniques enable him to provide unbiased, evidence-based recommendations [web:246][web:247].
+              Dr. Cyriac's decades of experience with all hair restoration techniques enable him to provide unbiased, evidence-based recommendations.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {principles.map((principle, index) => (
@@ -220,7 +220,7 @@ export default function ETProtocolPage() {
           <div className="max-w-5xl mx-auto">
             <h2 className="mb-6 text-center">Comprehensive Treatment Options Available</h2>
             <p className="text-lg text-gray-700 text-center mb-12">
-              The ET-Protocol draws from a complete spectrum of proven hair loss treatments [web:246][web:248]
+              The ET-Protocol draws from a complete spectrum of proven hair loss treatments
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {treatmentOptions.map((category, index) => (
@@ -252,7 +252,7 @@ export default function ETProtocolPage() {
                 Not All Hair Loss Can Be Treated with Hair Transplantation
               </h3>
               <p className="text-lg text-gray-700 mb-4">
-                This is a fundamental principle of the ET-Protocol. Hair transplantation is a powerful tool, but it's not always the right solution [web:246][web:248]. Some patients benefit more from:
+                This is a fundamental principle of the ET-Protocol. Hair transplantation is a powerful tool, but it's not always the right solution. Some patients benefit more from:
               </p>
               <ul className="space-y-2 text-gray-700 ml-6">
                 <li>• Medical therapy to stabilize hair loss before considering surgery</li>
@@ -279,7 +279,7 @@ export default function ETProtocolPage() {
                   What is the duration of treatment as per this protocol?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  There is no definitive duration of therapy. As the problem evolves, treatments change. The requirements too change with time. Therefore, we encourage our patients to return to us regularly to maintain a healthy head of hair [web:249].
+                  There is no definitive duration of therapy. As the problem evolves, treatments change. The requirements too change with time. Therefore, we encourage our patients to return to us regularly to maintain a healthy head of hair.
                 </p>
               </div>
 
@@ -288,7 +288,7 @@ export default function ETProtocolPage() {
                   Can this protocol be applied for ladies?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Yes, absolutely. Given the different causes and extent of hair loss amongst women, it is definitely necessary to provide all treatment options. Hair transplantation is typically the last option for female patients [web:247].
+                  Yes, absolutely. Given the different causes and extent of hair loss amongst women, it is definitely necessary to provide all treatment options. Hair transplantation is typically the last option for female patients.
                 </p>
               </div>
 
@@ -321,7 +321,7 @@ export default function ETProtocolPage() {
             <h2 className="mb-6">Why Dr. Chacko Cyriac for the ET-Protocol?</h2>
             <div className="bg-white p-8 rounded-2xl shadow-xl mb-8">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                With <strong>22+ years of experience</strong> practicing almost all techniques in hair loss management, Dr. Cyriac has the unique advantage of providing completely unbiased recommendations [web:247].
+                With <strong>22+ years of experience</strong> practicing almost all techniques in hair loss management, Dr. Cyriac has the unique advantage of providing completely unbiased recommendations .
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 His training as an <strong>MCh Plastic Surgeon from PGI Chandigarh</strong> combined with <strong>international training from UK, USA, Canada, and Singapore</strong> ensures world-class expertise in every aspect of hair restoration.
