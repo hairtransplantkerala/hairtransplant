@@ -87,7 +87,7 @@ Sent from Eterno Clinic Website
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9645921944"],
+      details: ["Appointment: +91 9645921944", "Opinion: +91 9895666099"],
       link: "tel:+919645921944"
     },
     {

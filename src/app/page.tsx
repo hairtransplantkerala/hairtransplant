@@ -429,7 +429,7 @@ View all Latest Treatments            </Link>
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Patient Stories
             </div>
-            <h2 className="mb-4">What Our Patients Say</h2>
+            <h2 className="mb-4">What Our Patients Say About us! </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Verified customer reviews and ratings.
             </p>
