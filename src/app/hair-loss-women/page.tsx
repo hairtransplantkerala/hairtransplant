@@ -109,21 +109,21 @@ export default function HairLossWomenPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rose-900 to-pink-900 text-white py-20">
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <Heart size={40} className="text-pink-300" />
+              <Heart size={40} className="text-gray-300" />
               <h1 className="mb-0 text-white">Hair Loss in Women</h1>
             </div>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Compassionate, expert care for female hair loss by Dr. Chacko Cyriac - Understanding your unique needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary inline-block text-center bg-white text-gray-900 hover:bg-gray-100">
+              <Link href="/contact" className="btn-primary inline-block text-center">
                 Book Confidential Consultation
               </Link>
-              <Link href="/gallery" className="btn-secondary inline-block text-center border-white text-white hover:bg-white hover:text-gray-900">
+              <Link href="/gallery" className="btn-secondary inline-block text-center">
                 View Female Results
               </Link>
             </div>
@@ -132,15 +132,15 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Understanding Hair Loss in Women</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. Unlike men, women's hair loss patterns are typically more diffuse, with thinning spread across the crown and top of the scalp rather than receding hairlines [web:216].
+              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. Unlike men, women's hair loss patterns are typically more diffuse, with thinning spread across the crown and top of the scalp rather than receding hairlines.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Female pattern hair loss (FPHL) affects up to 30 million women in the United States, with most experiencing symptoms in their 40s, 50s, or 60s . However, hair loss can occur at any age due to various factors including hormonal changes, nutritional deficiencies, stress, and medical conditions.
+              Female pattern hair loss (FPHL) affects up to 30 million women in the United States, with most experiencing symptoms in their 40s, 50s, or 60s. However, hair loss can occur at any age due to various factors including hormonal changes, nutritional deficiencies, stress, and medical conditions.
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac provides compassionate, comprehensive evaluation and personalized treatment plans for women experiencing hair loss, ensuring both effective results and emotional support throughout your journey.
@@ -160,7 +160,7 @@ export default function HairLossWomenPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {causes.map((cause, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{cause.title}</h3>
                 <p className="text-gray-600">{cause.description}</p>
               </div>
@@ -170,7 +170,7 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* Types & Classification */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Types & Classification of Female Hair Loss</h2>
@@ -179,7 +179,7 @@ export default function HairLossWomenPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {types.map((item, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-pink-600">
+                <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-900">
                   <h3 className="text-lg font-bold mb-2 text-gray-900">{item.type}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
@@ -195,15 +195,15 @@ export default function HairLossWomenPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Treatment Options for Women</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tailored solutions addressing the unique needs of female hair loss [web:217][web:219]
+              Tailored solutions addressing the unique needs of female hair loss
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {treatments.map((treatment, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-200">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{treatment.title}</h3>
                 <p className="text-gray-600 mb-4">{treatment.description}</p>
-                <div className="border-t pt-4">
+                <div className="border-t border-gray-200 pt-4">
                   <p className="text-sm text-gray-500 font-semibold">Best For:</p>
                   <p className="text-sm text-gray-700">{treatment.ideal}</p>
                 </div>
@@ -214,11 +214,11 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* Special Considerations */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Special Considerations for Women</h2>
-            <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-200">
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-8 rounded-xl border-2 border-gray-300">
               <h3 className="text-xl font-bold mb-4 text-gray-900">Why Women's Hair Loss Requires Specialized Care</h3>
               <div className="space-y-4 text-gray-700">
                 <p><strong>Different Hair Loss Patterns:</strong> Women experience diffuse thinning rather than distinct bald patches, requiring specialized transplant techniques like DHI for undetectable results.</p>
@@ -239,8 +239,8 @@ export default function HairLossWomenPage() {
             <h2 className="mb-6">Hair Care & Prevention Tips for Women</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {tips.map((tip, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
-                  <CheckCircle className="text-pink-600 flex-shrink-0 mt-1" size={20} />
+                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
                   <span className="text-gray-700">{tip}</span>
                 </div>
               ))}
@@ -250,7 +250,7 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* Why Choose Dr. Cyriac */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mb-6">Compassionate Expert Care for Women</h2>
@@ -258,16 +258,16 @@ export default function HairLossWomenPage() {
               Dr. Chacko Cyriac understands the emotional impact of female hair loss and provides personalized, confidential care with proven results. With specialized training in female hair restoration techniques and over 22 years of experience, you're in expert hands.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-pink-600 mb-2">2000+</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">2000+</div>
                 <p className="text-gray-600">Female Patients Treated</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-pink-600 mb-2">98%</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">98%</div>
                 <p className="text-gray-600">Patient Satisfaction</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-pink-600 mb-2">5★</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">5★</div>
                 <p className="text-gray-600">Average Rating</p>
               </div>
             </div>
@@ -279,17 +279,17 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-rose-900 to-pink-900">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-6">You Don't Have to Face Hair Loss Alone</h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Schedule a confidential consultation to discuss your concerns in a supportive, judgment-free environment
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary inline-block bg-white text-gray-900 hover:bg-gray-100">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Free Consultation
             </Link>
-            <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2 border-white text-white hover:bg-white hover:text-gray-900">
+            <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
               <Phone size={20} />
               Call Now
             </a>

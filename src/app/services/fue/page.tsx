@@ -3,7 +3,7 @@ import { CheckCircle, Clock, Users, ArrowRight, Phone, IndianRupee } from 'lucid
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'FUE Hair Transplant in Kerala | Follicular Unit Extraction',
+  title: 'SC-FUE Hair Transplant in Kerala | Follicular Unit Extraction',
   description: 'Advanced FUE hair transplant technique with no linear scarring. Natural results with minimal downtime. Expert surgeon Dr. Chacko Cyriac.',
   keywords: 'FUE hair transplant Kerala, follicular unit extraction, scarless hair transplant, hair restoration Kerala',
 }

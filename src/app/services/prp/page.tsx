@@ -3,7 +3,7 @@ import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone, Droplet } fr
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'PRP Treatment for Hair Loss in Kerala | Platelet Rich Plasma Therapy',
+  title: 'UltraMax PRP for Hair Loss in Kerala | Platelet Rich Plasma Therapy',
   description: 'Non-surgical PRP hair treatment to stimulate hair growth and reduce hair loss. Safe, natural, and effective platelet-rich plasma therapy.',
   keywords: 'PRP hair treatment Kerala, platelet rich plasma therapy, hair loss treatment, non-surgical hair restoration',
 }
@@ -90,7 +90,7 @@ export default function PRPPage() {
                 <Droplet size={16} />
                 Natural & Non-Surgical
               </div>
-              <h1 className="text-white mb-6">PRP Hair Treatment</h1>
+              <h1 className="text-white mb-6">UltraMax PRP Hair Treatment</h1>
               <p className="text-xl text-gray-300 mb-8">
                 Platelet-Rich Plasma Therapy - Harness your body's natural healing power to stimulate hair growth and reduce hair loss.
               </p>

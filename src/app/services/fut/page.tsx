@@ -3,7 +3,7 @@ import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone } from 'lucid
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'FUT Hair Transplant in Kerala | Strip Method Hair Restoration',
+  title: 'Inviscar FUT Hair Transplant in Kerala | Strip Method Hair Restoration',
   description: 'FUT (Follicular Unit Transplantation) hair transplant with maximum graft yield. Cost-effective solution for advanced hair loss.',
   keywords: 'FUT hair transplant Kerala, strip method, hair restoration, follicular unit transplantation',
 }

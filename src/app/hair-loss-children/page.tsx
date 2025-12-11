@@ -11,7 +11,7 @@ export default function HairLossChildrenPage() {
   const causes = [
     {
       title: "Alopecia Areata",
-      description: "Autoimmune condition causing round, smooth bald patches. Most common cause of hair loss in children. Usually reversible with treatment ."
+      description: "Autoimmune condition causing round, smooth bald patches. Most common cause of hair loss in children. Usually reversible with treatment."
     },
     {
       title: "Tinea Capitis (Ringworm)",
@@ -38,12 +38,12 @@ export default function HairLossChildrenPage() {
   const treatments = [
     {
       title: "Topical Corticosteroids",
-      description: "Prescription-strength creams applied to bald spots, most effective first-line treatment for children with alopecia areata ",
+      description: "Prescription-strength creams applied to bald spots, most effective first-line treatment for children with alopecia areata",
       age: "Safe for all ages"
     },
     {
       title: "Minoxidil",
-      description: "FDA-approved topical solution to help maintain regrown hair. Few side effects, good option after corticosteroid treatment stops ",
+      description: "FDA-approved topical solution to help maintain regrown hair. Few side effects, good option after corticosteroid treatment stops",
       age: "Children 10+ years"
     },
     {
@@ -108,21 +108,21 @@ export default function HairLossChildrenPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <Baby size={40} className="text-blue-300" />
+              <Baby size={40} className="text-gray-300" />
               <h1 className="mb-0 text-white">Hair Loss in Children</h1>
             </div>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Expert pediatric hair loss diagnosis and treatment - Compassionate care for your child by Dr. Chacko Cyriac
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary inline-block text-center bg-white text-gray-900 hover:bg-gray-100">
+              <Link href="/contact" className="btn-primary inline-block text-center">
                 Book Pediatric Consultation
               </Link>
-              <Link href="/about" className="btn-secondary inline-block text-center border-white text-white hover:bg-white hover:text-gray-900">
+              <Link href="/about" className="btn-secondary inline-block text-center">
                 Meet Dr. Cyriac
               </Link>
             </div>
@@ -131,15 +131,15 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">Understanding Hair Loss in Children</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Discovering that your child is losing hair can be alarming for parents. While childhood hair loss is less common than in adults, it affects many children and is rarely dangerous or life-threatening . Most causes are treatable, and with proper diagnosis and care, children can regrow their hair.
+              Discovering that your child is losing hair can be alarming for parents. While childhood hair loss is less common than in adults, it affects many children and is rarely dangerous or life-threatening. Most causes are treatable, and with proper diagnosis and care, children can regrow their hair.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Children experience hair loss differently than adults. The most common condition is alopecia areata, an autoimmune disorder causing patchy bald spots. Other causes include fungal infections, stress-related shedding, nutritional deficiencies, and hair-pulling behaviors .
+              Children experience hair loss differently than adults. The most common condition is alopecia areata, an autoimmune disorder causing patchy bald spots. Other causes include fungal infections, stress-related shedding, nutritional deficiencies, and hair-pulling behaviors.
             </p>
             <p className="text-lg text-gray-700">
               At Eterno Clinic, Dr. Chacko Cyriac provides gentle, child-friendly evaluation and evidence-based treatments, ensuring both your child's physical and emotional wellbeing throughout the process.
@@ -159,7 +159,7 @@ export default function HairLossChildrenPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {causes.map((cause, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{cause.title}</h3>
                 <p className="text-gray-600">{cause.description}</p>
               </div>
@@ -169,21 +169,21 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* Treatment Options */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Safe, Effective Treatments for Children</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Age-appropriate, evidence-based care tailored to your child's needs 
+              Age-appropriate, evidence-based care tailored to your child's needs
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {treatments.map((treatment, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-200">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{treatment.title}</h3>
                 <p className="text-gray-600 mb-4">{treatment.description}</p>
-                <div className="border-t pt-4">
-                  <p className="text-sm text-indigo-600 font-semibold">{treatment.age}</p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-sm text-gray-900 font-semibold">{treatment.age}</p>
                 </div>
               </div>
             ))}
@@ -192,7 +192,7 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* When to Consult */}
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">When to Consult a Specialist</h2>
@@ -201,8 +201,8 @@ export default function HairLossChildrenPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {whenToConsult.map((sign, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
-                  <CheckCircle className="text-indigo-600 flex-shrink-0 mt-1" size={20} />
+                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
                   <span className="text-gray-700">{sign}</span>
                 </div>
               ))}
@@ -212,7 +212,7 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* Supporting Your Child */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">How to Support Your Child</h2>
@@ -221,7 +221,7 @@ export default function HairLossChildrenPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {support.map((item, index) => (
-                <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl border-2 border-gray-300">
                   <h3 className="text-lg font-bold mb-2 text-gray-900">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
@@ -236,9 +236,9 @@ export default function HairLossChildrenPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mb-6">Good News: Most Children Regrow Their Hair</h2>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
               <p className="text-lg text-gray-700 mb-4">
-                With proper treatment, most children with alopecia areata will regrow hair within one year . Even without treatment, hair may spontaneously regrow in young children.
+                With proper treatment, most children with alopecia areata will regrow hair within one year. Even without treatment, hair may spontaneously regrow in young children.
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 Fungal infections respond well to antifungal medications when treated promptly. Telogen effluvium typically resolves once the triggering factor is addressed.
@@ -252,7 +252,7 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* Why Choose Dr. Cyriac */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mb-6">Child-Friendly Expert Care</h2>
@@ -260,16 +260,16 @@ export default function HairLossChildrenPage() {
               Dr. Chacko Cyriac provides gentle, compassionate care for children with hair loss. With extensive experience in pediatric cases and a warm, reassuring approach, he helps children and families navigate treatment with confidence.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">500+</div>
                 <p className="text-gray-600">Children Treated</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">22+</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">22+</div>
                 <p className="text-gray-600">Years Experience</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <div className="text-4xl font-bold text-indigo-600 mb-2">95%</div>
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <div className="text-4xl font-bold text-gray-900 mb-2">95%</div>
                 <p className="text-gray-600">Treatment Success</p>
               </div>
             </div>
@@ -281,17 +281,17 @@ export default function HairLossChildrenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-6">Get Expert Help for Your Child Today</h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Schedule a gentle, child-friendly consultation to understand the cause and explore treatment options
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary inline-block bg-white text-gray-900 hover:bg-gray-100">
+            <Link href="/contact" className="btn-primary inline-block">
               Book Consultation
             </Link>
-            <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2 border-white text-white hover:bg-white hover:text-gray-900">
+            <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
               <Phone size={20} />
               Call Now
             </a>
