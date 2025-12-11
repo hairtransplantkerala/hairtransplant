@@ -240,7 +240,7 @@ export default async function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+     {/* <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -269,7 +269,7 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery Carousel Section */}
       <section className="py-20 bg-white">
