@@ -46,8 +46,8 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="relative bg-gradient-to-br from-primary-50 to-white p-8 md:p-12 rounded-2xl shadow-xl">
-      <Quote className="absolute top-8 left-8 text-primary-200 opacity-50" size={48} />
+    <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200">
+      <Quote className="absolute top-8 left-8 text-gray-300 opacity-50" size={48} />
       
       <div className="max-w-4xl mx-auto">
         {/* Rating Stars */}
@@ -64,23 +64,20 @@ export default function Testimonials() {
 
         {/* Patient Info */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary-700">
+          <div className="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-2xl font-bold text-gray-900">
               {currentTestimonial.name.charAt(0)}
             </span>
           </div>
           <h4 className="text-xl font-bold text-gray-900">{currentTestimonial.name}</h4>
-          <p className="text-gray-600">{currentTestimonial.location}</p>
-          <p className="text-sm text-primary-600 font-semibold mt-2">
-            {currentTestimonial.procedure}
-          </p>
+          <p className="text-sm text-gray-600 font-semibold mt-2">Verified Patient</p>
         </div>
 
         {/* Navigation */}
         <div className="flex items-center justify-center gap-6">
           <button
             onClick={prevTestimonial}
-            className="p-3 rounded-full bg-white shadow-lg hover:bg-primary-600 hover:text-white transition-colors"
+            className="p-3 rounded-full bg-white shadow-lg hover:bg-gray-900 hover:text-white transition-colors border border-gray-200"
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={24} />
@@ -94,7 +91,7 @@ export default function Testimonials() {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   index === currentIndex
-                    ? "bg-primary-600 w-8"
+                    ? "bg-gray-900 w-8"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -104,7 +101,7 @@ export default function Testimonials() {
 
           <button
             onClick={nextTestimonial}
-            className="p-3 rounded-full bg-white shadow-lg hover:bg-primary-600 hover:text-white transition-colors"
+            className="p-3 rounded-full bg-white shadow-lg hover:bg-gray-900 hover:text-white transition-colors border border-gray-200"
             aria-label="Next testimonial"
           >
             <ChevronRight size={24} />
