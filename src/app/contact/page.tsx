@@ -305,7 +305,7 @@ Sent from Eterno Clinic Website
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl text-white">
+              {/* <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl text-white">
                 <h3 className="text-2xl font-bold mb-4">International Patients</h3>
                 <p className="text-gray-300 mb-4">
                   We welcome patients from around the world. We can assist with:
@@ -336,7 +336,7 @@ Sent from Eterno Clinic Website
                     <span>Multi-language support</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               <div className="bg-white p-8 rounded-xl shadow-xl">
                 <h3 className="text-2xl font-bold mb-4">Why Choose Eterno?</h3>
@@ -351,7 +351,7 @@ Sent from Eterno Clinic Website
                   </li>
                   <li className="flex items-start">
                     <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">5000+ successful procedures</span>
+                    <span className="text-gray-700">7000+ successful procedures</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-gray-900 mr-3 flex-shrink-0 mt-1" size={20} />

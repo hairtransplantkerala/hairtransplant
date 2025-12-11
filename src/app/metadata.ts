@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Eterno Hair Transplant Clinic",
-  description: "Leading hair transplant clinic in Kochi, Kerala. Expert FUE, FUT, DHI, PRP treatments by Dr. Chacko Cyriac. 5000+ successful procedures.",
+  description: "Leading hair transplant clinic in Kochi, Kerala. Expert FUE, FUT, DHI, PRP treatments by Dr. Chacko Cyriac. 7000+ successful procedures.",
   url: "https://eternoclinic.com",
   ogImage: "/og-image.jpg",
   phone: "+919645921944",

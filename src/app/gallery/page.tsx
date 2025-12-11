@@ -222,7 +222,7 @@ export default function GalleryPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="p-4">
-                <div className="text-4xl font-bold text-gray-900 mb-2">5000+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">7000+</div>
                 <p className="text-gray-600">Successful Procedures</p>
               </div>
               <div className="p-4">

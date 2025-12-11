@@ -151,7 +151,7 @@ export default function ServicesPage() {
   const comparisonData = [
     { feature: "Scarring", fue: "Tiny dots (invisible)", fut: "Linear scar", dhi: "Tiny dots (invisible)" },
     { feature: "Recovery Time", fue: "7-10 days", fut: "10-14 days", dhi: "5-7 days" },
-    { feature: "Grafts per Session", fue: "2000-4000", fut: "3000-5000+", dhi: "2000-3500" },
+    { feature: "Grafts per Session", fue: "2000-4000", fut: "3000-7000+", dhi: "2000-3500" },
     { feature: "Shaving Required", fue: "Yes (donor area)", fut: "Yes (donor area)", dhi: "Minimal/No" },
     { feature: "Procedure Time", fue: "4-8 hours", fut: "4-6 hours", dhi: "6-9 hours" },
     { feature: "Best For", fue: "Short hairstyles", fut: "Maximum coverage", dhi: "Frontal hairline" },

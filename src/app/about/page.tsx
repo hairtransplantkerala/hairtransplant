@@ -4,7 +4,7 @@ import DoctorImage from "@/components/DoctorImage";
 
 export const metadata = {
   title: "About Dr. Chacko Cyriac | Expert Hair Transplant Surgeon",
-  description: "Meet Dr. Chacko Cyriac, MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore. 22+ years experience, 5000+ successful procedures.",
+  description: "Meet Dr. Chacko Cyriac, MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore. 22+ years experience, 7000+ successful procedures.",
 };
 
 export default function AboutPage() {
@@ -36,13 +36,13 @@ export default function AboutPage() {
     },
     {
       icon: Users,
-      title: "5000+ Successful Cases",
+      title: "7000+ Successful Cases",
       description: "Thousands of satisfied patients with life-changing transformations"
     },
     {
       icon: Globe,
       title: "International Clientele",
-      description: "Patients from 25+ countries including USA, UK, UAE, Singapore, and more"
+      description: "Patients from 26+ countries including USA, UK, UAE, Singapore, and more"
     },
     {
       icon: GraduationCap,
@@ -122,7 +122,7 @@ export default function AboutPage() {
     },
     {
       year: "2020",
-      title: "5000+ Successful Procedures",
+      title: "7000+ Successful Procedures",
       description: "Milestone achievement with patients from 25+ countries"
     },
     {
@@ -163,7 +163,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
-                    <span><strong>5000+</strong> Successful Procedures</span>
+                    <span><strong>7000+</strong> Successful Procedures</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
