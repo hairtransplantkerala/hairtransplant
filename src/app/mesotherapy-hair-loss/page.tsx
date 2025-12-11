@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Phone, Droplets } from "lucide-react";
+import { CheckCircle, ArrowRight, Phone, } from "lucide-react";
 
 export const metadata = {
   title: "Mesotherapy for Hair Loss | Non-Surgical Hair Treatment | Eterno Clinic",
@@ -95,7 +95,6 @@ export default function MesotherapyHairLossPage() {
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <Droplets size={40} className="text-gray-300" />
               <h1 className="mb-0 text-white">Mesotherapy for Hair Loss</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8">

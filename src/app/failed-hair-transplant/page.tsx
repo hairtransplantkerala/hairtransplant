@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Phone, AlertTriangle, RefreshCw } from "lucide-react";
+import { CheckCircle, ArrowRight, Phone, AlertTriangle, } from "lucide-react";
 
 export const metadata = {
-  title: "Failed Hair Transplant Repair | Corrective Hair Transplant Surgery | Eterno Clinic",
+  title: "Failed Hair Transplant | Corrective Hair Transplant Surgery | Eterno Clinic",
   description: "Expert corrective hair transplant surgery for failed procedures. Fix unnatural hairlines, poor density, visible scars by Dr. Chacko Cyriac in Kochi, Kerala.",
   keywords: "failed hair transplant, corrective hair transplant, hair transplant repair, revision hair transplant, botched hair transplant fix",
 };
@@ -105,8 +105,7 @@ export default function FailedHairTransplantRepairPage() {
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <RefreshCw size={40} className="text-gray-300" />
-              <h1 className="mb-0 text-white">Failed Hair Transplant Repair</h1>
+              <h1 className="mb-0 text-white">Failed Hair Transplant</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8">
               Expert corrective surgery to fix botched hair transplants - Restore natural results with Dr. Chacko Cyriac

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle, ArrowRight, Phone, Sparkles, Zap } from "lucide-react";
+import { CheckCircle, ArrowRight, Phone, Zap } from "lucide-react";
 
 export const metadata = {
   title: "Stem Cell FUE Hair Transplant | Advanced Hair Restoration | Eterno Clinic",
@@ -155,7 +155,6 @@ export default function StemCellFUEPage() {
         <div className="container-custom">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <Sparkles size={40} className="text-gray-300" />
               <h1 className="mb-0 text-white">Stem Cell FUE Hair Transplant</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8">
