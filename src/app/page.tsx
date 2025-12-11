@@ -10,58 +10,62 @@ import { createClient } from '@/lib/supabase/server';
 export default async function HomePage() {
   const specializedTreatments = [
     {
-      title: "Hair Loss in Men",
-      description: "Expert treatment for male pattern baldness and androgenetic alopecia",
-      image: "/images/conditions/hair-loss-men.webp",
-      link: "/hair-loss-men",
-      tag: "Most Common"
-    },
-    {
-      title: "Hair Loss in Women",
-      description: "Specialized care for female pattern hair loss with DHI techniques",
-      image: "/images/conditions/hair-loss-women.webp",
-      link: "/hair-loss-women",
-      tag: "Specialized Care"
-    },
-    {
-      title: "Hair Loss in Children",
-      description: "Gentle treatment for pediatric alopecia and childhood conditions",
-      image: "/images/conditions/hair-loss-children.webp",
-      link: "/hair-loss-children",
-      tag: "Pediatric Care"
-    },
-    {
-      title: "Failed Hair Transplant",
-      description: "Expert corrective surgery to fix unnatural results and scarring",
-      image: "/images/conditions/failed-transplant.webp",
-      link: "/failed-hair-transplant",
-      tag: "Corrective Surgery"
-    },
-    {
-      title: "Mesotherapy for Hair Loss",
-      description: "Non-surgical nutrient injections for natural hair regrowth",
-      image: "/images/conditions/mesotherapy.webp",
-      link: "/mesotherapy-hair-loss",
-      tag: "Non-Surgical"
+      title: "ET Protocol",
+      description: "Enhanced Transplantation Protocol for maximum graft survival and natural results",
+      image: "/images/conditions/et-protocol.webp",
+      link: "/et-protocol"
     },
     {
       title: "Stem Cell FUE",
-      description: "Revolutionary regenerative medicine for 90% graft survival",
+      description: "Revolutionary regenerative medicine for 90% graft survival and faster healing",
       image: "/images/conditions/stem-cell.webp",
-      link: "/stem-cell-fue",
-      tag: "Advanced Tech"
+      link: "/stem-cell-fue"
+    },
+    {
+      title: "InviScar FUT",
+      description: "Invisible scar FUT technique combining density with minimal visible scarring",
+      image: "/images/conditions/fut.webp",
+      link: "/inviscar-fut"
+    },
+    {
+      title: "Mesotherapy for Hair Loss",
+      description: "Non-surgical nutrient injections for natural hair regrowth and scalp health",
+      image: "/images/conditions/mesotherapy.webp",
+      link: "/mesotherapy-hair-loss"
+    },
+    {
+      title: "UltraMax PRP",
+      description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
+      image: "/images/conditions/prp.webp",
+      link: "/prp-therapy"
+    },
+    {
+      title: "Failed Hair Transplant Repair",
+      description: "Expert corrective surgery to fix unnatural results and scarring",
+      image: "/images/conditions/failed-transplant.webp",
+      link: "/failed-hair-transplant"
     },
   ];
 
-  const whyChooseUs = [
-    "Expert surgeon with MCh Plastic Surgery qualification from PGI Chandigarh",
-    "International training from UK, USA, Canada, and Singapore",
-    "Latest techniques: FUE, FUT, DHI, Modified Hair Implantation",
-    "State-of-the-art equipment and world-class facilities",
-    "Patients from 26+ countries worldwide trust our expertise",
-    "Personalized treatment plans tailored to individual needs",
-    "Comprehensive post-operative care and lifetime support",
-    "Transparent pricing with no hidden costs"
+  const commonConditions = [
+    {
+      title: "Hair Loss in Men",
+      description: "Expert treatment for male pattern baldness and androgenetic alopecia",
+      image: "/images/conditions/hair-loss-men.webp",
+      link: "/hair-loss-men"
+    },
+    {
+      title: "Hair Loss in Women",
+      description: "A huge problem in a silent population. A different approach is required.",
+      image: "/images/conditions/hair-loss-women.webp",
+      link: "/hair-loss-women"
+    },
+    {
+      title: "Hair Loss in Children",
+      description: "A problem presenting in increasing numbers. Treatments too vary.",
+      image: "/images/conditions/hair-loss-children.webp",
+      link: "/hair-loss-children"
+    },
   ];
 
   // Fetch latest blog posts
@@ -102,7 +106,9 @@ export default async function HomePage() {
             <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
           </h1>
           <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
-            All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon, <strong className="text-white">Dr. Chacko Cyriac</strong>
+            All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon,
+            <br />
+            <strong className="text-white">Dr. Chacko Cyriac</strong>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
@@ -130,13 +136,28 @@ export default async function HomePage() {
         </div>
       </HeroVideoBackground>
 
+      {/* Gallery Carousel Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Gallery</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Browse through some of our results. You might find a hair loss problem similar to yours!!
+            </p>
+          </div>
+          <GalleryCarousel />
+          <div className="text-center mt-12">
+            <Link href="/gallery" className="btn-primary inline-block">
+              View Full Gallery
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Specialized Care & Advanced Solutions */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Specialized Expertise
-            </div>
             <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               For the recent advances in hair loss treatment we have incorporated into our practice
@@ -157,12 +178,6 @@ export default async function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                  
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-white/95 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-full text-xs font-bold shadow-lg">
-                      {treatment.tag}
-                    </span>
-                  </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
@@ -187,60 +202,63 @@ export default async function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/treatments" className="btn-primary inline-block">
-View all Latest Treatments            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-     {/* <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Our Services
-            </div>
-            <h2 className="mb-4">Comprehensive Hair Loss Treatments</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Advanced solutions for all types of hair loss, backed by international expertise
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                image={service.image}
-                link={service.link}
-                features={service.features}
-              />
-            ))}
-          </div>
-          <div className="text-center mt-12">
             <Link href="/services" className="btn-primary inline-block">
               View All Services
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* Gallery Carousel Section */}
+      {/* Most Common Hair Loss Conditions */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Real Results
-            </div>
-            <h2 className="mb-4">Before & After Transformations</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              See the incredible transformations achieved by Dr. Chacko Cyriac at Eterno Clinic
+            <h2 className="mb-4">Most Common Hair Loss Conditions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Expert diagnosis and personalized treatment for different types of hair loss across all age groups
             </p>
           </div>
-          <GalleryCarousel />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {commonConditions.map((condition, index) => (
+              <Link
+                key={index}
+                href={condition.link}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={condition.image}
+                    alt={condition.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
+                      {condition.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-6 bg-white">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {condition.description}
+                  </p>
+                  <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
+                    Learn More 
+                    <ArrowRight className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
+              </Link>
+            ))}
+          </div>
+
           <div className="text-center mt-12">
-            <Link href="/gallery" className="btn-primary inline-block">
-              View Full Gallery
+            <Link href="/contact" className="btn-primary inline-block">
+              Book Consultation
             </Link>
           </div>
         </div>
@@ -251,27 +269,66 @@ View all Latest Treatments            </Link>
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Why Eterno Clinic
-              </div>
-              <h2 className="mb-6">Why Choose Dr. Chacko Cyriac for Your Hair Treatment?</h2>
+              <h2 className="mb-6">
+                Why choose <br />
+                Dr. Chacko Cyriac <br />
+                for your hair loss treatment?
+              </h2>
               <p className="text-gray-600 text-lg mb-8">
                 With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {whyChooseUs.map((item, index) => (
-                <div key={index} className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
+            {/* Doctor Image */}
+            <div className="flex justify-center mb-12">
+              <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-gray-300">
+                <img
+                  src="/images/dr-cyriac.jpg"
+                  alt="Dr. Chacko Cyriac - Hair Transplant Surgeon"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
+            {/* Why Choose Points 
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Expert surgeon with MCh Plastic Surgery qualification from PGI Chandigarh</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">International training from UK, USA, Canada, and Singapore</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Latest techniques: FUE, FUT, DHI, Modified Hair Implantation</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">State-of-the-art equipment and world-class facilities</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Patients from 26+ countries worldwide trust our expertise</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Personalized treatment plans tailored to individual needs</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Comprehensive post-operative care and lifetime support</span>
+              </div>
+              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">Transparent pricing with no hidden costs</span>
+              </div>
+            </div> */}
+
             <div className="text-center mt-8">
-              <Link href="/contact" className="btn-primary inline-block">
-                Schedule Your Consultation
+              <Link href="/about" className="btn-primary inline-block">
+                Know More
               </Link>
             </div>
           </div>
@@ -282,9 +339,6 @@ View all Latest Treatments            </Link>
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Expert Insights
-            </div>
             <h2 className="mb-4">Latest from Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Stay informed with expert advice, tips, and updates on hair restoration
@@ -422,14 +476,25 @@ View all Latest Treatments            </Link>
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Our Clientele - World Map Section */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Patient Stories
-            </div>
-            <h2 className="mb-4">What Our Patients Say About us! </h2>
+            <h2 className="mb-6">Our Clientele</h2>
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Our patients for hair loss treatments and hair transplantation, have come to us from various countries including the United States, Canada, Ireland, United Kingdom, Switzerland, Germany, Austria, Italy, South Africa, Ghana, almost all the Middle-Eastern countries, from various parts of India, Nepal, Singapore, Malaysia, Vietnam, Hong Kong, Japan, Australia and New Zealand.
+            </p>
+          </div>
+          
+          <WorldMapClientele />
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">What Our Patients Say About us!</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Verified customer reviews and ratings.
             </p>
@@ -438,43 +503,10 @@ View all Latest Treatments            </Link>
         </div>
       </section>
 
-      {/* Our Clientele - World Map Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Global Reach
-            </div>
-            <h2 className="mb-6">Our Clientele</h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Our patients for hair loss treatments and hair transplantation have come to us from various countries including the United States, Canada, Ireland, United Kingdom, Switzerland, Germany, Austria, Italy, South Africa, Ghana, almost all the Middle-Eastern countries, from various parts of India, Nepal, Singapore, Malaysia, Vietnam, Hong Kong, Japan, Australia and New Zealand.
-            </p>
-          </div>
-          
-          <WorldMapClientele />
-        </div>
-      </section>
-
-      {/* Before/After CTA */}
-      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
-        <div className="container-custom text-center">
-          <h2 className="text-white mb-6">See Real Results from Real Patients</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Browse our gallery of before and after transformations. These could be your results!
-          </p>
-          <Link href="/gallery" className="btn-primary inline-block">
-            View Results Gallery
-          </Link>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Got Questions?
-            </div>
             <h2 className="mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Get answers to the most common questions about hair transplant procedures
