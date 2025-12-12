@@ -234,7 +234,6 @@ export default function ETProtocolPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-6">Ready to Find Your Best Treatment ?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-justify">
             To know how the ET-Protocol for hair loss can be best applied to you, and for other questions regarding hair transplantation, take an appointment at our Kochi (Cochin) office in Kerala
           </p>

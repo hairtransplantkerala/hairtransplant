@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">Eterno Clinic</h3>
+            <h3 className="text-white text-xl font-bold mb-4">Eterno </h3>
             <p className="text-sm mb-4">
               The leading hair transplant clinic in Kochi, Kerala. Expert care by Dr. Chacko Cyriac.
             </p>
