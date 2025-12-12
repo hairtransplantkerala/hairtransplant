@@ -73,9 +73,6 @@ export default function ETProtocolPage() {
             <p className="text-2xl text-gray-300 mb-4 font-semibold">
               Eterno-Protocol for Hair Loss Management
             </p>
-            <p className="text-xl text-gray-400 mb-8">
-              All medical treatments for hair loss - not just the best hair transplantation in Kochi, Kerala
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary inline-block text-center">
                 Book Consultation
