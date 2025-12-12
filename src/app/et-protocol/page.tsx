@@ -172,52 +172,7 @@ export default function ETProtocolPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-12 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Why following the ET-Protocol is so important for hair loss management ?
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-justify">
-                  Causes of hair loss varies from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups. Dr. Chacko Cyriac has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age. All hair loss can certainly not be managed with hair transplantation.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Can this protocol be applied for ladies ?
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-justify">
-                  Yes. It certainly can. Given the different causes and extent of hair loss amongst ladies, it is definitely necessary to be able to provide all treatments. Doing hair transplantation is probably the last option.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  How about hair loss in young boys and girls ?
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-justify">
-                  Here lies a classic example of when the ET-Protocol is most essential. All hair loss cannot be treated with hair transplantation. Therefore one should go to a centre in Cochin (Kochi), Kerala, where all different options are available, and not just hair transplantation.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  What is the duration of the treatment for hair loss as per this protocol ?
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-justify">
-                  There is no definitive duration of therapy. As the problem evolves treatments change. The requirements too change with time. Therefore we encourage our patients to come back to us to maintain a healthy head of hair.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Why It's Important */}
 <section className="py-20 bg-gray-50">
   <div className="container-custom">
@@ -275,6 +230,52 @@ export default function ETProtocolPage() {
     </div>
   </div>
 </section>
+{/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="mb-12 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  Why following the ET-Protocol is so important for hair loss management ?
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  Causes of hair loss varies from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups. Dr. Chacko Cyriac has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age. All hair loss can certainly not be managed with hair transplantation.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  Can this protocol be applied for ladies ?
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  Yes. It certainly can. Given the different causes and extent of hair loss amongst ladies, it is definitely necessary to be able to provide all treatments. Doing hair transplantation is probably the last option.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  How about hair loss in young boys and girls ?
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  Here lies a classic example of when the ET-Protocol is most essential. All hair loss cannot be treated with hair transplantation. Therefore one should go to a centre in Cochin (Kochi), Kerala, where all different options are available, and not just hair transplantation.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  What is the duration of the treatment for hair loss as per this protocol ?
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  There is no definitive duration of therapy. As the problem evolves treatments change. The requirements too change with time. Therefore we encourage our patients to come back to us to maintain a healthy head of hair.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
