@@ -57,10 +57,6 @@ export default function UltraMaxPRPPage() {
       answer: 'Certainly. In fact the treatment of hair loss in this population is quite different from that for older patients. Hair transplantation is certainly not an option. The Ultra-max PRP helps control hair loss in many such young boys and girls.'
     },
     {
-      question: 'Does this need to be done every month ?',
-      answer: 'Certainly not. Dr Chacko Cyriac only asks his patients to come once every 5-6 months. With his improved methods, most often he does not find the reason to do this more frequently. Many a time we are able to thus avoid a hair transplantation.'
-    },
-    {
       question: 'Is there a reason then to do this more frequently ?',
       answer: 'Yes. When the quality of hair is that bad. When the response is suboptimal, we try our best to improve upon the situation by increasing the frequency of injections. If it still does not improve, we might be moving towards a hair transplantation.'
     },
@@ -113,14 +109,10 @@ export default function UltraMaxPRPPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit">
-                <Droplet size={16} />
-                Dr. Cyriac's Advanced PRP
-              </div>
-              <h1 className="text-white mb-6">UltraMax PRP Hair Treatment</h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <h1 className="text-white mb-6">UltraMax PRP</h1>
+              {/*<p className="text-xl text-gray-300 mb-8">
                 Dr. Chacko Cyriac's advanced PRP technique with strict protocol adherence for consistent and superior results. The best alternative to hair transplantation in Kochi, Kerala.
-              </p>
+              </p>*/}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary text-center">
                   Book Consultation
@@ -146,19 +138,16 @@ export default function UltraMaxPRPPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="mb-4">What is UltraMax PRP?</h2>
-            <p className="text-xl text-gray-600">
-              Platelet-rich plasma (PRP), alternatively referred to as autologous conditioned plasma, is concentrated platelet-rich plasma extracted from blood that has been centrifuged to remove red blood cells [web:296].
+            <p className="text-xl text-gray-600 text-justify">
+              Platelet-rich plasma (PRP), alternatively referred to as autologous conditioned plasma, is concentrated platelet-rich plasma extracted from blood that has been centrifuged to remove red blood cells.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4">Dr. Cyriac's Advanced Technique</h3>
-              <p className="text-gray-700 mb-4">
-                The regular PRP technique is quite popular, but with <strong>highly variable results</strong>. Dr Chacko Cyriac's advanced PRP technique, the <strong>UltraMax PRP</strong>, helps produce <strong>consistent and superior results</strong> [web:296].
-              </p>
-              <p className="text-gray-700 mb-6">
-                Over the years this has emerged as the <strong>best alternative to hair transplantation in Cochin (Kochi), Kerala</strong>. By strictly adhering to the rules involved in the harvest and preparation of platelet cells, Dr. Cyriac achieves superior results, often eliminating the need for hair transplantation [web:296].
+              <p className="text-gray-700 mb-4 text-justify">
+                The regular PRP technique is quite popular, but with <strong>highly variable results</strong>. Dr Chacko Cyriac's advanced PRP technique, <strong>UltraMax PRP</strong>, helps produce <strong>consistent and superior results</strong> Over the years this has emerged as the best alternative to hair transplantation in Cochin (Kochi), Kerala..
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
@@ -167,7 +156,7 @@ export default function UltraMaxPRPPage() {
                 {idealFor.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                    <span className="text-sm">{item}</span>
+                    <span className="text-sm text-justify">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -203,7 +192,7 @@ export default function UltraMaxPRPPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Benefits 
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -222,22 +211,17 @@ export default function UltraMaxPRPPage() {
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
 
       {/* Treatment Frequency */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-50 to-white p-8 rounded-2xl border-l-4 border-gray-900">
             <h3 className="text-2xl font-bold mb-4 text-gray-900">
-              Less Frequent Treatments Needed
+              Does this need to be done every month ?
             </h3>
-            <p className="text-lg text-gray-700 mb-4">
-              Unlike regular PRP that requires monthly treatments, Dr. Chacko Cyriac's improved UltraMax PRP method only requires patients to come <strong>once every 5-6 months</strong>.
-            </p>
-            <p className="text-lg text-gray-700">
-              With his improved methods, most often he does not find the reason to do this more frequently. <strong>Many a time we are able to thus avoid a hair transplantation.</strong>
-            </p>
+            <p className="text-lg text-gray-700 mb-4 text-justify">
+              Certainly not. Dr Chacko Cyriac only asks his patients to come once every 5-6 months. With his improved methods, most often he does not find the reason to do this more frequently. Many a time we are able to thus avoid a hair transplantation.</p>
           </div>
         </div>
       </section>
@@ -259,7 +243,7 @@ export default function UltraMaxPRPPage() {
                   <summary className="px-6 py-4 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
                     {faq.question}
                   </summary>
-                  <div className="px-6 pb-4 text-gray-600">
+                  <div className="px-6 pb-4 text-gray-600 text-justify">
                     {faq.answer}
                   </div>
                 </details>
@@ -273,7 +257,7 @@ export default function UltraMaxPRPPage() {
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-4">Experience UltraMax PRP by Dr. Chacko Cyriac</h2>
-          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto text-justify">
             Get consistent and superior results with advanced PRP technique. Best alternative to hair transplantation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

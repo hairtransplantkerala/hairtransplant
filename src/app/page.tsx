@@ -303,9 +303,9 @@ export default async function HomePage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Latest from Our Blog</h2>
+            <h2 className="mb-4">Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Stay informed with expert advice, tips, and updates on hair restoration
+              Read more about our unique approach to all aspects of hair loss and its treatment
             </p>
           </div>
           
