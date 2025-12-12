@@ -8,9 +8,9 @@ export default function StructuredData() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Eterno Clinic",
-      "addressLocality": "Kochi",
-      "addressRegion": "Kerala",
-      "postalCode": "682001",
+      "addressLocality": "4th Floor, AC Estate, Janatha Junction, S.A. Road, Vytilla",
+      "addressRegion": "Kochi, Kerala",
+      "postalCode": "682019",
       "addressCountry": "IN"
     },
     "telephone": "+919645921944",

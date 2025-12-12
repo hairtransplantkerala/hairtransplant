@@ -10,58 +10,58 @@ export default function ServicesPage() {
   const advancedTreatments = [
     {
       title: "ET Protocol",
-      description: "Revolutionary protocol combining advanced techniques for maximum graft survival and natural results. Our premium treatment option.",
+      description: "Dr. Chacko Cyriac's comprehensive Eterno-Protocol for hair loss management combines all treatment modalities to provide personalized care based on your unique needs, age, stage of baldness, and extent of hair loss.",
       image: "/images/services/et-protocol.webp",
       features: [
-        "Maximum graft survival rate (95%+)",
-        "Advanced preservation solutions",
-        "Optimized surgical workflow",
-        "Enhanced post-operative care",
-        "Premium service with guaranteed results",
-        "Combines best of all techniques"
+        "Customized treatment plan for each patient's unique condition",
+        "All treatment options available - not just hair transplantation",
+        "Suitable for men, women, and children with hair loss",
+        "Treatment evolves as your condition changes over time",
+        "No bias towards any single treatment method",
+        "Focus on long-term hair health maintenance"
       ],
-      ideal: "Ideal for patients seeking the absolute best results with premium care",
+      ideal: "Ideal for anyone experiencing hair loss at any stage - provides the most appropriate treatment based on individual needs",
       link: "/et-protocol"
     },
     {
-      title: "Stem Cell FUE",
-      description: "Revolutionary stem cell-enhanced FUE for superior results. Faster healing, better graft survival (90%), and improved scalp health through regenerative medicine.",
+      title: "SC-FUE (Stem Cell FUE)",
+      description: "Advanced FUE technique developed by Dr. Chacko Cyriac that maximizes stem cell harvest along with hair grafts during transplantation, ensuring improved graft survival and superior results.",
       image: "/images/services/fue.webp",
       features: [
-        "90% graft survival rate",
-        "Faster healing (2-3 days)",
-        "Improved hair density (45% increase)",
-        "Healthier scalp environment",
-        "Stimulates existing hair growth",
-        "Better results on scarred tissue"
+        "Maximum stem cell harvest with hair grafts",
+        "Improved graft survival rates",
+        "No additional time or cost compared to regular FUE",
+        "Individual follicles extracted with micro punches",
+        "Almost no visible scarring",
+        "Dr. Cyriac personally performs all graft extractions"
       ],
-      ideal: "Ideal for maximum results, depleted donor areas, and repair cases",
+      ideal: "Ideal for patients seeking the best possible results from FUE hair transplantation with advanced stem cell benefits",
       link: "/stem-cell-fue"
     },
     {
       title: "InviScar FUT",
-      description: "Advanced FUT technique with trichophytic closure for virtually invisible scarring. Maximum graft yield with minimal visible evidence.",
+      description: "Dr. Chacko Cyriac's advanced FUT technique with technical modifications to minimize scarring. The Microscopically Dissected Elliptical Excision (MDEE) method ensures maximum graft yield with minimal visible evidence.",
       image: "/images/services/fut.webp",
       features: [
-        "Virtually invisible linear scar",
-        "Maximum graft yield (5000-7000+)",
-        "Hair grows through scar line",
-        "Advanced closure techniques",
-        "Single session mega coverage",
-        "Cost-effective for large areas"
+        "Minimized scar formation with advanced closure techniques",
+        "Maximum graft yield in single session (up to 5000+ grafts)",
+        "Microscopically dissected follicular units",
+        "Proven method for extensive hair loss",
+        "No additional cost for advanced technique",
+        "Scar revision methods available if needed"
       ],
-      ideal: "Ideal for extensive coverage with minimal visible scarring",
+      ideal: "Ideal for extensive baldness requiring maximum coverage in a single session",
       link: "/inviscar-fut"
     },
     {
       title: "DHI Method",
-      description: "Modified FUE technique where hair follicles are implanted directly using a Choi implanter pen, allowing for precise control and denser packing.",
+      description: "Direct Hair Implantation using Choi implanter pen for precise control and maximum density. Hair follicles are implanted directly without pre-made incisions.",
       image: "/images/services/dhi.webp",
       features: [
         "No pre-made incisions needed",
         "Minimal bleeding during procedure",
         "Faster healing time",
-        "Higher density possible (60 grafts/cm²)",
+        "Higher density possible (up to 60 grafts/cm²)",
         "More control over angle and direction",
         "Less handling of grafts = better survival"
       ],
@@ -70,82 +70,49 @@ export default function ServicesPage() {
     },
   ];
 
-  const standardServices = [
-    {
-      title: "FUE Hair Transplant",
-      description: "Advanced minimally invasive technique where individual hair follicles are extracted and transplanted. No linear scar, faster recovery, and natural-looking results.",
-      image: "/images/services/fue.webp",
-      features: [
-        "No linear scarring",
-        "Minimal downtime - back to work in 2-3 days",
-        "Natural hairline design with artistic precision",
-        "Suitable for body hair transplant",
-        "Latest micro-FUE technology",
-        "Can be repeated multiple times"
-      ],
-      ideal: "Ideal for patients who prefer short hairstyles and want minimal scarring",
-      link: "/services/fue"
-    },
-    {
-      title: "FUT Hair Transplant",
-      description: "Traditional and proven method where a strip of hair-bearing scalp is removed and dissected into individual follicular units for transplantation.",
-      image: "/images/services/fut.webp",
-      features: [
-        "Maximum graft yield in single session",
-        "Cost-effective solution for extensive coverage",
-        "Up to 5000 grafts in one session",
-        "Excellent for advanced baldness",
-        "Proven track record over 30+ years",
-        "Higher graft survival rate"
-      ],
-      ideal: "Ideal for extensive hair loss coverage and maximum density",
-      link: "/services/fut"
-    },
-  ];
-
   const nonSurgicalTreatments = [
     {
+      title: "UltraMax PRP",
+      description: "Dr. Chacko Cyriac's advanced Platelet-Rich Plasma technique that produces consistent and superior results compared to regular PRP. Emerged as the best alternative to hair transplantation in Kochi, Kerala.",
+      image: "/images/services/prp.webp",
+      features: [
+        "Strict adherence to harvest and preparation protocols",
+        "Consistent and superior results",
+        "Sessions every 5-6 months (not monthly)",
+        "Uses your own blood - completely safe",
+        "No surgery required",
+        "Effective for men, women, and young adults (18+)"
+      ],
+      ideal: "Ideal for early-stage hair loss, thinning hair, young patients, and women experiencing hair loss",
+      link: "/prp-therapy"
+    },
+    {
       title: "Mesotherapy for Hair Loss",
-      description: "Non-surgical treatment with microinjections of vitamins, minerals, and growth factors directly into the scalp to stimulate hair growth.",
+      description: "Non-surgical treatment with microinjections of vitamins, minerals, and growth factors directly into the scalp to stimulate hair growth and improve scalp health.",
       image: "/images/conditions/mesotherapy.webp",
       features: [
-        "Non-surgical procedure",
-        "Direct nutrient delivery to follicles",
-        "Reduces hair loss by 70%",
-        "Improves scalp health",
+        "Direct nutrient delivery to hair follicles",
+        "Reduces hair loss significantly",
+        "Improves overall scalp health",
         "No downtime required",
-        "Complements hair transplant"
+        "Complements hair transplant procedures",
+        "Safe and minimally invasive"
       ],
       ideal: "Ideal for early-stage hair loss, thinning hair, and maintenance therapy",
       link: "/mesotherapy-hair-loss"
-    },
-    {
-      title: "PRP Therapy",
-      description: "Non-surgical hair loss treatment using your own blood platelets to stimulate hair growth and strengthen existing hair follicles.",
-      image: "/images/services/prp.webp",
-      features: [
-        "Natural growth stimulation",
-        "No incisions or surgery",
-        "Minimal side effects",
-        "Quick recovery - immediate",
-        "Complements hair transplants",
-        "Multiple sessions for optimal results"
-      ],
-      ideal: "Ideal for early-stage hair loss, thinning hair, and post-transplant care",
-      link: "/prp-therapy"
     },
   ];
 
   const specializedServices = [
     {
       title: "Beard Transplant",
-      description: "Specialized technique to create or enhance beard density using hair follicles from the scalp, creating a natural and masculine appearance.",
+      description: "Specialized FUE technique to create or enhance beard density using hair follicles from the scalp, creating a natural and masculine appearance with customizable patterns.",
       image: "/images/services/beard.webp",
       features: [
         "Natural beard pattern creation",
         "Customizable density and shape",
-        "Permanent results",
-        "Scar coverage capability",
+        "Permanent results that grow naturally",
+        "Scar coverage from injuries or burns",
         "FUE technique - minimal scarring",
         "Design goatee, mustache, or full beard"
       ],
@@ -154,15 +121,15 @@ export default function ServicesPage() {
     },
     {
       title: "Eyebrow Transplant",
-      description: "Precise transplantation to restore or enhance eyebrow shape and density, considering natural growth direction and aesthetic balance.",
+      description: "Precise transplantation to restore or enhance eyebrow shape and density, considering natural growth direction and aesthetic balance for perfect facial harmony.",
       image: "/images/services/eyebrow.webp",
       features: [
-        "Natural appearance",
+        "Natural appearance matching facial features",
         "Customized shape to complement face",
-        "Permanent solution",
-        "Minimal scarring with FUE",
-        "Artistic precision",
-        "Single hair grafts for realism"
+        "Permanent solution to over-plucking",
+        "Minimal scarring with FUE technique",
+        "Artistic precision and attention to detail",
+        "Single hair grafts for realistic appearance"
       ],
       ideal: "Ideal for over-plucked, thinning eyebrows, or congenital absence",
       link: "/eyebrow-transplant"
@@ -172,52 +139,52 @@ export default function ServicesPage() {
   const hairLossConditions = [
     {
       title: "Hair Loss in Men",
-      description: "Expert treatment for male pattern baldness and androgenetic alopecia with customized approaches based on Norwood scale classification.",
+      description: "Expert treatment for male pattern baldness and androgenetic alopecia. Dr. Chacko Cyriac evaluates each patient's stage of baldness, extent of hair loss, and age to recommend the most appropriate treatment from the full range of options.",
       image: "/images/conditions/hair-loss-men.webp",
       features: [
         "Pattern analysis using Norwood scale",
         "Comprehensive donor area assessment",
-        "Customized FUE/FUT technique selection",
+        "Customized treatment selection (not just transplantation)",
         "Long-term maintenance planning",
-        "Hairline design tailored to age and facial structure",
+        "Age-appropriate treatment recommendations",
         "Prevention strategies for future hair loss"
       ],
-      ideal: "Ideal for men experiencing pattern baldness at any stage",
+      ideal: "Ideal for men experiencing pattern baldness at any stage - treatment tailored to individual needs",
       link: "/hair-loss-men"
     },
     {
       title: "Hair Loss in Women",
-      description: "Specialized approach for female pattern hair loss with customized treatment plans considering hormonal factors, lifestyle, and aesthetic goals.",
+      description: "Specialized approach for female pattern hair loss with customized treatment plans. Hair transplantation is often the last option for women, with non-surgical treatments like UltraMax PRP, Mesotherapy, and Minoxidil prioritized first.",
       image: "/images/conditions/hair-loss-women.webp",
       features: [
         "Comprehensive hormonal evaluation",
-        "Customized DHI technique with minimal shaving",
-        "Ludwig scale classification assessment",
-        "PRP combination therapy for enhanced results",
-        "Focus on maintaining existing hair density",
-        "Discreet treatment options"
+        "Minoxidil therapy (FDA-approved for women)",
+        "UltraMax PRP combination therapy",
+        "Iron deficiency assessment and treatment",
+        "Nutritional guidance for healthy hair",
+        "DHI technique with minimal shaving when transplantation is needed"
       ],
-      ideal: "Ideal for women experiencing diffuse thinning or pattern hair loss",
+      ideal: "Ideal for women experiencing diffuse thinning, pattern hair loss, or hormonal hair loss",
       link: "/hair-loss-women"
     },
     {
       title: "Hair Loss in Children",
-      description: "Careful evaluation and age-appropriate treatments for pediatric hair loss conditions with focus on long-term outcomes and psychological well-being.",
+      description: "Careful evaluation and age-appropriate treatments for pediatric hair loss. This is a classic example where the ET-Protocol is essential - all hair loss cannot be treated with hair transplantation, especially in young patients.",
       image: "/images/conditions/hair-loss-children.webp",
       features: [
         "Comprehensive medical evaluation for underlying causes",
         "Non-surgical treatment options prioritized",
+        "UltraMax PRP for young patients (18+)",
         "Family counseling and support",
         "Long-term monitoring and follow-up care",
-        "Age-appropriate treatment planning",
         "Psychological support and guidance"
       ],
-      ideal: "Ideal for children with alopecia areata, trauma-related hair loss, or genetic conditions",
+      ideal: "Ideal for children and young adults with alopecia areata, trauma-related hair loss, or genetic conditions",
       link: "/hair-loss-children"
     },
     {
       title: "Failed Hair Transplant Repair",
-      description: "Expert corrective surgery to fix unnatural results, poor density, visible scarring, and complications from previous procedures.",
+      description: "Expert corrective surgery to fix unnatural results, poor density, visible scarring, and complications from previous procedures performed elsewhere.",
       image: "/images/conditions/failed-transplant.webp",
       features: [
         "Comprehensive assessment of previous work",
@@ -227,18 +194,9 @@ export default function ServicesPage() {
         "Advanced extraction from limited donor area",
         "Restoration of confidence and natural look"
       ],
-      ideal: "Ideal for patients unhappy with previous hair transplant results",
+      ideal: "Ideal for patients unhappy with previous hair transplant results from other clinics",
       link: "/failed-hair-transplant"
     },
-  ];
-
-  const comparisonData = [
-    { feature: "Scarring", fue: "Tiny dots (invisible)", fut: "Linear scar", dhi: "Tiny dots (invisible)", scfue: "Minimal" },
-    { feature: "Recovery Time", fue: "7-10 days", fut: "10-14 days", dhi: "5-7 days", scfue: "2-3 days" },
-    { feature: "Grafts per Session", fue: "2000-4000", fut: "3000-7000+", dhi: "2000-3500", scfue: "3000-5000" },
-    { feature: "Graft Survival", fue: "70-80%", fut: "80-85%", dhi: "80-90%", scfue: "90%+" },
-    { feature: "Procedure Time", fue: "4-8 hours", fut: "4-6 hours", dhi: "6-9 hours", scfue: "7-10 hours" },
-    { feature: "Best For", fue: "Short hairstyles", fut: "Maximum coverage", dhi: "Frontal hairline", scfue: "Premium results" },
   ];
 
   return (
@@ -248,7 +206,8 @@ export default function ServicesPage() {
         <div className="container-custom">
           <h1 className="mb-4 text-white">Our Hair Loss Treatments & Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Comprehensive range of advanced hair restoration procedures tailored to your unique needs by Dr. Chacko Cyriac
+            Comprehensive range of advanced hair restoration procedures tailored to your unique needs by Dr. Chacko Cyriac. 
+            All treatments available - not just hair transplantation.
           </p>
         </div>
       </section>
@@ -257,9 +216,9 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Latest Hair Restoration Technology</h2>
+            <h2 className="mb-4">Advanced Hair Restoration Techniques</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cutting-edge techniques for superior results
+              Dr. Chacko Cyriac's proven methods developed over years of experience in Kochi, Kerala
             </p>
           </div>
 
@@ -271,29 +230,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Standard Services 
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Standard Procedures
-            </div>
-            <h2 className="mb-4">Proven Hair Transplant Methods</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Time-tested techniques with excellent results
-            </p>
-          </div>
-
-          <div className="space-y-20">
-            {standardServices.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} />
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Non-Surgical Treatments */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -301,7 +239,7 @@ export default function ServicesPage() {
             </div>
             <h2 className="mb-4">Hair Growth Stimulation Therapies</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Effective treatments without surgery
+              Safe and effective treatments without surgery - often the best alternative to hair transplantation
             </p>
           </div>
 
@@ -314,15 +252,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Specialized Services */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Specialized Services
-            </div>
             <h2 className="mb-4">Facial Hair & Eyebrow Restoration</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert solutions beyond scalp hair
+              Expert solutions beyond scalp hair restoration
             </p>
           </div>
 
@@ -335,15 +270,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Hair Loss Conditions */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Specialized Conditions
-            </div>
             <h2 className="mb-4">Hair Loss Conditions We Treat</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert care for different types of hair loss across all age groups
+              Expert care for different types of hair loss across all age groups - men, women, and children
             </p>
           </div>
 
@@ -355,13 +287,41 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Important Note Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto bg-gray-50 border-l-4 border-gray-900 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold mb-4">Why All Treatment Options Matter</h3>
+            <div className="space-y-4 text-gray-700">
+              <p className="flex items-start gap-3">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span><strong>Not all hair loss can be treated with transplantation.</strong> The causes, stages, and extent of hair loss vary from person to person.</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span><strong>Different ages require different approaches.</strong> Young patients need different treatment than older patients. Hair transplantation is often not an option for teenagers.</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span><strong>Treatment evolves over time.</strong> As your condition changes, your treatment plan should adapt. That's why ongoing care is essential.</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                <span><strong>Safety is paramount.</strong> Dr. Chacko Cyriac evaluates each patient's overall health before recommending any procedure, ensuring the safest approach.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom">
           <div className="text-center text-white max-w-3xl mx-auto">
             <h2 className="text-white mb-4">Ready to Restore Your Hair?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized consultation with Dr. Chacko Cyriac to discuss the best treatment option for your unique situation
+              Schedule a personalized consultation with Dr. Chacko Cyriac to determine the best treatment option for your unique situation. 
+              Get expert advice on whether you need hair transplantation or other treatments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary inline-block">

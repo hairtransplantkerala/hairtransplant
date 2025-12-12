@@ -3,106 +3,55 @@ import { CheckCircle, ArrowRight, Phone, } from "lucide-react";
 
 export const metadata = {
   title: "Hair Loss in Women | Female Pattern Hair Loss Treatment | Eterno Clinic",
-  description: "Expert treatment for female hair loss and thinning. Understand causes, types, and effective solutions including PRP, hair transplant by Dr. Chacko Cyriac in Kochi, Kerala.",
-  keywords: "female hair loss, women hair loss treatment, female pattern baldness, FPHL, hair thinning women, alopecia in women",
+  description: "Expert treatment for female hair loss and thinning by Dr. Chacko Cyriac. FDA-approved treatments including Minoxidil, PRP, and hair transplantation in Kochi, Kerala.",
+  keywords: "female hair loss, women hair loss treatment, female pattern baldness, FPHL, hair thinning women, alopecia in women, Minoxidil for women",
 };
 
 export default function HairLossWomenPage() {
-  const causes = [
-    {
-      title: "Female Pattern Hair Loss (FPHL)",
-      description: "Androgenetic alopecia affecting 30 million women in the US, causing diffuse thinning on crown and top of scalp"
-    },
-    {
-      title: "Hormonal Changes",
-      description: "Pregnancy, childbirth, menopause, thyroid disorders, and PCOS can trigger significant hair loss"
-    },
-    {
-      title: "Nutritional Deficiencies",
-      description: "Low iron, vitamin D, B12, protein, and biotin levels commonly cause female hair thinning"
-    },
-    {
-      title: "Stress & Emotional Factors",
-      description: "Physical trauma, surgery, illness, or emotional stress can lead to telogen effluvium (temporary hair loss)"
-    },
-    {
-      title: "Medical Conditions",
-      description: "Autoimmune diseases, anemia, lupus, and scalp infections affect hair growth cycles"
-    },
-    {
-      title: "Styling & Chemical Damage",
-      description: "Tight hairstyles (traction alopecia), heat styling, harsh chemicals, and excessive coloring damage hair"
-    }
-  ];
-
-  const types = [
-    {
-      type: "Ludwig Scale Type I",
-      description: "Mild thinning at the crown with widening of the center part"
-    },
-    {
-      type: "Ludwig Scale Type II",
-      description: "Moderate thinning with noticeable decrease in hair density at the crown"
-    },
-    {
-      type: "Ludwig Scale Type III",
-      description: "Severe diffuse thinning with visible scalp at the top, frontal hairline usually preserved"
-    },
-    {
-      type: "Telogen Effluvium",
-      description: "Temporary, diffuse shedding triggered by stress, illness, or hormonal changes"
-    },
-    {
-      type: "Alopecia Areata",
-      description: "Autoimmune condition causing patchy, round bald spots anywhere on scalp"
-    },
-    {
-      type: "Traction Alopecia",
-      description: "Hair loss from tight hairstyles like braids, ponytails, or extensions"
-    }
-  ];
-
   const treatments = [
     {
-      title: "FUE Hair Transplant for Women",
-      description: "Individual follicle extraction for natural, undetectable results without linear scarring",
-      ideal: "Permanent solution for pattern hair loss"
-    },
-    {
-      title: "PRP Therapy",
-      description: "Platelet-Rich Plasma injections stimulate dormant follicles and strengthen existing hair",
-      ideal: "Early thinning, maintenance therapy"
-    },
-    {
-      title: "DHI Method",
-      description: "Direct Hair Implantation for precise placement without shaving large areas",
-      ideal: "Women who want to keep hair long"
-    },
-    {
       title: "Minoxidil (Rogaine)",
-      description: "FDA-approved topical solution (2% or 5%) to slow hair loss and promote regrowth",
-      ideal: "Mild to moderate thinning"
+      description: "FDA-approved topical treatment available over-the-counter. Increases hair growth and may lengthen their growth cycle. Can thicken hair and minimize the impression of patchiness or widening hair parting.",
+      details: "Safe for both men and women with high user satisfaction. Available under trade name Rogaine and several generic names."
     },
     {
-      title: "Low-Level Laser Therapy",
-      description: "FDA-approved laser caps/combs stimulate cellular activity in hair follicles",
-      ideal: "Non-invasive maintenance option"
+      title: "Platelet-Rich Plasma Injections",
+      description: "Doctor draws patient's blood, separates platelet-rich plasma, and reinjects it into damaged areas of the scalp. Contributes to acceleration of tissue repair.",
+      details: "Preliminary evidence suggests PRP injections may help prevent hair loss."
     },
     {
-      title: "Nutritional Supplementation",
-      description: "Iron, biotin, vitamin D supplements to address deficiencies causing hair loss",
-      ideal: "Deficiency-related hair loss"
+      title: "Healthy Diet & Nutrition",
+      description: "Eating a nutritious diet promotes regular hair development. Should include variety of vegetables, fruits, and iron-rich foods. Iron levels have an effect on hair health.",
+      details: "Consult physician for blood test to check for iron deficiency. May recommend iron-rich diet or supplements."
+    },
+    {
+      title: "Low-Level Light Therapy",
+      description: "May not be adequate to treat hair loss on its own, but can enhance effectiveness of other treatments such as minoxidil.",
+      details: "Works best when combined with other approved hair loss treatments."
+    },
+    {
+      title: "Hair Transplantation",
+      description: "When patient does not respond to treatment, specialists may propose hair transplantation. Involves transplanting hair from donor areas to areas of baldness.",
+      details: "Naturally increases the area's hair density. Recommended when other treatments are insufficient."
     }
   ];
 
-  const tips = [
+  const commonCauses = [
+    "Hormonal changes (pregnancy, childbirth, menopause)",
+    "Thyroid disorders and PCOS",
+    "Nutritional deficiencies (iron, vitamin D, B12)",
+    "Stress and emotional factors",
+    "Medical conditions and medications",
+    "Styling and chemical damage"
+  ];
+
+  const preventionTips = [
     "Eat protein-rich diet with iron, zinc, omega-3 fatty acids",
+    "Get regular blood tests to check for nutritional deficiencies",
     "Avoid tight hairstyles that pull on hair follicles",
     "Use gentle, sulfate-free shampoos and conditioners",
     "Minimize heat styling and harsh chemical treatments",
     "Manage stress through yoga, meditation, or therapy",
-    "Get regular blood tests to check for nutritional deficiencies",
-    "Protect hair from sun damage with hats or UV-protection products",
     "Consult specialist at first signs of unusual shedding"
   ];
 
@@ -116,11 +65,11 @@ export default function HairLossWomenPage() {
               <h1 className="mb-0 text-white">Hair Loss in Women</h1>
             </div>
             <p className="text-xl text-gray-300 mb-8">
-              Compassionate, expert care for female hair loss by Dr. Chacko Cyriac - Understanding your unique needs
+              Do you treat hair loss for ladies? Yes. Dr. Chacko Cyriac provides comprehensive, FDA-approved treatments for female hair loss in Kochi, Kerala.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-primary inline-block text-center">
-                Book Confidential Consultation
+                Book Consultation
               </Link>
               <Link href="/gallery" className="btn-secondary inline-block text-center">
                 View Female Results
@@ -134,56 +83,13 @@ export default function HairLossWomenPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Understanding Hair Loss in Women</h2>
-            <p className="text-lg text-gray-700 mb-4">
-              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. Unlike men, women's hair loss patterns are typically more diffuse, with thinning spread across the crown and top of the scalp rather than receding hairlines.
+            <h2 className="mb-6">Hair Loss Treatments For Women</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Hair loss can be emotionally devastating for women, as hair is deeply tied to femininity, identity, and self-confidence. At Eterno Clinic, Dr. Chacko Cyriac provides compassionate, comprehensive evaluation and personalized treatment plans for women experiencing hair loss.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Female pattern hair loss (FPHL) affects up to 30 million women in the United States, with most experiencing symptoms in their 40s, 50s, or 60s. However, hair loss can occur at any age due to various factors including hormonal changes, nutritional deficiencies, stress, and medical conditions.
+              Below are some of the <strong>approved hair loss treatments for Women:</strong>
             </p>
-            <p className="text-lg text-gray-700">
-              At Eterno Clinic, Dr. Chacko Cyriac provides compassionate, comprehensive evaluation and personalized treatment plans for women experiencing hair loss, ensuring both effective results and emotional support throughout your journey.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Causes Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Common Causes of Female Hair Loss</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Understanding the root cause is essential for effective treatment
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {causes.map((cause, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{cause.title}</h3>
-                <p className="text-gray-600">{cause.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Types & Classification */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Types & Classification of Female Hair Loss</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              The Ludwig Scale is the primary classification system for female pattern hair loss, measuring severity of diffuse thinning.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              {types.map((item, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-900">
-                  <h3 className="text-lg font-bold mb-2 text-gray-900">{item.type}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -192,19 +98,22 @@ export default function HairLossWomenPage() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Treatment Options for Women</h2>
+            <h2 className="mb-4">FDA-Approved Treatment Options</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tailored solutions addressing the unique needs of female hair loss
+              Evidence-based solutions for female hair loss
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto space-y-6">
             {treatments.map((treatment, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{treatment.title}</h3>
-                <p className="text-gray-600 mb-4">{treatment.description}</p>
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="text-sm text-gray-500 font-semibold">Best For:</p>
-                  <p className="text-sm text-gray-700">{treatment.ideal}</p>
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow border border-gray-200">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{treatment.title}</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  {treatment.description}
+                </p>
+                <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-900">
+                  <p className="text-gray-600 text-sm">
+                    <strong>Note:</strong> {treatment.details}
+                  </p>
                 </div>
               </div>
             ))}
@@ -212,33 +121,116 @@ export default function HairLossWomenPage() {
         </div>
       </section>
 
-      {/* Special Considerations */}
+      {/* Common Causes */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Special Considerations for Women</h2>
-            <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-8 rounded-xl border-2 border-gray-300">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Why Women's Hair Loss Requires Specialized Care</h3>
-              <div className="space-y-4 text-gray-700">
-                <p><strong>Different Hair Loss Patterns:</strong> Women experience diffuse thinning rather than distinct bald patches, requiring specialized transplant techniques like DHI for undetectable results.</p>
-                <p><strong>Hormonal Factors:</strong> Pregnancy, menopause, thyroid issues require thorough medical evaluation before treatment planning.</p>
-                <p><strong>Aesthetic Concerns:</strong> Women often cannot shave their heads, necessitating no-shave FUE or DHI techniques.</p>
-                <p><strong>Emotional Impact:</strong> Hair loss affects women's self-esteem differently, requiring compassionate, confidential care throughout treatment.</p>
-                <p><strong>Donor Area Preservation:</strong> Women need careful donor management to maintain overall hair volume and styling options.</p>
-              </div>
+            <h2 className="mb-6">Common Causes of Female Hair Loss</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              Understanding the root cause is essential for effective treatment. Female pattern hair loss can occur due to various factors:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {commonCauses.map((cause, index) => (
+                <div key={index} className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-200">
+                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-gray-700">{cause}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Minoxidil Details */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-gray-900">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                Minoxidil - FDA Approved Treatment
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Minoxidil has been approved by the Food and Drug Administration (FDA) to treat hair loss.</strong> Minoxidil topical is available over-the-counter under the trade name Rogaine and several generic names (OTC).
+              </p>
+              <p className="text-lg text-gray-700 mb-4">
+                Minoxidil is safe for both men and women, and <strong>users report a high level of satisfaction with the product</strong>. Minoxidil increases hair growth and may lengthen their growth cycle.
+              </p>
+              <p className="text-lg text-gray-700">
+                It can <strong>thicken hair and minimize the impression of patchiness or widening hair parting</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRP Details */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-gray-900">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                Platelet-Rich Plasma Injections
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Preliminary evidence suggests that platelet-rich plasma injections may also help prevent hair loss.</strong>
+              </p>
+              <p className="text-lg text-gray-700">
+                A plasma-rich injection is performed by a doctor who <strong>draws the patient's blood, separates the platelet-rich plasma from the blood, and then reinjects it into the damaged areas of the scalp</strong>. This contributes to the acceleration of tissue repair.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nutrition & Diet */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-8 rounded-2xl border-l-4 border-amber-500">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                Consume a Healthy Diet
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Eating a nutritious diet may also promote regular hair development.</strong> A healthy diet would often include a variety of foods, including a variety of vegetables and fruits. These contain a variety of vital nutrients and chemicals that contribute to the health of the skin and hair.
+              </p>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Iron levels may also have an effect on the health of your hair.</strong> Females experiencing hair loss should consult their physician for a blood test to determine if they have an iron deficit.
+              </p>
+              <p className="text-lg text-gray-700">
+                A physician may recommend an <strong>iron-rich diet or the use of an iron supplement</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hair Transplantation */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-gray-300">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                Hair Transplantation for Women
+              </h3>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>In some instances, when a patient does not respond to treatment, specialists may propose hair transplantation.</strong>
+              </p>
+              <p className="text-lg text-gray-700">
+                This procedure includes <strong>transplanting hair from donor areas to areas of baldness in order to naturally increase the area's hair density</strong>.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Prevention Tips */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Hair Care & Prevention Tips for Women</h2>
+            <h2 className="mb-6">Hair Care & Prevention Tips</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {tips.map((tip, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+              {preventionTips.map((tip, index) => (
+                <div key={index} className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-200">
                   <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
                   <span className="text-gray-700">{tip}</span>
                 </div>
@@ -249,25 +241,21 @@ export default function HairLossWomenPage() {
       </section>
 
       {/* Why Choose Dr. Cyriac */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-6">Compassionate Expert Care for Women</h2>
+            <h2 className="mb-6">Expert Care for Women's Hair Loss</h2>
             <p className="text-lg text-gray-700 mb-8">
               Dr. Chacko Cyriac understands the emotional impact of female hair loss and provides personalized, confidential care with proven results. With specialized training in female hair restoration techniques and over 22 years of experience, you're in expert hands.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
                 <div className="text-4xl font-bold text-gray-900 mb-2">2000+</div>
                 <p className="text-gray-600">Female Patients Treated</p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <div className="text-4xl font-bold text-gray-900 mb-2">98%</div>
-                <p className="text-gray-600">Patient Satisfaction</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <div className="text-4xl font-bold text-gray-900 mb-2">5★</div>
-                <p className="text-gray-600">Average Rating</p>
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
+                <div className="text-4xl font-bold text-gray-900 mb-2">22+</div>
+                <p className="text-gray-600">Years Experience</p>
               </div>
             </div>
             <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black inline-flex items-center gap-2">
@@ -280,17 +268,17 @@ export default function HairLossWomenPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-6">You Don't Have to Face Hair Loss Alone</h2>
+          <h2 className="text-white mb-6">Start Your Hair Restoration Journey</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Schedule a confidential consultation to discuss your concerns in a supportive, judgment-free environment
+            Schedule a consultation to discuss FDA-approved treatment options for your hair loss concerns
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">
-              Book Free Consultation
+              Book Consultation
             </Link>
             <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
               <Phone size={20} />
-              Call Now
+              Call Now: +91 96459 21944
             </a>
           </div>
         </div>

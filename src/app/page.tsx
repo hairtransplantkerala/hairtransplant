@@ -39,20 +39,14 @@ export default async function HomePage() {
       image: "/images/conditions/prp.webp",
       link: "/prp-therapy"
     },
+  ];
+
+  const commonConditions = [
     {
       title: "Failed Hair Transplant Repair",
       description: "Expert corrective surgery to fix unnatural results and scarring",
       image: "/images/conditions/failed-transplant.webp",
       link: "/failed-hair-transplant"
-    },
-  ];
-
-  const commonConditions = [
-    {
-      title: "Hair Loss in Men",
-      description: "Expert treatment for male pattern baldness and androgenetic alopecia",
-      image: "/images/conditions/hair-loss-men.webp",
-      link: "/hair-loss-men"
     },
     {
       title: "Hair Loss in Women",
@@ -289,42 +283,6 @@ export default async function HomePage() {
                 />
               </div>
             </div>
-
-            {/* Why Choose Points 
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Expert surgeon with MCh Plastic Surgery qualification from PGI Chandigarh</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">International training from UK, USA, Canada, and Singapore</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Latest techniques: FUE, FUT, DHI, Modified Hair Implantation</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">State-of-the-art equipment and world-class facilities</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Patients from 26+ countries worldwide trust our expertise</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Personalized treatment plans tailored to individual needs</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Comprehensive post-operative care and lifetime support</span>
-              </div>
-              <div className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">Transparent pricing with no hidden costs</span>
-              </div>
-            </div> */}
 
             <div className="text-center mt-8">
               <Link href="/about" className="btn-primary inline-block">

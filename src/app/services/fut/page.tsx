@@ -1,69 +1,92 @@
 import Link from 'next/link'
-import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone } from 'lucide-react'
+import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone, Award, Shield, Zap, Target } from 'lucide-react'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'Inviscar FUT Hair Transplant in Kerala | Strip Method Hair Restoration',
-  description: 'FUT (Follicular Unit Transplantation) hair transplant with maximum graft yield. Cost-effective solution for advanced hair loss.',
-  keywords: 'FUT hair transplant Kerala, strip method, hair restoration, follicular unit transplantation',
+  title: 'InviScar FUT Hair Transplant in Kerala | Invisible Scar Strip Method',
+  description: 'Advanced InviScar FUT hair transplant by Dr. Chacko Cyriac with minimized scarring. Maximum graft yield for extensive coverage in Kochi, Kerala.',
+  keywords: 'InviScar FUT, invisible scar FUT, strip method, MDEE, follicular unit transplantation Kerala, advanced hair transplant',
 }
 
-export default function FUTPage() {
+export default function InviScarFUTPage() {
   const benefits = [
-    'Maximum graft yield in single session',
+    'Minimized scar formation with advanced techniques',
+    'Maximum graft yield (3000-7000+ grafts)',
+    'Microscopically Dissected Elliptical Excision (MDEE)',
+    'Single session mega coverage',
     'Cost-effective for large areas',
-    'Higher graft survival rate',
-    'Ideal for advanced baldness',
-    'Can harvest 3000-4000 grafts',
-    'Less time-consuming extraction',
-    'Better for dense packing',
-    'Single linear scar (easily hidden)'
+    'No additional cost for advanced technique',
+    'Proven method with 30+ years track record',
+    'Scar revision methods available if needed'
   ]
 
   const process = [
     {
       step: '1',
       title: 'Strip Removal',
-      description: 'A thin strip of scalp tissue removed from donor area under local anesthesia'
+      description: 'Thin strip of hair-bearing scalp removed from donor zone under anesthesia'
     },
     {
       step: '2',
-      title: 'Follicle Dissection',
-      description: 'Strip dissected into individual follicular units under microscope'
+      title: 'Microscopic Dissection',
+      description: 'Strip placed under microscope, follicular units separated into naturally occurring clusters'
     },
     {
       step: '3',
-      title: 'Site Creation',
-      description: 'Recipient sites created following natural hair growth pattern'
+      title: 'InviScar Closure',
+      description: 'Advanced closure technique to minimize scar formation'
     },
     {
       step: '4',
       title: 'Graft Placement',
-      description: 'Follicular units carefully implanted for maximum density'
+      description: 'Follicular units implanted for maximum density and natural appearance'
     }
   ]
 
   const faqs = [
     {
-      question: 'What is the difference between FUT and FUE?',
-      answer: 'FUT involves removing a strip of scalp from the donor area and dissecting it into individual grafts, while FUE extracts individual follicles directly. FUT leaves a linear scar but allows for more grafts in one session.'
+      question: 'Does the InviScar FUT method guarantee a totally scarless hair transplantation?',
+      answer: 'This technique is done to minimise the incidence of scar formation. However, scar formation occurs even after the best hair transplantation in Kochi (Cochin), Kerala, and is dependent on several factors and not just the surgical technique. Therefore if there is an increased scar formation in spite of all this, our centre has proven methods to treat it too.'
     },
     {
-      question: 'Will the FUT scar be visible?',
-      answer: 'The linear scar can be easily hidden with hair as short as 1-2 cm. With proper surgical technique and post-op care, the scar becomes a thin line that is not noticeable when hair is grown out.'
+      question: 'Is not the FUT technique proven to be superior to the FUE?',
+      answer: 'This is an endless discussion. World over proponents of both methods advocate their technique as the best hair transplantation method. But Dr. Chacko Cyriac is proficient in both. He provides his patients with both options and has developed his own method to choose the better technique for the patient.'
     },
     {
-      question: 'How many grafts can be transplanted with FUT?',
-      answer: 'FUT typically allows harvesting of 3000-4000 grafts in a single session, making it ideal for covering large bald areas. This is often more than what can be safely extracted with FUE in one session.'
+      question: 'Does this technique take longer to do than the FUE?',
+      answer: 'Yes. The duration of the procedure is slightly more than the regular FUE hair transplant surgery. But the patient does not feel it as the patient is given more "breaks" between the procedure.'
     },
     {
-      question: 'What is the recovery time for FUT?',
-      answer: 'Recovery takes about 10-14 days. Stitches are removed after 10-14 days. Most patients can return to work after 7-10 days. Full healing of the donor area takes 2-3 weeks.'
+      question: 'Does this technique cost more?',
+      answer: 'No. Dr. Chacko Cyriac ensures that his patients receive the best hair transplant surgical technique without having to pay more for either.'
     },
     {
-      question: 'Is FUT painful?',
-      answer: 'The procedure is performed under local anesthesia, so there is no pain during surgery. Post-operative discomfort in the donor area is manageable with prescribed pain medication and typically subsides within 3-5 days.'
+      question: 'Is there a situation when the InviScar technique for hair transplantation is not to be done?',
+      answer: 'Our Senior Consultant Plastic Surgeon Dr. Chacko Cyriac makes sure the general condition of all his hair transplant patients is good enough for them to go through a procedure under general anesthesia. Only then does he do it under local anesthesia. This is in stark contrast with what most centres claim, that this procedure only requires local anesthesia and not general anesthesia and therefore many medical issues can be ignored. After all, the safety of the patient is paramount. If there exists a heightened tendency for scar formation, the patient is not fit for this procedure or for that matter, other cosmetic surgery procedure.'
     }
+  ]
+
+  const advantages = [
+    {
+      icon: Shield,
+      title: 'Minimized Scarring',
+      description: 'Dr. Cyriac\'s technical modifications to minimize scar formation compared to traditional FUT'
+    },
+    {
+      icon: Award,
+      title: 'MDEE Technique',
+      description: 'Microscopically Dissected Elliptical Excision for precise follicular unit separation'
+    },
+    {
+      icon: Zap,
+      title: 'Maximum Yield',
+      description: 'Up to 5000-7000+ grafts in single session for extensive coverage'
+    },
+    {
+      icon: Target,
+      title: 'Proven Results',
+      description: 'Best hair transplantation method followed worldwide with proven track record'
+    },
   ]
 
   return (
@@ -74,11 +97,11 @@ export default function FUTPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Maximum Graft Yield
+                Dr. Cyriac's Advanced FUT Technique
               </div>
-              <h1 className="text-white mb-6">FUT Hair Transplant</h1>
+              <h1 className="text-white mb-6">InviScar FUT Hair Transplant</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Follicular Unit Transplantation - The proven strip method for maximum coverage in advanced hair loss cases.
+                Microscopically Dissected Elliptical Excision (MDEE) - Advanced strip method with minimized scarring for maximum coverage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary text-center">
@@ -93,86 +116,61 @@ export default function FUTPage() {
             
             <ServiceHeroImage 
               src="/images/services/fut.webp"
-              alt="FUT Hair Transplant Procedure"
-              placeholder="FUT Procedure"
+              alt="InviScar FUT Hair Transplant Procedure"
+              placeholder="InviScar FUT Procedure"
             />
           </div>
         </div>
       </section>
 
-      {/* Quick Info */}
-      <section className="py-12 bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Duration</h3>
-              <p className="text-gray-600">4-6 hours</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Recovery</h3>
-              <p className="text-gray-600">10-14 days</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Grafts</h3>
-              <p className="text-gray-600">3000-4000</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <IndianRupee className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Starting From</h3>
-              <p className="text-gray-600">₹35,000</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What is FUT */}
+      {/* What is InviScar FUT */}
       <section className="py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4">What is FUT Hair Transplant?</h2>
+            <h2 className="mb-4">What is InviScar FUT Hair Transplant?</h2>
             <p className="text-xl text-gray-600">
-              Follicular Unit Transplantation (FUT), also known as the strip method, is a time-tested hair restoration technique where a strip of scalp is removed from the donor area and dissected into individual follicular units.
+              FUT (Follicular Unit Transplant) hair transplant technique or the strip method, is a surgical hair restoration procedure that harvests hair from the donor area on the back and sides of the head where your hair is genetically designed as permanent hair, and then transplants it into the balding or thinning areas of your scalp.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">How FUT Works</h3>
+              <h3 className="text-2xl font-bold mb-4">Dr. Cyriac's Innovation: MDEE Technique</h3>
               <p className="text-gray-700 mb-4">
-                A thin strip of hair-bearing scalp (typically 1-1.5 cm wide and 15-25 cm long) is surgically removed from the back of the head. This strip is then carefully dissected under stereoscopic microscopes into individual follicular units.
+                <strong>Microscopically Dissected Elliptical Excision (MDEE)</strong> is a term used to describe the technique by which a strip of donor tissue is removed from the donor zone, placed under a microscope, and the follicular units within the strip are separated into their naturally occurring clusters.
+              </p>
+              <p className="text-gray-700 mb-4">
+                The older strip technique or the FUT method is a proven method followed to produce the best results following hair transplantation in many centers and not just in Kochi (Cochin), Kerala.
               </p>
               <p className="text-gray-700 mb-6">
-                The donor area is closed with sutures, leaving a fine linear scar that can be easily hidden by surrounding hair. The dissected grafts are then implanted into the recipient area, creating natural density and coverage.
+                <strong>Dr. Chacko Cyriac has gone one step further with technical modifications to improve the appearance of the scar following this surgery.</strong>
               </p>
               <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Get Personalized Quote <ArrowRight size={20} />
+                Learn More <ArrowRight size={20} />
               </Link>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-              <h4 className="text-xl font-bold mb-4">Ideal For:</h4>
+              <h4 className="text-xl font-bold mb-4">Key Features:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Advanced hair loss (Norwood 4-7)</span>
+                  <span>Minimized scar formation with advanced closure</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Patients needing maximum grafts</span>
+                  <span>Maximum graft yield up to 5000-7000+ grafts</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Those comfortable with longer hair</span>
+                  <span>Microscopic dissection for precision</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Cost-conscious patients</span>
+                  <span>Scar revision methods available if needed</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Dense packing requirements</span>
+                  <span>No additional cost for advanced technique</span>
                 </li>
               </ul>
             </div>
@@ -180,54 +178,67 @@ export default function FUTPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Why InviScar FUT */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Benefits of FUT Hair Transplant</h2>
+            <h2 className="mb-4">Why Choose InviScar FUT?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dr. Cyriac's advanced modifications minimize scarring while maximizing results
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advantages.map((advantage, index) => {
+              const IconComponent = advantage.icon;
+              return (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">{advantage.title}</h3>
+                  <p className="text-gray-600 text-sm">{advantage.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Benefits of InviScar FUT</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Why FUT remains a preferred choice for extensive hair restoration
+              Advanced FUT technique with minimized scarring and maximum coverage
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200">
                 <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
-                <p className="font-semibold">{benefit}</p>
+                <p className="font-semibold text-gray-800">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20">
+      {/* Important Note */}
+      <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">The FUT Process</h2>
-            <p className="text-xl text-gray-600">
-              Step-by-step journey to your new look
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-amber-50 to-orange-50 p-8 rounded-2xl border-l-4 border-amber-500">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+              Patient Safety is Paramount
+            </h3>
+            <p className="text-lg text-gray-700 mb-4">
+              Our Senior Consultant Plastic Surgeon Dr. Chacko Cyriac makes sure the general condition of all his hair transplant patients is good enough for them to go through a procedure under general anesthesia. Only then does he do it under local anesthesia.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-gray-900" />
-                  </div>
-                )}
-              </div>
-            ))}
+            <p className="text-lg text-gray-700">
+              This is in stark contrast with what most centres claim, that this procedure only requires local anesthesia and not general anesthesia and therefore many medical issues can be ignored. <strong>After all, the safety of the patient is paramount.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -239,7 +250,7 @@ export default function FUTPage() {
             <div className="text-center mb-12">
               <h2 className="mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about FUT hair transplant
+                Everything you need to know about InviScar FUT
               </p>
             </div>
 
@@ -262,9 +273,9 @@ export default function FUTPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-4">Ready for Maximum Coverage?</h2>
+          <h2 className="text-white mb-4">Experience InviScar FUT by Dr. Chacko Cyriac</h2>
           <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-            Schedule a Consultation with Dr. Chacko Cyriac to discuss your personalized FUT treatment plan
+            Get maximum coverage with minimized scarring. Advanced MDEE technique at no extra cost.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">

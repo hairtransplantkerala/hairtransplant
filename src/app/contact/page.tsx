@@ -81,7 +81,7 @@ Sent from Eterno Clinic Website
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Eterno Hair Transplant Clinic", "Panampilly Nagar, Kochi", "Kerala 682036, India"],
+      details: ["Eterno Hair Transplant Clinic", "4th Floor, AC Estate, Janatha Junction, S.A. Road, Vytilla, Kochi - 682019"],
       link: "https://maps.google.com"
     },
     {

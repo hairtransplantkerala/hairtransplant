@@ -337,8 +337,7 @@ export default function PlasticSurgeryCenterPage() {
                       <h3 className="text-xl font-bold mb-2 text-gray-900">Eterno - The Plastic Surgery Centre</h3>
                       <p className="text-gray-700 mb-2">
                         Located in the heart of Kochi, Kerala<br />
-                        Near St. Teresa's College<br />
-                        Ernakulam, Kochi - 682011
+                        4th Floor, AC Estate, Janatha Junction,<br/> S.A. Road, Vytilla, Kochi -19
                       </p>
                     </div>
                   </div>

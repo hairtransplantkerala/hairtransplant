@@ -1,69 +1,92 @@
 import Link from 'next/link'
-import { CheckCircle, Clock, Users, ArrowRight, Phone, IndianRupee } from 'lucide-react'
+import { CheckCircle, Clock, Users, ArrowRight, Phone, IndianRupee, Zap, Heart, Shield, Award } from 'lucide-react'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'SC-FUE Hair Transplant in Kerala | Follicular Unit Extraction',
-  description: 'Advanced FUE hair transplant technique with no linear scarring. Natural results with minimal downtime. Expert surgeon Dr. Chacko Cyriac.',
-  keywords: 'FUE hair transplant Kerala, follicular unit extraction, scarless hair transplant, hair restoration Kerala',
+  title: 'SC-FUE Hair Transplant in Kerala | Stem Cell FUE | Eterno Clinic',
+  description: 'Advanced SC-FUE hair transplant technique by Dr. Chacko Cyriac. Maximum stem cell harvest for improved graft survival and superior results in Kochi, Kerala.',
+  keywords: 'SC-FUE, stem cell FUE, follicular unit extraction Kerala, advanced hair transplant, hair restoration Kerala',
 }
 
-export default function FUEPage() {
+export default function SCFUEPage() {
   const benefits = [
-    'No linear scarring',
-    'Minimal downtime (3-5 days)',
-    'Natural-looking results',
-    'Less post-operative discomfort',
-    'Can wear hair short',
-    'Faster healing process',
-    'Suitable for body hair extraction',
-    'Minimal invasion'
+    'Maximum stem cell harvest with grafts',
+    'Improved graft survival rates',
+    'No additional time required',
+    'No extra charges for advanced technique',
+    'Dr. Cyriac personally performs all extractions',
+    'Individual follicles extracted precisely',
+    'Almost no visible scarring',
+    'Same recovery as regular FUE'
   ]
 
   const process = [
     {
       step: '1',
-      title: 'Consultation',
-      description: 'Detailed scalp analysis and personalized treatment plan'
+      title: 'Personal Assessment',
+      description: 'Dr. Cyriac evaluates your condition and donor area'
     },
     {
       step: '2',
-      title: 'Preparation',
-      description: 'Donor area trimming and local anesthesia application'
+      title: 'SC-FUE Extraction',
+      description: 'Dr. Cyriac personally punches all grafts to maximize stem cell harvest'
     },
     {
       step: '3',
-      title: 'Extraction',
-      description: 'Individual follicles extracted using micro-punch technique'
+      title: 'Graft Preparation',
+      description: 'Follicles with stem cells carefully preserved'
     },
     {
       step: '4',
       title: 'Implantation',
-      description: 'Grafts carefully placed in recipient area for natural density'
+      description: 'Strategic placement for natural results and maximum survival'
     }
   ]
 
   const faqs = [
     {
-      question: 'Is FUE hair transplant permanent?',
-      answer: 'Yes, FUE hair transplant provides permanent results. The transplanted hair follicles are resistant to DHT (the hormone responsible for hair loss) and will continue to grow naturally for a lifetime.'
+      question: 'Does the SC-FUE hair transplant surgery take more time?',
+      answer: 'No it does not. As Dr. Cyriac is himself personally punching all the grafts, it does not take more time than regular FUE.'
     },
     {
-      question: 'How long does FUE surgery take?',
-      answer: 'FUE procedure typically takes 6-8 hours depending on the number of grafts needed. Most patients require 2000-4000 grafts for optimal coverage.'
+      question: 'Does the SC-FUE hair transplant technique cost more than the regular FUE?',
+      answer: 'No. Dr. Chacko Cyriac passes on the benefit of this advanced technique to all of his patients without any extra charges.'
     },
     {
-      question: 'When will I see results?',
-      answer: 'Initial hair growth appears after 3-4 months. Significant results are visible by 6-9 months, with full results achieved after 12-18 months as the transplanted hair matures.'
+      question: 'Will there be any side effects of the SC-FUE hair transplant technique?',
+      answer: 'None whatsoever. The issues related to the regular FUE technique are applicable here too. There are no additional side effects from the stem cell harvesting.'
     },
     {
-      question: 'Does FUE leave scars?',
-      answer: 'FUE leaves tiny dot scars (less than 1mm) that are virtually invisible, even with short haircuts. This is a major advantage over FUT which leaves a linear scar.'
+      question: 'Is there more scarring with the SC-FUE hair transplantation method?',
+      answer: 'No. It is the same as for regular FUE surgery. The scar from the regular FUE is due to the loss of hair growth from the site of punching. This will happen with this technique too.'
     },
     {
-      question: 'What is the success rate of FUE?',
-      answer: 'With an experienced surgeon like Dr. Chacko Cyriac, FUE has a 95-98% graft survival rate. Proper post-operative care is essential for optimal results.'
+      question: 'Is there a patient in whom the SC-FUE hair transplantation technique should not be done?',
+      answer: 'Of course the general condition of the patient should be good enough for him to go through the procedure. These aspects are strictly looked into by our Senior Consultant Plastic Surgeon Dr. Chacko Cyriac. If the patients are unfit for a general anesthesia procedure, then he does not do the same under local anesthesia too. After all, the safety of the patient is paramount. If the patient has an increased tendency for scar formation as keloids etc then the patient is not fit for any cosmetic surgery technique, leave alone SC-FUE.'
     }
+  ]
+
+  const advantages = [
+    {
+      icon: Zap,
+      title: 'Maximum Stem Cell Harvest',
+      description: 'Dr. Cyriac developed this method to ensure maximal harvest of stem cells along with hair grafts'
+    },
+    {
+      icon: Heart,
+      title: 'Improved Graft Survival',
+      description: 'Stem cells not only ensure better graft survival but help achieve the best results'
+    },
+    {
+      icon: Shield,
+      title: 'No Extra Charges',
+      description: 'Dr. Cyriac passes on the benefit of this advanced technique without any additional cost'
+    },
+    {
+      icon: Award,
+      title: 'Personal Expertise',
+      description: 'Dr. Cyriac himself personally punches all the grafts during SC-FUE procedures'
+    },
   ]
 
   return (
@@ -74,11 +97,11 @@ export default function FUEPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Most Advanced Technique
+                Dr. Cyriac's Advanced Innovation
               </div>
-              <h1 className="text-white mb-6">FUE Hair Transplant</h1>
+              <h1 className="text-white mb-6">SC-FUE Hair Transplant</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Follicular Unit Extraction - The gold standard in hair restoration with no linear scarring and natural results.
+                Stem Cell Enhanced FUE - Dr. Chacko Cyriac's advanced method for maximum stem cell harvest and superior graft survival.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary text-center">
@@ -94,86 +117,58 @@ export default function FUEPage() {
             {/* Reusable Image Component */}
             <ServiceHeroImage 
               src="/images/services/fue.webp"
-              alt="FUE Hair Transplant Procedure"
-              placeholder="FUE Procedure"
+              alt="SC-FUE Hair Transplant Procedure"
+              placeholder="SC-FUE Procedure"
             />
           </div>
         </div>
       </section>
 
-      {/* Quick Info */}
-      <section className="py-12 bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Duration</h3>
-              <p className="text-gray-600">6-8 hours</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Recovery</h3>
-              <p className="text-gray-600">3-5 days</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Success Rate</h3>
-              <p className="text-gray-600">95-98%</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <IndianRupee className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Starting From</h3>
-              <p className="text-gray-600">₹40,000</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What is FUE */}
+      {/* What is SC-FUE */}
       <section className="py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4">What is FUE Hair Transplant?</h2>
+            <h2 className="mb-4">What is SC-FUE Hair Transplant?</h2>
             <p className="text-xl text-gray-600">
-              Follicular Unit Extraction (FUE) is an advanced hair restoration technique where individual hair follicles are extracted from the donor area and transplanted to balding or thinning areas.
+              As the name suggests, follicular unit extraction (FUE) is a hair transplant procedure that involves extracting individual hair follicles from your scalp and transplanting them to an area of your scalp where hair is sparse or non-existent.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">How FUE Works</h3>
+              <h3 className="text-2xl font-bold mb-4">Dr. Cyriac's Innovation</h3>
               <p className="text-gray-700 mb-4">
-                Unlike traditional strip methods, FUE uses a specialized micro-punch tool (0.6-1.0mm) to extract individual follicular units from the donor area. This minimally invasive technique leaves tiny circular scars that are virtually undetectable.
+                Single follicles are extracted and transplanted using micro punches, which leave almost no evidence of extraction. <strong>The SC-FUE is an advancement of this technique.</strong>
+              </p>
+              <p className="text-gray-700 mb-4">
+                Dr. Chacko Cyriac has developed this method to ensure the <strong>maximal harvest of stem cells along with the hair grafts</strong> during hair transplantation.
               </p>
               <p className="text-gray-700 mb-6">
-                The extracted grafts are then carefully implanted into the recipient area following your natural hair growth pattern, ensuring completely natural-looking results.
+                Not only does this ensure the improved survival of the hair grafts but it also helps him achieve the <strong>best results for the hair transplantation surgery</strong> he does in Kochi (Cochin), Kerala, India.
               </p>
-              <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Get Personalized Quote <ArrowRight size={20} />
-              </Link>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-              <h4 className="text-xl font-bold mb-4">Perfect For:</h4>
+              <h4 className="text-xl font-bold mb-4">Key Advantages:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Those who prefer wearing hair short</span>
+                  <span>Maximum stem cell harvest with each graft</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Patients with limited donor availability</span>
+                  <span>Improved graft survival for better results</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Active lifestyle with minimal downtime</span>
+                  <span>Dr. Cyriac personally performs all extractions</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Body hair transplant candidates</span>
+                  <span>No additional time or cost required</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                  <span>Scar revision procedures</span>
+                  <span>Same recovery period as regular FUE</span>
                 </li>
               </ul>
             </div>
@@ -181,52 +176,48 @@ export default function FUEPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Why SC-FUE is Better */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Benefits of FUE Hair Transplant</h2>
+            <h2 className="mb-4">Why Choose SC-FUE Over Regular FUE?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dr. Cyriac's advanced technique provides superior results without extra cost or time
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advantages.map((advantage, index) => {
+              const IconComponent = advantage.icon;
+              return (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">{advantage.title}</h3>
+                  <p className="text-gray-600 text-sm">{advantage.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Benefits of SC-FUE Hair Transplant</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Why thousands choose FUE for their hair restoration journey
+              All the advantages of FUE with enhanced stem cell benefits
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200">
                 <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
-                <p className="font-semibold">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-20">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">The FUE Process</h2>
-            <p className="text-xl text-gray-600">
-              Step-by-step journey to your new look
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-gray-900" />
-                  </div>
-                )}
+                <p className="font-semibold text-gray-800">{benefit}</p>
               </div>
             ))}
           </div>
@@ -234,13 +225,13 @@ export default function FUEPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about FUE hair transplant
+                Everything you need to know about SC-FUE hair transplant
               </p>
             </div>
 
@@ -256,6 +247,12 @@ export default function FUEPage() {
                 </details>
               ))}
             </div>
+
+            <div className="mt-8 bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl border-l-4 border-amber-500">
+              <p className="text-gray-700">
+                <strong>For more information on this technique,</strong> <Link href="/contact" className="text-gray-900 font-semibold underline hover:text-black">contact us</Link> for an appointment with Dr. Chacko Cyriac.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -263,9 +260,9 @@ export default function FUEPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-4">Ready to Start Your Hair Restoration Journey?</h2>
+          <h2 className="text-white mb-4">Experience SC-FUE by Dr. Chacko Cyriac</h2>
           <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-            Schedule a Consultation with Dr. Chacko Cyriac to discuss your personalized FUE treatment plan
+            Get the advanced SC-FUE technique with maximum stem cell harvest at no extra cost
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">

@@ -108,10 +108,10 @@ export default function RootLayout({
     "email": "eternocosmeticsurgery@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Eterno Clinic",
+      "streetAddress": "4th Floor, AC Estate, Janatha Junction, S.A. Road, Vytilla,",
       "addressLocality": "Kochi",
       "addressRegion": "Kerala",
-      "postalCode": "682001",
+      "postalCode": "682019",
       "addressCountry": "IN"
     },
     "geo": {

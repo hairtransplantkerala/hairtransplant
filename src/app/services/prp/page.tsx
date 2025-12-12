@@ -1,82 +1,109 @@
 import Link from 'next/link'
-import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone, Droplet } from 'lucide-react'
+import { CheckCircle, Clock, IndianRupee, Users, ArrowRight, Phone, Droplet, Award, Zap, Shield, Target } from 'lucide-react'
 import ServiceHeroImage from '@/components/ServiceHeroImage'
 
 export const metadata = {
-  title: 'UltraMax PRP for Hair Loss in Kerala | Platelet Rich Plasma Therapy',
-  description: 'Non-surgical PRP hair treatment to stimulate hair growth and reduce hair loss. Safe, natural, and effective platelet-rich plasma therapy.',
-  keywords: 'PRP hair treatment Kerala, platelet rich plasma therapy, hair loss treatment, non-surgical hair restoration',
+  title: 'UltraMax PRP for Hair Loss in Kerala | Advanced Platelet Rich Plasma',
+  description: 'Dr. Chacko Cyriac\'s advanced UltraMax PRP technique for consistent and superior hair regrowth results. Best alternative to hair transplantation in Kochi, Kerala.',
+  keywords: 'UltraMax PRP, advanced PRP hair treatment Kerala, platelet rich plasma therapy, non-surgical hair restoration Kochi',
 }
 
-export default function PRPPage() {
+export default function UltraMaxPRPPage() {
   const benefits = [
-    'Non-surgical procedure',
-    'No downtime required',
-    '100% natural treatment',
-    'Stimulates hair growth',
-    'Reduces hair fall',
-    'Improves hair thickness',
-    'Safe with no side effects',
-    'Quick 30-minute sessions'
+    'Consistent and superior results',
+    'Best alternative to hair transplantation',
+    'Strictly adheres to harvest rules',
+    'Superior platelet cell preparation',
+    'Less frequent treatments needed',
+    'Important for women\'s hair loss',
+    'Perfect for young boys and girls',
+    'Uses patient\'s own blood - safe'
   ]
 
   const process = [
     {
       step: '1',
       title: 'Blood Collection',
-      description: 'Small amount of blood drawn from your arm (similar to routine blood test)'
+      description: 'Patient\'s blood is drawn following strict protocols'
     },
     {
       step: '2',
       title: 'Centrifugation',
-      description: 'Blood processed in centrifuge to separate platelet-rich plasma'
+      description: 'Blood centrifuged to remove red blood cells'
     },
     {
       step: '3',
-      title: 'Activation',
-      description: 'PRP activated with growth factors to maximize effectiveness'
+      title: 'Advanced Preparation',
+      description: 'Strict adherence to harvest and preparation rules for superior quality'
     },
     {
       step: '4',
       title: 'Injection',
-      description: 'PRP injected into scalp using fine needles or micro-needling'
+      description: 'Concentrated platelet-rich plasma injected into scalp'
     }
   ]
 
   const faqs = [
     {
-      question: 'What is PRP treatment for hair loss?',
-      answer: 'PRP (Platelet-Rich Plasma) is a non-surgical treatment that uses your own blood\'s healing properties to stimulate hair growth. Platelets contain growth factors that promote cell regeneration and healing, which helps reactivate dormant hair follicles.'
+      question: 'Is this also PRP or Platelet Rich Plasma?',
+      answer: 'Yes it is. But it is what we get when we strictly adhere to the rules involved in the harvest and preparation of the platelet cells. Therefore the results too are found to be superior. Many a case we are able to produce best results without doing hair transplantation.'
     },
     {
-      question: 'How many PRP sessions are needed?',
-      answer: 'Typically, 4-6 sessions are recommended initially, spaced 3-4 weeks apart. After the initial phase, maintenance sessions every 3-6 months help sustain results. The exact number depends on your hair loss severity and response to treatment.'
+      question: 'Is this technique useful for ladies?',
+      answer: 'Certainly. It forms an important part of the treatment protocol for hair loss in ladies.'
     },
     {
-      question: 'When will I see results from PRP?',
-      answer: 'Most patients notice reduced hair fall within 2-3 sessions. Visible hair growth and thickness improvements typically appear after 3-6 months. Optimal results are seen after completing the full treatment protocol.'
+      question: 'What about hair loss in young boys as young as 18?',
+      answer: 'Certainly. In fact the treatment of hair loss in this population is quite different from that for older patients. Hair transplantation is certainly not an option. The Ultra-max PRP helps control hair loss in many such young boys and girls.'
     },
     {
-      question: 'Is PRP treatment painful?',
-      answer: 'PRP injections cause minimal discomfort. We use very fine needles and can apply numbing cream before treatment. Most patients describe it as a slight pricking sensation. The entire procedure takes only 30-45 minutes.'
+      question: 'Does this need to be done every month?',
+      answer: 'Certainly not. Dr Chacko Cyriac only asks his patients to come once every 5-6 months. With his improved methods, most often he does not find the reason to do this more frequently. Many a time we are able to thus avoid a hair transplantation.'
     },
     {
-      question: 'Are there any side effects of PRP?',
-      answer: 'PRP is extremely safe as it uses your own blood, eliminating risk of allergic reactions. Mild temporary side effects may include slight redness, tenderness, or swelling at injection sites, which resolve within 24-48 hours.'
+      question: 'Is there a reason then to do this more frequently?',
+      answer: 'Yes. When the quality of hair is that bad. When the response is suboptimal, we try our best to improve upon the situation by increasing the frequency of injections. If it still does not improve, we might be moving towards a hair transplantation.'
     },
     {
-      question: 'Can PRP be combined with hair transplant?',
-      answer: 'Yes! PRP is often combined with hair transplant surgery to enhance graft survival, speed up healing, and improve overall results. It can be done before, during, or after transplant procedures.'
+      question: 'Are there any side effects of this injection?',
+      answer: 'The patient\'s own blood is the source of this injection. No other medications are being injected. Therefore we do not anticipate any problem whatsoever. This is certainly safer than a hair transplant surgery.'
+    },
+    {
+      question: 'What are the possible problems arising from this injection?',
+      answer: 'There may be a swelling on the forehead (will disappear by next morning). There may be a numb feeling on the top of the head (takes about 3 hours to disappear). If there is any pain in the injection site, it will settle down with massage.'
     }
   ]
 
-  const idealCandidates = [
-    'Early-stage hair loss',
-    'Pattern baldness',
-    'Post-transplant care',
-    'Thinning hair',
-    'Alopecia areata',
-    'Hair fall prevention'
+  const advantages = [
+    {
+      icon: Award,
+      title: 'Strict Protocol Adherence',
+      description: 'Strictly adheres to rules for harvest and preparation of platelet cells'
+    },
+    {
+      icon: Zap,
+      title: 'Consistent Superior Results',
+      description: 'Helps produce consistent and superior results compared to regular PRP'
+    },
+    {
+      icon: Shield,
+      title: 'Best Alternative',
+      description: 'Emerged as the best alternative to hair transplantation in Kochi, Kerala'
+    },
+    {
+      icon: Target,
+      title: 'Less Frequent Treatments',
+      description: 'Patients only need to come once every 5-6 months with improved methods'
+    },
+  ]
+
+  const idealFor = [
+    'Ladies with hair loss - important part of treatment protocol',
+    'Young boys and girls (18+) where transplantation is not an option',
+    'Patients wanting to avoid hair transplantation',
+    'Those seeking consistent and superior results',
+    'Cases with suboptimal response to regular PRP',
+    'Anyone preferring non-surgical options'
   ]
 
   return (
@@ -88,11 +115,11 @@ export default function PRPPage() {
             <div>
               <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit">
                 <Droplet size={16} />
-                Natural & Non-Surgical
+                Dr. Cyriac's Advanced PRP
               </div>
               <h1 className="text-white mb-6">UltraMax PRP Hair Treatment</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Platelet-Rich Plasma Therapy - Harness your body's natural healing power to stimulate hair growth and reduce hair loss.
+                Dr. Chacko Cyriac's advanced PRP technique with strict protocol adherence for consistent and superior results. The best alternative to hair transplantation in Kochi, Kerala.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary text-center">
@@ -107,71 +134,40 @@ export default function PRPPage() {
             
             <ServiceHeroImage 
               src="/images/services/prp.webp"
-              alt="PRP Hair Treatment Therapy"
-              placeholder="PRP Therapy"
+              alt="UltraMax PRP Hair Treatment Therapy"
+              placeholder="UltraMax PRP"
             />
           </div>
         </div>
       </section>
 
-      {/* Quick Info */}
-      <section className="py-12 bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Clock className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Duration</h3>
-              <p className="text-gray-600">30-45 minutes</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <Users className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Recovery</h3>
-              <p className="text-gray-600">No downtime</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <CheckCircle className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Sessions</h3>
-              <p className="text-gray-600">4-6 sessions</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <IndianRupee className="w-10 h-10 text-gray-900 mx-auto mb-3" />
-              <h3 className="text-lg font-bold mb-1">Per Session</h3>
-              <p className="text-gray-600">₹8,000</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What is PRP */}
+      {/* What is UltraMax PRP */}
       <section className="py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4">What is PRP Treatment?</h2>
+            <h2 className="mb-4">What is UltraMax PRP?</h2>
             <p className="text-xl text-gray-600">
-              PRP (Platelet-Rich Plasma) therapy uses the healing power of your own blood platelets to stimulate dormant hair follicles, strengthen existing hair, and promote new hair growth naturally.
+              Platelet-rich plasma (PRP), alternatively referred to as autologous conditioned plasma, is concentrated platelet-rich plasma extracted from blood that has been centrifuged to remove red blood cells [web:296].
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">How PRP Works</h3>
+              <h3 className="text-2xl font-bold mb-4">Dr. Cyriac's Advanced Technique</h3>
               <p className="text-gray-700 mb-4">
-                Your blood contains platelets rich in growth factors. When concentrated and injected into the scalp, these growth factors stimulate stem cells in hair follicles, increase blood supply, and promote cell regeneration.
+                The regular PRP technique is quite popular, but with <strong>highly variable results</strong>. Dr Chacko Cyriac's advanced PRP technique, the <strong>UltraMax PRP</strong>, helps produce <strong>consistent and superior results</strong> [web:296].
               </p>
               <p className="text-gray-700 mb-6">
-                PRP contains proteins like PDGF, VEGF, TGF, and EGF that trigger natural hair growth. The treatment is completely natural, using your body's own healing mechanisms without any synthetic substances.
+                Over the years this has emerged as the <strong>best alternative to hair transplantation in Cochin (Kochi), Kerala</strong>. By strictly adhering to the rules involved in the harvest and preparation of platelet cells, Dr. Cyriac achieves superior results, often eliminating the need for hair transplantation [web:296].
               </p>
-              <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Get Started Today <ArrowRight size={20} />
-              </Link>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
               <h4 className="text-xl font-bold mb-4">Ideal For:</h4>
               <ul className="space-y-3">
-                {idealCandidates.map((candidate, index) => (
+                {idealFor.map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-gray-900 flex-shrink-0 mt-1" />
-                    <span>{candidate}</span>
+                    <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -180,89 +176,68 @@ export default function PRPPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Why UltraMax is Superior */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Benefits of PRP Treatment</h2>
+            <h2 className="mb-4">Why UltraMax PRP is Superior</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dr. Cyriac's strict adherence to protocols produces consistent, superior results
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advantages.map((advantage, index) => {
+              const IconComponent = advantage.icon;
+              return (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="text-white" size={32} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">{advantage.title}</h3>
+                  <p className="text-gray-600 text-sm">{advantage.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Benefits of UltraMax PRP</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Why PRP is the preferred choice for non-surgical hair restoration
+              Why UltraMax PRP delivers superior results compared to regular PRP
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200">
                 <CheckCircle className="w-8 h-8 text-gray-900 mb-3" />
-                <p className="font-semibold">{benefit}</p>
+                <p className="font-semibold text-gray-800">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-20">
+
+      {/* Treatment Frequency */}
+      <section className="py-16 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">The PRP Process</h2>
-            <p className="text-xl text-gray-600">
-              Simple, safe, and effective treatment in just 4 steps
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-50 to-white p-8 rounded-2xl border-l-4 border-gray-900">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+              Less Frequent Treatments Needed
+            </h3>
+            <p className="text-lg text-gray-700 mb-4">
+              Unlike regular PRP that requires monthly treatments, Dr. Chacko Cyriac's improved UltraMax PRP method only requires patients to come <strong>once every 5-6 months</strong>.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-gray-900" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Protocol */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-center mb-12">Treatment Protocol</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h3 className="text-xl font-bold mb-2">Initial Phase</h3>
-                <p className="text-gray-600 mb-4">4 sessions over 3-4 months</p>
-                <p className="text-sm text-gray-500">Kickstart hair growth and reduce hair fall</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h3 className="text-xl font-bold mb-2">Consolidation</h3>
-                <p className="text-gray-600 mb-4">2 sessions over 6 months</p>
-                <p className="text-sm text-gray-500">Strengthen and stabilize results</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="text-xl font-bold mb-2">Maintenance</h3>
-                <p className="text-gray-600 mb-4">1 session every 6 months</p>
-                <p className="text-sm text-gray-500">Sustain long-term results</p>
-              </div>
-            </div>
+            <p className="text-lg text-gray-700">
+              With his improved methods, most often he does not find the reason to do this more frequently. <strong>Many a time we are able to thus avoid a hair transplantation.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -274,7 +249,7 @@ export default function PRPPage() {
             <div className="text-center mb-12">
               <h2 className="mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about PRP hair treatment
+                Everything you need to know about UltraMax PRP
               </p>
             </div>
 
@@ -297,16 +272,16 @@ export default function PRPPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-4">Stop Hair Loss Naturally</h2>
+          <h2 className="text-white mb-4">Experience UltraMax PRP by Dr. Chacko Cyriac</h2>
           <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-            Start your PRP treatment journey today and see visible results in just a few months
+            Get consistent and superior results with advanced PRP technique. Best alternative to hair transplantation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">
-              Book Your First Session
+              Book Your Consultation
             </Link>
-            <Link href="/blog" className="btn-secondary inline-block">
-              Learn More About PRP
+            <Link href="/gallery" className="btn-secondary inline-block">
+              View Results
             </Link>
           </div>
         </div>
