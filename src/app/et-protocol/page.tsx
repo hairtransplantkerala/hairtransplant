@@ -86,7 +86,7 @@ export default function ETProtocolPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">What is the ET-Protocol?</h2>
+            <h2 className="mb-6">What is the ET-Protocol ?</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
                 Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> does all the medical treatments for hair loss, and not just the best hair transplantation in Kochi (Cochin), Kerala. He firmly believes all treatments have definitive indications, and limitations too.
@@ -180,7 +180,7 @@ export default function ETProtocolPage() {
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Why following the ET-Protocol is so important for hair loss management?
+                  Why following the ET-Protocol is so important for hair loss management ?
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   Causes of hair loss varies from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups. Dr. Chacko Cyriac has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age. All hair loss can certainly not be managed with hair transplantation.
@@ -189,7 +189,7 @@ export default function ETProtocolPage() {
 
               <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Can this protocol be applied for ladies?
+                  Can this protocol be applied for ladies ?
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   Yes. It certainly can. Given the different causes and extent of hair loss amongst ladies, it is definitely necessary to be able to provide all treatments. Doing hair transplantation is probably the last option.
@@ -198,7 +198,7 @@ export default function ETProtocolPage() {
 
               <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  How about hair loss in young boys and girls?
+                  How about hair loss in young boys and girls ?
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   Here lies a classic example of when the ET-Protocol is most essential. All hair loss cannot be treated with hair transplantation. Therefore one should go to a centre in Cochin (Kochi), Kerala, where all different options are available, and not just hair transplantation.
@@ -207,7 +207,7 @@ export default function ETProtocolPage() {
 
               <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  What is the duration of the treatment for hair loss as per this protocol?
+                  What is the duration of the treatment for hair loss as per this protocol ?
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   There is no definitive duration of therapy. As the problem evolves treatments change. The requirements too change with time. Therefore we encourage our patients to come back to us to maintain a healthy head of hair.
@@ -279,7 +279,7 @@ export default function ETProtocolPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-6">Ready to Find Your Best Treatment?</h2>
+          <h2 className="text-white mb-6">Ready to Find Your Best Treatment ?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-justify">
             To know how the ET-Protocol for hair loss can be best applied to you, and for other questions regarding hair transplantation, take an appointment at our Kochi (Cochin) office in Kerala
           </p>
