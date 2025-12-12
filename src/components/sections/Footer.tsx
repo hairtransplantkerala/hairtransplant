@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>Eterno Clinic, Kochi, Kerala, India</span>
+                <span>4th Floor, AC Estate, Janatha Junction, S.A. Road, Vytilla, Kochi -682019</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone size={16} />

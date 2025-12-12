@@ -11,12 +11,12 @@ export default async function HomePage() {
   const specializedTreatments = [
     {
       title: "ET Protocol",
-      description: "Enhanced Transplantation Protocol for maximum graft survival and natural results",
+      description: "Eterno Protocol for maximum graft survival and natural results",
       image: "/images/conditions/et-protocol.webp",
       link: "/et-protocol"
     },
     {
-      title: "Stem Cell FUE",
+      title: "SC-FUE",
       description: "Revolutionary regenerative medicine for 90% graft survival and faster healing",
       image: "/images/conditions/stem-cell.webp",
       link: "/stem-cell-fue"
@@ -38,6 +38,12 @@ export default async function HomePage() {
       description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
       image: "/images/conditions/prp.webp",
       link: "/prp-therapy"
+    },
+    {
+      title: "Stem Cell Therapy",
+      description: "",
+      image: "/images/services/dhi.webp",
+      link: "/dhi"
     },
   ];
 
