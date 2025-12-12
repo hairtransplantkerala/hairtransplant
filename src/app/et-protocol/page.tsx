@@ -86,7 +86,7 @@ export default function ETProtocolPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">What is the ET-Protocol ?</h2>
+            <h3 className="mb-6">What is the ET-Protocol ?</h3>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
                 Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> does all the medical treatments for hair loss, and not just the best hair transplantation in Kochi (Cochin), Kerala. He firmly believes all treatments have definitive indications, and limitations too.
