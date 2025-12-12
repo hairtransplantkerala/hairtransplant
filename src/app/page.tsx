@@ -272,7 +272,7 @@ export default async function HomePage() {
               <h2 className="mb-6">
                 Why choose <br />
                 Dr. Chacko Cyriac <br />
-                for your hair loss treatment?
+                for your hair loss treatment ?
               </h2>
               <p className="text-gray-600 text-lg mb-8">
                 With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
@@ -481,7 +481,7 @@ export default async function HomePage() {
           </div>
           <div className="text-center mt-8">
             <Link href="/contact" className="btn-primary inline-block">
-              Still Have Questions? Contact Us
+              Still Have Questions ? Contact Us
             </Link>
           </div>
         </div>

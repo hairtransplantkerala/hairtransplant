@@ -45,27 +45,27 @@ export default function EyebrowTransplantPage() {
 
   const faqs = [
     {
-      question: 'Who needs eyebrow transplant?',
+      question: 'Who needs eyebrow transplant ?',
       answer: 'Eyebrow transplant is ideal for those with naturally sparse eyebrows, over-plucked brows that won\'t grow back, eyebrow loss due to burns/accidents/medical conditions, aging-related thinning, or those seeking fuller, more defined eyebrows.'
     },
     {
-      question: 'How many grafts are needed for eyebrows?',
+      question: 'How many grafts are needed for eyebrows ?',
       answer: 'Typically, 200-400 grafts per eyebrow are needed (400-800 total). The exact number depends on existing eyebrow density and desired thickness. Women usually need more grafts than men for a fuller look.'
     },
     {
-      question: 'Will transplanted eyebrows look natural?',
+      question: 'Will transplanted eyebrows look natural ?',
       answer: 'Yes! When performed by an expert like Dr. Chacko Cyriac, results are completely natural. We use single-hair follicles placed at specific angles (10-15 degrees) to mimic natural eyebrow growth. The direction, curl, and density are carefully planned.'
     },
     {
-      question: 'How long does eyebrow transplant last?',
+      question: 'How long does eyebrow transplant last ?',
       answer: 'Eyebrow transplant results are permanent. The transplanted hair follicles are from the scalp and will continue to grow throughout your lifetime. You\'ll need regular trimming every 2-3 weeks as scalp hair grows faster than eyebrow hair.'
     },
     {
-      question: 'What is the recovery time?',
+      question: 'What is the recovery time ?',
       answer: 'Recovery is quick - most swelling and redness resolve within 5-7 days. You can return to work after 3-5 days with makeup coverage if needed. Transplanted hairs shed within 2-3 weeks and regrow permanently after 3-4 weeks.'
     },
     {
-      question: 'Can I shape my transplanted eyebrows?',
+      question: 'Can I shape my transplanted eyebrows ?',
       answer: 'Yes! After 3 months when hair is fully grown, you can pluck, trim, or shape your eyebrows normally. The transplanted follicles are permanent and will continue to grow, so regular maintenance is needed.'
     }
   ]

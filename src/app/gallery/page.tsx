@@ -242,7 +242,7 @@ export default function GalleryPage() {
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready for Your Transformation?
+            Ready for Your Transformation ?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             These results could be yours. Schedule a Consultation to discuss your hair restoration goals with Dr. Chacko Cyriac.

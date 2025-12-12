@@ -231,12 +231,12 @@ export default function AboutPage() {
                   When considering hair transplant surgery, it's crucial to ask the right questions:
                 </p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>✓ What are your surgeon's qualifications?</li>
-                  <li>✓ What is their primary training background?</li>
-                  <li>✓ Are they qualified and trained to perform surgery?</li>
-                  <li>✓ What kind of surgical training do they have?</li>
-                  <li>✓ How many procedures have they performed?</li>
-                  <li>✓ Can you see before and after results?</li>
+                  <li>✓ What are your surgeon's qualifications ?</li>
+                  <li>✓ What is their primary training background ?</li>
+                  <li>✓ Are they qualified and trained to perform surgery ?</li>
+                  <li>✓ What kind of surgical training do they have ?</li>
+                  <li>✓ How many procedures have they performed ?</li>
+                  <li>✓ Can you see before and after results ?</li>
                 </ul>
                 <p className="text-white font-semibold mt-4 text-lg">
                   With Dr. Cyriac, you can trust that you're in the hands of a true expert.

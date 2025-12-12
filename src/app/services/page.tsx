@@ -318,7 +318,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom">
           <div className="text-center text-white max-w-3xl mx-auto">
-            <h2 className="text-white mb-4">Ready to Restore Your Hair?</h2>
+            <h2 className="text-white mb-4">Ready to Restore Your Hair ?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Schedule a personalized consultation with Dr. Chacko Cyriac to determine the best treatment option for your unique situation. 
               Get expert advice on whether you need hair transplantation or other treatments.

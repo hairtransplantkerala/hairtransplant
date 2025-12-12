@@ -45,31 +45,31 @@ export default function UltraMaxPRPPage() {
 
   const faqs = [
     {
-      question: 'Is this also PRP or Platelet Rich Plasma?',
+      question: 'Is this also PRP or Platelet Rich Plasma ?',
       answer: 'Yes it is. But it is what we get when we strictly adhere to the rules involved in the harvest and preparation of the platelet cells. Therefore the results too are found to be superior. Many a case we are able to produce best results without doing hair transplantation.'
     },
     {
-      question: 'Is this technique useful for ladies?',
+      question: 'Is this technique useful for ladies ?',
       answer: 'Certainly. It forms an important part of the treatment protocol for hair loss in ladies.'
     },
     {
-      question: 'What about hair loss in young boys as young as 18?',
+      question: 'What about hair loss in young boys as young as 18 ?',
       answer: 'Certainly. In fact the treatment of hair loss in this population is quite different from that for older patients. Hair transplantation is certainly not an option. The Ultra-max PRP helps control hair loss in many such young boys and girls.'
     },
     {
-      question: 'Does this need to be done every month?',
+      question: 'Does this need to be done every month ?',
       answer: 'Certainly not. Dr Chacko Cyriac only asks his patients to come once every 5-6 months. With his improved methods, most often he does not find the reason to do this more frequently. Many a time we are able to thus avoid a hair transplantation.'
     },
     {
-      question: 'Is there a reason then to do this more frequently?',
+      question: 'Is there a reason then to do this more frequently ?',
       answer: 'Yes. When the quality of hair is that bad. When the response is suboptimal, we try our best to improve upon the situation by increasing the frequency of injections. If it still does not improve, we might be moving towards a hair transplantation.'
     },
     {
-      question: 'Are there any side effects of this injection?',
+      question: 'Are there any side effects of this injection ?',
       answer: 'The patient\'s own blood is the source of this injection. No other medications are being injected. Therefore we do not anticipate any problem whatsoever. This is certainly safer than a hair transplant surgery.'
     },
     {
-      question: 'What are the possible problems arising from this injection?',
+      question: 'What are the possible problems arising from this injection ?',
       answer: 'There may be a swelling on the forehead (will disappear by next morning). There may be a numb feeling on the top of the head (takes about 3 hours to disappear). If there is any pain in the injection site, it will settle down with massage.'
     }
   ]

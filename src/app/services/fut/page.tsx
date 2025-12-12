@@ -45,23 +45,23 @@ export default function InviScarFUTPage() {
 
   const faqs = [
     {
-      question: 'Does the InviScar FUT method guarantee a totally scarless hair transplantation?',
+      question: 'Does the InviScar FUT method guarantee a totally scarless hair transplantation ?',
       answer: 'This technique is done to minimise the incidence of scar formation. However, scar formation occurs even after the best hair transplantation in Kochi (Cochin), Kerala, and is dependent on several factors and not just the surgical technique. Therefore if there is an increased scar formation in spite of all this, our centre has proven methods to treat it too.'
     },
     {
-      question: 'Is not the FUT technique proven to be superior to the FUE?',
+      question: 'Is not the FUT technique proven to be superior to the FUE ?',
       answer: 'This is an endless discussion. World over proponents of both methods advocate their technique as the best hair transplantation method. But Dr. Chacko Cyriac is proficient in both. He provides his patients with both options and has developed his own method to choose the better technique for the patient.'
     },
     {
-      question: 'Does this technique take longer to do than the FUE?',
+      question: 'Does this technique take longer to do than the FUE ?',
       answer: 'Yes. The duration of the procedure is slightly more than the regular FUE hair transplant surgery. But the patient does not feel it as the patient is given more "breaks" between the procedure.'
     },
     {
-      question: 'Does this technique cost more?',
+      question: 'Does this technique cost more ?',
       answer: 'No. Dr. Chacko Cyriac ensures that his patients receive the best hair transplant surgical technique without having to pay more for either.'
     },
     {
-      question: 'Is there a situation when the InviScar technique for hair transplantation is not to be done?',
+      question: 'Is there a situation when the InviScar technique for hair transplantation is not to be done ?',
       answer: 'Our Senior Consultant Plastic Surgeon Dr. Chacko Cyriac makes sure the general condition of all his hair transplant patients is good enough for them to go through a procedure under general anesthesia. Only then does he do it under local anesthesia. This is in stark contrast with what most centres claim, that this procedure only requires local anesthesia and not general anesthesia and therefore many medical issues can be ignored. After all, the safety of the patient is paramount. If there exists a heightened tendency for scar formation, the patient is not fit for this procedure or for that matter, other cosmetic surgery procedure.'
     }
   ]

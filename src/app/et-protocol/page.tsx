@@ -66,9 +66,6 @@ export default function ETProtocolPage() {
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              Dr. Chacko Cyriac's Comprehensive Approach
-            </div>
             <h1 className="mb-6 text-white">The ET-Protocol</h1>
             <p className="text-2xl text-gray-300 mb-4 font-semibold">
               Eterno-Protocol for Hair Loss Management
@@ -91,13 +88,10 @@ export default function ETProtocolPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-6">What is the ET-Protocol?</h2>
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> does all the medical treatments for hair loss, and not just the best hair transplantation in Kochi (Cochin), Kerala. 
+              <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
+                Though a Plastic Surgeon by training, <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> does all the medical treatments for hair loss, and not just the best hair transplantation in Kochi (Cochin), Kerala. He firmly believes all treatments have definitive indications, and limitations too.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                He firmly believes all treatments have <strong>definitive indications, and limitations too</strong>.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
                 With no bias towards any one type of treatment and with his wide range of experience with all techniques, he has developed the <strong>ET-Protocol</strong> for hair loss (read as Eterno-Protocol).
               </p>
             </div>
@@ -106,117 +100,71 @@ export default function ETProtocolPage() {
       </section>
 
       {/* Why It's Important */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Why Following the ET-Protocol is So Important for Hair Loss Management</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Causes of hair loss vary from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="text-white" size={32} />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-gray-900">{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm">{benefit.description}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-2xl shadow-xl">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age.
-            </p>
-            <p className="text-lg text-gray-900 font-bold mt-4">
-              All hair loss can certainly not be managed with hair transplantation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Who Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="mb-12 text-center">Can This Protocol Be Applied For You?</h2>
-            <div className="space-y-6">
-              {whoItHelps.map((item, index) => {
-                const IconComponent = item.icon;
-                return (
-                  <div key={index} className="bg-gradient-to-r from-gray-50 to-white p-8 rounded-xl shadow-lg border-l-4 border-gray-900">
-                    <div className="flex items-start gap-6">
-                      <div className="bg-gray-900 p-4 rounded-full flex-shrink-0">
-                        <IconComponent className="text-white" size={32} />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                        <p className="text-gray-700 text-lg leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+<section className="py-20 bg-gray-50">
+  <div className="container-custom">
+    <div className="text-center mb-12">
+      <h2 className="mb-4">Why Following the ET-Protocol is So Important for Hair Loss Management</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+        Causes of hair loss vary from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups.
+      </p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {benefits.map((benefit, index) => {
+        const IconComponent = benefit.icon;
+        return (
+          <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <IconComponent className="text-white" size={32} />
             </div>
+            <h3 className="text-lg font-bold mb-3 text-gray-900">{benefit.title}</h3>
+            <p className="text-gray-600 text-sm">{benefit.description}</p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
 
-      {/* Core Principles */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6 text-center">Why Dr. Cyriac's Experience Matters</h2>
-            <p className="text-lg text-gray-700 text-center mb-10">
-              With several years practicing all techniques in hair loss management, Dr. Cyriac provides unbiased recommendations based on your unique situation.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              {principles.map((principle, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-5 rounded-lg shadow-sm">
-                  <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-gray-700">{principle}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-2xl shadow-xl">
+      <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
+        <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age.
+      </p>
+      <p className="text-lg text-gray-900 font-bold text-justify">
+        All hair loss can certainly not be managed with hair transplantation.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Important Note */}
-      <section className="py-20 bg-gradient-to-r from-amber-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-r from-gray-100 to-gray-100">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-amber-500">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-black">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">
                 All Hair Loss Cannot Be Treated with Hair Transplantation
               </h3>
-              <p className="text-lg text-gray-700 mb-4">
+              <p className="text-lg text-gray-700 mb-4 text-justify">
                 This is the fundamental principle behind the ET-Protocol. Different conditions require different approaches:
               </p>
               <ul className="space-y-3 text-gray-700 mb-6">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span>Young patients often need medical treatments, not surgery</span>
+                  <span className="text-justify">Young patients often need medical treatments, not surgery</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span>Women typically benefit from non-surgical options first</span>
+                  <span className="text-justify">Women typically benefit from non-surgical options first</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span>Early-stage hair loss may respond to PRP or medications</span>
+                  <span className="text-justify">Early-stage hair loss may respond to PRP or medications</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
-                  <span>Some conditions require combination treatments</span>
+                  <span className="text-justify">Some conditions require combination treatments</span>
                 </li>
               </ul>
-              <p className="text-lg text-gray-900 font-bold">
+              <p className="text-lg text-gray-900 font-bold text-justify">
                 Therefore one should go to a centre in Cochin (Kochi), Kerala, where all different options are available, and not just hair transplantation.
               </p>
             </div>
@@ -234,7 +182,7 @@ export default function ETProtocolPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   Why following the ET-Protocol is so important for hair loss management?
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   Causes of hair loss varies from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups. Dr. Chacko Cyriac has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age. All hair loss can certainly not be managed with hair transplantation.
                 </p>
               </div>
@@ -243,7 +191,7 @@ export default function ETProtocolPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   Can this protocol be applied for ladies?
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   Yes. It certainly can. Given the different causes and extent of hair loss amongst ladies, it is definitely necessary to be able to provide all treatments. Doing hair transplantation is probably the last option.
                 </p>
               </div>
@@ -252,7 +200,7 @@ export default function ETProtocolPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   How about hair loss in young boys and girls?
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   Here lies a classic example of when the ET-Protocol is most essential. All hair loss cannot be treated with hair transplantation. Therefore one should go to a centre in Cochin (Kochi), Kerala, where all different options are available, and not just hair transplantation.
                 </p>
               </div>
@@ -261,7 +209,7 @@ export default function ETProtocolPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   What is the duration of the treatment for hair loss as per this protocol?
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   There is no definitive duration of therapy. As the problem evolves treatments change. The requirements too change with time. Therefore we encourage our patients to come back to us to maintain a healthy head of hair.
                 </p>
               </div>
@@ -270,49 +218,69 @@ export default function ETProtocolPage() {
         </div>
       </section>
 
-      {/* Why Choose Dr. Cyriac */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-6">Why Choose Dr. Chacko Cyriac?</h2>
-            <div className="bg-white p-8 rounded-2xl shadow-xl mb-8">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Though a Plastic Surgeon by training, Dr. Chacko Cyriac provides <strong>all medical treatments for hair loss</strong>, not just hair transplantation. He firmly believes all treatments have definitive indications and limitations too.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With <strong>no bias towards any one type of treatment</strong> and with his <strong>wide range of experience with all techniques</strong>, he ensures each patient receives the best probable method for their specific condition.
-              </p>
+      {/* Why It's Important */}
+<section className="py-20 bg-gray-50">
+  <div className="container-custom">
+    <div className="text-center mb-12">
+      <h2 className="mb-4">Why Following the ET-Protocol is So Important for Hair Loss Management</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+        Causes of hair loss vary from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups.
+      </p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {benefits.map((benefit, index) => {
+        const IconComponent = benefit.icon;
+        return (
+          <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <IconComponent className="text-white" size={32} />
             </div>
-            <div className="grid md:grid-cols-4 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-gray-900 to-gray-700 text-white p-6 rounded-xl">
-                <div className="text-4xl font-bold mb-2">7000+</div>
-                <p className="text-gray-300">Patients Treated</p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-900 to-gray-700 text-white p-6 rounded-xl">
-                <div className="text-4xl font-bold mb-2">22+</div>
-                <p className="text-gray-300">Years Experience</p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-900 to-gray-700 text-white p-6 rounded-xl">
-                <div className="text-4xl font-bold mb-2">26+</div>
-                <p className="text-gray-300">Countries Served</p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-900 to-gray-700 text-white p-6 rounded-xl">
-                <div className="text-4xl font-bold mb-2">All</div>
-                <p className="text-gray-300">Techniques Available</p>
-              </div>
-            </div>
-            <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black inline-flex items-center gap-2 text-lg">
-              Learn More About Dr. Cyriac <ArrowRight size={20} />
-            </Link>
+            <h3 className="text-lg font-bold mb-3 text-gray-900">{benefit.title}</h3>
+            <p className="text-gray-600 text-sm">{benefit.description}</p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+
+    <div className="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-2xl shadow-xl">
+      <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
+        <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age.
+      </p>
+      <p className="text-lg text-gray-900 font-bold text-justify">
+        All hair loss can certainly not be managed with hair transplantation.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Why Dr. Cyriac's Experience Matters */}
+<section className="py-20 bg-white">
+  <div className="container-custom">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="mb-4">Why Dr. Cyriac's Experience Matters</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+          With several years practicing all techniques in hair loss management, Dr. Cyriac provides unbiased recommendations based on your unique situation.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        {principles.map((principle, index) => (
+          <div key={index} className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-200">
+            <CheckCircle className="text-gray-900 flex-shrink-0 mt-1" size={20} />
+            <span className="text-gray-700">{principle}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-6">Ready to Find Your Best Treatment?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-justify">
             To know how the ET-Protocol for hair loss can be best applied to you, and for other questions regarding hair transplantation, take an appointment at our Kochi (Cochin) office in Kerala
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

@@ -45,23 +45,23 @@ export default function SCFUEPage() {
 
   const faqs = [
     {
-      question: 'Does the SC-FUE hair transplant surgery take more time?',
+      question: 'Does the SC-FUE hair transplant surgery take more time ?',
       answer: 'No it does not. As Dr. Cyriac is himself personally punching all the grafts, it does not take more time than regular FUE.'
     },
     {
-      question: 'Does the SC-FUE hair transplant technique cost more than the regular FUE?',
+      question: 'Does the SC-FUE hair transplant technique cost more than the regular FUE ?',
       answer: 'No. Dr. Chacko Cyriac passes on the benefit of this advanced technique to all of his patients without any extra charges.'
     },
     {
-      question: 'Will there be any side effects of the SC-FUE hair transplant technique?',
+      question: 'Will there be any side effects of the SC-FUE hair transplant technique ?',
       answer: 'None whatsoever. The issues related to the regular FUE technique are applicable here too. There are no additional side effects from the stem cell harvesting.'
     },
     {
-      question: 'Is there more scarring with the SC-FUE hair transplantation method?',
+      question: 'Is there more scarring with the SC-FUE hair transplantation method ?',
       answer: 'No. It is the same as for regular FUE surgery. The scar from the regular FUE is due to the loss of hair growth from the site of punching. This will happen with this technique too.'
     },
     {
-      question: 'Is there a patient in whom the SC-FUE hair transplantation technique should not be done?',
+      question: 'Is there a patient in whom the SC-FUE hair transplantation technique should not be done ?',
       answer: 'Of course the general condition of the patient should be good enough for him to go through the procedure. These aspects are strictly looked into by our Senior Consultant Plastic Surgeon Dr. Chacko Cyriac. If the patients are unfit for a general anesthesia procedure, then he does not do the same under local anesthesia too. After all, the safety of the patient is paramount. If the patient has an increased tendency for scar formation as keloids etc then the patient is not fit for any cosmetic surgery technique, leave alone SC-FUE.'
     }
   ]

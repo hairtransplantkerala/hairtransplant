@@ -45,23 +45,23 @@ export default function DHIPage() {
 
   const faqs = [
     {
-      question: 'What makes DHI different from FUE?',
+      question: 'What makes DHI different from FUE ?',
       answer: 'DHI uses a specialized CHOI implanter pen that creates the incision and places the graft simultaneously, unlike FUE where incisions are made first and grafts placed later. This results in less tissue trauma and higher survival rates.'
     },
     {
-      question: 'Is shaving required for DHI?',
+      question: 'Is shaving required for DHI ?',
       answer: 'No, DHI can be performed without shaving the recipient or donor area, making it ideal for those who want to maintain their hairstyle throughout the procedure and recovery.'
     },
     {
-      question: 'How long does DHI procedure take?',
+      question: 'How long does DHI procedure take ?',
       answer: 'DHI typically takes 6-9 hours depending on the number of grafts (usually 2000-3000 per session). The process is more time-intensive than standard FUE due to the precise implantation technique.'
     },
     {
-      question: 'What is the success rate of DHI?',
+      question: 'What is the success rate of DHI ?',
       answer: 'DHI has a graft survival rate of 95-98%, slightly higher than traditional FUE. The direct implantation method minimizes graft handling and time outside the body, improving survival.'
     },
     {
-      question: 'Is DHI more expensive than FUE?',
+      question: 'Is DHI more expensive than FUE ?',
       answer: 'Yes, DHI is generally 20-30% more expensive than FUE due to the specialized equipment (CHOI pens), longer procedure time, and advanced expertise required. However, the superior results often justify the additional cost.'
     }
   ]
@@ -133,7 +133,7 @@ export default function DHIPage() {
       <section className="py-20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="mb-4">What is DHI Hair Transplant?</h2>
+            <h2 className="mb-4">What is DHI Hair Transplant ?</h2>
             <p className="text-xl text-gray-600">
               Direct Hair Implantation (DHI) is the most advanced hair restoration technique using specialized CHOI implanter pens that allow for direct placement of follicles without pre-made incisions.
             </p>

@@ -116,7 +116,7 @@ export default function MesotherapyHairLossPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">What is Mesotherapy for Hair Loss?</h2>
+            <h2 className="mb-6">What is Mesotherapy for Hair Loss ?</h2>
             <p className="text-lg text-gray-700 mb-4">
               Mesotherapy for hair loss is a non-surgical treatment that involves microinjecting a customized cocktail of vitamins, minerals, amino acids, and growth factors directly into the scalp's mesodermal layer. This targeted delivery system nourishes hair follicles, improves blood circulation, and stimulates natural hair growth.
             </p>
@@ -154,7 +154,7 @@ export default function MesotherapyHairLossPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">How Does Mesotherapy Work?</h2>
+            <h2 className="mb-6">How Does Mesotherapy Work ?</h2>
             <p className="text-lg text-gray-700 mb-8">
               Mesotherapy works by delivering a nutrient-rich solution into the mesoderm (middle skin layer) where hair follicles reside. The treatment improves blood circulation to the scalp, provides essential nutrients for hair growth, and stimulates collagen production.
             </p>
@@ -216,7 +216,7 @@ export default function MesotherapyHairLossPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6">Who is Mesotherapy Ideal For?</h2>
+            <h2 className="mb-6">Who is Mesotherapy Ideal For ?</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {idealFor.map((condition, index) => (
                 <div key={index} className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg border border-gray-200">

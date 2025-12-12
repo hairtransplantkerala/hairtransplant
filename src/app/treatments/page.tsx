@@ -208,7 +208,7 @@ export default function TreatmentsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="mb-6">Why Choose Our Advanced Treatments?</h2>
+              <h2 className="mb-6">Why Choose Our Advanced Treatments ?</h2>
               <p className="text-lg text-gray-600">
                 Dr. Chacko Cyriac stays at the forefront of hair restoration technology and techniques
               </p>
@@ -279,7 +279,7 @@ export default function TreatmentsPage() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
-            <h2 className="text-white mb-4">Not Sure Which Treatment Is Right for You?</h2>
+            <h2 className="text-white mb-4">Not Sure Which Treatment Is Right for You ?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Schedule a comprehensive consultation with Dr. Chacko Cyriac. We'll assess your condition and recommend the most effective treatment plan.
             </p>

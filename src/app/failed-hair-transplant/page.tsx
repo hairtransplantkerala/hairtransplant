@@ -250,7 +250,7 @@ export default function FailedHairTransplantRepairPage() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-6 text-center">Why Trust Dr. Chacko Cyriac for Repair Surgery?</h2>
+            <h2 className="mb-6 text-center">Why Trust Dr. Chacko Cyriac for Repair Surgery ?</h2>
             <p className="text-lg text-gray-700 mb-8 text-center">
               Corrective surgery requires exceptional skill, experience, and artistic judgment. Here's why Dr. Cyriac is your best choice:
             </p>

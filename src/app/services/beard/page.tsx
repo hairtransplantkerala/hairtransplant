@@ -45,27 +45,27 @@ export default function BeardTransplantPage() {
 
   const faqs = [
     {
-      question: 'Who is a good candidate for beard transplant?',
+      question: 'Who is a good candidate for beard transplant ',
       answer: 'Ideal candidates include men with patchy beards, facial scars from burns or accidents, thin beard growth, or those who cannot grow facial hair due to genetics. You should be at least 25 years old with stable hair patterns.'
     },
     {
-      question: 'How many grafts are needed for a full beard?',
+      question: 'How many grafts are needed for a full beard ?',
       answer: 'A full beard typically requires 2000-3000 grafts, mustache needs 400-600 grafts, and goatee requires 500-800 grafts. The exact number depends on desired density and coverage area.'
     },
     {
-      question: 'Is beard transplant permanent?',
+      question: 'Is beard transplant permanent ?',
       answer: 'Yes, transplanted facial hair is permanent. However, the transplanted hair retains characteristics of scalp hair, so you may need to trim it more frequently as it grows faster than natural beard hair.'
     },
     {
-      question: 'Does beard transplant look natural?',
+      question: 'Does beard transplant look natural ?',
       answer: 'When performed by an experienced surgeon like Dr. Chacko Cyriac, results are completely natural. Careful attention to angle, direction, and distribution ensures the transplanted beard blends seamlessly with existing facial hair.'
     },
     {
-      question: 'What is the recovery time?',
+      question: 'What is the recovery time ?',
       answer: 'Most swelling and redness resolve within 5-7 days. You can return to work after 3-5 days. Transplanted hair will shed within 2-3 weeks and regrow permanently after 3-4 months. Full results visible in 8-12 months.'
     },
     {
-      question: 'Can I shave after beard transplant?',
+      question: 'Can I shave after beard transplant ?',
       answer: 'You should avoid shaving for the first 10 days. After that, you can shave carefully with an electric razor. After 3 weeks, you can shave normally. The transplanted follicles are permanent and will regrow like regular beard hair.'
     }
   ]

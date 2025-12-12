@@ -131,7 +131,7 @@ export default function StemCellFUEPage() {
 
   const science = [
     {
-      title: "What Are Stem Cells?",
+      title: "What Are Stem Cells ?",
       description: "Regenerative cells with ability to self-renew and develop into specialized cell types. They repair damaged tissues and stimulate cellular regeneration throughout the body."
     },
     {
@@ -188,7 +188,7 @@ export default function StemCellFUEPage() {
               </div>
             </div>
 
-            <h2 className="mb-6">What is Stem Cell FUE Hair Transplant?</h2>
+            <h2 className="mb-6">What is Stem Cell FUE Hair Transplant ?</h2>
             <p className="text-lg text-gray-700 mb-4">
               Stem Cell FUE (Follicular Unit Extraction) is an advanced hair transplant technique that enhances traditional FUE with regenerative stem cell therapy. The procedure extracts individual hair follicles from the donor area and enriches them with concentrated stem cells before implantation, while also injecting stem cell solution into the recipient scalp.
             </p>
