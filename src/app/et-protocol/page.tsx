@@ -127,9 +127,6 @@ export default function ETProtocolPage() {
       <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
         <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age.
       </p>
-      <p className="text-lg text-gray-900 font-bold text-justify">
-        All hair loss can certainly not be managed with hair transplantation.
-      </p>
     </div>
   </div>
 </section>
@@ -172,42 +169,6 @@ export default function ETProtocolPage() {
         </div>
       </section>
 
-      
-      {/* Why It's Important */}
-<section className="py-20 bg-gray-50">
-  <div className="container-custom">
-    <div className="text-center mb-12">
-      <h2 className="mb-4">Why Following the ET-Protocol is So Important for Hair Loss Management</h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
-        Causes of hair loss vary from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups.
-      </p>
-    </div>
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {benefits.map((benefit, index) => {
-        const IconComponent = benefit.icon;
-        return (
-          <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <IconComponent className="text-white" size={32} />
-            </div>
-            <h3 className="text-lg font-bold mb-3 text-gray-900">{benefit.title}</h3>
-            <p className="text-gray-600 text-sm">{benefit.description}</p>
-          </div>
-        );
-      })}
-    </div>
-
-    <div className="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-2xl shadow-xl">
-      <p className="text-lg text-gray-700 leading-relaxed mb-4 text-justify">
-        <Link href="/about" className="text-gray-900 font-semibold underline hover:text-black">Dr. Chacko Cyriac</Link> has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age.
-      </p>
-      <p className="text-lg text-gray-900 font-bold text-justify">
-        All hair loss can certainly not be managed with hair transplantation.
-      </p>
-    </div>
-  </div>
-</section>
-
 {/* Why Dr. Cyriac's Experience Matters */}
 <section className="py-20 bg-white">
   <div className="container-custom">
@@ -236,14 +197,7 @@ export default function ETProtocolPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="mb-12 text-center">Frequently Asked Questions</h2>
             <div className="space-y-6">
-              <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Why following the ET-Protocol is so important for hair loss management ?
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-justify">
-                  Causes of hair loss varies from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups. Dr. Chacko Cyriac has been practicing almost all techniques in the management for hair loss for several years. Therefore he is able to advise each patient the best probable method for treating his hair loss, for his extent of hair loss, for his stage of baldness, for his age. All hair loss can certainly not be managed with hair transplantation.
-                </p>
-              </div>
+
 
               <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
