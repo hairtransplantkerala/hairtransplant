@@ -203,33 +203,6 @@ export default function ChooseYourDoctorPage() {
           </div>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-6">Make an Informed Decision</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Find out more about our Plastic Surgeon and how he can help you get the best results for your hair transplantation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/about" className="btn-primary inline-block">
-                About Our Plastic Surgeon
-              </Link>
-              <Link href="/contact" className="btn-secondary inline-block">
-                Book Consultation
-              </Link>
-            </div>
-            <p className="text-gray-600">
-              View our{" "}
-              <Link href="/gallery" className="text-gray-900 font-semibold underline hover:text-black">
-                Gallery
-              </Link>
-              {" "}to understand better our approach to the problem of hair loss and the role of hair transplantation in Kochi, Kerala, India.
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
