@@ -215,7 +215,7 @@ export default function PlasticSurgeryCenterPage() {
         </div>
       </section>
 
-      {/* Services Offered */}
+      {/* Services Offered 
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
@@ -246,9 +246,9 @@ export default function PlasticSurgeryCenterPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Privacy Section with Video */}
+      {/* Privacy Section with Video 
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
@@ -288,7 +288,7 @@ export default function PlasticSurgeryCenterPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -375,7 +375,7 @@ export default function PlasticSurgeryCenterPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-6">Ready for Your Transformation?</h2>
+          <h2 className="text-white mb-6">Start Your Hair Restoration Journey Today</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Experience world-class plastic surgery and hair transplantation in a safe, private, and patient-friendly environment
           </p>

@@ -3,8 +3,9 @@ import Link from "next/link";
 import DoctorImage from "@/components/DoctorImage";
 
 export const metadata = {
-  title: "About Dr. Chacko Cyriac | Expert Hair Transplant Surgeon",
-  description: "Meet Dr. Chacko Cyriac, MCh Plastic Surgery from PGI Chandigarh with international training from UK, USA, Canada, and Singapore. 22+ years experience, 7000+ successful procedures.",
+  title: "About Dr. Chacko Cyriac | Expert Hair Transplant Surgeon Kochi",
+  description: "Meet Dr. Chacko Cyriac, Senior Consultant Plastic Surgeon with qualifications from 5 countries. Sam C Bose Award winner, leading hair transplant practice in Kochi, Kerala.",
+  keywords: "Dr Chacko Cyriac, plastic surgeon Kochi, hair transplant surgeon Kerala, MCh Plastic Surgery, Cooper Foundation Fellowship",
 };
 
 export default function AboutPage() {
@@ -31,104 +32,70 @@ export default function AboutPage() {
   const achievements = [
     {
       icon: Award,
-      title: "22+ Years Experience",
-      description: "Extensive experience in plastic surgery and hair restoration with continuous learning"
+      title: "Sam C Bose Award 2016",
+      description: "Prestigious award by Association of Plastic Surgeons of India for best audit and research paper"
+    },
+    {
+      icon: Trophy,
+      title: "Cooper Foundation Fellowship",
+      description: "Selected for clinical and research work in Pediatric Plastic Surgery at University of Toronto, Canada"
+    },
+    {
+      icon: GraduationCap,
+      title: "Healthy Kids Fellowship",
+      description: "Advanced training in Pediatric Plastic Surgery at University of Toronto, Canada"
     },
     {
       icon: Users,
       title: "7000+ Successful Cases",
-      description: "Thousands of satisfied patients with life-changing transformations"
+      description: "Leading one of the largest hair transplant practices in Kochi, Kerala"
     },
     {
       icon: Globe,
       title: "International Clientele",
-      description: "Patients from 26+ countries including USA, UK, UAE, Singapore, and more"
-    },
-    {
-      icon: GraduationCap,
-      title: "Advanced Training",
-      description: "Trained at world-renowned institutions across multiple countries"
-    },
-    {
-      icon: Trophy,
-      title: "Industry Recognition",
-      description: "Featured speaker at national and international hair restoration conferences"
+      description: "Patients from 26+ countries trust Dr. Cyriac's expertise"
     },
     {
       icon: Heart,
-      title: "Patient-Centric Care",
-      description: "Personalized approach with lifetime follow-up and support"
+      title: "Dual Excellence",
+      description: "Heads Plastic Surgery Department at Lourdes Hospital while maintaining hair transplant practice"
     }
   ];
 
-  const mediaFeatures = [
+  const innovations = [
     {
-      title: "Featured in Leading Medical Journals",
-      description: "Published research on advanced hair transplant techniques"
+      title: "UltraMax PRP",
+      description: "Pioneering technique for superior hair growth results",
+      link: "/services/prp"
     },
     {
-      title: "International Conference Speaker",
-      description: "Regular presenter at hair restoration conferences worldwide"
+      title: "SC-FUE",
+      description: "Stem Cell enhanced FUE for improved graft survival",
+      link: "/services/fue"
     },
     {
-      title: "Medical Innovation",
-      description: "Pioneered modified techniques for better graft survival"
-    },
-    {
-      title: "Media Appearances",
-      description: "Featured in health magazines and medical television programs"
+      title: "InviScar FUT",
+      description: "Advanced strip method with minimized scarring",
+      link: "/services/fut"
     }
   ];
 
   const philosophy = [
     {
-      title: "Artistic Excellence",
-      description: "Every hairline is designed as a unique work of art that complements your facial features and age"
-    },
-    {
-      title: "Natural Results",
-      description: "Focus on creating undetectable, natural-looking results that restore confidence"
-    },
-    {
-      title: "Ethical Practice",
-      description: "Honest assessment of candidacy and realistic expectations with transparent pricing"
+      title: "Reconstructive Foundation",
+      description: "Believes principles of reconstructive surgery hold true in cosmetic surgery. Cannot be a good cosmetic surgeon without knowing reconstructive techniques."
     },
     {
       title: "Continuous Innovation",
-      description: "Staying updated with latest techniques and technology for optimal patient outcomes"
-    }
-  ];
-
-  const journey = [
-    {
-      year: "2008",
-      title: "MCh Plastic Surgery",
-      description: "Completed advanced training from prestigious PGI Chandigarh"
+      description: "Innovative streak enabled development of newer techniques in both reconstructive and hair transplant surgery."
     },
     {
-      year: "2010",
-      title: "International Fellowship",
-      description: "Specialized training in UK focusing on aesthetic and reconstructive surgery"
+      title: "Comprehensive Practice",
+      description: "Careful not to narrow down to just hair transplant alone, continues to head Plastic Surgery Department at Lourdes Hospital."
     },
     {
-      year: "2012",
-      title: "Hair Restoration Expertise",
-      description: "Advanced certification in hair transplant techniques from USA and Singapore"
-    },
-    {
-      year: "2015",
-      title: "Eterno Clinic Established",
-      description: "Founded state-of-the-art hair transplant clinic in Kochi, Kerala"
-    },
-    {
-      year: "2020",
-      title: "7000+ Successful Procedures",
-      description: "Milestone achievement with patients from 26+ countries"
-    },
-    {
-      year: "2025",
-      title: "Industry Leader",
-      description: "Recognized as one of Kerala's leading hair transplant surgeons"
+      title: "National Recognition",
+      description: "High standard of work recognized at national level through prestigious awards and fellowships."
     }
   ];
 
@@ -137,10 +104,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16">
         <div className="container-custom">
-          <h1 className="mb-4 text-white">Meet Dr. Chacko Cyriac</h1>
-          <p className="text-xl text-gray-300 max-w-3xl">
-            Senior Consultant Plastic Surgeon | MCh Plastic Surgery | International Expert in Hair Restoration
-          </p>
+          <h1 className="mb-4 text-white">Our Plastic Surgeon</h1>
         </div>
       </section>
 
@@ -148,7 +112,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
-            {/* Image - Removed sticky on mobile, only sticky on lg+ */}
+            {/* Image */}
             <div className="lg:sticky lg:top-24">
               <DoctorImage 
                 src="/images/dr-cyriac.jpg"
@@ -171,7 +135,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="text-gray-900 mr-3" size={20} />
-                    <span><strong>98%</strong> Patient Satisfaction</span>
+                    <span><strong>5</strong> Countries Training</span>
                   </li>
                 </ul>
               </div>
@@ -180,18 +144,15 @@ export default function AboutPage() {
             {/* Content */}
             <div className="space-y-8">
               <div>
-                <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                  About Dr. Cyriac
-                </div>
-                <h2 className="mb-4">A Leader in Hair Restoration Surgery</h2>
-                <p className="text-gray-600 text-lg mb-4">
-                  Dr. Chacko Cyriac is a highly qualified and experienced plastic surgeon with specialized expertise in hair transplantation and restoration. With his MCh in Plastic Surgery from the prestigious Post Graduate Institute (PGI), Chandigarh, he represents the pinnacle of surgical training in India.
+                <h2 className="mb-4">Dr. Chacko Cyriac</h2>
+                <p className="text-gray-700 text-lg mb-4 text-justify">
+                  With qualifications from 5 countries and with training from the very best centres in India and abroad, Dr Cyriac returned to India to set up the first Plastic Surgery Unit in the 600 bedded Lourdes Hospital, in Kochi, Kerala, India.
                 </p>
-                <p className="text-gray-600 text-lg mb-4">
-                  What sets Dr. Cyriac apart is his pursuit of international excellence. After completing his MCh, he pursued advanced training and qualifications from leading institutions in the United Kingdom, United States, Canada, and Singapore. This international exposure has equipped him with cutting-edge techniques and a global perspective on hair restoration.
+                <p className="text-gray-700 text-lg mb-4 text-justify">
+                  Over the years, Dr Cyriac was careful to not let himself narrow down to just hair transplant surgery alone as he firmly believes that the principles of reconstructive surgery hold true in cosmetic surgery as well. <strong>"One cannot be a good cosmetic surgeon if one does not know and practice the techniques and principles of reconstructive surgery,"</strong> he claims. Therefore, while leading one of the largest hair transplant practices in Kochi (Cochin), Kerala, he continues to head the Plastic Surgery Department at Lourdes Hospital.
                 </p>
-                <p className="text-gray-600 text-lg">
-                  His commitment to excellence and continuous learning has positioned him as one of the most sought-after hair transplant surgeons in India, with patients traveling from around the world to receive his expert care.
+                <p className="text-gray-700 text-lg text-justify">
+                  The innovative streak in him enabled him to develop newer techniques in several aspects of Plastic Surgery, be it reconstructive surgery or hair transplant surgery.
                 </p>
               </div>
 
@@ -224,48 +185,98 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-2xl text-white">
-                <h3 className="text-2xl font-bold mb-4">Choose Your Doctor Wisely</h3>
-                <p className="text-gray-300 mb-4">
-                  When considering hair transplant surgery, it's crucial to ask the right questions:
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>✓ What are your surgeon's qualifications ?</li>
-                  <li>✓ What is their primary training background ?</li>
-                  <li>✓ Are they qualified and trained to perform surgery ?</li>
-                  <li>✓ What kind of surgical training do they have ?</li>
-                  <li>✓ How many procedures have they performed ?</li>
-                  <li>✓ Can you see before and after results ?</li>
-                </ul>
-                <p className="text-white font-semibold mt-4 text-lg">
-                  With Dr. Cyriac, you can trust that you're in the hands of a true expert.
-                </p>
+      {/* National Recognition */}
+      <section className="py-20 bg-gradient-to-r from-gray-100 to-gray-100">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-black">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">National Recognition</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Sam C Bose and Saroja Bose Award, 2016</h3>
+                  <p className="text-gray-700 text-lg text-justify">
+                    The prestigious <strong>Sam C Bose and Saroja Bose Award, 2016</strong>, for the best audit and research paper by the <strong>Association of Plastic Surgeons of India</strong> was a recognition of the high standard of his work at the National level.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Cooper Foundation Fellowship Grant</h3>
+                  <p className="text-gray-700 text-lg text-justify">
+                    Earlier on he had won the <strong>Cooper Foundation Fellowship Grant</strong> for the purpose of pursuing clinical and research work in Pediatric Plastic Surgery at the University of Toronto, Canada.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Healthy Kids International Fellowship</h3>
+                  <p className="text-gray-700 text-lg text-justify">
+                    He was also selected for the <strong>Healthy Kids International Fellowship Grant</strong> for advanced training in Pediatric Plastic Surgery at the University of Toronto, Canada.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Pioneering Techniques */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="mb-4">Pioneering Techniques in Hair Transplantation</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+              Dr. Cyriac has developed innovative techniques that have set new standards in hair restoration surgery
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {innovations.map((innovation, index) => (
+              <Link 
+                key={index} 
+                href={innovation.link}
+                className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-gray-900 hover:shadow-xl transition-all group"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-black transition-colors">
+                  {innovation.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{innovation.description}</p>
+                <span className="text-gray-900 font-semibold inline-flex items-center group-hover:underline">
+                  Learn More →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-gray-600 text-lg">
+              To read more about his pioneering techniques, go to the{" "}
+              <Link href="/services" className="text-gray-900 font-semibold underline hover:text-black">
+                latest in hair transplant
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy 
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Our Treatment Philosophy</h2>
+            <h2 className="mb-4">Treatment Philosophy</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              What guides our approach to hair restoration
+              What sets Dr. Cyriac apart in plastic and hair restoration surgery
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {philosophy.map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <p className="text-gray-600 text-justify">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
       <section className="py-20">
@@ -273,7 +284,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Recognition & Achievements</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A track record of excellence and patient satisfaction
+              A track record of excellence and innovation in plastic surgery
             </p>
           </div>
 
@@ -291,67 +302,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey Timeline */}
+      {/* Choose Your Doctor Wisely 
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Professional Journey</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Milestones in a career dedicated to excellence
-            </p>
-          </div>
-
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {journey.map((milestone, index) => (
-                <div key={index} className="flex gap-6">
-                  <div className="flex flex-col items-center">
-                    <div className="bg-gray-900 text-white w-20 h-20 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
-                      {milestone.year}
-                    </div>
-                    {index < journey.length - 1 && (
-                      <div className="w-1 h-full bg-gray-200 mt-2"></div>
-                    )}
-                  </div>
-                  <div className="bg-white p-6 rounded-xl shadow-lg flex-1 mb-8">
-                    <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Media Features */}
-      <section className="py-20">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="mb-4">Dr. Cyriac in the Media</h2>
-              <p className="text-gray-600 text-lg">
-                Dr. Chacko Cyriac is a recognized expert whose work extends beyond hair transplant surgery. His innovative techniques and successful outcomes have been featured in various media outlets.
+            <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-2xl text-white">
+              <h2 className="text-3xl font-bold mb-6">Choose Your Doctor Wisely</h2>
+              <p className="text-gray-300 mb-6 text-lg text-justify">
+                When considering hair transplant surgery, it's crucial to ask the right questions about your surgeon's qualifications and experience:
+              </p>
+              <ul className="space-y-3 text-gray-300 text-lg mb-6">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>What are your surgeon's qualifications?</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>What is their primary training background?</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>Are they qualified and trained to perform surgery?</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>What kind of surgical training do they have?</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>How many procedures have they performed?</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="flex-shrink-0 mt-1" size={20} />
+                  <span>Can you see before and after results?</span>
+                </li>
+              </ul>
+              <p className="text-white font-bold text-xl">
+                With Dr. Cyriac, you can trust that you're in the hands of a true expert with qualifications from 5 countries and recognized excellence at the national level.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {mediaFeatures.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
-          <h2 className="text-white mb-4">Consult with Dr. Cyriac</h2>
+          <h2 className="text-white mb-4">Schedule an Appointment</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get personalized expert advice for your hair restoration journey. Book your Consultation today.
+            To schedule an appointment to meet Dr. Chacko Cyriac, contact us today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-primary inline-block">

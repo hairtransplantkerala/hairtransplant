@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, ArrowRight, Calendar, Clock } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, ArrowRight, Calendar, Clock, Newspaper, MapPin } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
 import GalleryCarousel from "@/components/GalleryCarousel";
 import WorldMapClientele from "@/components/WorldMapClientele";
+import YouTubeThumbnail from "@/components/YouTubeThumbnail";
 import { createClient } from '@/lib/supabase/server';
 
 export default async function HomePage() {
@@ -65,6 +66,72 @@ export default async function HomePage() {
       description: "A problem presenting in increasing numbers. Treatments too vary.",
       image: "/images/conditions/hair-loss-children.webp",
       link: "/hair-loss-children"
+    },
+  ];
+
+  const mediaFeatures = [
+    {
+      title: "Manorama News",
+      description: "Featured interview discussing advanced hair transplant techniques and patient care",
+      videoId: "lOh8jPTjP80",
+      link: "https://www.youtube.com/watch?v=lOh8jPTjP80",
+      type: "video"
+    },
+    {
+      title: "Asianet News",
+      description: "Coverage of innovative plastic surgery procedures and success stories",
+      videoId: "cG4rkfJnUGQ",
+      link: "https://www.youtube.com/watch?v=cG4rkfJnUGQ",
+      type: "video"
+    },
+    {
+      title: "Mathrubhumi News",
+      description: "Expert insights on hair restoration and cosmetic surgery advancements",
+      videoId: "beWJFyVrE9c",
+      link: "https://www.youtube.com/watch?v=beWJFyVrE9c",
+      type: "video"
+    },
+    {
+      title: "Media One TV",
+      description: "Discussing patient-centric approach to hair transplantation in Kerala",
+      videoId: "WacY7-h7l44",
+      link: "https://www.youtube.com/watch?v=WacY7-h7l44",
+      type: "video"
+    },
+    {
+      title: "Kairali TV",
+      description: "Recognition for specialized work in pediatric plastic surgery",
+      videoId: "eZEz6fXCbRg",
+      link: "https://www.youtube.com/watch?v=eZEz6fXCbRg&t=9s",
+      type: "video"
+    },
+  ];
+
+  const clinicImages = [
+    {
+      title: "Reception Area",
+      description: "Welcoming and comfortable reception at Eterno Clinic",
+      image: "/images/clinic/reception.jpg"
+    },
+    {
+      title: "Consultation Room",
+      description: "Private consultation rooms for personalized treatment planning",
+      image: "/images/clinic/consultation.jpg"
+    },
+    {
+      title: "Operation Theatre",
+      description: "State-of-the-art surgical facilities with advanced equipment",
+      image: "/images/clinic/operation-theatre.jpg"
+    },
+    {
+      title: "Recovery Room",
+      description: "Comfortable recovery areas for post-procedure care",
+      image: "/images/clinic/recovery.jpg"
+    },
+    {
+      title: "Clinic",
+      description: "Where we are located",
+      image: "/images/clinic/lourdes-hospital.jpg"
     },
   ];
 
@@ -259,6 +326,185 @@ export default async function HomePage() {
           <div className="text-center mt-12">
             <Link href="/contact" className="btn-primary inline-block">
               Book Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Dr. Cyriac in the Media */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center gap-2 mb-4">
+              <Newspaper className="text-gray-900" size={32} />
+              <h2 className="mb-0">Dr. Cyriac in the Media</h2>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+              Dr Chacko Cyriac is a Senior Consultant Plastic Surgeon whose area of expertise is not confined to just hair transplant surgery. Some of the reports of his procedures in the media are shown below.
+            </p>
+          </div>
+
+          {/* Desktop Grid View */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mediaFeatures.map((media, index) => (
+              <a
+                key={index}
+                href={media.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block bg-black rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="relative aspect-video">
+                  <YouTubeThumbnail
+                    videoId={media.videoId}
+                    title={media.title}
+                    className="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
+                  />
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                      <svg className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-900 p-4">
+                  <h3 className="text-lg font-bold mb-2 text-white group-hover:text-gray-300 transition-colors">
+                    {media.title}
+                  </h3>
+                  <p className="text-sm text-gray-400 line-clamp-2">
+                    {media.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Horizontal Scroll Slider */}
+          <div className="md:hidden -mx-4 px-4">
+            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+              {mediaFeatures.map((media, index) => (
+                <a
+                  key={index}
+                  href={media.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 w-[85vw] bg-black rounded-xl overflow-hidden shadow-lg snap-start"
+                >
+                  <div className="relative aspect-video">
+                    <YouTubeThumbnail
+                      videoId={media.videoId}
+                      title={media.title}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-xl">
+                        <svg className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-gray-900 p-4">
+                    <h3 className="text-lg font-bold mb-2 text-white">
+                      {media.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 line-clamp-2">
+                      {media.description}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div className="flex justify-center gap-2 mt-6">
+              {mediaFeatures.map((_, index) => (
+                <div key={index} className="w-2 h-2 rounded-full bg-gray-300" />
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/media" className="btn-primary inline-block">
+              View All Media Coverage
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Where We Are */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center gap-2 mb-4">
+              <MapPin className="text-gray-900" size={32} />
+              <h2 className="mb-0">Where We Are</h2>
+            </div>
+          </div>
+
+          {/* Desktop Grid View */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clinicImages.map((clinic, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="relative aspect-[4/3] bg-gray-200 overflow-hidden">
+                  <img
+                    src={clinic.image}
+                    alt={clinic.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-2">
+                    {clinic.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {clinic.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Horizontal Scroll Slider */}
+          <div className="md:hidden -mx-4 px-4">
+            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+              {clinicImages.map((clinic, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-[85vw] bg-white rounded-xl shadow-lg overflow-hidden snap-start"
+                >
+                  <div className="relative aspect-[4/3] bg-gray-200 overflow-hidden">
+                    <img
+                      src={clinic.image}
+                      alt={clinic.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold mb-2">
+                      {clinic.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {clinic.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center gap-2 mt-6">
+              {clinicImages.map((_, index) => (
+                <div key={index} className="w-2 h-2 rounded-full bg-gray-300" />
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/contact" className="btn-primary inline-block">
+              Visit Our Clinic
             </Link>
           </div>
         </div>

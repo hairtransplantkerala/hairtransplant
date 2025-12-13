@@ -16,8 +16,12 @@ export default function Header() {
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = () => {
-      if (isMenuOpen) setIsMenuOpen(false);
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      // Only close if clicking outside the mobile menu and hamburger button
+      if (isMenuOpen && !target.closest('.mobile-menu') && !target.closest('.hamburger-button')) {
+        setIsMenuOpen(false);
+      }
     };
     
     if (isMenuOpen) {
@@ -159,7 +163,7 @@ export default function Header() {
                 e.stopPropagation();
                 setIsMenuOpen(!isMenuOpen);
               }}
-              className="lg:hidden p-2 text-gray-700 hover:text-black relative z-[60]"
+              className="lg:hidden p-2 text-gray-700 hover:text-black relative z-[60] hamburger-button"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -178,17 +182,19 @@ export default function Header() {
 
       {/* Mobile Navigation - Slide-in menu from right */}
       <div 
-        className={`lg:hidden fixed right-0 top-20 bottom-0 w-[75%] sm:w-[60%] bg-white shadow-2xl z-50 overflow-y-auto transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed right-0 top-20 bottom-0 w-[75%] sm:w-[60%] bg-white shadow-2xl z-50 overflow-y-auto transition-transform duration-300 ease-in-out mobile-menu ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        onClick={(e) => e.stopPropagation()}
       >
         <div className="py-4 px-6 space-y-1">
           {navigation.map((item) => (
             item.hasDropdown ? (
               <div key={item.name}>
                 <button
-                  onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveDropdown(activeDropdown === item.name ? null : item.name);
+                  }}
                   className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-black font-medium"
                 >
                   <span>{item.name}</span>
