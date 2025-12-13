@@ -361,8 +361,7 @@ export default async function HomePage() {
               <h2 className="mb-6">
                 Our Plastic Surgeon </h2>
               <p className="text-gray-600 text-xl mb-8 text-centre">
-                With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. His commitment to excellence and patient satisfaction sets him apart.
-              </p>
+                After completing his MCh Plastic Surgery training from the prestigious PGI, Chandigarh, India, he went on to get formal training and qualifications from the UK, USA, Canada and Singapore.</p>
             </div>
             
             {/* Doctor Image */}
