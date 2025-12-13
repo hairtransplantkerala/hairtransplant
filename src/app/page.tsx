@@ -359,12 +359,9 @@ export default async function HomePage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="mb-6">
-                Why choose <br />
-                Dr. Chacko Cyriac <br />
-                for your hair loss treatment ?
-              </h2>
-              <p className="text-gray-600 text-lg mb-8 text-justify">
-                With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
+                Our Plastic Surgeon </h2>
+              <p className="text-gray-600 text-xl mb-8 text-centre">
+                With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. His commitment to excellence and patient satisfaction sets him apart.
               </p>
             </div>
             
