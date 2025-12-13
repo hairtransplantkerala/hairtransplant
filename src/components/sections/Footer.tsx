@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-xl font-bold mb-4">Eterno </h3>
             <p className="text-sm mb-4">
-              The leading hair transplant clinic in Kochi, Kerala. Expert care by Dr. Chacko Cyriac.
+              The leading hair transplant clinic in Kochi, Kerala. <br></br>Our Plastic Surgeon : Dr. Chacko Cyriac.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">

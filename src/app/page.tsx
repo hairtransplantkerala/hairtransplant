@@ -716,7 +716,7 @@ export default async function HomePage() {
 
       <div className="text-center">
         <Link href="/choose-your-doctor" className="btn-primary inline-block mb-4">
-          Learn More About Choosing Your Doctor
+          Learn More
         </Link>
       </div>
     </div>
@@ -798,7 +798,7 @@ export default async function HomePage() {
 
 
           <div className="text-center mt-12">
-            <Link href="/contact" className="btn-primary inline-block">
+            <Link href="/plastic-surgery-center" className="btn-primary inline-block">
               Visit Our Clinic
             </Link>
           </div>
@@ -811,12 +811,17 @@ export default async function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">What Our Patients Say About us!</h2>
+            <h2 className="mb-4">What Our Patients Say About us !</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
               Verified customer reviews and ratings.
             </p>
           </div>
           <Testimonials />
+          <div className="text-center mt-8">
+            <Link href="/contact" className="btn-primary inline-block">
+              view all
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -834,13 +839,16 @@ export default async function HomePage() {
             <FAQ />
           </div>
           <div className="text-center mt-8">
+            <h3 className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
+              Still have questions ?
+            </h3> 
+            <br></br>
             <Link href="/contact" className="btn-primary inline-block">
-              Still Have Questions ? Contact Us
+              Contact Us
             </Link>
           </div>
         </div>
       </section>
-
 
       {/* Final CTA */}
       <section className="py-20 bg-gray-50">
@@ -848,7 +856,7 @@ export default async function HomePage() {
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
             <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-centre">
-              Don't wait any longer. Schedule your Consultation with Dr. Chacko Cyriac and take the first step towards regaining your confidence.
+              Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-secondary inline-block">
