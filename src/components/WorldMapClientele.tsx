@@ -154,7 +154,7 @@ export default function WorldMapClientele() {
         </div>
         <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg text-center border-2 border-gray-200 hover:border-gray-900 transition-colors">
           <div className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">7000+</div>
-          <p className="text-gray-600 font-semibold text-sm sm:text-base">International Patients</p>
+          <p className="text-gray-600 font-semibold text-sm sm:text-base"> Patients</p>
         </div>
       </div>
     </div>

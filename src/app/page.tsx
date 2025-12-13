@@ -217,7 +217,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
               Browse through some of our results. You might find a hair loss problem similar to yours!!
             </p>
           </div>
@@ -236,7 +236,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
               For the recent advances in hair loss treatment we have incorporated into our practice
             </p>
           </div>
@@ -291,13 +291,46 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="mb-6">
+                Our Plastic Surgeon </h2>
+              <p className="text-gray-600 text-xl mb-8 text-centre">
+                After completing his MCh Plastic Surgery training from the prestigious PGI, Chandigarh, India, he went on to get formal training and qualifications from the UK, USA, Canada and Singapore.</p>
+            </div>
+            
+            {/* Doctor Image */}
+            <div className="flex justify-center mb-12">
+              <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-gray-300">
+                <img
+                  src="/images/dr-cyriac.jpg"
+                  alt="Dr. Chacko Cyriac - Hair Transplant Surgeon"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+
+            <div className="text-center mt-8">
+              <Link href="/about" className="btn-primary inline-block">
+                Know More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Most Common Hair Loss Conditions */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Most Common Hair Loss Conditions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
               Expert diagnosis and personalized treatment for different types of hair loss across all age groups
             </p>
           </div>
@@ -352,46 +385,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="mb-6">
-                Our Plastic Surgeon </h2>
-              <p className="text-gray-600 text-xl mb-8 text-centre">
-                After completing his MCh Plastic Surgery training from the prestigious PGI, Chandigarh, India, he went on to get formal training and qualifications from the UK, USA, Canada and Singapore.</p>
-            </div>
-            
-            {/* Doctor Image */}
-            <div className="flex justify-center mb-12">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-gray-300">
-                <img
-                  src="/images/dr-cyriac.jpg"
-                  alt="Dr. Chacko Cyriac - Hair Transplant Surgeon"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-
-            <div className="text-center mt-8">
-              <Link href="/about" className="btn-primary inline-block">
-                Know More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       {/* Latest Blogs Section - Mobile Slider */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Blog</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
               Read more about our unique approach to all aspects of hair loss and its treatment
             </p>
           </div>
@@ -523,7 +522,7 @@ export default async function HomePage() {
 
           <div className="text-center mt-12">
             <Link href="/blog" className="btn-primary inline-block">
-              View All Articles
+              View All 
             </Link>
           </div>
         </div>
@@ -535,7 +534,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-6">Our Clientele</h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-centre">
               Our patients for hair loss treatments and hair transplantation, have come to us from various countries including the United States, Canada, Ireland, United Kingdom, Switzerland, Germany, Austria, Italy, South Africa, Ghana, almost all the Middle-Eastern countries, from various parts of India, Nepal, Singapore, Malaysia, Vietnam, Hong Kong, Japan, Australia and New Zealand.
             </p>
           </div>
@@ -550,10 +549,9 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center gap-2 mb-4">
-              <Newspaper className="text-gray-900" size={32} />
               <h2 className="mb-0">Dr. Cyriac in the Media</h2>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
               Dr Chacko Cyriac is a Senior Consultant Plastic Surgeon whose area of expertise is not confined to just hair transplant surgery. Some of the reports of his procedures in the media are shown below.
             </p>
           </div>
@@ -644,7 +642,7 @@ export default async function HomePage() {
 
           <div className="text-center mt-12">
             <Link href="/media" className="btn-primary inline-block">
-              View All Media Coverage
+              View All
             </Link>
           </div>
         </div>
@@ -656,7 +654,7 @@ export default async function HomePage() {
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="mb-6">Choose Your Doctor Wisely</h2>
-        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-justify">
+        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-centre">
           Before choosing your hair transplant surgeon, ask yourself these important questions:
         </p>
       </div>
@@ -814,7 +812,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">What Our Patients Say About us!</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
               Verified customer reviews and ratings.
             </p>
           </div>
@@ -828,7 +826,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
               Get answers to the most common questions about hair transplant procedures
             </p>
           </div>
@@ -849,7 +847,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
             <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-justify">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-centre">
               Don't wait any longer. Schedule your Consultation with Dr. Chacko Cyriac and take the first step towards regaining your confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
