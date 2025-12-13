@@ -103,7 +103,7 @@ export default function ETProtocolPage() {
 <section className="py-20 bg-gray-50">
   <div className="container-custom">
     <div className="text-center mb-12">
-      <h2 className="mb-4">Why Following the ET-Protocol is So Important for Hair Loss Management</h2>
+      <h2 className="mb-4">Why following the ET-Protocol is important</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
         Causes of hair loss vary from person to person. So does the stage of hair loss. So does the extent of hair loss. The requirements for restoration too are different with different age groups.
       </p>

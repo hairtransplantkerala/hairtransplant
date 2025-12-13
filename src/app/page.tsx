@@ -113,12 +113,12 @@ export default async function HomePage() {
 
   const clinicImages = [
     {
-      title: "Reception Area",
+      title: "Reception",
       description: "Welcoming and comfortable reception at Eterno Clinic",
       image: "/images/clinic/reception.jpg"
     },
     {
-      title: "Consultation Room",
+      title: "Consultation",
       description: "Private consultation rooms for personalized treatment planning",
       image: "/images/clinic/consultation.jpg"
     },
@@ -128,7 +128,7 @@ export default async function HomePage() {
       image: "/images/clinic/operation-theatre.jpg"
     },
     {
-      title: "Recovery Room",
+      title: "Recovery",
       description: "Comfortable recovery areas for post-procedure care",
       image: "/images/clinic/recovery.jpg"
     },
@@ -218,7 +218,7 @@ export default async function HomePage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Gallery</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
-              Browse through some of our results. You might find a hair loss problem similar to yours!!
+              Browse through some of our results. You might find a hair loss problem similar to yours !
             </p>
           </div>
           <GalleryCarousel />
@@ -391,7 +391,7 @@ export default async function HomePage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
-              Read more about our unique approach to all aspects of hair loss and its treatment
+              Read more about our unique approach to all aspects of hair loss and its treatments.
             </p>
           </div>
           
@@ -655,7 +655,7 @@ export default async function HomePage() {
       <div className="text-center mb-12">
         <h2 className="mb-6">Choose Your Doctor Wisely</h2>
         <p className="text-xl text-gray-700 mb-8 leading-relaxed text-centre">
-          Before choosing your hair transplant surgeon, ask yourself these important questions:
+          Before choosing your hair transplant surgeon, ask yourself these important questions :
         </p>
       </div>
 
