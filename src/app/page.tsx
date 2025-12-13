@@ -8,6 +8,7 @@ import WorldMapClientele from "@/components/WorldMapClientele";
 import YouTubeThumbnail from "@/components/YouTubeThumbnail";
 import { createClient } from '@/lib/supabase/server';
 
+
 export default async function HomePage() {
   const specializedTreatments = [
     {
@@ -48,6 +49,7 @@ export default async function HomePage() {
     },
   ];
 
+
   const commonConditions = [
     {
       title: "Failed Hair Transplant Repair",
@@ -68,6 +70,7 @@ export default async function HomePage() {
       link: "/hair-loss-children"
     },
   ];
+
 
   const mediaFeatures = [
     {
@@ -107,6 +110,7 @@ export default async function HomePage() {
     },
   ];
 
+
   const clinicImages = [
     {
       title: "Reception Area",
@@ -135,6 +139,7 @@ export default async function HomePage() {
     },
   ];
 
+
   // Fetch latest blog posts
   const supabase = await createClient();
   const { data: latestPosts } = await supabase
@@ -143,6 +148,7 @@ export default async function HomePage() {
     .eq('published', true)
     .order('published_at', { ascending: false })
     .limit(3);
+
 
   return (
     <>
@@ -167,6 +173,7 @@ export default async function HomePage() {
             <span className="text-white/90 whitespace-nowrap">7000+ Happy Patients</span>
           </div>
 
+
           <h1 className="mb-6 leading-tight text-white">
             <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
             <span className="block">Hair Transplant Clinic</span>
@@ -177,6 +184,7 @@ export default async function HomePage() {
             <br />
             <strong className="text-white">Dr. Chacko Cyriac</strong>
           </p>
+
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
             <Link href="/contact" className="btn-primary text-center shadow-xl">
@@ -203,12 +211,13 @@ export default async function HomePage() {
         </div>
       </HeroVideoBackground>
 
+
       {/* Gallery Carousel Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
               Browse through some of our results. You might find a hair loss problem similar to yours!!
             </p>
           </div>
@@ -221,15 +230,17 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* Specialized Care & Advanced Solutions */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
               For the recent advances in hair loss treatment we have incorporated into our practice
             </p>
           </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specializedTreatments.map((treatment, index) => (
@@ -246,6 +257,7 @@ export default async function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
+
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {treatment.title}
@@ -253,8 +265,9 @@ export default async function HomePage() {
                   </div>
                 </div>
 
+
                 <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-justify">
                     {treatment.description}
                   </p>
                   <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
@@ -263,10 +276,12 @@ export default async function HomePage() {
                   </div>
                 </div>
 
+
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
               </Link>
             ))}
           </div>
+
 
           <div className="text-center mt-12">
             <Link href="/services" className="btn-primary inline-block">
@@ -276,15 +291,17 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* Most Common Hair Loss Conditions */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Most Common Hair Loss Conditions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
               Expert diagnosis and personalized treatment for different types of hair loss across all age groups
             </p>
           </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {commonConditions.map((condition, index) => (
@@ -301,6 +318,7 @@ export default async function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
+
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {condition.title}
@@ -308,8 +326,9 @@ export default async function HomePage() {
                   </div>
                 </div>
 
+
                 <div className="p-6 bg-white">
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-justify">
                     {condition.description}
                   </p>
                   <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
@@ -318,10 +337,12 @@ export default async function HomePage() {
                   </div>
                 </div>
 
+
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
               </Link>
             ))}
           </div>
+
 
           <div className="text-center mt-12">
             <Link href="/contact" className="btn-primary inline-block">
@@ -330,6 +351,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -341,7 +363,7 @@ export default async function HomePage() {
                 Dr. Chacko Cyriac <br />
                 for your hair loss treatment ?
               </h2>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-gray-600 text-lg mb-8 text-justify">
                 With over 22+ years of experience and international training, Dr. Chacko Cyriac brings world-class expertise to Kerala. Our commitment to excellence and patient satisfaction sets us apart.
               </p>
             </div>
@@ -357,6 +379,7 @@ export default async function HomePage() {
               </div>
             </div>
 
+
             <div className="text-center mt-8">
               <Link href="/about" className="btn-primary inline-block">
                 Know More
@@ -366,16 +389,18 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* Choose Your Doctor Wisely */}
 <section className="py-20 bg-white">
   <div className="container-custom">
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="mb-6">Choose Your Doctor Wisely</h2>
-        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-justify">
           Before choosing your hair transplant surgeon, ask yourself these important questions:
         </p>
       </div>
+
 
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
@@ -385,10 +410,11 @@ export default async function HomePage() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Ask for Qualifications</h3>
-              <p className="text-gray-600">What are your surgeon's qualifications and certifications?</p>
+              <p className="text-gray-600 text-justify">What are your surgeon's qualifications and certifications?</p>
             </div>
           </div>
         </div>
+
 
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
@@ -397,10 +423,11 @@ export default async function HomePage() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Primary Training</h3>
-              <p className="text-gray-600">What is their primary training and medical background?</p>
+              <p className="text-gray-600 text-justify">What is their primary training and medical background?</p>
             </div>
           </div>
         </div>
+
 
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
@@ -409,10 +436,11 @@ export default async function HomePage() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Qualified for Surgery</h3>
-              <p className="text-gray-600">Are they qualified and trained to perform surgical procedures?</p>
+              <p className="text-gray-600 text-justify">Are they qualified and trained to perform surgical procedures?</p>
             </div>
           </div>
         </div>
+
 
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
@@ -421,11 +449,12 @@ export default async function HomePage() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Type of Surgery Training</h3>
-              <p className="text-gray-600">What specific type of surgery are they trained in?</p>
+              <p className="text-gray-600 text-justify">What specific type of surgery are they trained in?</p>
             </div>
           </div>
         </div>
       </div>
+
 
       <div className="text-center">
         <Link href="/choose-your-doctor" className="btn-primary inline-block mb-4">
@@ -437,12 +466,13 @@ export default async function HomePage() {
 </section>
 
 
+
       {/* Latest Blogs Section - Mobile Slider */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Blog</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
               Read more about our unique approach to all aspects of hair loss and its treatment
             </p>
           </div>
@@ -476,7 +506,7 @@ export default async function HomePage() {
                         {post.title}
                       </h3>
                       {post.excerpt && (
-                        <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                        <p className="text-gray-600 text-sm line-clamp-3 mb-4 text-justify">
                           {post.excerpt}
                         </p>
                       )}
@@ -502,6 +532,7 @@ export default async function HomePage() {
                   </Link>
                 ))}
               </div>
+
 
               {/* Mobile Horizontal Scroll Slider */}
               <div className="md:hidden -mx-4 px-4">
@@ -531,7 +562,7 @@ export default async function HomePage() {
                           {post.title}
                         </h3>
                         {post.excerpt && (
-                          <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                          <p className="text-gray-600 text-sm line-clamp-3 mb-4 text-justify">
                             {post.excerpt}
                           </p>
                         )}
@@ -566,9 +597,10 @@ export default async function HomePage() {
             </>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">No blog posts available yet. Check back soon!</p>
+              <p className="text-gray-600 text-lg text-justify">No blog posts available yet. Check back soon!</p>
             </div>
           )}
+
 
           <div className="text-center mt-12">
             <Link href="/blog" className="btn-primary inline-block">
@@ -578,12 +610,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* Our Clientele - World Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-6">Our Clientele</h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-justify">
               Our patients for hair loss treatments and hair transplantation, have come to us from various countries including the United States, Canada, Ireland, United Kingdom, Switzerland, Germany, Austria, Italy, South Africa, Ghana, almost all the Middle-Eastern countries, from various parts of India, Nepal, Singapore, Malaysia, Vietnam, Hong Kong, Japan, Australia and New Zealand.
             </p>
           </div>
@@ -591,6 +624,7 @@ export default async function HomePage() {
           <WorldMapClientele />
         </div>
       </section>
+
 
        {/* Dr. Cyriac in the Media */}
       <section className="py-20 bg-gray-50">
@@ -604,6 +638,7 @@ export default async function HomePage() {
               Dr Chacko Cyriac is a Senior Consultant Plastic Surgeon whose area of expertise is not confined to just hair transplant surgery. Some of the reports of his procedures in the media are shown below.
             </p>
           </div>
+
 
           {/* Desktop Grid View */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -634,13 +669,14 @@ export default async function HomePage() {
                   <h3 className="text-lg font-bold mb-2 text-white group-hover:text-gray-300 transition-colors">
                     {media.title}
                   </h3>
-                  <p className="text-sm text-gray-400 line-clamp-2">
+                  <p className="text-sm text-gray-400 line-clamp-2 text-justify">
                     {media.description}
                   </p>
                 </div>
               </a>
             ))}
           </div>
+
 
           {/* Mobile Horizontal Scroll Slider */}
           <div className="md:hidden -mx-4 px-4">
@@ -672,7 +708,7 @@ export default async function HomePage() {
                     <h3 className="text-lg font-bold mb-2 text-white">
                       {media.title}
                     </h3>
-                    <p className="text-sm text-gray-400 line-clamp-2">
+                    <p className="text-sm text-gray-400 line-clamp-2 text-justify">
                       {media.description}
                     </p>
                   </div>
@@ -686,6 +722,7 @@ export default async function HomePage() {
             </div>
           </div>
 
+
           <div className="text-center mt-12">
             <Link href="/media" className="btn-primary inline-block">
               View All Media Coverage
@@ -693,6 +730,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* Where We Are */}
       <section className="py-20 bg-white">
@@ -703,6 +741,7 @@ export default async function HomePage() {
               <h2 className="mb-0">Where We Are</h2>
             </div>
           </div>
+
 
           {/* Desktop Grid View */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -722,13 +761,14 @@ export default async function HomePage() {
                   <h3 className="text-lg font-bold mb-2">
                     {clinic.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm text-justify">
                     {clinic.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
 
           {/* Mobile Horizontal Scroll Slider */}
           <div className="md:hidden -mx-4 px-4">
@@ -749,7 +789,7 @@ export default async function HomePage() {
                     <h3 className="text-lg font-bold mb-2">
                       {clinic.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm text-justify">
                       {clinic.description}
                     </p>
                   </div>
@@ -763,6 +803,7 @@ export default async function HomePage() {
             </div>
           </div>
 
+
           <div className="text-center mt-12">
             <Link href="/contact" className="btn-primary inline-block">
               Visit Our Clinic
@@ -772,12 +813,13 @@ export default async function HomePage() {
       </section>
 
 
+
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">What Our Patients Say About us!</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
               Verified customer reviews and ratings.
             </p>
           </div>
@@ -785,12 +827,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-justify">
               Get answers to the most common questions about hair transplant procedures
             </p>
           </div>
@@ -805,12 +848,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+
       {/* Final CTA */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
             <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-justify">
               Don't wait any longer. Schedule your Consultation with Dr. Chacko Cyriac and take the first step towards regaining your confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
