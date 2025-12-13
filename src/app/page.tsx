@@ -366,6 +366,77 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Choose Your Doctor Wisely */}
+<section className="py-20 bg-white">
+  <div className="container-custom">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="mb-6">Choose Your Doctor Wisely</h2>
+        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          Before choosing your hair transplant surgeon, ask yourself these important questions:
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
+              1
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Ask for Qualifications</h3>
+              <p className="text-gray-600">What are your surgeon's qualifications and certifications?</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
+              2
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Primary Training</h3>
+              <p className="text-gray-600">What is their primary training and medical background?</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
+              3
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Qualified for Surgery</h3>
+              <p className="text-gray-600">Are they qualified and trained to perform surgical procedures?</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
+              4
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Type of Surgery Training</h3>
+              <p className="text-gray-600">What specific type of surgery are they trained in?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <Link href="/choose-your-doctor" className="btn-primary inline-block mb-4">
+          Learn More About Choosing Your Doctor
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       {/* Latest Blogs Section - Mobile Slider */}
       <section className="py-20 bg-white">
         <div className="container-custom">
