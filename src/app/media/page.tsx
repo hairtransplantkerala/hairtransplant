@@ -69,48 +69,38 @@ export default function MediaPage() {
       type: "video"
     },
     {
-      title: "Malayala Manorama",
-      image: "/images/media/articles/manorama-1.webp",
-      type: "article"
-    },
-    {
-      title: "Times of India",
-      image: "/images/media/articles/toi-1.webp",
+      title: "Chandrika",
+      image: "/images/media/articles/chandrika.webp",
       type: "article"
     },
     {
       title: "Deepika",
-      image: "/images/media/articles/deepika-1.webp",
+      image: "/images/media/articles/deepika 2.webp",
       type: "article"
     },
     {
-      title: "The Hindu",
-      image: "/images/media/articles/hindu-1.webp",
+      title: "Deepika",
+      image: "/images/media/articles/Deepika 3.webp",
       type: "article"
     },
     {
-      title: "Indian Express",
-      image: "/images/media/articles/indian-express-1.webp",
+      title: "Deepika",
+      image: "/images/media/articles/Deepika 4.webp",
       type: "article"
     },
     {
-      title: "Deccan Chronicle",
-      image: "/images/media/articles/deccan-chronicle.webp",
+      title: "Deepika",
+      image: "/images/media/articles/Deepika 5.webp",
       type: "article"
     },
     {
-      title: "Mathrubhumi",
-      image: "/images/media/articles/mathrubhumi-1.webp",
+      title: "Deepika",
+      image: "/images/media/articles/Deepika 6.webp",
       type: "article"
     },
     {
-      title: "Varthamanam",
-      image: "/images/media/articles/varthamanam-1.webp",
-      type: "article"
-    },
-    {
-      title: "Kerala Kaumudi",
-      image: "/images/media/articles/kerala-kaumudi.webp",
+      title: "Deepika",
+      image: "/images/media/articles/Deepika 7.webp",
       type: "article"
     },
     {
@@ -119,18 +109,158 @@ export default function MediaPage() {
       type: "article"
     },
     {
+      title: "Deshabhimani",
+      image: "/images/media/articles/deshabhimani 2.webp",
+      type: "article"
+    },
+    {
+      title: "Indian Express",
+      image: "/images/media/articles/Indian Express.webp",
+      type: "article"
+    },
+    {
+      title: "Kerala Chronicles",
+      image: "/images/media/articles/kerala chronicles.webp",
+      type: "article"
+    },
+    {
+      title: "Kerala Kaumudi",
+      image: "/images/media/articles/Kerala Kaumudi.webp",
+      type: "article"
+    },
+    {
+      title: "Keralavani",
+      image: "/images/media/articles/keralavani.webp",
+      type: "article"
+    },
+    {
+      title: "Kochi Times",
+      image: "/images/media/articles/Kochi Times.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama 2.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama 3.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama 4.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama5.webp",
+      type: "article"
+    },
+    {
+      title: "Malayala Manorama",
+      image: "/images/media/articles/malayala manorama 6.webp",
+      type: "article"
+    },
+    {
       title: "Mangalam",
       image: "/images/media/articles/mangalam.webp",
       type: "article"
     },
     {
-      title: "Times of Oman",
-      image: "/images/media/articles/times-oman.webp",
+      title: "Mathrubhumi",
+      image: "/images/media/articles/mathrubhumi.webp",
       type: "article"
     },
     {
-      title: "Chandrika",
-      image: "/images/media/articles/chandrika.webp",
+      title: "Mathrubhumi",
+      image: "/images/media/articles/mathrubhumi 2.webp",
+      type: "article"
+    },
+    {
+      title: "Metro Manorama",
+      image: "/images/media/articles/metro manorama.webp",
+      type: "article"
+    },
+    {
+      title: "Metro Manorama",
+      image: "/images/media/articles/metro manorama - 2.webp",
+      type: "article"
+    },
+    {
+      title: "NDTV",
+      image: "/images/media/articles/ndtv.webp",
+      type: "article"
+    },
+    {
+      title: "New Indian Express",
+      image: "/images/media/articles/new indian express.webp",
+      type: "article"
+    },
+    {
+      title: "News Express",
+      image: "/images/media/articles/news express.webp",
+      type: "article"
+    },
+    {
+      title: "Rashtradeepika",
+      image: "/images/media/articles/rashtradeepika.webp",
+      type: "article"
+    },
+    {
+      title: "The Hindu",
+      image: "/images/media/articles/the hindu.webp",
+      type: "article"
+    },
+    {
+      title: "The Hindu",
+      image: "/images/media/articles/the hindu 2.webp",
+      type: "article"
+    },
+    {
+      title: "The New Indian Express",
+      image: "/images/media/articles/the new india express.webp",
+      type: "article"
+    },
+    {
+      title: "The Times of India",
+      image: "/images/media/articles/the times of india.webp",
+      type: "article"
+    },
+    {
+      title: "Times City",
+      image: "/images/media/articles/times city.webp",
+      type: "article"
+    },
+    {
+      title: "The Times of India",
+      image: "/images/media/articles/times of india.webp",
+      type: "article"
+    },
+    {
+      title: "The Times of India",
+      image: "/images/media/articles/times of india 2.webp",
+      type: "article"
+    },
+    {
+      title: "Times of Oman",
+      image: "/images/media/articles/times of oman.webp",
+      type: "article"
+    },
+    {
+      title: "Varthamanam",
+      image: "/images/media/articles/varthamanam.webp",
+      type: "article"
+    },
+    {
+      title: "Varthamanam",
+      image: "/images/media/articles/varthamanam 2.webp",
       type: "article"
     },
     {
@@ -139,8 +269,18 @@ export default function MediaPage() {
       type: "article"
     },
     {
+      title: "Veekshanam",
+      image: "/images/media/articles/veekshanam 2.webp",
+      type: "article"
+    },
+    {
+      title: "Veekshanam",
+      image: "/images/media/articles/veekshanam 3.webp",
+      type: "article"
+    },
+    {
       title: "Web India 123",
-      image: "/images/media/articles/webindia.webp",
+      image: "/images/media/articles/webindia 123.webp",
       type: "article"
     }
   ];
@@ -157,6 +297,12 @@ export default function MediaPage() {
 
   return (
     <>
+      <style jsx>{`
+        .article-img {
+          background-color: white !important;
+        }
+      `}</style>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20">
         <div className="container-custom">
@@ -184,7 +330,7 @@ export default function MediaPage() {
               {mediaItems.map((item, index) => (
                 <div key={index}>
                   {item.type === "video" ? (
-                    // Video Item with YouTube Thumbnail
+                    // Video Item
                     <a
                       href={item.link}
                       target="_blank"
@@ -197,11 +343,9 @@ export default function MediaPage() {
                           alt={item.title}
                           className="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
                           onError={(e) => {
-                            // Fallback to hqdefault if maxresdefault doesn't exist
                             e.currentTarget.src = `https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`;
                           }}
                         />
-                        {/* Play Button Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-20 h-20 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
                             <svg className="w-10 h-10 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -211,44 +355,40 @@ export default function MediaPage() {
                         </div>
                       </div>
                       <div className="bg-gray-900 p-4">
-                        <h3 className="text-lg font-semibold text-white group-hover:text-gray-300 transition-colors">
+                        <h3 className="text-lg font-semibold text-white">
                           {item.title}
                         </h3>
-                        <span className="text-xs text-gray-400 uppercase tracking-wider">
+                        <span className="text-xs text-gray-400 uppercase">
                           Video Interview
                         </span>
                       </div>
                     </a>
                   ) : (
-                    // Article Item - Clickable to open modal
-                    <button
-                      onClick={() => handleImageClick(item.image!)}
-                      className="group relative block w-full bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-left"
-                    >
-                      <div className="relative aspect-[3/4]">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        {/* Zoom Icon Overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all flex items-center justify-center">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                            </svg>
-                          </div>
+                    // Article Item - Square Preview
+                    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200">
+                      <button
+                        onClick={() => handleImageClick(item.image!)}
+                        className="w-full group relative"
+                      >
+                        {/* Square container with fixed aspect ratio */}
+                        <div className="relative w-full aspect-square bg-white p-4 flex items-center justify-center">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full article-img"
+                            style={{ 
+                              objectFit: 'contain',
+                              backgroundColor: 'white'
+                            }}
+                          />
                         </div>
-                      </div>
+                      </button>
+                      
                       <div className="bg-white p-4 border-t border-gray-200">
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-black transition-colors">
-                          {item.title}
-                        </h3>
-                        <span className="text-xs text-gray-500 uppercase tracking-wider">
-                          Press Article
-                        </span>
+                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                        <span className="text-xs text-gray-500">Press Article • Click to Expand</span>
                       </div>
-                    </button>
+                    </div>
                   )}
                 </div>
               ))}
@@ -257,7 +397,7 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* Image Modal/Lightbox */}
+      {/* Image Modal - Same image source */}
       {selectedImage && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 p-4"
@@ -265,60 +405,34 @@ export default function MediaPage() {
         >
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
-            aria-label="Close"
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70"
           >
-            <X size={40} />
+            <X size={36} />
           </button>
           
-          <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
+          <div className="relative max-w-7xl max-h-[95vh] w-full h-full flex items-center justify-center p-8 bg-white rounded-lg">
             <img
               src={selectedImage}
-              alt="Press article"
+              alt="Press article expanded"
               className="max-w-full max-h-full object-contain"
-              onClick={(e) => e.stopPropagation()}
+              style={{ backgroundColor: 'white' }}
             />
           </div>
 
-          {/* Instructions */}
-          <div className="absolute bottom-8 left-0 right-0 text-center text-white text-sm">
+          <div className="absolute bottom-8 left-0 right-0 text-center text-white text-sm opacity-75">
             <p>Click outside the image or press ESC to close</p>
           </div>
         </div>
       )}
 
-      {/* Media Stats */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="mb-12 text-center">Media Recognition</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-2">26+</div>
-                <p className="text-gray-600 font-semibold">Media Features</p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-2">10+</div>
-                <p className="text-gray-600 font-semibold">TV Interviews</p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-2">22+</div>
-                <p className="text-gray-600 font-semibold">Press Articles</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Media Coverage */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="mb-6">Recognized Excellence in Plastic Surgery</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
               Dr. Chacko Cyriac and Eterno have been extensively featured in leading media outlets across India and internationally. Our pioneering work in hair transplantation and cosmetic surgery has garnered attention from major newspapers, television channels, and digital media platforms.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-8 text-justify">
               From Malayala Manorama and Times of India to international publications like Times of Oman, our expertise and patient-centric approach have been recognized and celebrated by the media industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -333,7 +447,6 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
         <div className="container-custom text-center">
           <h2 className="text-white mb-6">Experience Award-Winning Care</h2>

@@ -133,7 +133,7 @@ export default function PlasticSurgeryCenterPage() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/clinic/exterior.webp"
+                  src="/images/clinic/reception.webp"
                   alt="Eterno Plastic Surgery Centre"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
