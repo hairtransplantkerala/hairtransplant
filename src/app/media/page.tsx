@@ -225,12 +225,12 @@ export default function MediaPage() {
     },
     {
       title: "The New Indian Express",
-      image: "/images/media/articles/The New Indian Express.webp",
+      image: "/images/media/articles/The New India Express.webp",
       type: "article"
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/The Times of India.webp",
+      image: "/images/media/articles/The times of india.webp",
       type: "article"
     },
     {
@@ -240,12 +240,12 @@ export default function MediaPage() {
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/The Times of India.webp",
+      image: "/images/media/articles/Times of India 2.webp",
       type: "article"
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/The Times of India 2.webp",
+      image: "/images/media/articles/Times of India.webp",
       type: "article"
     },
     {
@@ -280,7 +280,7 @@ export default function MediaPage() {
     },
     {
       title: "Web India 123",
-      image: "/images/media/articles/Web India 123.webp",
+      image: "/images/media/articles/Webindia 123.webp",
       type: "article"
     }
   ];
