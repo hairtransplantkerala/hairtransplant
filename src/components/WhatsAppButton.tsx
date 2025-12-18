@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = '919645921944'; // Replace with actual WhatsApp number
+  const phoneNumber = '919895666099'; // Replace with actual WhatsApp number
   const callNumber = '+91 96459 21944'; // Display format
   const message = 'Hello! I would like to know more about hair transplant services at Eterno Clinic.';
 
@@ -37,7 +37,7 @@ export default function WhatsAppButton() {
               <MessageCircle className="text-white" size={24} />
             </div>
             <div>
-              <h3 className="font-bold text-gray-900">Get in Touch!</h3>
+              <h3 className="font-bold text-gray-900">Get in Touch !</h3>
               <p className="text-sm text-gray-600">We're here to help you</p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function WhatsAppButton() {
             Call Now
           </button>
 
-          {/* Phone Number Display */}
+          {/* Phone Number Display 
           <div className="mt-4 pt-4 border-t border-gray-200 text-center">
             <p className="text-xs text-gray-500 mb-1">Direct Line</p>
             <a 
@@ -73,7 +73,7 @@ export default function WhatsAppButton() {
             >
               {callNumber}
             </a>
-          </div>
+          </div> */}
         </div>
       )}
     </>

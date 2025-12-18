@@ -135,7 +135,7 @@ export default function WorldMapClientele() {
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-600">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-gray-900 rounded-full shadow-md" />
-            <span className="font-medium">Patient Origins (26+ Countries)</span>
+            <span className="font-medium">Patients from (26+ Countries)</span>
           </div>
           <span className="hidden sm:inline text-gray-400">•</span>
           <span className="text-gray-500 text-xs sm:text-sm">Hover over markers to see country names</span>

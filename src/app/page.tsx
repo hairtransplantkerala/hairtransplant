@@ -776,7 +776,7 @@ export default async function HomePage() {
           </div>
           <Testimonials />
           <div className="text-center mt-8">
-            <Link href="/contact" className="btn-primary inline-block">
+            <Link href="https://share.google/et94AAsNCgNKbPHAr" className="btn-primary inline-block">
               view all
             </Link>
           </div>
@@ -809,20 +809,24 @@ export default async function HomePage() {
 
       {/* Final CTA */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-12 text-center text-white shadow-2xl">
-            <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-centre">
-              Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-secondary inline-block">
-                Book Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container-custom">
+    <div className="bg-gradient-to-br from-gray-400 to-gray-400 rounded-2xl p-12 text-center text-white shadow-2xl">
+      <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
+      <p className="text-xl text-shadow-white mb-8 max-w-2xl mx-auto text-centre">
+        Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link 
+          href="/contact" 
+          className="inline-block px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 hover:scale-105 transition-all duration-300"
+        >
+          Book Consultation
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
     </>
   );
 }
