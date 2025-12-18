@@ -9,63 +9,44 @@ export default function MediaPage() {
 
   const mediaItems = [
     {
-      title: "Manorama News",
+      title: "Asianet News",
       videoId: "lOh8jPTjP80",
       link: "https://www.youtube.com/watch?v=lOh8jPTjP80",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews.webp" // Add custom thumbnail path here
     },
     {
       title: "Asianet News",
       videoId: "cG4rkfJnUGQ",
       link: "https://www.youtube.com/watch?v=cG4rkfJnUGQ",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews2.webp"
+      // No customThumbnail = uses YouTube default
     },
     {
-      title: "Mathrubhumi News",
-      videoId: "beWJFyVrE9c",
-      link: "https://www.youtube.com/watch?v=beWJFyVrE9c",
-      type: "video"
-    },
-    {
-      title: "Manorama News Interview",
-      videoId: "lOh8jPTjP80",
-      link: "https://www.youtube.com/watch?v=lOh8jPTjP80&t=1s",
-      type: "video"
-    },
-    {
-      title: "Media One TV",
-      videoId: "WacY7-h7l44",
-      link: "https://www.youtube.com/watch?v=WacY7-h7l44",
-      type: "video"
-    },
-    {
-      title: "Jaihind TV",
+      title: "24 News",
       videoId: "1WoT1TCJ56w",
       link: "https://www.youtube.com/watch?v=1WoT1TCJ56w&t=2s",
       type: "video"
     },
     {
-      title: "Reporter TV",
+      title: "Asianet News",
       videoId: "Ybjf7EmXe60",
       link: "https://www.youtube.com/watch?v=Ybjf7EmXe60&t=12s",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews3.webp"
     },
     {
       title: "Kairali TV",
       videoId: "eZEz6fXCbRg",
       link: "https://www.youtube.com/watch?v=eZEz6fXCbRg&t=9s",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/kairali.webp"
     },
     {
-      title: "News 18",
+      title: "TV New",
       videoId: "atG2OaN-ggQ",
       link: "https://www.youtube.com/watch?v=atG2OaN-ggQ",
-      type: "video"
-    },
-    {
-      title: "NDTV",
-      videoId: "xyz123abc",
-      link: "https://www.youtube.com/watch?v=xyz123abc",
       type: "video"
     },
     {
@@ -330,7 +311,7 @@ export default function MediaPage() {
               {mediaItems.map((item, index) => (
                 <div key={index}>
                   {item.type === "video" ? (
-                    // Video Item
+                    // Video Item with optional custom thumbnail
                     <a
                       href={item.link}
                       target="_blank"
@@ -339,11 +320,20 @@ export default function MediaPage() {
                     >
                       <div className="relative aspect-video">
                         <img
-                          src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
+                          src={
+                            item.customThumbnail 
+                              ? item.customThumbnail 
+                              : `https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`
+                          }
                           alt={item.title}
                           className="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
                           onError={(e) => {
-                            e.currentTarget.src = `https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`;
+                            // If custom thumbnail fails or YouTube thumbnail fails, try lower quality
+                            if (item.customThumbnail) {
+                              e.currentTarget.src = `https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`;
+                            } else {
+                              e.currentTarget.src = `https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`;
+                            }
                           }}
                         />
                         <div className="absolute inset-0 flex items-center justify-center">
