@@ -39,16 +39,36 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li>FUE Hair Transplant</li>
-              <li>FUT Hair Transplant</li>
-              <li>PRP Treatment</li>
-              <li>Beard Transplant</li>
-              <li>Eyebrow Transplant</li>
-            </ul>
-          </div>
+<div>
+  <h3 className="text-white text-lg font-semibold mb-4">Our Services</h3>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <Link href="/stem-cell-fue" className="hover:text-white transition-colors">
+        FUE Hair Transplant
+      </Link>
+    </li>
+    <li>
+      <Link href="/inviscar-fut" className="hover:text-white transition-colors">
+        FUT Hair Transplant
+      </Link>
+    </li>
+    <li>
+      <Link href="/prp-therapy" className="hover:text-white transition-colors">
+        PRP Treatment
+      </Link>
+    </li>
+    <li>
+      <Link href="/beard-transplant" className="hover:text-white transition-colors">
+        Beard Transplant
+      </Link>
+    </li>
+    <li>
+      <Link href="/eyebrow-transplant" className="hover:text-white transition-colors">
+        Eyebrow Transplant
+      </Link>
+    </li>
+  </ul>
+</div>
 
           {/* Contact */}
           <div>
@@ -71,8 +91,17 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Eterno Hair Transplant Clinic. All rights reserved.</p>
-        </div>
+  <p>&copy; {new Date().getFullYear()} Eterno Hair Transplant Clinic. All rights reserved.</p> 
+  <br />
+  Developed by <a 
+    href="https://creativewired.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white transition-colors underline"
+  >
+    Creative Wired
+  </a>
+</div>
       </div>
     </footer>
   );

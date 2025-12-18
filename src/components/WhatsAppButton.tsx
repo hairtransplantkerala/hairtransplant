@@ -47,22 +47,22 @@ export default function WhatsAppButton() {
           </p>
           
           {/* WhatsApp Button */}
-          <button
-            onClick={handleWhatsAppClick}
-            className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center gap-2 mb-3"
-          >
-            <MessageCircle size={20} />
-            Chat on WhatsApp
-          </button>
+<button
+  onClick={handleWhatsAppClick}
+  className="w-full bg-transparent border-2 border-green-500 text-green-500 py-3 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 mb-3"
+>
+  <MessageCircle size={20} />
+  Chat on WhatsApp
+</button>
 
-          {/* Call Button */}
-          <button
-            onClick={handleCallClick}
-            className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors flex items-center justify-center gap-2"
-          >
-            <Phone size={20} />
-            Call Now
-          </button>
+{/* Call Button */}
+<button
+  onClick={handleCallClick}
+  className="w-full bg-transparent border-2 border-green-500 text-green-500 py-3 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+>
+  <Phone size={20} />
+  Call Now
+</button>
 
           {/* Phone Number Display 
           <div className="mt-4 pt-4 border-t border-gray-200 text-center">

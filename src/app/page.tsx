@@ -144,62 +144,69 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* Hero Section with Video Background */}
-      <HeroVideoBackground 
-        videoSrc="/videos/hero-background.mp4"
+     {/* Hero Section with Video Background */}
+<HeroVideoBackground 
+  videoSrc="/videos/hero-background.mp4"
+>
+  <div className="max-w-4xl mx-auto text-center">
+    <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-6">
+      <div className="flex items-center gap-1">
+        <span className="text-yellow-400 text-base sm:text-lg">★★★★★</span>
+      </div>
+      <a 
+        href="https://share.google/et94AAsNCgNKbPHAr" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-white whitespace-nowrap hover:text-yellow-400 transition-colors underline"
       >
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold mb-6">
-            <div className="flex items-center gap-1">
-              <span className="text-yellow-400 text-base sm:text-lg">★★★★★</span>
-            </div>
-            <a 
-              href="https://share.google/et94AAsNCgNKbPHAr" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white whitespace-nowrap hover:text-yellow-400 transition-colors underline"
-            >
-              4.9 out of 5
-            </a>
-            <span className="text-white/70 xs:inline">|</span>
-            <span className="text-white/90 whitespace-nowrap">7000+ Happy Patients</span>
-          </div>
+        4.9 out of 5
+      </a>
+      <span className="text-white/70 xs:inline">|</span>
+      <span className="text-white/90 whitespace-nowrap">7000+ Happy Patients</span>
+    </div>
 
-          <h1 className="mb-6 leading-tight text-white">
-            <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
-            <span className="block">Hair Transplant Clinic</span>
-            <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
-          </h1>
-          <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
-            All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon,
-            <br />
-            <strong className="text-white">Dr. Chacko Cyriac</strong>
-          </p>
+    <h1 className="mb-6 leading-tight text-white">
+      <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
+      <span className="block">Hair Transplant Clinic</span>
+      <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
+    </h1>
+    <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
+      All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon,
+      <br />
+      <strong className="text-white">Dr. Chacko Cyriac</strong>
+    </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-            <Link href="/contact" className="btn-primary text-center shadow-xl">
-              Book Consultation
-            </Link>
-            <Link href="/gallery" className="btn-secondary text-center">
-              Our Results
-            </Link>
-          </div>
-          <div className="flex items-center gap-6 text-sm justify-center flex-wrap">
-            <div className="flex items-center gap-2">
-              <Users className="text-white" size={20} />
-              <span>7000+ Successful Cases</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Globe className="text-white" size={20} />
-              <span>26+ Countries Served</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="text-white" size={20} />
-              <span>22+ Years Experience</span>
-            </div>
-          </div>
-        </div>
-      </HeroVideoBackground>
+    <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+      <Link 
+        href="/contact" 
+        className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-black transition-colors duration-200 text-center shadow-xl"
+      >
+        Book Consultation
+      </Link>
+      <Link 
+        href="/gallery" 
+        className="inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center"
+      >
+        Our Results
+      </Link>
+    </div>
+    <div className="flex items-center gap-6 text-sm justify-center flex-wrap">
+      <div className="flex items-center gap-2">
+        <Users className="text-white" size={20} />
+        <span>7000+ Successful Cases</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <Globe className="text-white" size={20} />
+        <span>26+ Countries Served</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <Award className="text-white" size={20} />
+        <span>22+ Years Experience</span>
+      </div>
+    </div>
+  </div>
+</HeroVideoBackground>
+
 
       {/* Gallery Carousel Section */}
       <section className="py-20 bg-white">
@@ -219,60 +226,60 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Specialized Care & Advanced Solutions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
-              For the recent advances in hair loss treatment we have incorporated into our practice
+     {/* Specialized Care & Advanced Solutions */}
+<section className="py-20 bg-gray-50">
+  <div className="container-custom">
+    <div className="text-center mb-12">
+      <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
+        For the recent advances in hair loss treatment we have incorporated into our practice
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {specializedTreatments.map((treatment, index) => (
+        <Link
+          key={index}
+          href={treatment.link}
+          className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <img
+              src={treatment.image}
+              alt={treatment.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+            <div className="absolute -bottom-4 left-0 right-0 p-6 text-center">
+              <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
+                {treatment.title}
+              </h3>
+            </div>
+          </div>
+
+          <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
+            <p className="text-gray-600 mb-4 leading-relaxed text-justify">
+              {treatment.description}
             </p>
+            <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
+              Learn More 
+              <ArrowRight className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specializedTreatments.map((treatment, index) => (
-              <Link
-                key={index}
-                href={treatment.link}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={treatment.image}
-                    alt={treatment.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
+        </Link>
+      ))}
+    </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
-                      {treatment.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
-                  <p className="text-gray-600 mb-4 leading-relaxed text-justify">
-                    {treatment.description}
-                  </p>
-                  <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
-                    Learn More 
-                    <ArrowRight className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
-                  </div>
-                </div>
-
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/services" className="btn-primary inline-block">
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className="text-center mt-12">
+      <Link href="/services" className="btn-primary inline-block">
+        View All Services
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -812,14 +819,13 @@ export default async function HomePage() {
   <div className="container-custom">
     <div className="bg-gradient-to-br from-gray-400 to-gray-400 rounded-2xl p-12 text-center text-white shadow-2xl">
       <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
-      <p className="text-xl text-shadow-white mb-8 max-w-2xl mx-auto text-centre">
-        Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
-      </p>
+      <p className="text-xl text-white font-medium mb-8 max-w-2xl mx-auto text-centre">
+  Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
+</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link 
           href="/contact" 
-          className="inline-block px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 hover:scale-105 transition-all duration-300"
-        >
+          className="btn-secondary text-center shadow-xl">
           Book Consultation
         </Link>
       </div>
