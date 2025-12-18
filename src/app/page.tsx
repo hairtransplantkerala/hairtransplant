@@ -8,7 +8,6 @@ import WorldMapClientele from "@/components/WorldMapClientele";
 import YouTubeThumbnail from "@/components/YouTubeThumbnail";
 import { createClient } from '@/lib/supabase/server';
 
-
 export default async function HomePage() {
   const specializedTreatments = [
     {
@@ -49,7 +48,6 @@ export default async function HomePage() {
     },
   ];
 
-
   const commonConditions = [
     {
       title: "Failed Hair Transplant Repair",
@@ -71,45 +69,41 @@ export default async function HomePage() {
     },
   ];
 
-
   const mediaFeatures = [
     {
-      title: "Manorama News",
+      title: "Asianet News",
       description: "Featured interview discussing advanced hair transplant techniques and patient care",
       videoId: "lOh8jPTjP80",
       link: "https://www.youtube.com/watch?v=lOh8jPTjP80",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews.webp" // Add custom thumbnail here (optional)
     },
     {
       title: "Asianet News",
       description: "Coverage of innovative plastic surgery procedures and success stories",
       videoId: "cG4rkfJnUGQ",
       link: "https://www.youtube.com/watch?v=cG4rkfJnUGQ",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews2.webp"
+      // No customThumbnail = uses YouTube default
     },
     {
-      title: "Mathrubhumi News",
+      title: "Asianet News",
       description: "Expert insights on hair restoration and cosmetic surgery advancements",
       videoId: "beWJFyVrE9c",
-      link: "https://www.youtube.com/watch?v=beWJFyVrE9c",
-      type: "video"
-    },
-    {
-      title: "Media One TV",
-      description: "Discussing patient-centric approach to hair transplantation in Kerala",
-      videoId: "WacY7-h7l44",
-      link: "https://www.youtube.com/watch?v=WacY7-h7l44",
-      type: "video"
+      link: "https://www.youtube.com/watch?v=Ybjf7EmXe60&t=12s",
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews3.webp"
     },
     {
       title: "Kairali TV",
-      description: "Recognition for specialized work in pediatric plastic surgery",
-      videoId: "eZEz6fXCbRg",
+      description: "Discussing patient-centric approach to hair transplantation in Kerala",
+      videoId: "WacY7-h7l44",
       link: "https://www.youtube.com/watch?v=eZEz6fXCbRg&t=9s",
-      type: "video"
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/kairali.webp"
     },
   ];
-
 
   const clinicImages = [
     {
@@ -139,7 +133,6 @@ export default async function HomePage() {
     },
   ];
 
-
   // Fetch latest blog posts
   const supabase = await createClient();
   const { data: latestPosts } = await supabase
@@ -148,7 +141,6 @@ export default async function HomePage() {
     .eq('published', true)
     .order('published_at', { ascending: false })
     .limit(3);
-
 
   return (
     <>
@@ -173,7 +165,6 @@ export default async function HomePage() {
             <span className="text-white/90 whitespace-nowrap">7000+ Happy Patients</span>
           </div>
 
-
           <h1 className="mb-6 leading-tight text-white">
             <span className="block text-xl md:text-2xl font-normal mb-2">The Leading</span>
             <span className="block">Hair Transplant Clinic</span>
@@ -184,7 +175,6 @@ export default async function HomePage() {
             <br />
             <strong className="text-white">Dr. Chacko Cyriac</strong>
           </p>
-
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
             <Link href="/contact" className="btn-primary text-center shadow-xl">
@@ -211,7 +201,6 @@ export default async function HomePage() {
         </div>
       </HeroVideoBackground>
 
-
       {/* Gallery Carousel Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
@@ -230,7 +219,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-
       {/* Specialized Care & Advanced Solutions */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
@@ -240,7 +228,6 @@ export default async function HomePage() {
               For the recent advances in hair loss treatment we have incorporated into our practice
             </p>
           </div>
-
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specializedTreatments.map((treatment, index) => (
@@ -257,14 +244,12 @@ export default async function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {treatment.title}
                     </h3>
                   </div>
                 </div>
-
 
                 <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
                   <p className="text-gray-600 mb-4 leading-relaxed text-justify">
@@ -276,12 +261,10 @@ export default async function HomePage() {
                   </div>
                 </div>
 
-
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
               </Link>
             ))}
           </div>
-
 
           <div className="text-center mt-12">
             <Link href="/services" className="btn-primary inline-block">
@@ -313,7 +296,6 @@ export default async function HomePage() {
               </div>
             </div>
 
-
             <div className="text-center mt-8">
               <Link href="/about" className="btn-primary inline-block">
                 Know More
@@ -322,8 +304,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-
 
       {/* Most Common Hair Loss Conditions */}
       <section className="py-20 bg-white">
@@ -334,7 +314,6 @@ export default async function HomePage() {
               Expert diagnosis and personalized treatment for different types of hair loss across all age groups
             </p>
           </div>
-
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {commonConditions.map((condition, index) => (
@@ -351,14 +330,12 @@ export default async function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {condition.title}
                     </h3>
                   </div>
                 </div>
-
 
                 <div className="p-6 bg-white">
                   <p className="text-gray-600 mb-4 leading-relaxed text-justify">
@@ -370,12 +347,10 @@ export default async function HomePage() {
                   </div>
                 </div>
 
-
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
               </Link>
             ))}
           </div>
-
 
           <div className="text-center mt-12">
             <Link href="/contact" className="btn-primary inline-block">
@@ -451,7 +426,6 @@ export default async function HomePage() {
                 ))}
               </div>
 
-
               {/* Mobile Horizontal Scroll Slider */}
               <div className="md:hidden -mx-4 px-4">
                 <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
@@ -519,7 +493,6 @@ export default async function HomePage() {
             </div>
           )}
 
-
           <div className="text-center mt-12">
             <Link href="/blog" className="btn-primary inline-block">
               View All 
@@ -527,7 +500,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
 
       {/* Our Clientele - World Map Section */}
       <section className="py-20 bg-white">
@@ -543,7 +515,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-
        {/* Dr. Cyriac in the Media */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
@@ -556,9 +527,8 @@ export default async function HomePage() {
             </p>
           </div>
 
-
           {/* Desktop Grid View */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {mediaFeatures.map((media, index) => (
               <a
                 key={index}
@@ -571,6 +541,7 @@ export default async function HomePage() {
                   <YouTubeThumbnail
                     videoId={media.videoId}
                     title={media.title}
+                    customThumbnail={media.customThumbnail}
                     className="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
                   />
                   {/* Play Button Overlay */}
@@ -594,7 +565,6 @@ export default async function HomePage() {
             ))}
           </div>
 
-
           {/* Mobile Horizontal Scroll Slider */}
           <div className="md:hidden -mx-4 px-4">
             <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
@@ -610,6 +580,7 @@ export default async function HomePage() {
                     <YouTubeThumbnail
                       videoId={media.videoId}
                       title={media.title}
+                      customThumbnail={media.customThumbnail}
                       className="w-full h-full object-cover"
                     />
                     {/* Play Button Overlay */}
@@ -639,7 +610,6 @@ export default async function HomePage() {
             </div>
           </div>
 
-
           <div className="text-center mt-12">
             <Link href="/media" className="btn-primary inline-block">
               View All
@@ -659,7 +629,6 @@ export default async function HomePage() {
         </p>
       </div>
 
-
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
@@ -673,7 +642,6 @@ export default async function HomePage() {
           </div>
         </div>
 
-
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
@@ -686,7 +654,6 @@ export default async function HomePage() {
           </div>
         </div>
 
-
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">
@@ -698,7 +665,6 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-
 
         <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border-2 border-gray-200 hover:border-gray-900 transition-all">
           <div className="flex items-start gap-4">
@@ -713,7 +679,6 @@ export default async function HomePage() {
         </div>
       </div>
 
-
       <div className="text-center">
         <Link href="/choose-your-doctor" className="btn-primary inline-block mb-4">
           Learn More
@@ -722,8 +687,6 @@ export default async function HomePage() {
     </div>
   </div>
 </section>
-
-
 
       {/* Where We Are */}
       <section className="py-20 bg-white">
@@ -734,7 +697,6 @@ export default async function HomePage() {
               <h2 className="mb-0">Where We Are</h2>
             </div>
           </div>
-
 
           {/* Desktop Grid View */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -761,7 +723,6 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
-
 
           {/* Mobile Horizontal Scroll Slider */}
           <div className="md:hidden -mx-4 px-4">
@@ -796,7 +757,6 @@ export default async function HomePage() {
             </div>
           </div>
 
-
           <div className="text-center mt-12">
             <Link href="/plastic-surgery-center" className="btn-primary inline-block">
               Visit Our Clinic
@@ -804,8 +764,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
@@ -824,7 +782,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
