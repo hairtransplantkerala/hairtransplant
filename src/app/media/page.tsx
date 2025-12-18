@@ -70,12 +70,12 @@ export default function MediaPage() {
     },
     {
       title: "Chandrika",
-      image: "/images/media/articles/chandrika.webp",
+      image: "/images/media/articles/Chandrika.webp",
       type: "article"
     },
     {
       title: "Deepika",
-      image: "/images/media/articles/deepika 2.webp",
+      image: "/images/media/articles/Deepika 2.webp",
       type: "article"
     },
     {
@@ -105,12 +105,12 @@ export default function MediaPage() {
     },
     {
       title: "Deshabhimani",
-      image: "/images/media/articles/deshabhimani.webp",
+      image: "/images/media/articles/Deshabhimani.webp",
       type: "article"
     },
     {
       title: "Deshabhimani",
-      image: "/images/media/articles/deshabhimani 2.webp",
+      image: "/images/media/articles/Deshabhimani 2.webp",
       type: "article"
     },
     {
@@ -120,7 +120,7 @@ export default function MediaPage() {
     },
     {
       title: "Kerala Chronicles",
-      image: "/images/media/articles/kerala chronicles.webp",
+      image: "/images/media/articles/Kerala Chronicles.webp",
       type: "article"
     },
     {
@@ -130,7 +130,7 @@ export default function MediaPage() {
     },
     {
       title: "Keralavaani",
-      image: "/images/media/articles/keralavaani.webp",
+      image: "/images/media/articles/Keralavaani.webp",
       type: "article"
     },
     {
@@ -140,147 +140,147 @@ export default function MediaPage() {
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama.webp",
+      image: "/images/media/articles/Malayala Manorama.webp",
       type: "article"
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama 2.webp",
+      image: "/images/media/articles/Malayala Manorama 2.webp",
       type: "article"
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama 3.webp",
+      image: "/images/media/articles/Malayala Manorama 3.webp",
       type: "article"
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama 4.webp",
+      image: "/images/media/articles/Malayala Manorama 4.webp",
       type: "article"
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama5.webp",
+      image: "/images/media/articles/Malayala Manorama5.webp",
       type: "article"
     },
     {
       title: "Malayala Manorama",
-      image: "/images/media/articles/malayala manorama 6.webp",
+      image: "/images/media/articles/Malayala Manorama 6.webp",
       type: "article"
     },
     {
       title: "Mangalam",
-      image: "/images/media/articles/mangalam.webp",
+      image: "/images/media/articles/Mangalam.webp",
       type: "article"
     },
     {
       title: "Mathrubhumi",
-      image: "/images/media/articles/mathrubhumi.webp",
+      image: "/images/media/articles/Mathrubhumi.webp",
       type: "article"
     },
     {
       title: "Mathrubhumi",
-      image: "/images/media/articles/mathrubhumi 2.webp",
+      image: "/images/media/articles/Mathrubhumi 2.webp",
       type: "article"
     },
     {
       title: "Metro Manorama",
-      image: "/images/media/articles/metro manorama.webp",
+      image: "/images/media/articles/Metro Manorama.webp",
       type: "article"
     },
     {
       title: "Metro Manorama",
-      image: "/images/media/articles/metro manorama - 2.webp",
+      image: "/images/media/articles/Metro Manorama - 2.webp",
       type: "article"
     },
     {
       title: "NDTV",
-      image: "/images/media/articles/ndtv.webp",
+      image: "/images/media/articles/NDTV.webp",
       type: "article"
     },
     {
       title: "New Indian Express",
-      image: "/images/media/articles/new indian express.webp",
+      image: "/images/media/articles/New Indian Express.webp",
       type: "article"
     },
     {
       title: "News Express",
-      image: "/images/media/articles/news express.webp",
+      image: "/images/media/articles/News Express.webp",
       type: "article"
     },
     {
       title: "Rashtradeepika",
-      image: "/images/media/articles/rashtradeepika.webp",
+      image: "/images/media/articles/Rashtradeepika.webp",
       type: "article"
     },
     {
       title: "The Hindu",
-      image: "/images/media/articles/the hindu.webp",
+      image: "/images/media/articles/The Hindu.webp",
       type: "article"
     },
     {
       title: "The Hindu",
-      image: "/images/media/articles/the hindu 2.webp",
+      image: "/images/media/articles/The Hindu 2.webp",
       type: "article"
     },
     {
       title: "The New Indian Express",
-      image: "/images/media/articles/the new india express.webp",
+      image: "/images/media/articles/The New Indian Express.webp",
       type: "article"
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/the times of india.webp",
+      image: "/images/media/articles/The Times of India.webp",
       type: "article"
     },
     {
       title: "Times City",
-      image: "/images/media/articles/times city.webp",
+      image: "/images/media/articles/Times City.webp",
       type: "article"
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/times of india.webp",
+      image: "/images/media/articles/The Times of India.webp",
       type: "article"
     },
     {
       title: "The Times of India",
-      image: "/images/media/articles/times of india 2.webp",
+      image: "/images/media/articles/The Times of India 2.webp",
       type: "article"
     },
     {
       title: "Times of Oman",
-      image: "/images/media/articles/times of oman.webp",
+      image: "/images/media/articles/Times of Oman.webp",
       type: "article"
     },
     {
       title: "Varthamanam",
-      image: "/images/media/articles/varthamanam.webp",
+      image: "/images/media/articles/Varthamanam.webp",
       type: "article"
     },
     {
       title: "Varthamanam",
-      image: "/images/media/articles/varthamanam 2.webp",
+      image: "/images/media/articles/Varthamanam 2.webp",
       type: "article"
     },
     {
       title: "Veekshanam",
-      image: "/images/media/articles/veekshanam.webp",
+      image: "/images/media/articles/Veekshanam.webp",
       type: "article"
     },
     {
       title: "Veekshanam",
-      image: "/images/media/articles/veekshanam 2.webp",
+      image: "/images/media/articles/Veekshanam 2.webp",
       type: "article"
     },
     {
       title: "Veekshanam",
-      image: "/images/media/articles/veekshanam 3.webp",
+      image: "/images/media/articles/Veekshanam 3.webp",
       type: "article"
     },
     {
       title: "Web India 123",
-      image: "/images/media/articles/webindia 123.webp",
+      image: "/images/media/articles/Web India 123.webp",
       type: "article"
     }
   ];
