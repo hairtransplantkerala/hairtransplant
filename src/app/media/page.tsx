@@ -129,8 +129,8 @@ export default function MediaPage() {
       type: "article"
     },
     {
-      title: "Keralavani",
-      image: "/images/media/articles/keralavani.webp",
+      title: "Keralavaani",
+      image: "/images/media/articles/keralavaani.webp",
       type: "article"
     },
     {
