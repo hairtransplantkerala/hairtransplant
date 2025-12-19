@@ -58,7 +58,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+      <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16">
         <div className="container-custom">
           <h1 className="mb-4">Hair Restoration Blog</h1>
           <p className="text-xl text-primary-100 max-w-3xl">

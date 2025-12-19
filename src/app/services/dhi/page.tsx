@@ -73,10 +73,6 @@ export default function DHIPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit">
-                <Zap size={16} />
-                Most Advanced Technology
-              </div>
               <h1 className="text-white mb-6">DHI Hair Transplant</h1>
               <p className="text-xl text-gray-300 mb-8">
                 Direct Hair Implantation - The revolutionary CHOI pen technique for maximum precision and natural density.
@@ -101,7 +97,7 @@ export default function DHIPage() {
         </div>
       </section>
 
-      {/* Quick Info */}
+      {/* Quick Info 
       <section className="py-12 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -127,7 +123,7 @@ export default function DHIPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What is DHI */}
       <section className="py-20">
@@ -202,7 +198,7 @@ export default function DHIPage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Process 
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -231,7 +227,7 @@ export default function DHIPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">

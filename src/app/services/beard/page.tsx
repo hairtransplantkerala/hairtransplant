@@ -88,9 +88,6 @@ export default function BeardTransplantPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Transform Your Look
-              </div>
               <h1 className="text-white mb-6">Beard Transplant</h1>
               <p className="text-xl text-gray-300 mb-8">
                 Facial Hair Restoration - Achieve the full, masculine beard you've always wanted with natural, permanent results.
@@ -115,7 +112,7 @@ export default function BeardTransplantPage() {
         </div>
       </section>
 
-      {/* Quick Info */}
+      {/* Quick Info 
       <section className="py-12 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -141,7 +138,7 @@ export default function BeardTransplantPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What is Beard Transplant */}
       <section className="py-20">
@@ -202,7 +199,7 @@ export default function BeardTransplantPage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Process 
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -231,7 +228,7 @@ export default function BeardTransplantPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Before & After Care */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">

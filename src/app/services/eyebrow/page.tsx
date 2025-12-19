@@ -104,10 +104,6 @@ export default function EyebrowTransplantPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4 flex items-center gap-2 w-fit">
-                <Eye size={16} />
-                Frame Your Face
-              </div>
               <h1 className="text-white mb-6">Eyebrow Transplant</h1>
               <p className="text-xl text-gray-300 mb-8">
                 Eyebrow Restoration - Achieve perfectly shaped, natural eyebrows that enhance your facial beauty permanently.
@@ -132,7 +128,7 @@ export default function EyebrowTransplantPage() {
         </div>
       </section>
 
-      {/* Quick Info */}
+      {/* Quick Info 
       <section className="py-12 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -158,7 +154,7 @@ export default function EyebrowTransplantPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What is Eyebrow Transplant */}
       <section className="py-20">
@@ -219,7 +215,7 @@ export default function EyebrowTransplantPage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Process 
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -248,7 +244,7 @@ export default function EyebrowTransplantPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Golden Ratio Design */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
