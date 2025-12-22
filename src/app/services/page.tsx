@@ -68,6 +68,21 @@ export default function ServicesPage() {
       ideal: "Ideal for frontal hairline work and creating maximum density",
       link: "/dhi"
     },
+    {
+      title: "Micro FUE",
+      description: "Ultra-fine extraction technique using 0.6-0.8mm punches for virtually scarless results. The most refined FUE method with microscopic precision and maximum follicle preservation.",
+      image: "/images/services/fue.webp",
+      features: [
+        "Ultra-fine 0.6-0.8mm punch extraction",
+        "Virtually invisible donor area scars",
+        "Higher graft survival (95%+)",
+        "Faster recovery than standard FUE",
+        "Perfect for short hairstyles",
+        "Minimal trauma to surrounding tissue"
+      ],
+      ideal: "Ideal for patients wanting scarless results and short hairstyles",
+      link: "/micro-fue"
+    },
   ];
 
   const nonSurgicalTreatments = [
@@ -85,6 +100,21 @@ export default function ServicesPage() {
       ],
       ideal: "Ideal for early-stage hair loss, thinning hair, young patients, and women experiencing hair loss",
       link: "/prp-therapy"
+    },
+    {
+      title: "GFC (Growth Factor Concentrate)",
+      description: "Advanced regenerative therapy with 10x higher concentration of growth factors than traditional PRP. Natural hair stimulation using your body's own healing properties.",
+      image: "/images/services/prp.webp",
+      features: [
+        "10x higher growth factor concentration",
+        "Purer concentrate without RBCs/WBCs",
+        "Less pain and inflammation",
+        "Faster results with fewer sessions",
+        "Stimulates dormant follicles naturally",
+        "Zero side effects - your own blood"
+      ],
+      ideal: "Ideal for early hair loss, post-transplant enhancement, and medical hair loss conditions",
+      link: "/gfc-prp"
     },
     {
       title: "Mesotherapy for Hair Loss",
@@ -120,6 +150,21 @@ export default function ServicesPage() {
       link: "/beard-transplant"
     },
     {
+      title: "Moustache Transplant",
+      description: "Precise moustache restoration using FUE technique. Custom design matching facial features with perfect angle and density for natural appearance.",
+      image: "/images/services/beard.webp",
+      features: [
+        "Custom moustache design",
+        "Perfect hair angle and direction",
+        "High density for fuller appearance",
+        "Scarless FUE extraction",
+        "Permanent natural growth",
+        "Post-scar restoration available"
+      ],
+      ideal: "Ideal for sparse moustache, post-scar restoration, and young adults seeking fuller moustache",
+      link: "/moustache-transplant"
+    },
+    {
       title: "Eyebrow Transplant",
       description: "Precise transplantation to restore or enhance eyebrow shape and density, considering natural growth direction and aesthetic balance for perfect facial harmony.",
       image: "/images/services/eyebrow.webp",
@@ -133,6 +178,51 @@ export default function ServicesPage() {
       ],
       ideal: "Ideal for over-plucked, thinning eyebrows, or congenital absence",
       link: "/eyebrow-transplant"
+    },
+    {
+      title: "Eyelash Transplant",
+      description: "Highly specialized microsurgical procedure for natural eyelash restoration. Individual follicles transplanted with microscopic precision for permanent enhancement.",
+      image: "/images/services/eyebrow.webp",
+      features: [
+        "Microsurgical precision technique",
+        "Perfect curl angle (40-50 degrees)",
+        "Permanent natural eyelashes",
+        "Safe for delicate eyelid tissue",
+        "Upper and lower lash restoration",
+        "Regular trimming needed post-procedure"
+      ],
+      ideal: "Ideal for sparse natural lashes, trauma victims, and medical conditions like trichotillomania",
+      link: "/eyelash-transplant"
+    },
+    {
+      title: "Hairline Revision",
+      description: "Expert hairline design and correction. Create natural hairlines or repair unnatural results from previous transplants with artistic precision.",
+      image: "/images/services/fue.webp",
+      features: [
+        "Age-appropriate hairline design",
+        "Irregular natural pattern creation",
+        "Forehead reduction (2-4 cm)",
+        "Failed transplant correction",
+        "Perfect angle and density gradient",
+        "Conservative long-term approach"
+      ],
+      ideal: "Ideal for high foreheads, failed transplant repair, and receding hairlines",
+      link: "/hairline-revision"
+    },
+    {
+      title: "Scar Hair Transplant",
+      description: "Specialized technique to camouflage scars with natural hair growth. Expert management of difficult scar tissue implantation.",
+      image: "/images/conditions/failed-transplant.webp",
+      features: [
+        "Complete scar camouflage",
+        "Specialized scar tissue technique",
+        "Higher graft density for coverage",
+        "FUT strip scar repair",
+        "Burn and injury scar restoration",
+        "Lifetime natural hair growth"
+      ],
+      ideal: "Ideal for FUT strip scars, burn victims, and surgical scar camouflage",
+      link: "/scar-hair-transplant"
     },
   ];
 
@@ -234,9 +324,6 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Non-Surgical Options
-            </div>
             <h2 className="mb-4">Hair Growth Stimulation Therapies</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Safe and effective treatments without surgery - often the best alternative to hair transplantation
@@ -255,7 +342,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Facial Hair & Eyebrow Restoration</h2>
+            <h2 className="mb-4">Specialized Hair & Facial Hair Restoration</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Expert solutions beyond scalp hair restoration
             </p>
@@ -338,14 +425,22 @@ export default function ServicesPage() {
   );
 }
 
-// Service Card Component
+// Service Card Component - FIXED FOR MOBILE
 function ServiceCard({ service, index }: { service: any; index: number }) {
   return (
-    <div 
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-        index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-      }`}
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* Mobile: Image always first */}
+      <div className="lg:hidden">
+        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Content Section */}
       <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
         <h2 className="text-3xl md:text-4xl mb-4">{service.title}</h2>
         <p className="text-gray-600 text-lg mb-6">{service.description}</p>
@@ -372,7 +467,8 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
         </Link>
       </div>
 
-      <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+      {/* Desktop: Alternating image position */}
+      <div className={`hidden lg:block ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
           <img
             src={service.image}

@@ -277,7 +277,7 @@ export default async function HomePage() {
 </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -309,7 +309,7 @@ export default async function HomePage() {
       </section>
 
       {/* Most Common Hair Loss Conditions */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Changing Hair Loss Complaints</h2>
@@ -368,7 +368,7 @@ export default async function HomePage() {
       </section>
 
       {/* Latest Blogs Section - Mobile Slider */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Blog</h2>
@@ -509,7 +509,7 @@ export default async function HomePage() {
       </section>
 
       {/* Our Clientele - World Map Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-6">Our Clientele</h2>
@@ -523,7 +523,7 @@ export default async function HomePage() {
       </section>
 
        {/* Dr. Cyriac in the Media */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center gap-2 mb-4">
@@ -626,7 +626,7 @@ export default async function HomePage() {
       </section>
 
        {/* Choose Your Doctor Wisely */}
-<section className="py-20 bg-white">
+<section className="py-20 bg-gray-50">
   <div className="container-custom">
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
@@ -775,49 +775,52 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* show map */}
-      {/* Map & Additional Info */}
-            <div className="space-y-8">
-              <div className="bg-white p-8 rounded-xl shadow-xl">
-                <h3 className="text-2xl font-bold mb-4 text-center">Our Location</h3>
-                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
-                  ></iframe>
-                </div>
-                <p className="text-gray-600">
-                  We're conveniently located in the heart of Kochi, Kerala. Our state-of-the-art facility provides a comfortable and private environment for all consultations and procedures.
-                </p>
-              </div>
-            </div>
+      {/* Where We Are */}
+<section className="py-20 bg-gray-50">
+  <div className="container-custom">
+    <div className="text-center mb-12">
+      <div className="inline-flex items-center justify-center gap-2 mb-4">
+        <h2 className="mb-0 font-bold text-gray-900">Our Location</h2>
+      </div>
+    </div>
+    <div className="aspect-video bg-gray-200 rounded-2xl shadow-lg overflow-hidden mb-8 mx-auto max-w-4xl">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="w-full h-full rounded-2xl"
+      />
+    </div>
+    <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center leading-relaxed">
+      We're conveniently located in the heart of Kochi, Kerala. Our state-of-the-art facility provides a comfortable and private environment for all consultations and procedures.
+    </p>
+  </div>
+</section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">What Our Patients Say About us !</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
-              Verified customer reviews and ratings.
-            </p>
-          </div>
-          <Testimonials />
-          <div className="text-center mt-8">
-            <Link href="https://share.google/et94AAsNCgNKbPHAr" className="btn-primary inline-block">
-              view all
-            </Link>
-          </div>
-        </div>
-      </section>
+{/* Testimonials Section */}
+<section className="py-20 bg-white">
+  <div className="container-custom">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Patients Say About Us!</h2>
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        Verified customer reviews and ratings from real patients.
+      </p>
+    </div>
+    <Testimonials />
+    <div className="text-center mt-12">
+      <Link href="https://share.google/et94AAsNCgNKbPHAr" className="btn-primary inline-block px-8 py-4 text-lg">
+        View All Reviews
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
@@ -841,7 +844,7 @@ export default async function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
   <div className="container-custom">
     <div className="bg-gradient-to-br from-gray-400 to-gray-400 rounded-2xl p-12 text-center text-white shadow-2xl">
       <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>

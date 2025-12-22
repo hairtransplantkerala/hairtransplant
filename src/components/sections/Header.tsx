@@ -38,13 +38,20 @@ export default function Header() {
       href: "/services",
       hasDropdown: true,
       dropdown: [
-        { name: "ET-Protocol For Hair Loss & Hair Transplant", href: "/et-protocol" },
-        { name: "SC-FUE", href: "/services/fue" },
-        { name: "Inviscar FUT", href: "/services/fut" },
-        { name: "DHI Hair Transplant", href: "/services/dhi" },
-        { name: "UltraMax PRP", href: "/services/prp" },
-        { name: "Beard Transplant", href: "/services/beard" },
-        { name: "Eyebrow Transplant", href: "/services/eyebrow" },
+        { name: "ET-Protocol", href: "/et-protocol" },
+        { name: "SC-FUE (Stem Cell FUE)", href: "/stem-cell-fue" },
+        { name: "InviScar FUT", href: "/inviscar-fut" },
+        { name: "DHI Hair Transplant", href: "/dhi" },
+        { name: "Micro FUE", href: "/micro-fue" },
+        { name: "UltraMax PRP", href: "/prp-therapy" },
+        { name: "GFC (Growth Factor Concentrate)", href: "/gfc-prp" },
+        { name: "Mesotherapy", href: "/mesotherapy-hair-loss" },
+        { name: "Beard Transplant", href: "/beard-transplant" },
+        { name: "Moustache Transplant", href: "/moustache-transplant" },
+        { name: "Eyebrow Transplant", href: "/eyebrow-transplant" },
+        { name: "Eyelash Transplant", href: "/eyelash-transplant" },
+        { name: "Hairline Revision", href: "/hairline-revision" },
+        { name: "Scar Hair Transplant", href: "/scar-hair-transplant" },
       ]
     },
     { 
@@ -55,6 +62,7 @@ export default function Header() {
         { name: "Dr. Chacko Cyriac", href: "/about" },
         { name: "In the Media", href: "/media" },
         { name: "Plastic Surgery Center", href: "/plastic-surgery-center" },
+        { name: "Choose Your Doctor Wisely", href: "/choose-your-doctor" },
       ] 
     },
     { name: "Our Results", href: "/gallery" },
@@ -113,7 +121,7 @@ export default function Header() {
                     </Link>
                     
                     {/* Dropdown Menu */}
-                    <div className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 transition-all duration-200 ${
+                    <div className={`absolute left-0 top-full mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 transition-all duration-200 max-h-[80vh] overflow-y-auto ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible -translate-y-2'
