@@ -357,8 +357,7 @@ export default async function HomePage() {
   <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
     Learn More 
     <div
-      className="ml-1 group-hover:translate-x-2 transition-transition duration-300"
-      size={18}></div>
+      className="ml-1 group-hover:translate-x-2 transition-transform duration-300"></div>
     <div/>
   </div>
 </div>
