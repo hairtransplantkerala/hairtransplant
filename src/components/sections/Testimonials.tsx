@@ -33,6 +33,48 @@ export default function Testimonials() {
       rating: 5,
       text: "I have been going to Dr Chacko Cyriac in Kochi Kerala for my hair loss treatment. He was the only surgeon who told no need for surgery. I am very much satisfied with my results of treatment. Costs are also reasonable. Thank you Sir for your sincere advice.",
     },
+    {
+      id: 4,
+      name: "Glian Tony Antonio",
+      rating: 5,
+      text: "I have nothing but total joy in writing this review for Dr Chacko Cyriac.... I have been doing hair loss treatment with him. He has been guiding me through the months and years....  Unlike most centers he advised me against aggressive treatments and to instead have a steady long term approach.... Certainly not running for business. Thank you Sir for your help.",
+    },
+    {
+      id: 5,
+      name: "Ginesh K George",
+      rating: 5,
+      text: "I had my hair transplant surgery done by Dr. Chacko 5 years back and had a wonderful result. Moreover he is not Business minded in his profession, educates his patients in the right way and such a simple person to deal with. He had done an Ear surgery also for my wife and the result was again outstanding. He is a God gifted person no doubt. God Bless.",
+    },
+    {
+      id: 6,
+      name: "Yasar Arafath",
+      rating: 5,
+      text: "I had my hair loss treatment with Dr Chacko Cyriac. He is a genuine plastic surgeon who will not hesitate to say the truth even if it is bad. He had guided me well. Thanks a lot sir for the sincere advice.",
+    },
+    {
+      id: 7,
+      name: "Vishal James",
+      rating: 5,
+      text: "Thank you doc for the hospitality. Had great results from the very first procedure. The care and hospitality was upto the mark. Was very happy to see my results.",
+    },
+    {
+      id: 8,
+      name: "Muhammad Rihan",
+      rating: 5,
+      text: "Thank you Dr Chacko for doing my scalp surgery...I had an electric burn injury to my head causing a big wound on my head with bone damage....After plastic surgery by Dr Chacko Cyriac I am so happy the wounds have all healed. My entire family is grateful. Thank you sir",
+    },
+    {
+      id: 9,
+      name: "Saikishan Sasi Kumar Menon",
+      rating: 5,
+      text: "Thank you so much Dr Chacko Cyriac for treating my hair loss problem. First, he helped me understand my problem before moving forward to start the treatment.The manner in which he explained the condition, treatment plan and the possible outcomes was definitely helpful. Moreover, the ease by which he does procedures while keeping one comfortable is truly amazing. I have been a patient of his for more than a year and the results I have been getting are extremely satisfying.Thank you so much for your help and support.",
+    },
+    {
+      id: 10,
+      name: "Shijil A C",
+      rating: 5,
+      text: "I was looking to get my hair transplant for a long time. I had gone to several clinics and places to get consultation; I wasn't impressed at all. Then I finally landed up at the Eterno hair transplant center. The way Dr. Chacko cyriac explained everything was very impressive. The doctor made me understand the process and structure in a much more friendly manner.I'm really impressed with your great service. Thank you, Dr. Chacko, for your wonderful service and thanks for your entire team. It's been now 7 weeks over after the Hair transplant surgery, eagerly waiting to see my final result.",
+    },
   ];
 
   const nextTestimonial = () => {

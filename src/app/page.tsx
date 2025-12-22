@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, Calendar, Clock, Newspaper, MessageCircle, MapPin } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, Calendar, Clock, Newspaper, MapPin } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
@@ -109,27 +109,17 @@ export default async function HomePage() {
     {
       title: "Reception",
       description: "Welcoming and comfortable reception at Eterno Clinic",
-      image: "/images/clinic/reception.jpg"
+      image: "/images/clinic/reception.webp"
     },
     {
       title: "Consultation",
       description: "Private consultation rooms for personalized treatment planning",
-      image: "/images/clinic/consultation.jpg"
-    },
-    {
-      title: "Operation Theatre",
-      description: "State-of-the-art surgical facilities with advanced equipment",
-      image: "/images/clinic/operation-theatre.jpg"
+      image: "/images/clinic/consultation.webp"
     },
     {
       title: "Recovery",
       description: "Comfortable recovery areas for post-procedure care",
-      image: "/images/clinic/recovery.jpg"
-    },
-    {
-      title: "Clinic",
-      description: "Where we are located",
-      image: "/images/clinic/lourdes-hospital.jpg"
+      image: "/images/clinic/recovery.webp"
     },
   ];
 
@@ -789,7 +779,7 @@ export default async function HomePage() {
       {/* Map & Additional Info */}
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-xl shadow-xl">
-                <h3 className="text-2xl font-bold mb-4">Our Location</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center">Our Location</h3>
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
