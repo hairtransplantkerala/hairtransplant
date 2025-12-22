@@ -89,7 +89,7 @@ export default function Testimonials() {
 
   return (
     <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200">
-      <div className="absolute top-8 left-8 text-gray-300 opacity-50" size={48} />
+      <Star className="absolute top-8 left-8 text-gray-300 opacity-50" size={48} />
       
       <div className="max-w-4xl mx-auto">
         {/* Rating Stars */}
