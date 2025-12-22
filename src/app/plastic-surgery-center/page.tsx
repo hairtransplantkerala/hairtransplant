@@ -354,23 +354,38 @@ export default function PlasticSurgeryCenterPage() {
                   <Link href="/contact" className="btn-primary inline-block text-center">
                     Book Appointment
                   </Link>
-                  <a href="tel:+919645921944" className="btn-secondary inline-flex items-center justify-center gap-2">
+                  <a href="tel:+919645921944" className="btn-primary inline-flex items-center justify-center gap-2">
                     <Phone size={20} />
                     +91 96459 21944
                   </a>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/images/clinic/location-map.webp"
-                  alt="Eterno Clinic Location"
-                  className="w-full h-auto"
-                />
-              </div>
             </div>
           </div>
         </div>
       </section>
+      {/* Map & Additional Info */}
+            <section className="space-y-8">
+              <div id="our-location" className="container-custom max-w-6xl mx-auto text-center"> </div>
+              <div className="bg-white p-8 rounded-xl shadow-xl">
+                <h3 className="text-2xl font-bold mb-4">Our Location</h3>
+                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                <p className="text-gray-600">
+                  We're conveniently located in the heart of Kochi, Kerala. Our state-of-the-art facility provides a comfortable and private environment for all consultations and procedures.
+                </p>
+              </div>
+            </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, ArrowRight, Calendar, Clock, Newspaper, MapPin } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, Calendar, Clock, Newspaper, MapPin } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
@@ -11,7 +11,7 @@ import { createClient } from '@/lib/supabase/server';
 export default async function HomePage() {
   const specializedTreatments = [
     {
-      title: "ET Protocol",
+      title: "ET Protocol For Hair Loss",
       description: "Eterno Protocol for maximum graft survival and natural results",
       image: "/images/conditions/et-protocol.webp",
       link: "/et-protocol"
@@ -35,7 +35,7 @@ export default async function HomePage() {
       link: "/mesotherapy-hair-loss"
     },
     {
-      title: "UltraMax PRP",
+      title: "Advanced UltraMax PRP",
       description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
       image: "/images/conditions/prp.webp",
       link: "/prp-therapy"
@@ -50,7 +50,7 @@ export default async function HomePage() {
 
   const commonConditions = [
     {
-      title: "Failed Hair Transplant Repair",
+      title: "Failed Hair Transplant",
       description: "Expert corrective surgery to fix unnatural results and scarring",
       image: "/images/conditions/failed-transplant.webp",
       link: "/failed-hair-transplant"
@@ -214,7 +214,7 @@ export default async function HomePage() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Gallery</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
-              Browse through some of our results. You might find a hair loss problem similar to yours !
+              Browse through some of our results.<br></br> You might find a hair loss problem similar to yours !
             </p>
           </div>
           <GalleryCarousel />
@@ -230,9 +230,9 @@ export default async function HomePage() {
 <section className="py-20 bg-gray-50">
   <div className="container-custom">
     <div className="text-center mb-12">
-      <h2 className="mb-4">The Latest in Hair Loss Treatments</h2>
+      <h2 className="mb-4">The Latest in<br></br> Hair Loss Treatments</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
-        For the recent advances in hair loss treatment we have incorporated into our practice
+        The recent advances in hair loss treatment we have incorporated into our practice
       </p>
     </div>
 
@@ -252,19 +252,24 @@ export default async function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
             <div className="absolute -bottom-4 left-0 right-0 p-6 text-center">
-              <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
+             {/* <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                 {treatment.title}
-              </h3>
+              </h3> */}
             </div>
           </div>
 
           <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
-            <p className="text-gray-600 mb-4 leading-relaxed text-justify">
+            {/*<p className="text-gray-600 mb-4 leading-relaxed text-justify">
               {treatment.description}
-            </p>
+            </p>*/}
+            <h3 className="text-black text-xl text-center font-bold mb-2 transition-colors">
+                {treatment.title}
+              </h3>
+            <div className="flex justify-center">
             <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
               Learn More 
-              <ArrowRight className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
+              <div className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
+            </div>
             </div>
           </div>
 
@@ -288,6 +293,7 @@ export default async function HomePage() {
             <div className="text-center mb-12">
               <h2 className="mb-6">
                 Our Plastic Surgeon </h2>
+                <h3 className="mb-4 text-xl text-black">Dr. Chacko Cyriac</h3>
               <p className="text-gray-600 text-xl mb-8 text-centre">
                 After completing his MCh Plastic Surgery training from the prestigious PGI, Chandigarh, India, he went on to get formal training and qualifications from the UK, USA, Canada and Singapore.</p>
             </div>
@@ -316,10 +322,9 @@ export default async function HomePage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Most Common Hair Loss Conditions</h2>
+            <h2 className="mb-4">Changing Hair Loss Complaints</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
-              Expert diagnosis and personalized treatment for different types of hair loss across all age groups
-            </p>
+              Increased awareness has resulted in new and evolving hair loss complaints among patients.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -338,20 +343,26 @@ export default async function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
+                    {/*<h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
                       {condition.title}
-                    </h3>
+                    </h3>*/}
                   </div>
                 </div>
 
                 <div className="p-6 bg-white">
-                  <p className="text-gray-600 mb-4 leading-relaxed text-justify">
-                    {condition.description}
-                  </p>
-                  <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
-                    Learn More 
-                    <ArrowRight className="ml-1 group-hover:translate-x-2 transition-transform duration-300" size={18} />
-                  </div>
+                  <h3 className="text-black text-xl font-bold mb-2 transition-colors text-center">
+                      {condition.title}
+                    </h3>
+                  <div className="flex justify-center">
+  <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
+    Learn More 
+    <div
+      className="ml-1 group-hover:translate-x-2 transition-transition duration-300"
+      size={18}></div>
+    <div/>
+  </div>
+</div>
+
                 </div>
 
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
@@ -719,14 +730,14 @@ export default async function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
+                {/* <div className="p-6">
                   <h3 className="text-lg font-bold mb-2">
                     {clinic.title}
                   </h3>
                   <p className="text-gray-600 text-sm text-justify">
                     {clinic.description}
                   </p>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -746,14 +757,14 @@ export default async function HomePage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-6">
+                  {/*<div className="p-6">
                     <h3 className="text-lg font-bold mb-2">
                       {clinic.title}
                     </h3>
                     <p className="text-gray-600 text-sm text-justify">
                       {clinic.description}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -768,9 +779,35 @@ export default async function HomePage() {
             <Link href="/plastic-surgery-center" className="btn-primary inline-block">
               Visit Our Clinic
             </Link>
+            <Link href="/plastic-surgery-center#our-location" className="btn-primary inline-block">
+  View Map
+</Link>
           </div>
         </div>
       </section>
+
+      {/* show map */}
+      {/* Map & Additional Info */}
+            <div className="space-y-8">
+              <div className="bg-white p-8 rounded-xl shadow-xl">
+                <h3 className="text-2xl font-bold mb-4">Our Location</h3>
+                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.590222200979!2d76.30854187527144!3d9.968010473583847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873ba3f3a0e5d%3A0x96d4cdcbaa9e9b21!2sDr%20Chacko%20Cyriac%20Cosmetic%20Plastic%20Surgeon%2C%20PRP%20Hair%2C%20Laser%20Hair%20Removal!5e0!3m2!1sen!2sin!4v1764174583133!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                <p className="text-gray-600">
+                  We're conveniently located in the heart of Kochi, Kerala. Our state-of-the-art facility provides a comfortable and private environment for all consultations and procedures.
+                </p>
+              </div>
+            </div>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
