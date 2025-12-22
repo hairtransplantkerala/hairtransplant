@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle, Award, Users, Globe, Calendar, Clock, Newspaper, MapPin } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, Calendar, Clock, Newspaper, MessageCircle, MapPin } from "lucide-react";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
 import HeroVideoBackground from "@/components/HeroVideoBackground";
