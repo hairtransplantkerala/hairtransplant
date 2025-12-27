@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300">
       <div className="container-custom py-12">
         {/* Quick Links and Services - Side by side on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 ">
           {/* Quick Links - First column */}
           <div>
             <h3 className="text-white text-base md:text-lg font-semibold mb-4">Quick Links</h3>
