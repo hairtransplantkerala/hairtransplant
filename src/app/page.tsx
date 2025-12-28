@@ -20,13 +20,13 @@ export default async function HomePage() {
       title: "SC-FUE",
       description: "Revolutionary regenerative medicine for 90% graft survival and faster healing",
       image: "/images/conditions/stem-cell.webp",
-      link: "/fue"
+      link: "/services/fue"
     },
     {
       title: "InviScar FUT",
       description: "Invisible scar FUT technique combining density with minimal visible scarring",
       image: "/images/conditions/fut.webp",
-      link: "/fut"
+      link: "/services/fut"
     },
     {
       title: "Mesotherapy for Hair Loss",
@@ -38,7 +38,7 @@ export default async function HomePage() {
       title: "Advanced UltraMax PRP",
       description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
       image: "/images/conditions/prp.webp",
-      link: "/prp"
+      link: "/services/prp"
     },
     {
       title: "Stem Cell Therapy",
