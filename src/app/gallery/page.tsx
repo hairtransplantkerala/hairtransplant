@@ -144,13 +144,14 @@ export default function GalleryPage() {
               key={item.id} 
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="relative h-96">
+              <div className="relative h-96 touch-pan-y">
                 <ReactCompareSlider
                   itemOne={
                     <ReactCompareSliderImage
                       src={item.before}
                       alt="Before hair transplant"
                       className="object-cover"
+                      style={{ pointerEvents: 'none' }}
                     />
                   }
                   itemTwo={
@@ -158,11 +159,14 @@ export default function GalleryPage() {
                       src={item.after}
                       alt="After hair transplant"
                       className="object-cover"
+                      style={{ pointerEvents: 'none' }}
                     />
                   }
                   position={50}
-                  onlyHandleDraggable={true}
                   className="h-full"
+                  style={{
+                    touchAction: 'pan-y',
+                  }}
                 />
                 {/* Before Label */}
                 <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
@@ -172,6 +176,9 @@ export default function GalleryPage() {
                 <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                   After
                 </div>
+                
+                {/* Instruction hint for mobile */}
+                
               </div>
               
               {/* Card Info */}

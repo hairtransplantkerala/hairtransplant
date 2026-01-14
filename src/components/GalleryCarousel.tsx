@@ -63,13 +63,14 @@ export default function GalleryCarousel() {
         >
           {galleryItems.map((item) => (
             <div key={item.id} className="min-w-full">
-              <div className="relative h-[400px] md:h-[500px]">
+              <div className="relative h-[400px] md:h-[500px] touch-pan-y">
                 <ReactCompareSlider
                   itemOne={
                     <ReactCompareSliderImage
                       src={item.before}
                       alt="Before hair transplant"
                       className="object-cover"
+                      style={{ pointerEvents: 'none' }}
                     />
                   }
                   itemTwo={
@@ -77,18 +78,23 @@ export default function GalleryCarousel() {
                       src={item.after}
                       alt="After hair transplant"
                       className="object-cover"
+                      style={{ pointerEvents: 'none' }}
                     />
                   }
                   position={50}
                   className="h-full"
+                  style={{
+                    touchAction: 'pan-y',
+                  }}
                 />
                 {/* Before/After Labels */}
-                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                   Before
                 </div>
-                <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                   After
                 </div>
+                {/* Instruction hint for mobile */}
               </div>
               
               {/* Info Section */}
