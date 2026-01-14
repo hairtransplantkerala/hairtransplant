@@ -33,8 +33,8 @@ export default function GalleryPage() {
       id: 2,
       category: 'fue',
       procedure: 'FUE Hairline Restoration',
-      before: '/images/gallery/fue-before-2.jpg',
-      after: '/images/gallery/fue-after-2.jpg',
+      before: '/images/gallery/fue-before-2.webp',
+      after: '/images/gallery/fue-after-2.webp',
       timeline: '10 months post-op',
       grafts: '2800 grafts'
     },
@@ -42,8 +42,8 @@ export default function GalleryPage() {
       id: 3,
       category: 'fut',
       procedure: 'FUT Hair Transplant - Advanced Hair Loss',
-      before: '/images/gallery/fut-before-1.jpg',
-      after: '/images/gallery/fut-after-1.jpg',
+      before: '/images/gallery/fut-before-1.webp',
+      after: '/images/gallery/fut-after-1.webp',
       timeline: '14 months post-op',
       grafts: '5000 grafts'
     },
@@ -51,44 +51,44 @@ export default function GalleryPage() {
       id: 4,
       category: 'dhi',
       procedure: 'DHI Method - Frontal Hairline',
-      before: '/images/gallery/dhi-before-1.jpg',
-      after: '/images/gallery/dhi-after-1.jpg',
+      before: '/images/gallery/dhi-before-1.webp',
+      after: '/images/gallery/dhi-after-1.webp',
       timeline: '8 months post-op',
       grafts: '2200 grafts'
     },
     {
       id: 5,
-      category: 'beard',
-      procedure: 'Beard Transplant - Full Coverage',
-      before: '/images/gallery/beard-before-1.jpg',
-      after: '/images/gallery/beard-after-1.jpg',
+      category: 'dhi',
+      procedure: 'DHI Hair Transplant',
+      before: '/images/gallery/dhi-before-2.webp',
+      after: '/images/gallery/dhi-after-2.webp',
       timeline: '6 months post-op',
-      grafts: '1500 grafts'
+      grafts: '6000 grafts'
     },
     {
       id: 6,
-      category: 'female',
-      procedure: 'Female Hair Loss Treatment - FUE',
-      before: '/images/gallery/female-before-1.jpg',
-      after: '/images/gallery/female-after-1.jpg',
+      category: 'prp',
+      procedure: 'PRP Treatment',
+      before: '/images/gallery/prp-before-1.webp',
+      after: '/images/gallery/prp-after-1.webp',
       timeline: '10 months post-op',
       grafts: '2500 grafts'
     },
     {
       id: 7,
-      category: 'eyebrow',
-      procedure: 'Eyebrow Transplant Restoration',
-      before: '/images/gallery/eyebrow-before-1.jpg',
-      after: '/images/gallery/eyebrow-after-1.jpg',
+      category: 'fut',
+      procedure: 'FUT',
+      before: '/images/gallery/fut-before-2.webp',
+      after: '/images/gallery/fut-after-2.webp',
       timeline: '5 months post-op',
       grafts: '400 grafts'
     },
     {
       id: 8,
       category: 'fue',
-      procedure: 'FUE Crown Restoration',
-      before: '/images/gallery/fue-before-3.jpg',
-      after: '/images/gallery/fue-after-3.jpg',
+      procedure: 'FUE Hair Restoration',
+      before: '/images/gallery/fue-before-3.webp',
+      after: '/images/gallery/fue-after-3.webp',
       timeline: '11 months post-op',
       grafts: '3200 grafts'
     },
@@ -96,8 +96,8 @@ export default function GalleryPage() {
       id: 9,
       category: 'PRP',
       procedure: 'PRP Treatment',
-      before: '/images/gallery/prp-before.webp',
-      after: '/images/gallery/prp-after.webp',
+      before: '/images/gallery/prp-before-2.webp',
+      after: '/images/gallery/prp-after-2.webp',
       timeline: '11 months post-op',
       grafts: '3200 grafts'
     },
@@ -161,14 +161,15 @@ export default function GalleryPage() {
                     />
                   }
                   position={50}
+                  onlyHandleDraggable={true}
                   className="h-full"
                 />
                 {/* Before Label */}
-                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                   Before
                 </div>
                 {/* After Label */}
-                <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
+                <div className="absolute top-4 right-4 bg-white text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10 pointer-events-none">
                   After
                 </div>
               </div>

@@ -19,8 +19,20 @@ export default async function HomePage() {
     {
       title: "SC-FUE",
       description: "Revolutionary regenerative medicine for 90% graft survival and faster healing",
-      image: "/images/conditions/stem-cell.webp",
+      image: "/images/services/fue.webp",
       link: "/services/fue"
+    },
+    {
+      title: "Advanced UltraMax PRP",
+      description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
+      image: "/images/conditions/prp.webp",
+      link: "/services/prp"
+    },
+    {
+      title: "Stem Cell Therapy",
+      description: "",
+      image: "/images/conditions/stem-cell.webp",
+      link: "/stem-cell-fue"
     },
     {
       title: "InviScar FUT",
@@ -34,18 +46,7 @@ export default async function HomePage() {
       image: "/images/conditions/mesotherapy.webp",
       link: "/mesotherapy-hair-loss"
     },
-    {
-      title: "Advanced UltraMax PRP",
-      description: "Platelet-Rich Plasma injections to stimulate hair growth and strengthen follicles",
-      image: "/images/conditions/prp.webp",
-      link: "/services/prp"
-    },
-    {
-      title: "Stem Cell Therapy",
-      description: "",
-      image: "/images/services/dhi.webp",
-      link: "/stem-cell-fue"
-    },
+    
   ];
 
   const commonConditions = [
@@ -160,7 +161,7 @@ export default async function HomePage() {
       <span className="block">Hair Transplant Clinic</span>
       <span className="block text-xl md:text-2xl font-normal mt-2">in Kochi, Kerala</span>
     </h1>
-    <p className="text-xl md:text-xl mb-8 text-gray-300 leading-relaxed">
+    <p className="text-s md:text-xl mb-8 text-gray-300 leading-relaxed">
       All hair loss treatments & hair transplant will be done only by our Senior Consultant Plastic Surgeon,
       <br />
       <strong className="text-white">Dr. Chacko Cyriac</strong>
@@ -203,7 +204,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
+            <p className="text-m text-gray-600 max-w-2xl mx-auto text-centre">
               Browse through some of our results.<br></br> You might find a hair loss problem similar to yours !
             </p>
           </div>
@@ -221,16 +222,15 @@ export default async function HomePage() {
   <div className="container-custom">
     <div className="text-center mb-12">
       <h2 className="mb-4">The Latest in<br></br> Hair Loss Treatments</h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
+      <p className="text-m text-gray-600 max-w-3xl mx-auto text-centre">
         The recent advances in hair loss treatment we have incorporated into our practice
       </p>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {specializedTreatments.map((treatment, index) => (
-        <Link
+        <div
           key={index}
-          href={treatment.link}
           className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
         >
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -240,31 +240,25 @@ export default async function HomePage() {
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-            <div className="absolute -bottom-4 left-0 right-0 p-6 text-center">
-             {/* <h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
-                {treatment.title}
-              </h3> */}
-            </div>
           </div>
 
           <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
-            {/*<p className="text-gray-600 mb-4 leading-relaxed text-justify">
-              {treatment.description}
-            </p>*/}
             <h3 className="text-black text-xl text-center font-bold mb-2 transition-colors">
-                {treatment.title}
-              </h3>
+              {treatment.title}
+            </h3>
             <div className="flex justify-center">
-            <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
-              Learn More 
-              <div className="ml-1 group-hover:translate-x-2 transition-transform duration-300"/>
-            </div>
+              <Link 
+                href={treatment.link}
+                className="flex items-center text-gray-900 font-semibold hover:gap-2 transition-all hover:text-black"
+              >
+                Learn More 
+                <div className="ml-1 group-hover:translate-x-2 transition-transform duration-300"/>
+              </Link>
             </div>
           </div>
 
           <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
-        </Link>
+        </div>
       ))}
     </div>
 
@@ -275,6 +269,7 @@ export default async function HomePage() {
     </div>
   </div>
 </section>
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
@@ -309,70 +304,65 @@ export default async function HomePage() {
       </section>
 
       {/* Most Common Hair Loss Conditions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="mb-4">Changing Hair Loss Complaints</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
-              Increased awareness has resulted in new and evolving hair loss complaints among patients.</p>
+<section className="py-20 bg-gray-50">
+  <div className="container-custom">
+    <div className="text-center mb-12">
+      <h2 className="mb-4 text-center">One Center <br></br>for <br></br>All Hair Loss Problems</h2>
+      <p className="text-m text-gray-600 max-w-3xl mx-auto text-centre">
+        Increased awareness has resulted in new and evolving hair loss complaints among patients.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {commonConditions.map((condition, index) => (
+        <div
+          key={index}
+          className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <img
+              src={condition.image}
+              alt={condition.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {commonConditions.map((condition, index) => (
-              <Link
-                key={index}
+          <div className="p-6 bg-white">
+            <h3 className="text-black text-xl font-bold mb-2 transition-colors text-center">
+              {condition.title}
+            </h3>
+            <div className="flex justify-center">
+              <Link 
                 href={condition.link}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200"
+                className="flex items-center text-gray-900 font-semibold hover:gap-2 transition-all hover:text-black"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={condition.image}
-                    alt={condition.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    {/*<h3 className="text-white text-2xl font-bold mb-2 group-hover:text-gray-200 transition-colors">
-                      {condition.title}
-                    </h3>*/}
-                  </div>
-                </div>
-
-                <div className="p-6 bg-white">
-                  <h3 className="text-black text-xl font-bold mb-2 transition-colors text-center">
-                      {condition.title}
-                    </h3>
-                  <div className="flex justify-center">
-  <div className="flex items-center text-gray-900 font-semibold group-hover:gap-2 transition-all">
-    Learn More 
-    <div
-      className="ml-1 group-hover:translate-x-2 transition-transform duration-300"></div>
-    <div/>
-  </div>
-</div>
-
-                </div>
-
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
+                Learn More 
+                <div className="ml-1 group-hover:translate-x-2 transition-transform duration-300"/>
               </Link>
-            ))}
+            </div>
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/contact" className="btn-primary inline-block">
-              Book Consultation
-            </Link>
-          </div>
+          <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 rounded-2xl transition-colors duration-300 pointer-events-none"></div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="text-center mt-12">
+      <Link href="/contact" className="btn-primary inline-block">
+        Book Consultation
+      </Link>
+    </div>
+  </div>
+</section>
+
 
       {/* Latest Blogs Section - Mobile Slider */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Our Blog</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
+            <p className="text-m text-gray-600 max-w-2xl mx-auto text-centre">
               Read more about our unique approach to all aspects of hair loss and its treatments.
             </p>
           </div>
@@ -513,7 +503,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-6">Our Clientele</h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-centre">
+            <p className="text-m text-gray-700 max-w-4xl mx-auto leading-relaxed text-centre">
               Our patients for hair loss treatments and hair transplantation, have come to us from various countries including the United States, Canada, Ireland, United Kingdom, Switzerland, Germany, Austria, Italy, South Africa, Ghana, almost all the Middle-Eastern countries, from various parts of India, Nepal, Singapore, Malaysia, Vietnam, Hong Kong, Japan, Australia and New Zealand.
             </p>
           </div>
@@ -529,7 +519,7 @@ export default async function HomePage() {
             <div className="inline-flex items-center justify-center gap-2 mb-4">
               <h2 className="mb-0">Dr. Cyriac in the Media</h2>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto text-centre">
+            <p className="text-m text-gray-600 max-w-3xl mx-auto text-centre">
               Dr Chacko Cyriac is a Senior Consultant Plastic Surgeon whose area of expertise is not confined to just hair transplant surgery. Some of the reports of his procedures in the media are shown below.
             </p>
           </div>
@@ -631,7 +621,7 @@ export default async function HomePage() {
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="mb-6">Choose Your Doctor Wisely</h2>
-        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-centre">
+        <p className="text-m text-gray-700 mb-8 leading-relaxed text-centre">
           Before choosing your hair transplant surgeon, ask yourself these important questions :
         </p>
       </div>
@@ -806,7 +796,7 @@ export default async function HomePage() {
   <div className="container-custom">
     <div className="text-center mb-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Patients Say About Us!</h2>
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <p className="text-m text-gray-600 max-w-2xl mx-auto">
         Verified customer reviews and ratings from real patients.
       </p>
     </div>
@@ -824,7 +814,7 @@ export default async function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-centre">
+            <p className="text-m text-gray-600 max-w-2xl mx-auto text-centre">
               Get answers to the most common questions about hair transplant procedures
             </p>
           </div>
@@ -848,7 +838,7 @@ export default async function HomePage() {
   <div className="container-custom">
     <div className="bg-gradient-to-br from-gray-400 to-gray-400 rounded-2xl p-12 text-center text-white shadow-2xl">
       <h2 className="text-white mb-4">Start Your Hair Restoration Journey Today</h2>
-      <p className="text-xl text-white font-medium mb-8 max-w-2xl mx-auto text-centre">
+      <p className="text-m text-white font-medium mb-8 max-w-2xl mx-auto text-centre">
   Don't wait any longer. <br></br>Schedule your Consultation with <br></br>Dr. Chacko Cyriac. <br></br>Take the first step towards regaining your confidence.
 </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

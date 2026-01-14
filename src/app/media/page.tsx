@@ -9,14 +9,30 @@ export default function MediaPage() {
 
   const mediaItems = [
     {
-      title: "Asianet News",
+      title: "Asianet News Part 1",
       videoId: "lOh8jPTjP80",
       link: "https://www.youtube.com/watch?v=lOh8jPTjP80",
       type: "video",
       customThumbnail: "/images/media/thumbnails/asianetnews.webp" // Add custom thumbnail path here
     },
     {
-      title: "Asianet News",
+      title: "Asianet News Part 2",
+      videoId: "cG4rkfJnUGQ",
+      link: "https://www.youtube.com/watch?v=WacY7-h7l44",
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews.webp"
+      // No customThumbnail = uses YouTube default
+    },
+    {
+      title: "Asianet News Part 1",
+      videoId: "cG4rkfJnUGQ",
+      link: "https://www.youtube.com/watch?v=I8YGzLgSKHo",
+      type: "video",
+      customThumbnail: "/images/media/thumbnails/asianetnews2.webp"
+      // No customThumbnail = uses YouTube default
+    },
+    {
+      title: "Asianet News Part 2",
       videoId: "cG4rkfJnUGQ",
       link: "https://www.youtube.com/watch?v=cG4rkfJnUGQ",
       type: "video",

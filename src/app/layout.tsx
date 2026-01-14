@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -168,6 +169,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} antialiased`}>
+        <ScrollToTop />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
