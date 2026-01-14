@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function ScrollToTop() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     // Scroll to top immediately
@@ -17,7 +16,7 @@ export default function ScrollToTop() {
     }, 0);
 
     return () => clearTimeout(timeoutId);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   // Also handle history navigation
   useEffect(() => {
