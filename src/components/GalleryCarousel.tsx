@@ -10,7 +10,7 @@ export default function GalleryCarousel() {
   const galleryItems = [
     {
       id: 1,
-      procedure: "FUE Hair Transplant - 3500 Grafts",
+      procedure: "FUE Hair Transplant",
       before: "/images/gallery/fue-before-1.webp",
       after: "/images/gallery/fue-after-1.webp",
       timeline: "12 months post-op",
@@ -38,11 +38,40 @@ export default function GalleryCarousel() {
     },
     {
       id: 5,
-      procedure: "Beard Transplant",
-      before: "/images/gallery/beard-before-1.webp",
-      after: "/images/gallery/beard-after-1.webp",
-      timeline: "6 months post-op",
+      procedure: 'DHI Hair Transplant',
+      before: '/images/gallery/dhi-before-2.webp',
+      after: '/images/gallery/dhi-after-2.webp',
+      timeline: '6 months post-op',
     },
+    {
+      id: 6,
+      procedure: 'PRP Treatment',
+      before: '/images/gallery/prp-before-1.webp',
+      after: '/images/gallery/prp-after-1.webp',
+      timeline: '10 months post-op',
+    },
+    {
+      id: 7,
+      procedure: 'FUT',
+      before: '/images/gallery/fut-before-2.webp',
+      after: '/images/gallery/fut-after-2.webp',
+      timeline: '5 months post-op',
+    },
+    {
+      id: 8,
+      procedure: 'FUE Hair Restoration',
+      before: '/images/gallery/fue-before-3.webp',
+      after: '/images/gallery/fue-after-3.webp',
+      timeline: '11 months post-op',
+    },
+    {
+      id: 9,
+      procedure: 'PRP Treatment',
+      before: '/images/gallery/prp-before-2.webp',
+      after: '/images/gallery/prp-after-2.webp',
+      timeline: '11 months post-op',
+    },
+
   ];
 
   const nextSlide = () => {

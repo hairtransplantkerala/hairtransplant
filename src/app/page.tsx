@@ -38,7 +38,7 @@ export default async function HomePage() {
       title: "InviScar FUT",
       description: "Invisible scar FUT technique combining density with minimal visible scarring",
       image: "/images/conditions/fut.webp",
-      link: "/services/fut"
+      link: "/services/inviscar-fut"
     },
     {
       title: "Mesotherapy for Hair Loss",
@@ -170,7 +170,7 @@ export default async function HomePage() {
     <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
       <Link 
         href="/contact" 
-        className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-black transition-colors duration-200 text-center shadow-xl"
+        className=" inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center"
       >
         Book Consultation
       </Link>
@@ -239,7 +239,7 @@ export default async function HomePage() {
               alt={treatment.title}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t to-transparent"></div>
           </div>
 
           <div className="p-6 bg-gradient-to-b from-gray-50 to-white">
@@ -325,7 +325,7 @@ export default async function HomePage() {
               alt={condition.title}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 from-black/80 via-black/40 to-transparent"></div>
           </div>
 
           <div className="p-6 bg-white">
@@ -756,10 +756,10 @@ export default async function HomePage() {
 
           <div className="text-center mt-12">
             <Link href="/plastic-surgery-center" className="btn-primary inline-block">
-              Visit Our Clinic
+              Visit Our Center
             </Link>
             <Link href="/plastic-surgery-center#our-location" className="btn-primary inline-block">
-  View Map
+  Contact us
 </Link>
           </div>
         </div>
@@ -785,7 +785,7 @@ export default async function HomePage() {
         className="w-full h-full rounded-2xl"
       />
     </div>
-    <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center leading-relaxed">
+    <p className="text-m text-gray-600 max-w-2xl mx-auto text-center leading-relaxed">
       We're conveniently located in the heart of Kochi, Kerala. Our state-of-the-art facility provides a comfortable and private environment for all consultations and procedures.
     </p>
   </div>
@@ -795,7 +795,7 @@ export default async function HomePage() {
 <section className="py-20 bg-white">
   <div className="container-custom">
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Patients Say About Us!</h2>
+      <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Patients Say About Us !</h2>
       <p className="text-m text-gray-600 max-w-2xl mx-auto">
         Verified customer reviews and ratings from real patients.
       </p>

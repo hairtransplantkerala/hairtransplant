@@ -22,15 +22,15 @@ export default function WorldMapClientele() {
     { name: "Kuwait", x: 61, y: 46 },
     { name: "Qatar", x: 62, y: 48 },
     { name: "Oman", x: 64, y: 50 },
-    { name: "India", x: 70, y: 48 },
-    { name: "Nepal", x: 72, y: 46 },
-    { name: "Sri Lanka", x: 71, y: 52 },
-    { name: "Singapore", x: 78, y: 55 },
-    { name: "Malaysia", x: 78, y: 53 },
+    { name: "India", x: 68, y: 48 },
+    { name: "Nepal", x: 70, y: 46 },
+    { name: "Sri Lanka", x: 69, y: 60 },
+    { name: "Singapore", x: 78, y: 60 },
+    { name: "Malaysia", x: 77, y: 56 },
     { name: "Vietnam", x: 79, y: 48 },
     { name: "Hong Kong", x: 82, y: 46 },
     { name: "Japan", x: 87, y: 42 },
-    { name: "Indonesia", x: 81, y: 58 },
+    { name: "Indonesia", x: 81, y: 62 },
     { name: "Australia", x: 86, y: 68 },
     { name: "New Zealand", x: 93, y: 74 },
     { name: "South Africa", x: 52, y: 68 },
@@ -92,27 +92,14 @@ export default function WorldMapClientele() {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  {/* Pin/Marker */}
+                  {/* Point Marker */}
                   <div className="relative group">
-                    {/* Outer pulse ring (always visible) */}
-                    <div className="absolute inset-0 -m-2">
-                      <div className={`w-7 h-7 rounded-full bg-gray-900 opacity-10 ${
-                        hoveredCountry === country.name ? 'animate-ping' : ''
-                      }`} />
-                    </div>
-                    
-                    {/* Main dot */}
-                    <div
-                      className={`w-3 h-3 rounded-full transition-all duration-300 relative z-10 ${
-                        hoveredCountry === country.name
-                          ? "bg-black scale-150 ring-4 ring-black ring-opacity-30 shadow-lg"
-                          : "bg-gray-900 hover:bg-black hover:scale-125 shadow-md"
-                      }`}
-                    />
+                    {/* Tiny point */}
+                    <div className="w-1 h-1 rounded-full bg-gray-900" />
                     
                     {/* Tooltip */}
                     <div
-                      className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-gray-900 text-white text-xs font-semibold rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 z-20 ${
+                      className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-gray-900 text-white text-xs font-semibold rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 z-20 ${
                         hoveredCountry === country.name
                           ? "opacity-100 visible translate-y-0"
                           : "opacity-0 invisible translate-y-2 pointer-events-none"
@@ -121,7 +108,7 @@ export default function WorldMapClientele() {
                       {country.name}
                       {/* Tooltip arrow */}
                       <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-                        <div className="border-[6px] border-transparent border-t-gray-900" />
+                        <div className="border-[5px] border-transparent border-t-gray-900" />
                       </div>
                     </div>
                   </div>
@@ -134,7 +121,7 @@ export default function WorldMapClientele() {
         {/* Legend */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-600">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-gray-900 rounded-full shadow-md" />
+            <div className="w-1 h-1 bg-gray-900 rounded-full" />
             <span className="font-medium">Patients from 26+ Countries</span>
           </div>
           <span className="hidden sm:inline text-gray-400">•</span>
