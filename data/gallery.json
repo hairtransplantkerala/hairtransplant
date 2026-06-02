@@ -1,17 +1,5 @@
 [
   {
-    "id": "40d8144f-967c-470c-9a55-1b8b386313ab",
-    "category": "fue",
-    "procedure": "test procedure",
-    "before": "https://res.cloudinary.com/damt9g3nb/image/upload/v1780398409/kerala-hair-transplant/gallery/hlvffgnvrtcnkztycy0q.webp",
-    "after": "https://res.cloudinary.com/damt9g3nb/image/upload/v1780398420/kerala-hair-transplant/gallery/pahkqtoctcsxgul3kkq0.webp",
-    "timeline": "timeline test",
-    "grafts": "grat 55 test",
-    "featured": true,
-    "created_at": "2026-06-02T11:38:21.879Z",
-    "updated_at": "2026-06-02T11:38:21.879Z"
-  },
-  {
     "id": "gallery-1",
     "category": "fue",
     "procedure": "FUE Hair Transplant - 3500 Grafts",
