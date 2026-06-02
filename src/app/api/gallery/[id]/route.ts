@@ -1,21 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { deletePost, getPostById, updatePost } from '@/lib/content/posts';
+import { deleteGalleryItem, getGalleryItem, updateGalleryItem } from '@/lib/content/gallery';
 
 export async function GET(
   request: NextRequest,
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
-  const post = await getPostById(id);
+  const item = await getGalleryItem(id);
 
-  if (!post) {
+  if (!item) {
     return NextResponse.json(
-      { success: false, error: 'Post not found' },
+      { success: false, error: 'Gallery item not found' },
       { status: 404 }
     );
   }
 
-  return NextResponse.json({ success: true, post });
+  return NextResponse.json({ success: true, item });
 }
 
 export async function PUT(
@@ -26,20 +26,20 @@ export async function PUT(
 
   try {
     const body = await request.json();
-    const post = await updatePost(id, body);
+    const item = await updateGalleryItem(id, body);
 
-    if (!post) {
+    if (!item) {
       return NextResponse.json(
-        { success: false, error: 'Post not found' },
+        { success: false, error: 'Gallery item not found' },
         { status: 404 }
       );
     }
 
-    return NextResponse.json({ success: true, post });
+    return NextResponse.json({ success: true, item });
   } catch (error: any) {
     return NextResponse.json(
       { success: false, error: error.message || 'Internal server error' },
-      { status: error.message?.includes('Slug already exists') ? 400 : 500 }
+      { status: 500 }
     );
   }
 }
@@ -49,17 +49,14 @@ export async function DELETE(
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
-  const deleted = await deletePost(id);
+  const deleted = await deleteGalleryItem(id);
 
   if (!deleted) {
     return NextResponse.json(
-      { success: false, error: 'Post not found' },
+      { success: false, error: 'Gallery item not found' },
       { status: 404 }
     );
   }
 
-  return NextResponse.json({
-    success: true,
-    message: 'Post deleted successfully',
-  });
+  return NextResponse.json({ success: true });
 }

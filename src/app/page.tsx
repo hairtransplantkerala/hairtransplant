@@ -6,7 +6,7 @@ import HeroVideoBackground from "@/components/HeroVideoBackground";
 import GalleryCarousel from "@/components/GalleryCarousel";
 import WorldMapClientele from "@/components/WorldMapClientele";
 import YouTubeThumbnail from "@/components/YouTubeThumbnail";
-import { createClient } from '@/lib/supabase/server';
+import { listPosts } from "@/lib/content/posts";
 
 export default async function HomePage() {
   const specializedTreatments = [
@@ -124,14 +124,7 @@ export default async function HomePage() {
     },
   ];
 
-  // Fetch latest blog posts
-  const supabase = await createClient();
-  const { data: latestPosts } = await supabase
-    .from('posts')
-    .select('id, title, slug, excerpt, image, published_at, read_time, category, author')
-    .eq('published', true)
-    .order('published_at', { ascending: false })
-    .limit(3);
+  const latestPosts = (await listPosts({ status: "published" })).slice(0, 3);
 
   return (
     <>
@@ -170,13 +163,13 @@ export default async function HomePage() {
     <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
       <Link 
         href="/contact" 
-        className=" inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center"
+        className=" inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center size-4/10"
       >
         Book Consultation
       </Link>
       <Link 
         href="/gallery" 
-        className="inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center"
+        className="inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 text-center size-4/10"
       >
         Our Results
       </Link>
@@ -404,7 +397,7 @@ export default async function HomePage() {
                         <div className="flex items-center gap-2">
                           <Calendar size={14} />
                           <span>
-                            {new Date(post.published_at).toLocaleDateString('en-US', {
+                            {new Date(post.published_at || post.created_at).toLocaleDateString('en-US', {
                               month: 'short',
                               day: 'numeric',
                               year: 'numeric'
@@ -459,7 +452,7 @@ export default async function HomePage() {
                           <div className="flex items-center gap-2">
                             <Calendar size={14} />
                             <span>
-                              {new Date(post.published_at).toLocaleDateString('en-US', {
+                              {new Date(post.published_at || post.created_at).toLocaleDateString('en-US', {
                                 month: 'short',
                                 day: 'numeric',
                                 year: 'numeric'

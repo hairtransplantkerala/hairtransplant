@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FileText, Eye, ThumbsUp, TrendingUp, Loader } from "lucide-react";
+import { FileText, Eye, Image, ThumbsUp, TrendingUp, Loader } from "lucide-react";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -9,6 +9,7 @@ export default function AdminDashboard() {
     publishedPosts: 0,
     draftPosts: 0,
     totalViews: 0,
+    galleryItems: 0,
   });
   const [recentPosts, setRecentPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,8 @@ export default function AdminDashboard() {
     try {
       const response = await fetch("/api/posts");
       const data = await response.json();
+      const galleryResponse = await fetch("/api/gallery");
+      const galleryData = await galleryResponse.json();
 
       if (data.success) {
         const posts = data.posts || [];
@@ -33,6 +36,7 @@ export default function AdminDashboard() {
           publishedPosts: published.length,
           draftPosts: drafts.length,
           totalViews,
+          galleryItems: galleryData.success ? galleryData.items.length : 0,
         });
 
         // Get 5 most recent posts
@@ -74,6 +78,13 @@ export default function AdminDashboard() {
       icon: TrendingUp,
       color: "bg-orange-500"
     },
+    {
+      name: "Gallery Results",
+      value: stats.galleryItems.toString(),
+      change: "Before & after cases",
+      icon: Image,
+      color: "bg-gray-900"
+    },
   ];
 
   if (loading) {
@@ -88,11 +99,11 @@ export default function AdminDashboard() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
-        <p className="text-gray-600">Welcome back! Here's what's happening with your blog.</p>
+        <p className="text-gray-600">Welcome back. Manage blog posts and before/after gallery results.</p>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
         {statsData.map((stat) => (
           <div key={stat.name} className="bg-white rounded-xl shadow-md p-6">
             <div className="flex items-center justify-between mb-4">
@@ -163,7 +174,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl shadow-md p-6 text-white">
           <h3 className="text-xl font-bold mb-2">Create New Post</h3>
           <p className="text-primary-100 mb-4">Start writing a new blog post</p>
@@ -176,6 +187,13 @@ export default function AdminDashboard() {
           <p className="text-purple-100 mb-4">View and edit all blog posts</p>
           <a href="/admin/posts" className="btn-primary bg-white text-purple-600 hover:bg-gray-100 inline-block">
             View Posts
+          </a>
+        </div>
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-md p-6 text-white">
+          <h3 className="text-xl font-bold mb-2">Add Gallery Result</h3>
+          <p className="text-gray-200 mb-4">Upload before and after photos</p>
+          <a href="/admin/gallery" className="btn-primary bg-white text-gray-900 hover:bg-gray-100 inline-block">
+            Manage Gallery
           </a>
         </div>
       </div>

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "gallery-1",
+    "category": "fue",
+    "procedure": "FUE Hair Transplant - 3500 Grafts",
+    "before": "/images/gallery/fue-before-1.webp",
+    "after": "/images/gallery/fue-after-1.webp",
+    "timeline": "12 months post-op",
+    "grafts": "3500 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-2",
+    "category": "fue",
+    "procedure": "FUE Hairline Restoration",
+    "before": "/images/gallery/fue-before-2.webp",
+    "after": "/images/gallery/fue-after-2.webp",
+    "timeline": "10 months post-op",
+    "grafts": "2800 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-3",
+    "category": "fut",
+    "procedure": "FUT Hair Transplant - Advanced Hair Loss",
+    "before": "/images/gallery/fut-before-1.webp",
+    "after": "/images/gallery/fut-after-1.webp",
+    "timeline": "14 months post-op",
+    "grafts": "5000 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-4",
+    "category": "dhi",
+    "procedure": "DHI Method - Frontal Hairline",
+    "before": "/images/gallery/dhi-before-1.webp",
+    "after": "/images/gallery/dhi-after-1.webp",
+    "timeline": "8 months post-op",
+    "grafts": "2200 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-5",
+    "category": "dhi",
+    "procedure": "DHI Hair Transplant",
+    "before": "/images/gallery/dhi-before-2.webp",
+    "after": "/images/gallery/dhi-after-2.webp",
+    "timeline": "6 months post-op",
+    "grafts": "6000 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-6",
+    "category": "prp",
+    "procedure": "PRP Treatment",
+    "before": "/images/gallery/prp-before-1.webp",
+    "after": "/images/gallery/prp-after-1.webp",
+    "timeline": "10 months post-op",
+    "grafts": "2500 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-7",
+    "category": "fut",
+    "procedure": "FUT",
+    "before": "/images/gallery/fut-before-2.webp",
+    "after": "/images/gallery/fut-after-2.webp",
+    "timeline": "5 months post-op",
+    "grafts": "400 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-8",
+    "category": "fue",
+    "procedure": "FUE Hair Restoration",
+    "before": "/images/gallery/fue-before-3.webp",
+    "after": "/images/gallery/fue-after-3.webp",
+    "timeline": "11 months post-op",
+    "grafts": "3200 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "gallery-9",
+    "category": "prp",
+    "procedure": "PRP Treatment",
+    "before": "/images/gallery/prp-before-2.webp",
+    "after": "/images/gallery/prp-after-2.webp",
+    "timeline": "11 months post-op",
+    "grafts": "3200 grafts",
+    "featured": true,
+    "created_at": "2025-01-01T00:00:00.000Z",
+    "updated_at": "2025-01-01T00:00:00.000Z"
+  }
+]

@@ -1,107 +1,50 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import Link from 'next/link';
 
+interface GalleryItem {
+  id: string;
+  category: string;
+  procedure: string;
+  before: string;
+  after: string;
+  timeline: string;
+  grafts: string;
+}
+
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const categories = [
     { id: 'all', label: 'All Results' },
     { id: 'fue', label: 'FUE Hair Transplant' },
     { id: 'fut', label: 'FUT Hair Transplant' },
-    { id: 'PRP', label: 'PRP Treatment'},
+    { id: 'prp', label: 'PRP Treatment'},
     { id: 'dhi', label: 'DHI Method' },
     { id: 'beard', label: 'Beard Transplant' },
     { id: 'eyebrow', label: 'Eyebrow Transplant' },
     { id: 'female', label: 'Female Hair Loss' },
   ];
 
-  // Hair transplant gallery items with before/after images
-  const galleryItems = [
-    {
-      id: 1,
-      category: 'fue',
-      procedure: 'FUE Hair Transplant - 3500 Grafts',
-      before: '/images/gallery/fue-before-1.webp',
-      after: '/images/gallery/fue-after-1.webp',
-      timeline: '12 months post-op',
-      grafts: '3500 grafts'
-    },
-    {
-      id: 2,
-      category: 'fue',
-      procedure: 'FUE Hairline Restoration',
-      before: '/images/gallery/fue-before-2.webp',
-      after: '/images/gallery/fue-after-2.webp',
-      timeline: '10 months post-op',
-      grafts: '2800 grafts'
-    },
-    {
-      id: 3,
-      category: 'fut',
-      procedure: 'FUT Hair Transplant - Advanced Hair Loss',
-      before: '/images/gallery/fut-before-1.webp',
-      after: '/images/gallery/fut-after-1.webp',
-      timeline: '14 months post-op',
-      grafts: '5000 grafts'
-    },
-    {
-      id: 4,
-      category: 'dhi',
-      procedure: 'DHI Method - Frontal Hairline',
-      before: '/images/gallery/dhi-before-1.webp',
-      after: '/images/gallery/dhi-after-1.webp',
-      timeline: '8 months post-op',
-      grafts: '2200 grafts'
-    },
-    {
-      id: 5,
-      category: 'dhi',
-      procedure: 'DHI Hair Transplant',
-      before: '/images/gallery/dhi-before-2.webp',
-      after: '/images/gallery/dhi-after-2.webp',
-      timeline: '6 months post-op',
-      grafts: '6000 grafts'
-    },
-    {
-      id: 6,
-      category: 'prp',
-      procedure: 'PRP Treatment',
-      before: '/images/gallery/prp-before-1.webp',
-      after: '/images/gallery/prp-after-1.webp',
-      timeline: '10 months post-op',
-      grafts: '2500 grafts'
-    },
-    {
-      id: 7,
-      category: 'fut',
-      procedure: 'FUT',
-      before: '/images/gallery/fut-before-2.webp',
-      after: '/images/gallery/fut-after-2.webp',
-      timeline: '5 months post-op',
-      grafts: '400 grafts'
-    },
-    {
-      id: 8,
-      category: 'fue',
-      procedure: 'FUE Hair Restoration',
-      before: '/images/gallery/fue-before-3.webp',
-      after: '/images/gallery/fue-after-3.webp',
-      timeline: '11 months post-op',
-      grafts: '3200 grafts'
-    },
-    {
-      id: 9,
-      category: 'PRP',
-      procedure: 'PRP Treatment',
-      before: '/images/gallery/prp-before-2.webp',
-      after: '/images/gallery/prp-after-2.webp',
-      timeline: '11 months post-op',
-      grafts: '3200 grafts'
-    },
-  ];
+  useEffect(() => {
+    async function fetchGallery() {
+      try {
+        const response = await fetch('/api/gallery');
+        const data = await response.json();
+        if (data.success) {
+          setGalleryItems(data.items || []);
+        }
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchGallery();
+  }, []);
 
   const filteredGallery = activeCategory === 'all' 
     ? galleryItems 
@@ -137,7 +80,12 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        {/* Gallery Grid */}
+        {loading ? (
+          <div className="text-center py-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto"></div>
+            <p className="text-gray-600 mt-4">Loading gallery...</p>
+          </div>
+        ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredGallery.map((item) => (
             <div 
@@ -200,9 +148,10 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
+        )}
 
         {/* Empty State */}
-        {filteredGallery.length === 0 && (
+        {!loading && filteredGallery.length === 0 && (
           <div className="text-center py-20">
             <svg className="w-24 h-24 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />

@@ -16,6 +16,40 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Content Storage
+
+Posts and gallery items are stored as JSON in `data/posts.json` and `data/gallery.json`.
+In local development the app writes to those files directly. In production, set these
+environment variables to make admin changes commit through the GitHub Contents API:
+
+```bash
+GITHUB_TOKEN=
+GITHUB_OWNER=
+GITHUB_REPO=
+GITHUB_BRANCH=main
+GITHUB_CONTENT_PATH=data
+```
+
+If GitHub returns `404 Not Found`, check that `GITHUB_OWNER`, `GITHUB_REPO`,
+`GITHUB_BRANCH`, and `GITHUB_CONTENT_PATH` match the repo exactly, and that the
+token has read/write access to that repo's contents. The files should resolve to
+`data/posts.json` and `data/gallery.json` on the configured branch.
+
+Image uploads use Cloudinary through `/api/upload`:
+
+```bash
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+```
+
+Admin login continues to use:
+
+```bash
+ADMIN_EMAIL=
+ADMIN_PASSWORD=
+```
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

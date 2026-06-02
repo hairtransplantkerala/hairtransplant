@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
-    "@supabase/ssr": "^0.5.2",
-    "@supabase/supabase-js": "^2.47.10",
     "@tiptap/extension-image": "^2.10.4",
     "@tiptap/extension-link": "^2.10.4",
     "@tiptap/extension-placeholder": "^2.27.1",

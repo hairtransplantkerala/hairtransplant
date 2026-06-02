@@ -1,20 +1,13 @@
-import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowLeft, User } from 'lucide-react'
 import TableOfContents from '@/components/blog/TableOfContents'
 import { addIdsToHeadings } from '@/lib/utils/toc'
+import { getPostBySlug, relatedPosts } from '@/lib/content/posts'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const supabase = await createClient()
-  
-  const { data: post } = await supabase
-    .from('posts')
-    .select('*')
-    .eq('slug', slug)
-    .eq('published', true)
-    .single()
+  const post = await getPostBySlug(slug)
 
   if (!post) return { title: 'Post Not Found' }
 
@@ -41,36 +34,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const supabase = await createClient()
-  
-  const { data: post, error } = await supabase
-    .from('posts')
-    .select('*')
-    .eq('slug', slug)
-    .eq('published', true)
-    .single()
+  const post = await getPostBySlug(slug)
 
-  if (error || !post) {
+  if (!post) {
     notFound()
   }
-
-  // Increment views
-  await supabase
-    .from('posts')
-    .update({ views: (post.views || 0) + 1 })
-    .eq('id', post.id)
 
   // Add IDs to headings for ToC navigation
   const contentWithIds = addIdsToHeadings(post.content)
 
-  // Get related posts
-  const { data: relatedPosts } = await supabase
-    .from('posts')
-    .select('id, title, slug, excerpt, image, published_at, read_time, category')
-    .eq('published', true)
-    .eq('category', post.category)
-    .neq('id', post.id)
-    .limit(3)
+  const related = await relatedPosts(post, 3)
 
   return (
     <>
@@ -116,7 +89,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
             <div className="flex items-center gap-2">
               <Calendar size={18} />
-              <span>{new Date(post.published_at).toLocaleDateString('en-US', {
+              <span>{new Date(post.published_at || post.created_at).toLocaleDateString('en-US', {
                 month: 'long',
                 day: 'numeric',
                 year: 'numeric'
@@ -224,12 +197,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
 
       {/* Related Posts */}
-      {relatedPosts && relatedPosts.length > 0 && (
+      {related && related.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="container-custom">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {relatedPosts.map((related) => (
+              {related.map((related) => (
                 <Link
                   key={related.id}
                   href={`/blog/${related.slug}`}
@@ -253,7 +226,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </p>
                     <div className="flex items-center text-gray-500 text-sm">
                       <Calendar size={14} className="mr-2" />
-                      {new Date(related.published_at).toLocaleDateString('en-US', {
+                      {new Date(related.published_at || related.created_at).toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',
                         year: 'numeric'

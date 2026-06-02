@@ -7,8 +7,6 @@ import {
   LayoutDashboard, 
   FileText, 
   Image, 
-  Users, 
-  Settings, 
   LogOut,
   Menu,
   X
@@ -50,9 +48,7 @@ export default function AdminLayout({
   const navigation = [
     { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     { name: "Blog Posts", href: "/admin/posts", icon: FileText },
-    { name: "Media Library", href: "/admin/media", icon: Image },
-    { name: "Users", href: "/admin/users", icon: Users },
-    { name: "Settings", href: "/admin/settings", icon: Settings },
+    { name: "Gallery", href: "/admin/gallery", icon: Image },
   ];
 
   return (

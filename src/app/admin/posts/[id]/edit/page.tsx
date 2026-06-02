@@ -8,7 +8,6 @@ import imageCompression from 'browser-image-compression'
 import { ArrowLeft, Save, Eye, Upload, X, Sparkles, Copy, Check } from 'lucide-react'
 import Link from 'next/link'
 import { generateMetaTitle, generateMetaDescription, generateKeywords, generateSchemaMarkup } from '@/lib/utils/seo'
-import { createClient } from '@/lib/supabase/client'
 
 function slugify(text: string): string {
   return text
@@ -27,7 +26,6 @@ function calculateReadingTime(html: string): number {
 
 export default function EditPostPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter()
-  const supabase = createClient()
   
   // Unwrap params Promise
   const { id } = use(params)
@@ -159,28 +157,23 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
       const compressedFile = await imageCompression(file, options)
       console.log('Compressed file size:', (compressedFile.size / 1024).toFixed(2), 'KB')
 
-      const fileExt = 'webp'
-      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`
-      const filePath = `blog-images/${fileName}`
+      const uploadData = new FormData()
+      uploadData.append('file', compressedFile, `blog-${Date.now()}.webp`)
+      uploadData.append('folder', 'kerala-hair-transplant/blog')
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: uploadData,
+      })
+      const result = await response.json()
 
-      const { error: uploadError } = await supabase.storage
-        .from('uploads')
-        .upload(filePath, compressedFile, {
-          cacheControl: '3600',
-          upsert: false,
-          contentType: 'image/webp'
-        })
-
-      if (uploadError) throw uploadError
-
-      const { data: { publicUrl } } = supabase.storage
-        .from('uploads')
-        .getPublicUrl(filePath)
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Image upload failed')
+      }
 
       setFormData({ 
         ...formData, 
-        image: publicUrl,
-        og_image: publicUrl 
+        image: result.url,
+        og_image: result.url 
       })
       
       alert('Image uploaded successfully!')

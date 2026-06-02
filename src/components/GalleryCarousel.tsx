@@ -1,78 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 
+interface GalleryItem {
+  id: string;
+  procedure: string;
+  before: string;
+  after: string;
+  timeline: string;
+}
+
 export default function GalleryCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [galleryItems, setGalleryItems] = useState<GalleryItem[]>([]);
 
-  const galleryItems = [
-    {
-      id: 1,
-      procedure: "FUE Hair Transplant",
-      before: "/images/gallery/fue-before-1.webp",
-      after: "/images/gallery/fue-after-1.webp",
-      timeline: "12 months post-op",
-    },
-    {
-      id: 2,
-      procedure: "FUE Hairline Restoration",
-      before: "/images/gallery/fue-before-2.webp",
-      after: "/images/gallery/fue-after-2.webp",
-      timeline: "10 months post-op",
-    },
-    {
-      id: 3,
-      procedure: "FUT Hair Transplant",
-      before: "/images/gallery/fut-before-1.webp",
-      after: "/images/gallery/fut-after-1.webp",
-      timeline: "14 months post-op",
-    },
-    {
-      id: 4,
-      procedure: "DHI Method",
-      before: "/images/gallery/dhi-before-1.webp",
-      after: "/images/gallery/dhi-after-1.webp",
-      timeline: "8 months post-op",
-    },
-    {
-      id: 5,
-      procedure: 'DHI Hair Transplant',
-      before: '/images/gallery/dhi-before-2.webp',
-      after: '/images/gallery/dhi-after-2.webp',
-      timeline: '6 months post-op',
-    },
-    {
-      id: 6,
-      procedure: 'PRP Treatment',
-      before: '/images/gallery/prp-before-1.webp',
-      after: '/images/gallery/prp-after-1.webp',
-      timeline: '10 months post-op',
-    },
-    {
-      id: 7,
-      procedure: 'FUT',
-      before: '/images/gallery/fut-before-2.webp',
-      after: '/images/gallery/fut-after-2.webp',
-      timeline: '5 months post-op',
-    },
-    {
-      id: 8,
-      procedure: 'FUE Hair Restoration',
-      before: '/images/gallery/fue-before-3.webp',
-      after: '/images/gallery/fue-after-3.webp',
-      timeline: '11 months post-op',
-    },
-    {
-      id: 9,
-      procedure: 'PRP Treatment',
-      before: '/images/gallery/prp-before-2.webp',
-      after: '/images/gallery/prp-after-2.webp',
-      timeline: '11 months post-op',
-    },
+  useEffect(() => {
+    async function fetchGallery() {
+      const response = await fetch("/api/gallery");
+      const data = await response.json();
+      if (data.success) {
+        setGalleryItems((data.items || []).filter((item: any) => item.featured !== false));
+      }
+    }
 
-  ];
+    fetchGallery().catch(() => undefined);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % galleryItems.length);
@@ -81,6 +35,10 @@ export default function GalleryCarousel() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
   };
+
+  if (galleryItems.length === 0) {
+    return null;
+  }
 
   return (
     <div className="relative max-w-5xl mx-auto">

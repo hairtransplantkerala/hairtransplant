@@ -15,10 +15,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check credentials (temporary - without Supabase for now)
+    const adminEmail = process.env.ADMIN_EMAIL || 'hairtransplantkerala@gmail.com';
+    const adminPassword = process.env.ADMIN_PASSWORD || 'TransplantHair@Care123';
+
+    // Check configured credentials
     if (
-      email === 'hairtransplantkerala@gmail.com' &&
-      password === 'TransplantHair@Care123'
+      email === adminEmail &&
+      password === adminPassword
     ) {
       const token = Buffer.from(`${email}:${Date.now()}`).toString('base64');
 
